@@ -1,0 +1,10 @@
+$(document).ready(function(){
+    var dob = new Date("10/23/2001");
+    var month_diff = Date.now() - dob.getTime();
+    var age_dt = new Date(month_diff);
+    var year = age_dt.getUTCFullYear(); 
+    var age = Math.abs(year - 1970);
+
+    $("span#my_years").text(age);
+    $("span#current_copy_year").text(new Date().getFullYear());
+});

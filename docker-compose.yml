@@ -1,0 +1,30 @@
+version: '3.2'
+services:
+  serivce:
+    build: .
+    restart: unless-stopped
+    container_name: giannuzzo_portfolio_code
+    ports:
+      - '3000:3000'
+      - '9229:9229'
+    networks:
+      - giannuzzo_portfolio_network
+  
+  web_server:
+    image: jonasal/nginx-certbot:latest
+    container_name: giannuzzo_portfolio_nginx
+    environment:
+      - CERTBOT_EMAIL=giovanni.damore85@gmail.com
+    ports: 
+      - '80:80'
+      - '443:443'
+    volumes:
+      - nginx_secrets:/etc/letsencrypt
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    networks:
+      - giannuzzo_portfolio_network
+
+networks:
+  giannuzzo_portfolio_network:
+volumes:
+  nginx_secrets:
