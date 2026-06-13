@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Indice Batterie Quiz</title>
+	<style>
+		:root {
+			--primary: #1a73e8;
+			--primary-dark: #1557b0;
+			--bg: #f0f2f5;
+			--card: #ffffff;
+			--text: #333333;
+			--muted: #666666;
+			--border: #e0e0e0;
+			--warning-bg: #fff3cd;
+			--warning-border: #ffc107;
+			--warning-text: #664d03;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			background-color: var(--bg);
+			margin: 0;
+			padding: 20px;
+			color: var(--text);
+		}
+
+		#app {
+			max-width: 1000px;
+			margin: 0 auto;
+			background: var(--card);
+			padding: 30px;
+			border-radius: 12px;
+			box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+		}
+
+		h1 {
+			text-align: center;
+			color: var(--primary);
+			margin-top: 0;
+		}
+
+		.subtitle {
+			text-align: center;
+			color: var(--muted);
+			margin-bottom: 24px;
+			line-height: 1.5;
+		}
+
+		.notice {
+			background: var(--warning-bg);
+			border-left: 6px solid var(--warning-border);
+			color: var(--warning-text);
+			padding: 16px 18px;
+			border-radius: 8px;
+			margin-bottom: 26px;
+			line-height: 1.5;
+		}
+
+		.notice strong {
+			display: block;
+			margin-bottom: 4px;
+		}
+
+		.toolbar {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 12px;
+			margin-bottom: 18px;
+			flex-wrap: wrap;
+		}
+
+		#search {
+			flex: 1;
+			min-width: 220px;
+			padding: 12px 14px;
+			border: 2px solid var(--border);
+			border-radius: 8px;
+			font-size: 1em;
+			outline: none;
+		}
+
+		#search:focus {
+			border-color: var(--primary);
+		}
+
+		#counter {
+			font-weight: 700;
+			color: var(--muted);
+		}
+
+		.grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+			gap: 16px;
+		}
+
+		.quiz-card {
+			border: 2px solid var(--border);
+			border-radius: 12px;
+			padding: 18px;
+			background: #f8f9fa;
+			transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+		}
+
+		.quiz-card:hover {
+			transform: translateY(-2px);
+			border-color: var(--primary);
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+		}
+
+		.quiz-card h2 {
+			margin: 0 0 8px;
+			font-size: 1.15em;
+			color: var(--primary);
+		}
+
+		.quiz-card p {
+			margin: 0 0 16px;
+			color: var(--muted);
+			line-height: 1.4;
+			min-height: 40px;
+		}
+
+		.quiz-card a {
+			display: inline-block;
+			width: 100%;
+			text-align: center;
+			background: var(--primary);
+			color: white;
+			text-decoration: none;
+			padding: 11px 14px;
+			border-radius: 8px;
+			font-weight: 700;
+		}
+
+		.quiz-card a:hover {
+			background: var(--primary-dark);
+		}
+
+		.edit-help {
+			margin-top: 26px;
+			padding: 16px;
+			border: 1px dashed #b7b7b7;
+			border-radius: 8px;
+			color: var(--muted);
+			background: #fafafa;
+			line-height: 1.5;
+			font-size: 0.95em;
+		}
+
+		code {
+			background: #eeeeee;
+			padding: 2px 5px;
+			border-radius: 4px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="app">
+		<h1>Simulazioni Esame</h1>
+		<p class="subtitle">
+			Seleziona una batteria di quiz da avviare. Ogni batteria si apre in una pagina separata.
+		</p>
+
+		<div class="notice" role="alert">
+			<strong>Avviso importante</strong>
+			I progressi non vengono salvati né durante lo svolgimento del quiz né dopo la chiusura o il cambio della
+			pagina. Se esci, ricarichi la pagina o apri un'altra batteria, dovrai ricominciare dall'inizio.
+		</div>
+
+		<div class="toolbar">
+			<input id="search" type="search" placeholder="Cerca una batteria..." oninput="renderQuizList()">
+			<span id="counter"></span>
+		</div>
+
+		<div class="grid" id="quiz-list"></div>
+	</div>
+
+	<script>
+		const quizPages = [
+			{ title: "Batteria 01", file: "1.html" },
+			{ title: "Batteria 02", file: "2.html" },
+			{ title: "Batteria 03", file: "3.html" },
+			{ title: "Batteria 04", file: "4.html" },
+			{ title: "Batteria 05", file: "5.html" },
+			{ title: "Batteria 06", file: "6.html" },
+			{ title: "Batteria 07", file: "7.html" },
+			{ title: "Batteria 08", file: "8.html" },
+			{ title: "Batteria 09", file: "9.html" },
+			{ title: "Batteria 10", file: "10.html" },
+			{ title: "Batteria 11", file: "11.html" },
+			{ title: "Batteria 12", file: "12.html" },
+			{ title: "Batteria 13", file: "13.html" },
+			{ title: "Batteria 14", file: "14.html" },
+			{ title: "Batteria 15", file: "15.html" },
+			{ title: "Batteria 16", file: "16.html" }
+		];
+
+		function renderQuizList() {
+			const list = document.getElementById("quiz-list");
+			const search = document.getElementById("search").value.trim().toLowerCase();
+
+			const filteredPages = quizPages.filter(page => {
+				return page.title.toLowerCase().includes(search) ||
+					page.file.toLowerCase().includes(search);
+			});
+
+			document.getElementById("counter").innerText = filteredPages.length + " / " + quizPages.length + " batterie";
+
+			if (filteredPages.length === 0) {
+				list.innerHTML = "<p>Nessuna batteria trovata.</p>";
+				return;
+			}
+
+			list.innerHTML = filteredPages.map(page => `
+        <div class="quiz-card">
+            <h2>${page.title}</h2>
+            <a href="${page.file}">Avvia simulazione</a>
+        </div>
+    `).join("");
+		}
+
+		window.onload = renderQuizList;
+	</script>
+
+</body>
+
+</html>
