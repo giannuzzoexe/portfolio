@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Interattivo: Piano della Formazione (60 Domande Inedite)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        #app {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1a73e8;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #1a73e8;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .question {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .options button {
+            width: 100%;
+            text-align: left;
+            background: #f8f9fa;
+            border: 2px solid #e0e0e0;
+            padding: 15px;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .options button:hover:not(:disabled) {
+            background: #e8f0fe;
+            border-color: #1a73e8;
+        }
+
+        .options button:disabled {
+            cursor: not-allowed;
+        }
+
+        .correct {
+            background: #d4edda !important;
+            border-color: #28a745 !important;
+            color: #155724;
+            font-weight: bold;
+        }
+
+        .wrong {
+            background: #f8d7da !important;
+            border-color: #dc3545 !important;
+            color: #721c24;
+        }
+
+        #explanation {
+            margin-top: 15px;
+            padding: 15px;
+            border-left: 5px solid #ffc107;
+            background: #fff3cd;
+            display: none;
+            font-size: 0.95em;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        #prev-btn,
+        #next-btn {
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        #prev-btn {
+            background: #e8eaed;
+            color: #333;
+        }
+
+        #prev-btn:hover:not(:disabled) {
+            background: #dadce0;
+        }
+
+        #prev-btn:disabled {
+            opacity: 0.45;
+            cursor: not-allowed;
+        }
+
+        #next-btn {
+            background: #1a73e8;
+            color: white;
+        }
+
+        #next-btn:hover {
+            background: #1557b0;
+        }
+
+        #progress {
+            font-weight: bold;
+            color: #666;
+        }
+
+        #result-screen {
+            text-align: center;
+            display: none;
+        }
+
+        .score {
+            font-size: 3em;
+            color: #1a73e8;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="app">
+        <div id="quiz-screen">
+            <h1>Simulazione Esame</h1>
+            <div class="badge" id="topic-badge">Materia</div>
+            <div class="question" id="question-text">Caricamento in corso...</div>
+            <div class="options" id="options-container"></div>
+            <div id="explanation"></div>
+
+            <div class="footer">
+                <span id="progress">Domanda 1 di 60</span>
+                <div class="nav-actions">
+                    <button id="prev-btn" onclick="prevQuestion()">&#11013; Domanda Precedente</button>
+                    <button id="next-btn" onclick="nextQuestion()">Prossima Domanda &#10140;</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="result-screen">
+            <h1>Esame Concluso!</h1>
+            <p>Hai completato le 60 domande. Ecco il tuo risultato:</p>
+            <div class="score" id="final-score">0 / 60</div>
+            <button onclick="location.reload()"
+                style="background: #1a73e8; color: white; border: none; padding: 15px 30px; font-size: 1.1em; border-radius: 8px; cursor: pointer;">Ripeti
+                il Quiz</button>
+        </div>
+    </div>
+
+    <script>
+        const quizData = [
+            {
+                "t": "Diritto Penale",
+                "q": "Qual è il dato corretto riguardo a condotta?",
+                "o": [
+                    "esiste solo nei delitti contro il patrimonio",
+                    "può consistere in azione o omissione",
+                    "può consistere solo in violenza fisica"
+                ],
+                "a": 1,
+                "e": "La condotta può essere commissiva oppure omissiva."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Tra le seguenti opzioni su preterintenzione, quale è corretta?",
+                "o": [
+                    "l’autore non pone in essere alcuna condotta",
+                    "l’evento realizzato è più grave di quello voluto",
+                    "il fatto è sempre amministrativo"
+                ],
+                "a": 1,
+                "e": "La preterintenzione combina volontà di un evento minore e verificazione di un evento più grave."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "In sede di quiz, per reato continuato la risposta corretta è:",
+                "o": [
+                    "un soggetto ripete un errore amministrativo",
+                    "un reato dura sempre più di un anno",
+                    "più violazioni sono esecutive di un medesimo disegno criminoso"
+                ],
+                "a": 2,
+                "e": "La continuazione presuppone pluralità di violazioni e unico disegno criminoso."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "La nozione di lesioni personali richiama soprattutto quale elemento?",
+                "o": [
+                    "riguardano una malattia nel corpo o nella mente cagionata ad altri",
+                    "coincidono sempre con l’omicidio",
+                    "riguardano solo un danno patrimoniale"
+                ],
+                "a": 0,
+                "e": "La lesione tutela l’integrità fisica e psichica della persona."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale affermazione è corretta in tema di violazione di domicilio?",
+                "o": [
+                    "tutela l’inviolabilità del domicilio contro introduzione o trattenimento abusivo",
+                    "si applica solo ai luoghi pubblici",
+                    "riguarda unicamente veicoli in sosta"
+                ],
+                "a": 0,
+                "e": "Il domicilio è protetto contro accessi o permanenze non consentite."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Con riferimento a abuso dei mezzi di correzione, individua la risposta esatta:",
+                "o": [
+                    "si applica solo ai pubblici ufficiali",
+                    "riguarda l’uso eccessivo o distorto di poteri educativi o disciplinari",
+                    "legittima qualunque violenza educativa"
+                ],
+                "a": 1,
+                "e": "La norma punisce l’abuso di un potere che astrattamente potrebbe essere lecito."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Nel programma d’esame, truffa va ricordato perché:",
+                "o": [
+                    "coincide sempre con il peculato",
+                    "richiede artifici o raggiri che inducano in errore procurando profitto con altrui danno",
+                    "consiste in una minaccia armata"
+                ],
+                "a": 1,
+                "e": "La truffa si fonda sull’inganno."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Durante lo studio di concussione, quale opzione è corretta?",
+                "o": [
+                    "si ha quando il privato minaccia il pubblico ufficiale",
+                    "è un reato contro la famiglia",
+                    "si ha quando il pubblico ufficiale o incaricato costringe taluno a dare o promettere indebitamente utilità"
+                ],
+                "a": 2,
+                "e": "La concussione si fonda sulla costrizione abusiva del soggetto pubblico."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Se la domanda riguarda oltraggio a pubblico ufficiale, quale risposta sceglieresti?",
+                "o": [
+                    "coincide con il furto in abitazione",
+                    "richiede sempre una lesione fisica",
+                    "richiede offesa all’onore o prestigio del pubblico ufficiale nei casi e con le condizioni previste dalla norma"
+                ],
+                "a": 2,
+                "e": "L’oltraggio tutela il prestigio della P.A. durante l’esercizio delle funzioni."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "In relazione a falsità materiale in atto pubblico, quale indicazione è conforme al materiale?",
+                "o": [
+                    "è sempre una contravvenzione stradale",
+                    "riguarda la formazione o alterazione materiale di un atto falso",
+                    "riguarda solo una valutazione giuridica errata"
+                ],
+                "a": 1,
+                "e": "La falsità materiale incide sull’autenticità fisica o provenienza dell’atto."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Sul punto relativo a irretroattività della legge penale, qual è la formulazione corretta?",
+                "o": [
+                    "la retroattività è decisa dalla persona offesa",
+                    "la legge penale sfavorevole non si applica a fatti precedenti",
+                    "ogni norma penale si applica sempre anche al passato"
+                ],
+                "a": 1,
+                "e": "Il cittadino deve conoscere prima quali fatti sono puniti e con quale pena."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Rispetto a rapporto di causalità, quale tra queste affermazioni è vera?",
+                "o": [
+                    "riguarda solo la fase esecutiva della pena",
+                    "collega la condotta all’evento",
+                    "serve a stabilire la competenza del Questore"
+                ],
+                "a": 1,
+                "e": "Il nesso causale verifica se l’evento è conseguenza della condotta."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Per evitare confusione su imputabilità, bisogna ricordare che:",
+                "o": [
+                    "è la capacità di pagare la multa",
+                    "è la capacità di intendere e di volere al momento del fatto",
+                    "è la sola capacità di testimoniare"
+                ],
+                "a": 1,
+                "e": "Senza imputabilità manca il presupposto della responsabilità penale personale."
+            },
+            {
+                "t": "Procedura Penale",
+                "q": "Quale risposta descrive meglio processo penale?",
+                "o": [
+                    "è solo la raccolta informale di notizie",
+                    "inizia con l’esercizio dell’azione penale e termina con la decisione",
+                    "inizia con ogni controllo di polizia"
+                ],
+                "a": 1,
+                "e": "Il processo è la porzione che segue l’azione penale."
+            },
+            {
+                "t": "Procedura Penale",
+                "q": "Nella materia indicata, denuncia del pubblico ufficiale significa che:",
+                "o": [
+                    "è vietata senza autorizzazione del Questore",
+                    "è obbligatoria per reati perseguibili d’ufficio conosciuti nell’esercizio o a causa delle funzioni",
+                    "è sempre facoltativa come per il privato"
+                ],
+                "a": 1,
+                "e": "Il P.U. ha un dovere qualificato di riferire la notizia di reato."
+            },
+            {
+                "t": "Procedura Penale",
+                "q": "Qual è il dato corretto riguardo a elezione di domicilio?",
+                "o": [
+                    "è un atto del Codice della Strada",
+                    "serve a scegliere il luogo del reato",
+                    "serve a individuare il luogo per le notificazioni all’indagato"
+                ],
+                "a": 2,
+                "e": "È un adempimento difensivo e notificatorio rilevante."
+            },
+            {
+                "t": "Procedura Penale",
+                "q": "Tra le seguenti opzioni su verbale, quale è corretta?",
+                "o": [
+                    "serve solo a prenotare servizi",
+                    "documenta atti compiuti e dichiarazioni ricevute con forme più rigorose",
+                    "è un documento privo di valore"
+                ],
+                "a": 1,
+                "e": "Il verbale garantisce tracciabilità e contenuto dell’atto."
+            },
+            {
+                "t": "Procedura Penale",
+                "q": "In sede di quiz, per sequestro di corrispondenza la risposta corretta è:",
+                "o": [
+                    "se eseguito da ufficiale di P.G. la corrispondenza va consegnata all’autorità senza aprirla o conoscerne il contenuto",
+                    "è sempre vietato in Italia",
+                    "può essere letta liberamente dagli agenti"
+                ],
+                "a": 0,
+                "e": "La corrispondenza è assistita da garanzie rafforzate."
+            },
+            {
+                "t": "Procedura Penale",
+                "q": "La nozione di convalida di arresto e fermo richiama soprattutto quale elemento?",
+                "o": [
+                    "è il controllo del giudice sulla legittimità della misura precautelare",
+                    "è una licenza del Questore",
+                    "è una multa stradale"
+                ],
+                "a": 0,
+                "e": "La convalida impedisce restrizioni arbitrarie della libertà."
+            },
+            {
+                "t": "Procedura Penale",
+                "q": "Quale affermazione è corretta in tema di divieto di avvicinamento?",
+                "o": [
+                    "è una licenza di porto d’armi",
+                    "è una confisca del veicolo",
+                    "impedisce di avvicinarsi a luoghi frequentati dalla persona offesa o di comunicare nei modi stabiliti"
+                ],
+                "a": 2,
+                "e": "Serve a prevenire contatti pericolosi con la persona offesa."
+            },
+            {
+                "t": "Procedura Penale",
+                "q": "Con riferimento a autonomia e indipendenza della magistratura, individua la risposta esatta:",
+                "o": [
+                    "garantiscono che il giudice non dipenda da altri poteri nella decisione",
+                    "impongono la scelta del giudice da parte del Questore",
+                    "attribuiscono alla P.G. il potere di condannare"
+                ],
+                "a": 0,
+                "e": "La magistratura deve essere indipendente per assicurare imparzialità."
+            },
+            {
+                "t": "Procedura Penale",
+                "q": "Nel programma d’esame, procedimento penale in senso stretto va ricordato perché:",
+                "o": [
+                    "inizia dopo la sentenza",
+                    "coincide con l’esecuzione della pena",
+                    "inizia con la notizia di reato e termina con l’esercizio dell’azione penale"
+                ],
+                "a": 2,
+                "e": "È la fase delle indagini preliminari."
+            },
+            {
+                "t": "Procedura Penale",
+                "q": "Durante lo studio di querela, quale opzione è corretta?",
+                "o": [
+                    "è sempre una misura cautelare",
+                    "è un mezzo di ricerca della prova",
+                    "è manifestazione di volontà della persona offesa di procedere per reati non d’ufficio"
+                ],
+                "a": 2,
+                "e": "La querela è condizione di procedibilità per determinati reati."
+            },
+            {
+                "t": "Procedura Penale",
+                "q": "Se la domanda riguarda identificazione ex art. 349 c.p.p., quale risposta sceglieresti?",
+                "o": [
+                    "serve a irrogare la pena",
+                    "è una misura di prevenzione patrimoniale",
+                    "serve a identificare indagato, persona offesa, persone informate e altri soggetti utili"
+                ],
+                "a": 2,
+                "e": "L’identificazione è un atto tipico di P.G."
+            },
+            {
+                "t": "Procedura Penale",
+                "q": "In relazione a annotazione, quale indicazione è conforme al materiale?",
+                "o": [
+                    "è un atto del giudice civile",
+                    "documenta attività d’indagine quando non è richiesto il verbale",
+                    "è sempre un provvedimento cautelare"
+                ],
+                "a": 1,
+                "e": "L’annotazione è una forma sintetica di documentazione della P.G."
+            },
+            {
+                "t": "Procedura Penale",
+                "q": "Sul punto relativo a sequestro probatorio d’urgenza, qual è la formulazione corretta?",
+                "o": [
+                    "è sempre vietato alla P.G.",
+                    "può essere eseguito dalla P.G. nei casi urgenti previsti",
+                    "è deciso dalla persona offesa"
+                ],
+                "a": 1,
+                "e": "Nei casi urgenti la P.G. agisce e trasmette per le valutazioni dell’autorità competente."
+            },
+            {
+                "t": "Procedura Penale",
+                "q": "Rispetto a messa a disposizione dell’arrestato o fermato, quale tra queste affermazioni è vera?",
+                "o": [
+                    "deve avvenire nei termini previsti con trasmissione degli atti all’autorità",
+                    "può essere rinviata senza limiti",
+                    "è decisa dalla vittima"
+                ],
+                "a": 0,
+                "e": "I termini garantiscono controllo rapido sulla privazione della libertà."
+            },
+            {
+                "t": "Procedura Penale",
+                "q": "Per evitare confusione su custodia cautelare in carcere, bisogna ricordare che:",
+                "o": [
+                    "è una sanzione amministrativa accessoria",
+                    "può essere decisa dalla persona offesa",
+                    "è la misura cautelare personale più afflittiva"
+                ],
+                "a": 2,
+                "e": "Incide fortemente sulla libertà e richiede presupposti rigorosi."
+            },
+            {
+                "t": "Procedura Penale",
+                "q": "Quale risposta descrive meglio diritto di difesa?",
+                "o": [
+                    "può essere escluso per comodità operativa",
+                    "è inviolabile in ogni stato e grado del procedimento",
+                    "esiste solo in appello"
+                ],
+                "a": 1,
+                "e": "È un diritto costituzionale fondamentale."
+            },
+            {
+                "t": "Procedura Penale",
+                "q": "Nella materia indicata, procedimento penale in senso ampio significa che:",
+                "o": [
+                    "è una serie ordinata di atti diretti alla decisione penale",
+                    "coincide solo con il dibattimento",
+                    "inizia sempre con la condanna"
+                ],
+                "a": 0,
+                "e": "Il procedimento comprende il cammino dalla notizia di reato alla decisione finale."
+            },
+            {
+                "t": "Procedura Penale",
+                "q": "Qual è il dato corretto riguardo a registro delle notizie di reato?",
+                "o": [
+                    "è curato dal Pubblico Ministero",
+                    "è gestito dal cittadino querelante",
+                    "è compilato dal Sindaco"
+                ],
+                "a": 0,
+                "e": "L’iscrizione ex art. 335 c.p.p. compete al P.M."
+            },
+            {
+                "t": "Procedura Penale",
+                "q": "Tra le seguenti opzioni su attività d’iniziativa della P.G., quale è corretta?",
+                "o": [
+                    "coincide con l’emissione di sentenze",
+                    "comprende atti urgenti e attività previste dal codice prima o anche dopo l’intervento del P.M.",
+                    "è sempre vietata"
+                ],
+                "a": 1,
+                "e": "La P.G. può agire d’iniziativa nei limiti stabiliti dal codice."
+            },
+            {
+                "t": "Procedura Penale",
+                "q": "In sede di quiz, per relazione di servizio la risposta corretta è:",
+                "o": [
+                    "documenta attività e fatti di servizio rilevanti",
+                    "è una licenza commerciale",
+                    "è una sentenza penale"
+                ],
+                "a": 0,
+                "e": "La relazione cristallizza circostanze operative conosciute dal personale."
+            },
+            {
+                "t": "Procedura Penale",
+                "q": "La nozione di sequestro probatorio richiama soprattutto quale elemento?",
+                "o": [
+                    "assicura corpo del reato o cose pertinenti necessarie all’accertamento",
+                    "è sempre definitivo e ablativo",
+                    "serve a punire anticipatamente l’indagato"
+                ],
+                "a": 0,
+                "e": "Ha finalità probatoria."
+            },
+            {
+                "t": "Procedura Penale",
+                "q": "Quale affermazione è corretta in tema di fermo di indiziato di delitto?",
+                "o": [
+                    "richiede sempre la flagranza",
+                    "richiede gravi indizi e pericolo di fuga per determinati delitti",
+                    "serve a sospendere la patente"
+                ],
+                "a": 1,
+                "e": "Il fermo è precautelare ma non dipende dalla flagranza."
+            },
+            {
+                "t": "Procedura Penale",
+                "q": "Con riferimento a arresti domiciliari, individua la risposta esatta:",
+                "o": [
+                    "impongono di non allontanarsi dall’abitazione o altro luogo stabilito",
+                    "cancellano il procedimento",
+                    "vietano solo di guidare"
+                ],
+                "a": 0,
+                "e": "Sono misura cautelare custodiale extra-carceraria."
+            },
+            {
+                "t": "Procedura Penale",
+                "q": "Nel programma d’esame, giudice naturale precostituito per legge va ricordato perché:",
+                "o": [
+                    "il giudice competente è individuato dalla legge prima del fatto",
+                    "il giudice è nominato dalla persona offesa",
+                    "il giudice è scelto caso per caso dal P.M."
+                ],
+                "a": 0,
+                "e": "La precostituzione garantisce imparzialità."
+            },
+            {
+                "t": "Procedura Penale",
+                "q": "Durante lo studio di testimonianza della P.G., quale opzione è corretta?",
+                "o": [
+                    "ufficiali e agenti possono riferire in giudizio su attività svolte e fatti percepiti",
+                    "è sempre vietata",
+                    "è sostituita automaticamente dal verbale"
+                ],
+                "a": 0,
+                "e": "La testimonianza completa la documentazione degli atti quando richiesta."
+            },
+            {
+                "t": "Codice della Strada",
+                "q": "Se la domanda riguarda responsabilità nella guida di servizio, quale risposta sceglieresti?",
+                "o": [
+                    "è sempre esclusa se si è in uniforme",
+                    "ricade sempre sul cittadino trasportato",
+                    "possono rilevare profili disciplinari, penali e patrimoniali"
+                ],
+                "a": 2,
+                "e": "Il piano richiama responsabilità connesse all’impiego dei veicoli."
+            },
+            {
+                "t": "Codice della Strada",
+                "q": "In relazione a atti vietati sulle strade, quale indicazione è conforme al materiale?",
+                "o": [
+                    "sono sempre irrilevanti",
+                    "rientrano nella tutela delle strade prevista dal programma",
+                    "sono regolati solo dal codice civile"
+                ],
+                "a": 1,
+                "e": "Il programma comprende tutela delle strade e atti vietati."
+            },
+            {
+                "t": "Codice della Strada",
+                "q": "Sul punto relativo a fermata e sosta, qual è la formulazione corretta?",
+                "o": [
+                    "sono sempre libere sui marciapiedi",
+                    "sono atti processuali",
+                    "sono condotte disciplinate dal C.d.S. e oggetto di sanzioni"
+                ],
+                "a": 2,
+                "e": "Il programma include arresto, fermata e sosta."
+            },
+            {
+                "t": "Codice della Strada",
+                "q": "Rispetto a veicoli a trazione elettrica, quale tra queste affermazioni è vera?",
+                "o": [
+                    "sono sempre privi di rischi",
+                    "richiedono cenni di primo intervento nella rilevazione incidenti",
+                    "non sono contemplati dal programma"
+                ],
+                "a": 1,
+                "e": "Il piano include primo intervento su veicoli a trazione elettrica."
+            },
+            {
+                "t": "Codice della Strada",
+                "q": "Per evitare confusione su trasporto di merci pericolose, bisogna ricordare che:",
+                "o": [
+                    "non ha alcuna disciplina speciale",
+                    "è regolato solo dall’art. 624 c.p.",
+                    "è oggetto anche di disciplina ADR"
+                ],
+                "a": 2,
+                "e": "Il materiale cita l’ADR tra le normative complementari."
+            },
+            {
+                "t": "Codice della Strada",
+                "q": "Quale risposta descrive meglio Codice della Strada?",
+                "o": [
+                    "è il codice di procedura penale",
+                    "è il T.U.L.P.S.",
+                    "è il D.Lgs. 30 aprile 1992, n. 285"
+                ],
+                "a": 2,
+                "e": "Il materiale indica il Codice della Strada come D.Lgs. 285/1992."
+            },
+            {
+                "t": "Codice della Strada",
+                "q": "Nella materia indicata, Regolamento di esecuzione e attuazione significa che:",
+                "o": [
+                    "riguarda solo armi da fuoco",
+                    "integra il Codice della Strada",
+                    "abroga la Costituzione"
+                ],
+                "a": 1,
+                "e": "Il C.d.S. è integrato dal D.P.R. 495/1992."
+            },
+            {
+                "t": "Codice della Strada",
+                "q": "Qual è il dato corretto riguardo a art. 1 C.d.S.?",
+                "o": [
+                    "regola l’interrogatorio dell’indagato",
+                    "pone la sicurezza delle persone tra le finalità primarie dello Stato",
+                    "disciplina il furto in abitazione"
+                ],
+                "a": 1,
+                "e": "La sicurezza nella circolazione è finalità primaria di ordine sociale ed economico."
+            },
+            {
+                "t": "Codice della Strada",
+                "q": "Tra le seguenti opzioni su mobilità sostenibile, quale è corretta?",
+                "o": [
+                    "è vietata dal Codice della Strada",
+                    "riguarda solo il porto d’armi",
+                    "è richiamata tra i principi cui si ispirano norme e provvedimenti attuativi"
+                ],
+                "a": 2,
+                "e": "Il materiale collega sicurezza stradale e mobilità sostenibile."
+            },
+            {
+                "t": "Codice della Strada",
+                "q": "In sede di quiz, per Piano nazionale per la sicurezza stradale la risposta corretta è:",
+                "o": [
+                    "è definito dal Ministro delle infrastrutture e dei trasporti",
+                    "è un atto del Pubblico Ministero",
+                    "è deciso dal singolo conducente"
+                ],
+                "a": 0,
+                "e": "L’art. 1 richiama il Piano nazionale per ridurre incidenti ed effetti."
+            },
+            {
+                "t": "Armi e Tiro",
+                "q": "La nozione di manutenzione richiama soprattutto quale elemento?",
+                "o": [
+                    "serve a modificare illegalmente l’arma",
+                    "serve a conservare efficienza e sicurezza dell’arma",
+                    "è un atto di notifica"
+                ],
+                "a": 1,
+                "e": "La manutenzione corretta riduce rischi e malfunzionamenti."
+            },
+            {
+                "t": "Armi e Tiro",
+                "q": "Quale affermazione è corretta in tema di tacca di mira e mirino?",
+                "o": [
+                    "sono componenti del cronotachigrafo",
+                    "servono all’allineamento dell’arma verso il bersaglio",
+                    "servono a compilare denunce"
+                ],
+                "a": 1,
+                "e": "Gli organi di mira aiutano il puntamento."
+            },
+            {
+                "t": "Armi e Tiro",
+                "q": "Con riferimento a maneggi dell’arma, individua la risposta esatta:",
+                "o": [
+                    "devono rispettare procedure e norme di sicurezza",
+                    "servono solo alla decorazione dell’uniforme",
+                    "sono liberi e senza regole"
+                ],
+                "a": 0,
+                "e": "La sicurezza nel maneggio è centrale nella formazione."
+            },
+            {
+                "t": "Armi e Tiro",
+                "q": "Nel programma d’esame, alimentazione va ricordato perché:",
+                "o": [
+                    "è il pagamento di una sanzione",
+                    "consiste nel portare la cartuccia dal caricatore alla camera",
+                    "è la notifica della querela"
+                ],
+                "a": 1,
+                "e": "È fase del ciclo funzionale dell’arma."
+            },
+            {
+                "t": "Armi e Tiro",
+                "q": "Durante lo studio di singola azione, quale opzione è corretta?",
+                "o": [
+                    "il grilletto sgancia il cane già armato",
+                    "il grilletto compila un verbale",
+                    "l’arma spara sempre a raffica"
+                ],
+                "a": 0,
+                "e": "In singola azione il cane è già armato."
+            },
+            {
+                "t": "Legislazione P.S.",
+                "q": "Se la domanda riguarda art. 1 T.U.L.P.S., quale risposta sceglieresti?",
+                "o": [
+                    "disciplina la ricettazione",
+                    "attribuisce all’Autorità di P.S. compiti di ordine pubblico, sicurezza, incolumità, proprietà e osservanza delle leggi",
+                    "regola la custodia cautelare"
+                ],
+                "a": 1,
+                "e": "È norma cardine sui compiti dell’Autorità di P.S."
+            },
+            {
+                "t": "Legislazione P.S.",
+                "q": "In relazione a legislazione in materia di armi, quale indicazione è conforme al materiale?",
+                "o": [
+                    "è esclusivamente diritto di famiglia",
+                    "riguarda solo la procedura penale",
+                    "comprende classificazione, autorizzazioni, esplosivi e articoli pirotecnici"
+                ],
+                "a": 2,
+                "e": "Il sommario di Legislazione P.S. dedica una sezione alle armi."
+            },
+            {
+                "t": "Legislazione P.S.",
+                "q": "Sul punto relativo a Autorità locale di P.S., qual è la formulazione corretta?",
+                "o": [
+                    "opera nei casi previsti dall’ordinamento sul territorio locale",
+                    "è sempre il Pubblico Ministero",
+                    "è un funzionario della motorizzazione"
+                ],
+                "a": 0,
+                "e": "Il T.U.L.P.S. disciplina anche l’autorità locale di P.S."
+            },
+            {
+                "t": "Legislazione P.S.",
+                "q": "Rispetto a mediazione del conflitto in ordine pubblico, quale tra queste affermazioni è vera?",
+                "o": [
+                    "è valorizzata insieme alla gestione negoziata dello spazio pubblico",
+                    "è esclusa da ogni direttiva",
+                    "è compito esclusivo del giudice civile"
+                ],
+                "a": 0,
+                "e": "La moderna cultura di O.P. punta anche su prevenzione e dialogo."
+            },
+            {
+                "t": "Banche Dati SDI/MIPG",
+                "q": "Per evitare confusione su utilizzatori MIPGWEB, bisogna ricordare che:",
+                "o": [
+                    "sono solo aziende assicurative",
+                    "sono solo cittadini privati",
+                    "sono appartenenti alla Polizia di Stato e personale civile dell’Interno"
+                ],
+                "a": 2,
+                "e": "Le slide precisano gli utilizzatori."
+            },
+            {
+                "t": "Banche Dati SDI/MIPG",
+                "q": "Quale risposta descrive meglio SIS Schengen?",
+                "o": [
+                    "è banca dati europea collegata allo spazio Schengen",
+                    "è banca dati comunale delle multe",
+                    "è un modello di pistola"
+                ],
+                "a": 0,
+                "e": "Le slide richiamano SIS come collegamento internazionale."
+            },
+            {
+                "t": "Banche Dati SDI/MIPG",
+                "q": "Nella materia indicata, protezione dei dati personali significa che:",
+                "o": [
+                    "non ha alcun rilievo per SDI",
+                    "vale solo per le scuole private",
+                    "rileva per accesso e trattamento dei dati nelle banche di polizia"
+                ],
+                "a": 2,
+                "e": "Le slide richiamano D.Lgs. 196/2003 e adeguamento al GDPR."
+            }
+        ];
+
+        let currentQ = 0;
+        let answers = new Array(quizData.length).fill(null);
+
+        function loadQuestion() {
+            document.getElementById("explanation").style.display = "none";
+            document.getElementById("options-container").innerHTML = "";
+
+            let qData = quizData[currentQ];
+            let selectedAnswer = answers[currentQ];
+
+            document.getElementById("topic-badge").innerText = qData.t;
+            document.getElementById("question-text").innerText = (currentQ + 1) + ". " + qData.q;
+            document.getElementById("progress").innerText = "Domanda " + (currentQ + 1) + " di " + quizData.length;
+
+            document.getElementById("prev-btn").disabled = currentQ === 0;
+            document.getElementById("next-btn").innerHTML = currentQ === quizData.length - 1 ? "Termina Quiz &#10004;" : "Prossima Domanda &#10140;";
+
+            qData.o.forEach((opt, index) => {
+                let btn = document.createElement("button");
+                btn.innerText = opt;
+                btn.onclick = () => checkAnswer(index, qData.a, qData.e);
+                document.getElementById("options-container").appendChild(btn);
+            });
+
+            if (selectedAnswer !== null) {
+                showAnsweredState(selectedAnswer, qData.a, qData.e);
+            }
+        }
+
+        function showAnsweredState(selectedIdx, correctIdx, explanation) {
+            let buttons = document.getElementById("options-container").children;
+            for (let b of buttons) { b.disabled = true; } // Lock options
+
+            if (selectedIdx === correctIdx) {
+                buttons[selectedIdx].classList.add("correct");
+            } else {
+                buttons[selectedIdx].classList.add("wrong");
+                buttons[correctIdx].classList.add("correct");
+            }
+
+            let expBox = document.getElementById("explanation");
+            expBox.innerHTML = "<strong>Spiegazione:</strong> " + explanation;
+            expBox.style.display = "block";
+        }
+
+        function checkAnswer(selectedIdx, correctIdx, explanation) {
+            if (answers[currentQ] !== null) return;
+
+            answers[currentQ] = selectedIdx;
+            showAnsweredState(selectedIdx, correctIdx, explanation);
+        }
+
+        function prevQuestion() {
+            if (currentQ > 0) {
+                currentQ--;
+                loadQuestion();
+            }
+        }
+
+        function nextQuestion() {
+            currentQ++;
+            if (currentQ < quizData.length) {
+                loadQuestion();
+            } else {
+                showResult();
+            }
+        }
+
+        function showResult() {
+            let score = answers.reduce((total, answer, index) => {
+                return total + (answer === quizData[index].a ? 1 : 0);
+            }, 0);
+
+            document.getElementById("quiz-screen").style.display = "none";
+            document.getElementById("result-screen").style.display = "block";
+            document.getElementById("final-score").innerText = score + " / " + quizData.length;
+        }
+
+        // Start quiz
+        window.onload = loadQuestion;
+    </script>
+
+</body>
+
+</html>
