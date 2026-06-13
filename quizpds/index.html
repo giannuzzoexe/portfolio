@@ -161,6 +161,24 @@
 			padding: 2px 5px;
 			border-radius: 4px;
 		}
+
+		.site-footer {
+			max-width: 800px;
+			margin: 30px auto 0;
+			padding: 18px 20px;
+			text-align: center;
+			color: #666;
+			font-size: 0.95em;
+		}
+
+		.site-footer p {
+			margin: 6px 0;
+		}
+
+		.footer-small {
+			font-size: 0.85em;
+			color: #999;
+		}
 	</style>
 </head>
 
@@ -187,23 +205,45 @@
 	</div>
 
 	<script>
+		const complete = [
+			{ title: "Simulazione 01", file: "batteria/1.html", description: "Batteria 60 Quiz, ripartiti in: Diritto Penale (13); Procedura Penale (25); legislazione di P.S. (4); Codice della Strada (10); SDI/MIPG (3); Armi e Tiro (5)." },
+			{ title: "Simulazione 02", file: "batteria/2.html", description: "Batteria 60 Quiz, ripartiti in: Diritto Penale (13); Procedura Penale (25); legislazione di P.S. (4); Codice della Strada (10); SDI/MIPG (3); Armi e Tiro (5)." },
+			{ title: "Simulazione 03", file: "batteria/3.html", description: "Batteria 60 Quiz, ripartiti in: Diritto Penale (13); Procedura Penale (25); legislazione di P.S. (4); Codice della Strada (10); SDI/MIPG (3); Armi e Tiro (5)." },
+			{ title: "Simulazione 04", file: "batteria/4.html", description: "Batteria 60 Quiz, ripartiti in: Diritto Penale (13); Procedura Penale (25); legislazione di P.S. (4); Codice della Strada (10); SDI/MIPG (3); Armi e Tiro (5)." },
+			{ title: "Simulazione 05", file: "batteria/5.html", description: "Batteria 60 Quiz, ripartiti in: Diritto Penale (13); Procedura Penale (25); legislazione di P.S. (4); Codice della Strada (10); SDI/MIPG (3); Armi e Tiro (5)." },
+			{ title: "Simulazione 06", file: "batteria/6.html", description: "Batteria 60 Quiz, ripartiti in: Diritto Penale (13); Procedura Penale (25); legislazione di P.S. (4); Codice della Strada (10); SDI/MIPG (3); Armi e Tiro (5)." },
+			{ title: "Simulazione 07", file: "batteria/7.html", description: "Batteria 60 Quiz, ripartiti in: Diritto Penale (13); Procedura Penale (25); legislazione di P.S. (4); Codice della Strada (10); SDI/MIPG (3); Armi e Tiro (5)." },
+			{ title: "Simulazione 08", file: "batteria/8.html", description: "Batteria 60 Quiz, ripartiti in: Diritto Penale (13); Procedura Penale (25); legislazione di P.S. (4); Codice della Strada (10); SDI/MIPG (3); Armi e Tiro (5)." },
+			{ title: "Simulazione 09", file: "batteria/9.html", description: "Batteria 60 Quiz, ripartiti in: Diritto Penale (13); Procedura Penale (25); legislazione di P.S. (4); Codice della Strada (10); SDI/MIPG (3); Armi e Tiro (5)." },
+			{ title: "Simulazione 10", file: "batteria/10.html", description: "Batteria 60 Quiz, ripartiti in: Diritto Penale (13); Procedura Penale (25); legislazione di P.S. (4); Codice della Strada (10); SDI/MIPG (3); Armi e Tiro (5)." },
+			{ title: "Simulazione 11", file: "batteria/11.html", description: "Batteria 60 Quiz, ripartiti in: Diritto Penale (13); Procedura Penale (25); legislazione di P.S. (4); Codice della Strada (10); SDI/MIPG (3); Armi e Tiro (5)." },
+			{ title: "Simulazione 12", file: "batteria/12.html", description: "Batteria 60 Quiz, ripartiti in: Diritto Penale (13); Procedura Penale (25); legislazione di P.S. (4); Codice della Strada (10); SDI/MIPG (3); Armi e Tiro (5)." },
+			{ title: "Simulazione 13", file: "batteria/13.html", description: "Batteria 60 Quiz, ripartiti in: Diritto Penale (13); Procedura Penale (25); legislazione di P.S. (4); Codice della Strada (10); SDI/MIPG (3); Armi e Tiro (5)." },
+			{ title: "Simulazione 14", file: "batteria/14.html", description: "Batteria 60 Quiz, ripartiti in: Diritto Penale (13); Procedura Penale (25); legislazione di P.S. (4); Codice della Strada (10); SDI/MIPG (3); Armi e Tiro (5)." },
+			{ title: "Simulazione 15", file: "batteria/15.html", description: "Batteria 60 Quiz, ripartiti in: Diritto Penale (13); Procedura Penale (25); legislazione di P.S. (4); Codice della Strada (10); SDI/MIPG (3); Armi e Tiro (5)." },
+			{ title: "Simulazione 16", file: "batteria/16.html", description: "Batteria 60 Quiz, ripartiti in: Diritto Penale (13); Procedura Penale (25); legislazione di P.S. (4); Codice della Strada (10); SDI/MIPG (3); Armi e Tiro (5)." }
+		];
+
+		const cp = [
+			{ title: "Diritto Penale 01", file: "cp/1.html", description: "Batteria 60 Quiz, Diritto Penale" },
+			{ title: "Diritto Penale 02", file: "cp/2.html", description: "Batteria 60 Quiz, Diritto Penale" },
+			{ title: "Diritto Penale 03", file: "cp/3.html", description: "Batteria 60 Quiz, Diritto Penale" },
+			{ title: "Diritto Penale 04", file: "cp/4.html", description: "Batteria 60 Quiz, Diritto Penale" },
+			{ title: "Diritto Penale 05", file: "cp/5.html", description: "Batteria 60 Quiz, Diritto Penale" },
+		];
+
+		const cpp = [
+			{ title: "Procedura Penale 01", file: "cpp/1.html", description: "Batteria 60 Quiz, Procedura Penale" },
+			{ title: "Procedura Penale 02", file: "cpp/2.html", description: "Batteria 60 Quiz, Procedura Penale" },
+			{ title: "Procedura Penale 03", file: "cpp/3.html", description: "Batteria 60 Quiz, Procedura Penale" },
+			{ title: "Procedura Penale 04", file: "cpp/4.html", description: "Batteria 60 Quiz, Procedura Penale" },
+			{ title: "Procedura Penale 05", file: "cpp/5.html", description: "Batteria 60 Quiz, Procedura Penale" },
+		];
+
 		const quizPages = [
-			{ title: "Batteria 01", file: "1.html" },
-			{ title: "Batteria 02", file: "2.html" },
-			{ title: "Batteria 03", file: "3.html" },
-			{ title: "Batteria 04", file: "4.html" },
-			{ title: "Batteria 05", file: "5.html" },
-			{ title: "Batteria 06", file: "6.html" },
-			{ title: "Batteria 07", file: "7.html" },
-			{ title: "Batteria 08", file: "8.html" },
-			{ title: "Batteria 09", file: "9.html" },
-			{ title: "Batteria 10", file: "10.html" },
-			{ title: "Batteria 11", file: "11.html" },
-			{ title: "Batteria 12", file: "12.html" },
-			{ title: "Batteria 13", file: "13.html" },
-			{ title: "Batteria 14", file: "14.html" },
-			{ title: "Batteria 15", file: "15.html" },
-			{ title: "Batteria 16", file: "16.html" }
+			...complete,
+			...cp,
+			...cpp,
 		];
 
 		function renderQuizList() {
@@ -212,7 +252,8 @@
 
 			const filteredPages = quizPages.filter(page => {
 				return page.title.toLowerCase().includes(search) ||
-					page.file.toLowerCase().includes(search);
+					page.file.toLowerCase().includes(search) ||
+					page.description.toLowerCase().includes(search);
 			});
 
 			document.getElementById("counter").innerText = filteredPages.length + " / " + quizPages.length + " batterie";
@@ -225,6 +266,7 @@
 			list.innerHTML = filteredPages.map(page => `
         <div class="quiz-card">
             <h2>${page.title}</h2>
+            <p>${page.description}</p>
             <a href="${page.file}">Avvia simulazione</a>
         </div>
     `).join("");
@@ -233,6 +275,29 @@
 		window.onload = renderQuizList;
 	</script>
 
+	<footer class="site-footer">
+		<p class="footer">
+			<code>Made with ❤️ dal vostro amichevole Giannuzzo di corrioio :P</code>
+		</p>
+		<code class="footer-small">
+				Il presente simulatore è stato realizzato esclusivamente a fini personali, didattici ed esercitativi.
+
+				Le batterie di quiz non sono in alcun modo ufficiali, né affiliate, approvate, validate o riconducibili
+				alla Polizia di Stato, al Ministero dell’Interno, alla Scuola Allievi Agenti di Alessandria o ad altri
+				enti istituzionali.
+
+				I contenuti sono stati generati con il supporto di ChatGPT sulla base del materiale di studio fornito
+				dall’utente. Durante la generazione è stata prestata attenzione a non far conservare o memorizzare
+				stabilmente i file e i materiali utilizzati dall’intelligenza artificiale.
+
+				Le domande, le risposte e le spiegazioni hanno esclusivamente finalità di ripasso e autovalutazione. Non
+				sostituiscono fonti normative, manuali ufficiali, circolari, dispense istituzionali o indicazioni
+				fornite dagli enti competenti.
+
+				L’utente è invitato a verificare sempre le informazioni attraverso fonti ufficiali e aggiornate.
+
+			</code>
+	</footer>
 </body>
 
 </html>

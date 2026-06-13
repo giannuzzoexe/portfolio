@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diritto Penale (60 Domande)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        #app {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1a73e8;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #1a73e8;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .question {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .options button {
+            width: 100%;
+            text-align: left;
+            background: #f8f9fa;
+            border: 2px solid #e0e0e0;
+            padding: 15px;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .options button:hover:not(:disabled) {
+            background: #e8f0fe;
+            border-color: #1a73e8;
+        }
+
+        .options button:disabled {
+            cursor: not-allowed;
+        }
+
+        .correct {
+            background: #d4edda !important;
+            border-color: #28a745 !important;
+            color: #155724;
+            font-weight: bold;
+        }
+
+        .wrong {
+            background: #f8d7da !important;
+            border-color: #dc3545 !important;
+            color: #721c24;
+        }
+
+        #explanation {
+            margin-top: 15px;
+            padding: 15px;
+            border-left: 5px solid #ffc107;
+            background: #fff3cd;
+            display: none;
+            font-size: 0.95em;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        #prev-btn,
+        #next-btn {
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        #prev-btn {
+            background: #e8eaed;
+            color: #333;
+        }
+
+        #prev-btn:hover:not(:disabled) {
+            background: #dadce0;
+        }
+
+        #prev-btn:disabled {
+            opacity: 0.45;
+            cursor: not-allowed;
+        }
+
+        #next-btn {
+            background: #1a73e8;
+            color: white;
+        }
+
+        #next-btn:hover {
+            background: #1557b0;
+        }
+
+        #progress {
+            font-weight: bold;
+            color: #666;
+        }
+
+        #result-screen {
+            text-align: center;
+            display: none;
+        }
+
+        .score {
+            font-size: 3em;
+            color: #1a73e8;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="app">
+        <div id="quiz-screen">
+            <h1>Simulazione Esame</h1>
+            <div class="badge" id="topic-badge">Materia</div>
+            <div class="question" id="question-text">Caricamento in corso...</div>
+            <div class="options" id="options-container"></div>
+            <div id="explanation"></div>
+
+            <div class="footer">
+                <span id="progress">Domanda 1 di 60</span>
+                <div class="nav-actions">
+                    <button id="prev-btn" onclick="prevQuestion()">&#11013; Domanda Precedente</button>
+                    <button id="next-btn" onclick="nextQuestion()">Prossima Domanda &#10140;</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="result-screen">
+            <h1>Esame Concluso!</h1>
+            <p>Hai completato le 60 domande. Ecco il tuo risultato:</p>
+            <div class="score" id="final-score">0 / 60</div>
+            <button onclick="location.reload()"
+                style="background: #1a73e8; color: white; border: none; padding: 15px 30px; font-size: 1.1em; border-radius: 8px; cursor: pointer;">Ripeti
+                il Quiz</button>
+        </div>
+    </div>
+
+    <script>
+        const quizData = [
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente principio di legalità?",
+                "o": [
+                    "il giudice può punire fatti non previsti come reato",
+                    "reato e pena devono essere previsti dalla legge prima del fatto",
+                    "la Polizia Giudiziaria può stabilire nuove pene"
+                ],
+                "a": 1,
+                "e": "Il principio di legalità garantisce che nessuno sia punito senza una previa legge che preveda fatto e pena."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente riserva di legge?",
+                "o": [
+                    "un regolamento interno può creare autonomamente delitti",
+                    "la consuetudine può introdurre pene detentive",
+                    "solo la legge può stabilire quali fatti costituiscono reato e quali pene si applicano"
+                ],
+                "a": 2,
+                "e": "La riserva di legge affida alla fonte legislativa la previsione di reati e pene."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente irretroattività penale?",
+                "o": [
+                    "la legge penale sfavorevole non si applica ai fatti commessi prima della sua entrata in vigore",
+                    "ogni legge penale più severa retroagisce sempre",
+                    "la pena può essere aggravata dopo il fatto senza limiti"
+                ],
+                "a": 0,
+                "e": "L’irretroattività sfavorevole tutela il cittadino da incriminazioni o pene successive al fatto."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente tassatività della norma penale?",
+                "o": [
+                    "la norma penale deve restare volutamente generica",
+                    "il fatto punibile deve essere descritto in modo chiaro e determinato",
+                    "il giudice può completare liberamente una fattispecie vaga"
+                ],
+                "a": 1,
+                "e": "La tassatività richiede precisione della fattispecie e limita interpretazioni arbitrarie."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente materialità e offensività?",
+                "o": [
+                    "è punibile il mero pensiero non manifestato",
+                    "basta un’intenzione interiore priva di condotta",
+                    "il diritto penale punisce fatti esteriori offensivi di beni giuridici"
+                ],
+                "a": 2,
+                "e": "Materialità e offensività escludono la punizione del solo pensiero e richiedono offesa o pericolo."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente delitti e contravvenzioni?",
+                "o": [
+                    "la distinzione dipende dalla specie della pena prevista",
+                    "la distinzione dipende dal luogo del fatto",
+                    "la distinzione dipende dal numero di testimoni"
+                ],
+                "a": 0,
+                "e": "Delitti e contravvenzioni si distinguono formalmente in base alle pene stabilite dalla legge."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente struttura del reato?",
+                "o": [
+                    "basta una denuncia per avere automaticamente un reato",
+                    "il reato richiede fatto tipico, antigiuridicità e colpevolezza",
+                    "è sufficiente la sola pericolosità morale dell’autore"
+                ],
+                "a": 1,
+                "e": "La struttura del reato comprende fatto tipico, antigiuridicità e colpevolezza."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente condotta penalmente rilevante?",
+                "o": [
+                    "la condotta è sempre e solo un’azione violenta",
+                    "l’omissione non ha mai rilievo penale",
+                    "la condotta può essere attiva oppure omissiva"
+                ],
+                "a": 2,
+                "e": "La condotta può consistere in azione o omissione quando esiste un obbligo giuridico di agire."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente rapporto di causalità?",
+                "o": [
+                    "collega la condotta all’evento previsto dalla norma",
+                    "collega la persona offesa al luogo di residenza",
+                    "serve solo a scegliere il giudice competente"
+                ],
+                "a": 0,
+                "e": "Il nesso causale consente di attribuire l’evento alla condotta dell’agente."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente dolo?",
+                "o": [
+                    "coincide con la mera distrazione involontaria",
+                    "consiste nella coscienza e volontà del fatto costituente reato",
+                    "esclude sempre la responsabilità penale"
+                ],
+                "a": 1,
+                "e": "Il dolo richiede rappresentazione e volontà degli elementi essenziali del fatto tipico."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente colpa?",
+                "o": [
+                    "richiede sempre la volontà diretta dell’evento",
+                    "coincide con l’accordo tra più concorrenti",
+                    "ricorre quando l’evento non voluto deriva da negligenza, imprudenza, imperizia o violazione di regole"
+                ],
+                "a": 2,
+                "e": "La colpa riguarda eventi non voluti causati dalla violazione di regole cautelari."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente preterintenzione?",
+                "o": [
+                    "si verifica quando dall’azione deriva un evento più grave di quello voluto",
+                    "si verifica solo quando l’evento è pienamente voluto",
+                    "esclude sempre qualsiasi nesso causale"
+                ],
+                "a": 0,
+                "e": "La preterintenzione indica un evento più grave rispetto a quello voluto dall’agente."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente imputabilità?",
+                "o": [
+                    "è la capacità di pagare una sanzione pecuniaria",
+                    "è la capacità di intendere e di volere al momento del fatto",
+                    "dipende solo dalla professione della persona offesa"
+                ],
+                "a": 1,
+                "e": "L’imputabilità è presupposto della responsabilità penale e si valuta al momento del fatto."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente cause di giustificazione?",
+                "o": [
+                    "aumentano sempre la pena prevista",
+                    "trasformano ogni delitto in illecito amministrativo",
+                    "escludono l’antigiuridicità del fatto tipico"
+                ],
+                "a": 2,
+                "e": "Le scriminanti rendono lecito un fatto che altrimenti sarebbe penalmente rilevante."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente legittima difesa?",
+                "o": [
+                    "richiede pericolo attuale di offesa ingiusta, necessità e proporzione della difesa",
+                    "consente sempre una vendetta successiva",
+                    "opera anche quando il pericolo è passato da tempo"
+                ],
+                "a": 0,
+                "e": "La legittima difesa scrimina la reazione necessaria e proporzionata contro un’offesa ingiusta attuale."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente stato di necessità?",
+                "o": [
+                    "riguarda solo un lieve fastidio patrimoniale",
+                    "richiede il pericolo attuale di un danno grave alla persona non altrimenti evitabile",
+                    "opera per punire chi ha causato il pericolo"
+                ],
+                "a": 1,
+                "e": "Lo stato di necessità riguarda il fatto commesso per salvare sé o altri da un danno grave alla persona."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente uso legittimo delle armi?",
+                "o": [
+                    "autorizza l’uso arbitrario della forza in ogni circostanza",
+                    "vale per qualunque privato per tutelare beni economici",
+                    "è una scriminante riferita al pubblico ufficiale nei casi e limiti previsti dalla legge"
+                ],
+                "a": 2,
+                "e": "L’uso legittimo delle armi è ammesso solo nei limiti di necessità, proporzione e previsione legale."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente eccesso colposo?",
+                "o": [
+                    "si ha quando si superano per colpa i limiti di una causa di giustificazione",
+                    "esclude sempre ogni responsabilità",
+                    "richiede necessariamente dolo di profitto"
+                ],
+                "a": 0,
+                "e": "L’eccesso colposo riguarda il superamento non voluto e colposo dei limiti della scriminante."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente tentativo?",
+                "o": [
+                    "punisce il solo pensiero criminoso",
+                    "richiede atti idonei e diretti in modo non equivoco a commettere un delitto",
+                    "richiede sempre la consumazione completa"
+                ],
+                "a": 1,
+                "e": "Il tentativo punibile presuppone atti esterni idonei e inequivocabilmente diretti al delitto."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente circostanze del reato?",
+                "o": [
+                    "sono sempre elementi essenziali del fatto base",
+                    "eliminano automaticamente il reato",
+                    "sono elementi accidentali che incidono sulla pena aggravandola o attenuandola"
+                ],
+                "a": 2,
+                "e": "Le circostanze modificano il trattamento sanzionatorio senza costituire necessariamente il nucleo del reato."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente concorso di persone?",
+                "o": [
+                    "più soggetti contribuiscono materialmente o moralmente alla commissione dello stesso reato",
+                    "risponde solo chi esegue materialmente l’ultimo atto",
+                    "la presenza casuale sul luogo basta sempre"
+                ],
+                "a": 0,
+                "e": "Nel concorso rileva un contributo causale, materiale o morale, alla realizzazione del reato."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente reato continuato?",
+                "o": [
+                    "richiede un unico fatto privo di offesa",
+                    "richiede più violazioni commesse in esecuzione di un medesimo disegno criminoso",
+                    "si ha solo nei reati colposi stradali"
+                ],
+                "a": 1,
+                "e": "La continuazione unifica più violazioni sotto un medesimo programma criminoso ai fini sanzionatori."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente omicidio doloso?",
+                "o": [
+                    "consiste nel procurare solo un danno patrimoniale",
+                    "è sempre una contravvenzione",
+                    "consiste nel cagionare volontariamente la morte di una persona"
+                ],
+                "a": 2,
+                "e": "L’omicidio doloso tutela la vita e richiede volontà dell’evento morte."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente omicidio colposo?",
+                "o": [
+                    "si ha quando la morte non voluta deriva da colpa",
+                    "richiede sempre volontà diretta di uccidere",
+                    "riguarda solo la sottrazione di cosa mobile"
+                ],
+                "a": 0,
+                "e": "L’omicidio colposo punisce la causazione non voluta della morte per violazione di regole cautelari."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente omicidio stradale?",
+                "o": [
+                    "riguarda il danneggiamento di un veicolo senza feriti",
+                    "riguarda la morte cagionata violando norme sulla circolazione stradale",
+                    "coincide con il furto d’auto"
+                ],
+                "a": 1,
+                "e": "L’omicidio stradale è una figura legata alla morte causata nell’ambito della circolazione stradale."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente percosse?",
+                "o": [
+                    "richiedono sempre una malattia grave",
+                    "riguardano solo l’offesa al patrimonio",
+                    "si configurano quando si percuote taluno senza cagionare malattia nel corpo o nella mente"
+                ],
+                "a": 2,
+                "e": "Le percosse si distinguono dalle lesioni perché non producono malattia."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente lesioni personali?",
+                "o": [
+                    "richiedono una malattia nel corpo o nella mente",
+                    "consistono sempre in una mera minaccia verbale",
+                    "sono reati esclusivamente contro il patrimonio"
+                ],
+                "a": 0,
+                "e": "Le lesioni personali tutelano l’integrità fisica e psichica e richiedono una malattia."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente rissa?",
+                "o": [
+                    "si realizza con un semplice litigio verbale isolato",
+                    "presuppone una contesa violenta tra più persone",
+                    "richiede necessariamente un pubblico ufficiale"
+                ],
+                "a": 1,
+                "e": "La rissa è una mischia violenta tra più persone ed è aggravata da morte o lesioni."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente omissione di soccorso?",
+                "o": [
+                    "punisce chi denuncia un reato perseguibile d’ufficio",
+                    "riguarda la falsificazione di atti pubblici",
+                    "punisce chi non presta assistenza o non avvisa l’autorità nei casi previsti"
+                ],
+                "a": 2,
+                "e": "L’omissione di soccorso tutela vita e incolumità di persone in pericolo."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente violenza privata?",
+                "o": [
+                    "consiste nel costringere altri con violenza o minaccia a fare, tollerare od omettere qualcosa",
+                    "consiste nella sottrazione nascosta di una cosa mobile",
+                    "richiede sempre la qualifica di pubblico ufficiale"
+                ],
+                "a": 0,
+                "e": "La violenza privata tutela la libertà morale di autodeterminazione."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente atti persecutori?",
+                "o": [
+                    "richiedono un solo atto neutro privo di molestia",
+                    "richiedono condotte reiterate di minaccia o molestia idonee a provocare ansia, paura o alterazione delle abitudini",
+                    "riguardano soltanto la falsificazione di documenti"
+                ],
+                "a": 1,
+                "e": "Gli atti persecutori tutelano la tranquillità e libertà morale della persona offesa."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente tortura?",
+                "o": [
+                    "è un semplice illecito amministrativo stradale",
+                    "richiede sempre un profitto patrimoniale",
+                    "riguarda condotte gravi idonee a causare acute sofferenze fisiche o trauma psichico verificabile"
+                ],
+                "a": 2,
+                "e": "La tortura è un grave delitto contro la persona, collegato a sofferenze fisiche o psichiche."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente violazione di domicilio?",
+                "o": [
+                    "tutela l’inviolabilità dei luoghi di privata dimora contro introduzione o permanenza abusiva",
+                    "tutela solo la circolazione stradale",
+                    "richiede sempre il consenso del titolare"
+                ],
+                "a": 0,
+                "e": "La violazione di domicilio protegge la libertà domestica e la riservatezza dei luoghi privati."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente sequestro di persona?",
+                "o": [
+                    "consiste nel ricevere cose di provenienza delittuosa",
+                    "consiste nel privare taluno della libertà personale",
+                    "riguarda solo la falsificazione materiale"
+                ],
+                "a": 1,
+                "e": "Il sequestro di persona tutela la libertà personale contro privazioni illegittime."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente arresto illegale?",
+                "o": [
+                    "riguarda un privato che non paga una multa",
+                    "coincide con il furto in abitazione",
+                    "può configurarsi quando il pubblico ufficiale procede ad arresto fuori dai casi consentiti"
+                ],
+                "a": 2,
+                "e": "L’arresto illegale tutela la libertà personale contro abusi del pubblico ufficiale."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente violenza sessuale?",
+                "o": [
+                    "tutela la libertà di autodeterminazione sessuale",
+                    "tutela solo il patrimonio pubblico",
+                    "consiste nella guida senza patente"
+                ],
+                "a": 0,
+                "e": "La violenza sessuale è delitto contro la persona e protegge la libertà sessuale."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente maltrattamenti familiari?",
+                "o": [
+                    "si realizzano con un singolo episodio neutro e isolato",
+                    "richiedono condotte abituali vessatorie in ambito familiare o parafamiliare",
+                    "riguardano solo falsi documentali"
+                ],
+                "a": 1,
+                "e": "I maltrattamenti presuppongono abitualità e un regime di vita offensivo per la vittima."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente abuso dei mezzi di correzione?",
+                "o": [
+                    "punisce l’appropriazione di denaro pubblico",
+                    "coincide sempre con la rapina",
+                    "punisce l’uso abusivo di mezzi correttivi o disciplinari leciti in origine"
+                ],
+                "a": 2,
+                "e": "Il reato riguarda l’abuso di strumenti educativi o disciplinari, quando pericoloso o lesivo."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente furto?",
+                "o": [
+                    "consiste nella sottrazione e impossessamento di cosa mobile altrui con fine di profitto",
+                    "richiede sempre un accordo corruttivo",
+                    "riguarda solo beni immobili"
+                ],
+                "a": 0,
+                "e": "Il furto richiede sottrazione, impossessamento, cosa mobile altrui e fine di profitto."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente furto in abitazione?",
+                "o": [
+                    "si realizza solo falsificando un atto pubblico",
+                    "è commesso introducendosi in un edificio o luogo destinato a privata dimora",
+                    "richiede sempre violenza alla persona"
+                ],
+                "a": 1,
+                "e": "Il furto in abitazione valorizza il luogo di privata dimora come elemento qualificante."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente furto con strappo?",
+                "o": [
+                    "si ha quando la vittima consegna denaro sotto minaccia",
+                    "richiede sempre un atto pubblico falso",
+                    "si ha quando la cosa viene strappata di dosso o di mano alla persona"
+                ],
+                "a": 2,
+                "e": "Nel furto con strappo la violenza è rivolta alla cosa; se diretta alla persona può configurarsi rapina."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente appropriazione indebita?",
+                "o": [
+                    "presuppone il possesso già legittimo della cosa altrui e la successiva appropriazione",
+                    "presuppone sempre la sottrazione clandestina iniziale",
+                    "riguarda solo atti giudiziari falsi"
+                ],
+                "a": 0,
+                "e": "Nell’appropriazione indebita l’agente possiede già la cosa e poi si comporta da proprietario."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente rapina?",
+                "o": [
+                    "si realizza solo con artifici e raggiri",
+                    "unisce sottrazione della cosa mobile a violenza o minaccia alla persona",
+                    "riguarda esclusivamente un atto d’ufficio omesso"
+                ],
+                "a": 1,
+                "e": "La rapina offende patrimonio e persona perché alla sottrazione si aggiunge violenza o minaccia."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente estorsione?",
+                "o": [
+                    "si realizza solo con sottrazione clandestina senza cooperazione della vittima",
+                    "non richiede mai minaccia o violenza",
+                    "costringe la vittima con violenza o minaccia a fare od omettere qualcosa con profitto ingiusto e danno"
+                ],
+                "a": 2,
+                "e": "Nell’estorsione la vittima coopera in modo coartato all’atto dispositivo."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente truffa?",
+                "o": [
+                    "richiede artifici o raggiri, errore della vittima, profitto ingiusto e danno",
+                    "richiede sempre violenza fisica sulla persona",
+                    "coincide con la resistenza a pubblico ufficiale"
+                ],
+                "a": 0,
+                "e": "La truffa si fonda sull’inganno che induce la vittima a compiere un atto pregiudizievole."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente usura?",
+                "o": [
+                    "consiste nella falsificazione di banconote",
+                    "consiste nel farsi dare o promettere interessi o vantaggi usurari",
+                    "riguarda solo l’omessa denuncia del P.U."
+                ],
+                "a": 1,
+                "e": "L’usura punisce la pretesa o promessa di interessi o vantaggi usurari."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente ricettazione?",
+                "o": [
+                    "punisce chi commette il delitto presupposto come autore principale",
+                    "riguarda solo l’abuso di un potere disciplinare",
+                    "punisce chi acquista, riceve od occulta cose provenienti da delitto per profitto, fuori dal concorso nel reato presupposto"
+                ],
+                "a": 2,
+                "e": "La ricettazione richiede consapevolezza della provenienza delittuosa e fine di profitto."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente incauto acquisto?",
+                "o": [
+                    "si distingue dalla ricettazione perché manca la piena consapevolezza dolosa della provenienza delittuosa",
+                    "richiede sempre la certezza dolosa della provenienza illecita",
+                    "è un delitto contro la vita"
+                ],
+                "a": 0,
+                "e": "L’incauto acquisto punisce l’acquisto colposo in presenza di motivi di sospetto."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente riciclaggio?",
+                "o": [
+                    "coincide con la mera percussione senza malattia",
+                    "consiste in operazioni su denaro, beni o utilità provenienti da delitto non colposo per ostacolarne l’identificazione",
+                    "riguarda solo la guida di veicoli di servizio"
+                ],
+                "a": 1,
+                "e": "Il riciclaggio mira a colpire la ripulitura di proventi illeciti."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente associazione per delinquere?",
+                "o": [
+                    "richiede un solo fatto isolato senza accordo stabile",
+                    "si realizza con la sola presenza casuale in strada",
+                    "richiede un vincolo stabile tra più persone finalizzato a commettere più delitti"
+                ],
+                "a": 2,
+                "e": "L’associazione per delinquere si fonda sulla stabilità del vincolo e sul programma criminoso."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente associazione mafiosa?",
+                "o": [
+                    "si caratterizza per forza di intimidazione, assoggettamento e omertà",
+                    "si caratterizza solo per un contratto commerciale illecito",
+                    "non richiede alcun metodo intimidatorio"
+                ],
+                "a": 0,
+                "e": "L’associazione mafiosa è connotata dal metodo mafioso e dai suoi effetti di assoggettamento e omertà."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente pubblico ufficiale?",
+                "o": [
+                    "svolge soltanto mansioni materiali private",
+                    "esercita una pubblica funzione legislativa, giudiziaria o amministrativa con poteri tipici",
+                    "è sempre un soggetto privo di poteri pubblici"
+                ],
+                "a": 1,
+                "e": "La qualifica di pubblico ufficiale rileva per numerosi reati propri contro la P.A."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente incaricato di pubblico servizio?",
+                "o": [
+                    "è sempre titolare di poteri certificativi pieni",
+                    "è necessariamente estraneo a ogni attività pubblica",
+                    "presta un pubblico servizio senza i poteri tipici del pubblico ufficiale e senza mere mansioni materiali"
+                ],
+                "a": 2,
+                "e": "L’incaricato di pubblico servizio svolge attività pubblicistica priva dei poteri tipici della pubblica funzione."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente peculato?",
+                "o": [
+                    "si ha quando pubblico ufficiale o incaricato si appropria di denaro o cosa mobile altrui posseduti per ragione dell’ufficio o servizio",
+                    "si ha quando un privato sottrae una borsa per strada",
+                    "coincide con l’accusa falsa contro un innocente"
+                ],
+                "a": 0,
+                "e": "Il peculato è appropriazione indebita qualificata dalla funzione pubblica e dal possesso per ragioni d’ufficio."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente concussione?",
+                "o": [
+                    "riguarda un accordo paritario tra privato e pubblico agente",
+                    "punisce il pubblico ufficiale che, abusando della qualità o dei poteri, costringe taluno a dare o promettere utilità indebita",
+                    "consiste nella sottrazione clandestina di cosa mobile"
+                ],
+                "a": 1,
+                "e": "La concussione si fonda sull’abuso costrittivo del pubblico funzionario nei confronti del privato."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente corruzione?",
+                "o": [
+                    "richiede sempre che il privato sia costretto senza margine decisionale",
+                    "coincide con il furto in abitazione",
+                    "presuppone un accordo illecito tra pubblico agente e privato avente a oggetto denaro o altra utilità"
+                ],
+                "a": 2,
+                "e": "La corruzione si basa sul pactum sceleris tra pubblico agente e privato."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente induzione indebita?",
+                "o": [
+                    "si ha quando il pubblico agente abusa della qualità o dei poteri inducendo il privato a dare o promettere utilità",
+                    "richiede sempre violenza fisica irresistibile sul privato",
+                    "non prevede mai la punibilità del privato"
+                ],
+                "a": 0,
+                "e": "L’induzione indebita si distingue dalla concussione perché il privato è indotto, non costretto."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente omissione o rifiuto di atti d’ufficio?",
+                "o": [
+                    "riguarda solo la sottrazione di cose private",
+                    "punisce il rifiuto o l’omissione indebita di atti dovuti nei casi previsti dalla legge",
+                    "è sempre un mero illecito disciplinare privo di rilievo penale"
+                ],
+                "a": 1,
+                "e": "L’art. 328 c.p. tutela il buon andamento della P.A. rispetto ad atti dovuti e urgenti."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente resistenza a pubblico ufficiale?",
+                "o": [
+                    "si realizza con la mera resistenza passiva priva di violenza o minaccia",
+                    "coincide con la calunnia",
+                    "si configura quando si usa violenza o minaccia per opporsi al pubblico ufficiale mentre compie un atto d’ufficio"
+                ],
+                "a": 2,
+                "e": "La resistenza richiede violenza o minaccia diretta a ostacolare un atto d’ufficio in corso."
+            },
+            {
+                "t": "Diritto Penale",
+                "q": "Quale definizione descrive correttamente calunnia?",
+                "o": [
+                    "consiste nell’incolpare di un reato una persona che si sa innocente",
+                    "consiste nel simulare un reato senza indicare alcuna persona",
+                    "richiede solo colpa nella ricostruzione dei fatti"
+                ],
+                "a": 0,
+                "e": "La calunnia richiede la falsa accusa contro un soggetto determinato saputo innocente."
+            }
+        ];
+
+        let currentQ = 0;
+        let answers = new Array(quizData.length).fill(null);
+
+        function loadQuestion() {
+            document.getElementById("explanation").style.display = "none";
+            document.getElementById("options-container").innerHTML = "";
+
+            let qData = quizData[currentQ];
+            let selectedAnswer = answers[currentQ];
+
+            document.getElementById("topic-badge").innerText = qData.t;
+            document.getElementById("question-text").innerText = (currentQ + 1) + ". " + qData.q;
+            document.getElementById("progress").innerText = "Domanda " + (currentQ + 1) + " di " + quizData.length;
+
+            document.getElementById("prev-btn").disabled = currentQ === 0;
+            document.getElementById("next-btn").innerHTML = currentQ === quizData.length - 1 ? "Termina Quiz &#10004;" : "Prossima Domanda &#10140;";
+
+            qData.o.forEach((opt, index) => {
+                let btn = document.createElement("button");
+                btn.innerText = opt;
+                btn.onclick = () => checkAnswer(index, qData.a, qData.e);
+                document.getElementById("options-container").appendChild(btn);
+            });
+
+            if (selectedAnswer !== null) {
+                showAnsweredState(selectedAnswer, qData.a, qData.e);
+            }
+        }
+
+        function showAnsweredState(selectedIdx, correctIdx, explanation) {
+            let buttons = document.getElementById("options-container").children;
+            for (let b of buttons) { b.disabled = true; } // Lock options
+
+            if (selectedIdx === correctIdx) {
+                buttons[selectedIdx].classList.add("correct");
+            } else {
+                buttons[selectedIdx].classList.add("wrong");
+                buttons[correctIdx].classList.add("correct");
+            }
+
+            let expBox = document.getElementById("explanation");
+            expBox.innerHTML = "<strong>Spiegazione:</strong> " + explanation;
+            expBox.style.display = "block";
+        }
+
+        function checkAnswer(selectedIdx, correctIdx, explanation) {
+            if (answers[currentQ] !== null) return;
+
+            answers[currentQ] = selectedIdx;
+            showAnsweredState(selectedIdx, correctIdx, explanation);
+        }
+
+        function prevQuestion() {
+            if (currentQ > 0) {
+                currentQ--;
+                loadQuestion();
+            }
+        }
+
+        function nextQuestion() {
+            currentQ++;
+            if (currentQ < quizData.length) {
+                loadQuestion();
+            } else {
+                showResult();
+            }
+        }
+
+        function showResult() {
+            let score = answers.reduce((total, answer, index) => {
+                return total + (answer === quizData[index].a ? 1 : 0);
+            }, 0);
+
+            document.getElementById("quiz-screen").style.display = "none";
+            document.getElementById("result-screen").style.display = "block";
+            document.getElementById("final-score").innerText = score + " / " + quizData.length;
+        }
+
+        // Start quiz
+        window.onload = loadQuestion;
+    </script>
+
+</body>
+
+</html>
