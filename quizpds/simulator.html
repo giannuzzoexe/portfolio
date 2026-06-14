@@ -803,6 +803,7 @@
                 quizData = Array.isArray(payload) ? payload : payload.questions;
 
                 validateQuizData(quizData);
+                quizData = quizData.map(shuffleQuestionOptions);
 
                 answers = new Array(quizData.length).fill(null);
 
@@ -839,6 +840,33 @@
                     );
                 }
             });
+        }
+
+
+        function shuffleQuestionOptions(question) {
+            const optionsWithOriginalIndex = question.o.map((text, originalIndex) => ({
+                text,
+                originalIndex
+            }));
+
+            shuffleArray(optionsWithOriginalIndex);
+
+            const newCorrectIndex = optionsWithOriginalIndex.findIndex(item => item.originalIndex === question.a);
+
+            return {
+                ...question,
+                o: optionsWithOriginalIndex.map(item => item.text),
+                a: newCorrectIndex
+            };
+        }
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const randomIndex = Math.floor(Math.random() * (i + 1));
+                [array[i], array[randomIndex]] = [array[randomIndex], array[i]];
+            }
+
+            return array;
         }
 
         function showScreen(id) {
