@@ -1,0 +1,666 @@
+{
+  "title": "Codice della Strada 01",
+  "description": "Batteria da 60 quiz di Codice della Strada.",
+  "questions": [
+    {
+      "t": "Codice della Strada",
+      "q": "Il Codice della Strada è contenuto principalmente:",
+      "o": [
+        "Nel Decreto Legislativo 30 aprile 1992, n. 285",
+        "Nel Codice Penale del 1930",
+        "Dal solo regolamento comunale"
+      ],
+      "a": 0,
+      "e": "Il Codice della Strada è il D.Lgs. 285/1992, integrato dal D.P.R. 495/1992, regolamento di esecuzione e attuazione."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Il Regolamento di esecuzione e attuazione del Codice della Strada è:",
+      "o": [
+        "Abroga integralmente il Codice della Strada",
+        "Il D.P.R. 16 dicembre 1992, n. 495",
+        "Solo norme sul processo penale"
+      ],
+      "a": 1,
+      "e": "Il D.P.R. 495/1992 è il regolamento che integra e attua il Codice della Strada."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Secondo l'art. 1 C.d.S., la sicurezza delle persone nella circolazione stradale:",
+      "o": [
+        "La sola velocità media dei veicoli",
+        "Alla disciplina dei reati contro la P.A.",
+        "Rientra tra le finalità primarie di ordine sociale ed economico perseguite dallo Stato"
+      ],
+      "a": 2,
+      "e": "L'art. 1 C.d.S. indica la sicurezza delle persone come finalità primaria e richiama sicurezza stradale e mobilità sostenibile."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Le norme del Codice della Strada si ispirano anche al principio di:",
+      "o": [
+        "Mobilità sostenibile",
+        "La durata delle indagini preliminari",
+        "Segretezza investigativa"
+      ],
+      "a": 0,
+      "e": "L'art. 1 C.d.S. richiama sicurezza stradale, mobilità sostenibile, qualità della vita, fluidità della circolazione e uso dei velocipedi."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "L'art. 140 C.d.S. stabilisce che gli utenti della strada devono:",
+      "o": [
+        "Applicare direttamente sanzioni penali",
+        "Comportarsi in modo da non costituire pericolo o intralcio per la circolazione",
+        "Dare precedenza solo ai veicoli più grandi"
+      ],
+      "a": 1,
+      "e": "L'art. 140 C.d.S. contiene il principio generale di prudenza: nessun utente deve creare pericolo o intralcio."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Il principio neminem laedere nella circolazione stradale significa:",
+      "o": [
+        "Diritto di ignorare i pedoni",
+        "È sempre esente da responsabilità",
+        "Obbligo generale di non arrecare danno o pericolo agli altri utenti"
+      ],
+      "a": 2,
+      "e": "Il principio neminem laedere impone di non creare danni o rischi; il rispetto formale di una regola non esclude sempre la colpa generica."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Nel materiale didattico si evidenzia, in materia di circolazione, la non piena applicabilità:",
+      "o": [
+        "Del principio di affidamento",
+        "Solo sulla segnaletica verticale privata",
+        "Elimina ogni responsabilità"
+      ],
+      "a": 0,
+      "e": "Nel traffico l'utente deve mantenere diligenza elevata e considerare anche comportamenti imprudenti prevedibili degli altri."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Le leggi complementari al Codice della Strada servono a:",
+      "o": [
+        "Solo omicidio e furto",
+        "Disciplinare settori specifici che si integrano con il Codice",
+        "Misura cautelare personale"
+      ],
+      "a": 1,
+      "e": "Le norme complementari regolano settori specifici che si integrano con il C.d.S., come ADR, autotrasporto e cronotachigrafo."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "La disciplina dell'autotrasporto è indicata come:",
+      "o": [
+        "Totalmente estraneo alla strada",
+        "Norma sulla legittima difesa",
+        "Legge complementare al Codice della Strada"
+      ],
+      "a": 2,
+      "e": "L'autotrasporto è materia regolata anche da norme complementari, integrate con il Codice della Strada."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "L'ADR riguarda:",
+      "o": [
+        "Il trasporto di merci pericolose",
+        "Una licenza di porto d'armi sportivo",
+        "Solo dal regolamento edilizio"
+      ],
+      "a": 0,
+      "e": "L'ADR disciplina il trasporto di merci pericolose e integra le regole generali del C.d.S."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Il cronotachigrafo è richiamato tra:",
+      "o": [
+        "Le cause di giustificazione",
+        "Le leggi complementari al Codice della Strada",
+        "La legittima difesa"
+      ],
+      "a": 1,
+      "e": "Il cronotachigrafo è materia complementare connessa al controllo dei tempi di guida e riposo nel trasporto professionale."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "La patente di guida ministeriale ha lo scopo di garantire:",
+      "o": [
+        "Possibilità di guidare qualunque mezzo privato senza limiti",
+        "Alla guida di imbarcazioni private",
+        "Professionalità e sicurezza negli interventi di emergenza"
+      ],
+      "a": 2,
+      "e": "La patente ministeriale è finalizzata a professionalità, sicurezza degli interventi, cultura della sicurezza e prevenzione dei sinistri."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "La validità ordinaria della patente ministeriale indicata nel materiale è:",
+      "o": [
+        "5 anni",
+        "Un anno soltanto",
+        "Mai"
+      ],
+      "a": 0,
+      "e": "Nel materiale didattico la patente ministeriale è indicata con validità di 5 anni."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Il certificato 1 della patente ministeriale riguarda:",
+      "o": [
+        "6",
+        "I motoveicoli",
+        "Gli autobus"
+      ],
+      "a": 1,
+      "e": "Il certificato 1 della patente ministeriale riguarda i motoveicoli."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Il certificato 2 della patente ministeriale riguarda:",
+      "o": [
+        "Solo ai velocipedi",
+        "Nel certificato 5",
+        "Autoveicoli fino a 3,5 tonnellate"
+      ],
+      "a": 2,
+      "e": "Il certificato 2 abilita alla guida di autoveicoli fino a 3,5 tonnellate."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Il certificato 3 della patente ministeriale riguarda:",
+      "o": [
+        "Autocarri e autoveicoli oltre 3,5 tonnellate",
+        "Motoveicoli",
+        "Solo ad autobus"
+      ],
+      "a": 0,
+      "e": "Il certificato 3 riguarda autocarri e autoveicoli superiori a 3,5 tonnellate."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Il certificato 4 della patente ministeriale riguarda:",
+      "o": [
+        "Nel certificato 1",
+        "Autobus",
+        "Certificato 2"
+      ],
+      "a": 1,
+      "e": "Il certificato 4 della patente ministeriale riguarda gli autobus."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Il certificato 5 della patente ministeriale riguarda:",
+      "o": [
+        "Solo ai veicoli speciali",
+        "Agli autoveicoli fino a 3,5 t",
+        "Rimorchi per certificati 3 e 4"
+      ],
+      "a": 2,
+      "e": "Il certificato 5 riguarda i rimorchi dei veicoli rientranti nei certificati 3 e 4."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Il certificato 6 della patente ministeriale riguarda:",
+      "o": [
+        "Veicoli speciali",
+        "Certificato 1",
+        "Autobus"
+      ],
+      "a": 0,
+      "e": "Il certificato 6 della patente ministeriale riguarda i veicoli speciali."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "L'art. 177 C.d.S. riguarda:",
+      "o": [
+        "Assenza di ogni cautela",
+        "La circolazione dei veicoli in servizio urgente d'istituto con dispositivi supplementari",
+        "Sono in normale pattugliamento senza urgenza"
+      ],
+      "a": 1,
+      "e": "L'art. 177 disciplina i veicoli in servizio urgente, con uso dei dispositivi acustici e visivi secondo legge."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Anche quando opera l'art. 177 C.d.S., il conducente del veicolo di servizio:",
+      "o": [
+        "È esente da ogni responsabilità",
+        "Ignorare pedoni e incroci",
+        "Deve rispettare cautele e prudenza adeguate"
+      ],
+      "a": 2,
+      "e": "L'art. 177 consente deroghe funzionali all'urgenza, ma non elimina l'obbligo di prudenza e sicurezza."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Il sistema della patente a punti prevede:",
+      "o": [
+        "Una dotazione di punti soggetta a decurtazioni per violazioni",
+        "Solo ai reati contro la P.A.",
+        "La confisca automatica della casa"
+      ],
+      "a": 0,
+      "e": "La patente a punti prevede decurtazioni per violazioni; il tetto ordinario contestuale è 15 punti, salvo sospensione/revoca o casi particolari."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "La revisione periodica del veicolo è disciplinata dall'art.:",
+      "o": [
+        "La capacità penale del conducente",
+        "80 C.d.S.",
+        "Alla guida in stato di ebbrezza"
+      ],
+      "a": 1,
+      "e": "L'art. 80 disciplina la revisione; la revisione scaduta comporta sanzione e sospensione dalla circolazione."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Guidare senza aver mai conseguito la patente, alla prima violazione:",
+      "o": [
+        "Sempre rapina",
+        "È sempre omicidio stradale",
+        "È di regola illecito amministrativo"
+      ],
+      "a": 2,
+      "e": "La guida senza patente è depenalizzata alla prima violazione, ma la recidiva nel biennio assume rilevanza penale."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "La guida in stato di ebbrezza diventa penalmente rilevante quando il tasso alcolemico è:",
+      "o": [
+        "Superiore a 0,8 g/l",
+        "Sempre amministrativa lieve",
+        "Sempre reato"
+      ],
+      "a": 0,
+      "e": "Da 0,5 a 0,8 g/l la violazione è amministrativa; oltre 0,8 g/l la condotta è penalmente rilevante, con fascia più grave oltre 1,5 g/l."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Il rifiuto di sottoporsi all'accertamento alcolemico:",
+      "o": [
+        "È sempre libero e privo di conseguenze",
+        "È punito come violazione autonoma nei termini previsti",
+        "Riceve solo un consiglio"
+      ],
+      "a": 1,
+      "e": "Il rifiuto degli accertamenti alcolemici è autonomamente sanzionato e trattato severamente dal C.d.S."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "L'art. 187 C.d.S. riguarda:",
+      "o": [
+        "È sempre lecita",
+        "Un illecito disciplinare interno",
+        "La guida in stato di alterazione psico-fisica per uso di sostanze stupefacenti"
+      ],
+      "a": 2,
+      "e": "L'art. 187 disciplina la guida in stato di alterazione per uso di sostanze stupefacenti o psicotrope."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "In caso di incidente stradale, l'art. 189 C.d.S. impone:",
+      "o": [
+        "Obbligo di fermarsi e prestare assistenza quando necessario",
+        "Evitare qualunque intervento",
+        "La guida senza patente"
+      ],
+      "a": 0,
+      "e": "L'art. 189 impone obblighi di fermarsi, fornire dati e prestare assistenza, soprattutto se vi sono danni alle persone."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "La fuga dopo incidente con danni alle persone:",
+      "o": [
+        "Solo il mancato pagamento del bollo",
+        "Ha rilevanza penale nei casi previsti",
+        "È sempre priva di conseguenze"
+      ],
+      "a": 1,
+      "e": "In presenza di danni alle persone, la fuga e l'omissione di assistenza assumono rilevanza penale."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "L'art. 142 C.d.S. disciplina:",
+      "o": [
+        "Un consiglio non vincolante",
+        "Sempre arresto in flagranza",
+        "I limiti di velocità"
+      ],
+      "a": 2,
+      "e": "L'art. 142 disciplina i limiti di velocità e le relative sanzioni graduate."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Anche rispettando il limite massimo, il conducente deve:",
+      "o": [
+        "Adeguare la velocità alle condizioni concrete",
+        "Accelerare sempre fino al massimo consentito",
+        "Solo quando vi è sirena"
+      ],
+      "a": 0,
+      "e": "La velocità deve essere sempre adeguata alle condizioni concrete, non basta rispettare il limite numerico."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "La distanza di sicurezza serve a:",
+      "o": [
+        "Una distanza minima fissa di un metro in ogni caso",
+        "Evitare collisioni in caso di rallentamento o arresto improvviso",
+        "Solo una violazione disciplinare interna"
+      ],
+      "a": 1,
+      "e": "La distanza di sicurezza deve consentire l'arresto tempestivo e dipende dalle condizioni concrete."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Le norme sulla precedenza servono a:",
+      "o": [
+        "Accelerare senza guardare",
+        "Superare comunque l'intersezione",
+        "Regolare i conflitti di traiettoria tra utenti"
+      ],
+      "a": 2,
+      "e": "Le regole di precedenza coordinano le traiettorie e prevengono collisioni nelle intersezioni."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Il semaforo rosso impone:",
+      "o": [
+        "L'arresto prima della linea di arresto",
+        "Ignorare il segnale",
+        "Accelerare sempre"
+      ],
+      "a": 0,
+      "e": "I semafori regolano i flussi; il rosso impone l'arresto e la violazione comporta sanzioni."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Il sorpasso deve essere effettuato:",
+      "o": [
+        "Avvenire sempre a destra",
+        "Solo quando può avvenire senza pericolo o intralcio",
+        "Ignorare retrovisori e segnaletica"
+      ],
+      "a": 1,
+      "e": "Il sorpasso è una manovra pericolosa consentita solo con spazio, visibilità, segnalazione e assenza di pericolo."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Le cinture di sicurezza hanno la funzione di:",
+      "o": [
+        "Aumentare la velocità del veicolo",
+        "Solo un richiamo morale",
+        "Ridurre le conseguenze lesive in caso di sinistro"
+      ],
+      "a": 2,
+      "e": "Le cinture sono dispositivi obbligatori di sicurezza passiva e la loro omissione è sanzionata."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "L'uso del casco protettivo è richiesto:",
+      "o": [
+        "Per conducenti e passeggeri di veicoli a due ruote nei casi previsti",
+        "Aumentare la rumorosità",
+        "È sempre facoltativo"
+      ],
+      "a": 0,
+      "e": "Il casco è dispositivo obbligatorio di protezione per veicoli a due ruote, secondo i casi previsti."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "L'uso del telefono durante la guida è vietato quando:",
+      "o": [
+        "È sempre obbligatorio",
+        "Comporta distrazione e non avviene con modalità consentite",
+        "Non ha mai rilevanza"
+      ],
+      "a": 1,
+      "e": "Il Codice sanziona l'uso non consentito di dispositivi durante la guida perché riduce attenzione e controllo."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Durante la circolazione, il conducente deve avere:",
+      "o": [
+        "Accertare reati contro la fede pubblica soltanto",
+        "Solo il passaporto",
+        "I documenti prescritti dalla legge"
+      ],
+      "a": 2,
+      "e": "Il conducente deve possedere ed esibire i documenti prescritti per guida, veicolo e assicurazione."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "La copertura assicurativa RCA è:",
+      "o": [
+        "Obbligatoria per la circolazione dei veicoli",
+        "È sempre autorizzato a circolare",
+        "Solo un avviso orale"
+      ],
+      "a": 0,
+      "e": "L'assicurazione RCA è obbligatoria; la mancanza comporta sanzioni e misure sul veicolo."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Il sequestro amministrativo del veicolo serve a:",
+      "o": [
+        "Applicare una pena detentiva",
+        "Assicurare il bene in vista di eventuale confisca o misura prevista",
+        "Può essere usato normalmente"
+      ],
+      "a": 1,
+      "e": "Il sequestro amministrativo vincola il veicolo nei casi previsti, spesso in vista della confisca."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Il fermo amministrativo del veicolo comporta:",
+      "o": [
+        "Può circolare liberamente",
+        "Sempre al conducente minorenne senza controlli",
+        "Il divieto temporaneo di circolazione"
+      ],
+      "a": 2,
+      "e": "Il fermo amministrativo è un vincolo temporaneo che impedisce la circolazione del veicolo."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "La confisca del veicolo comporta:",
+      "o": [
+        "La perdita definitiva della proprietà a favore dello Stato o ente competente",
+        "Può essere utilizzato subito liberamente",
+        "Del semplice preavviso"
+      ],
+      "a": 0,
+      "e": "La confisca è misura definitiva che comporta la perdita della proprietà del veicolo nei casi previsti."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Il ritiro della patente consiste:",
+      "o": [
+        "Al giudice civile per divorzio",
+        "Nell'apprensione materiale del documento da parte dell'organo accertatore",
+        "Nella cancellazione del reato"
+      ],
+      "a": 1,
+      "e": "Il ritiro è l'apprensione materiale del documento da parte dell'organo accertatore, in vista dei provvedimenti dell'autorità competente."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "La sospensione della patente comporta:",
+      "o": [
+        "È sempre consentito",
+        "Può guidare solo di notte senza limiti",
+        "Il divieto temporaneo di guidare"
+      ],
+      "a": 2,
+      "e": "La sospensione vieta temporaneamente la guida e la sua violazione comporta ulteriori sanzioni."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "La revoca della patente comporta:",
+      "o": [
+        "La perdita dell'abilitazione alla guida",
+        "Solo un divieto di un'ora",
+        "Attendere cinque minuti"
+      ],
+      "a": 0,
+      "e": "La revoca fa venir meno l'abilitazione alla guida; per guidare di nuovo occorre riacquisirla secondo legge."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "La contestazione immediata della violazione serve a:",
+      "o": [
+        "Sempre tenuta segreta",
+        "Portare subito a conoscenza del trasgressore l'illecito accertato",
+        "Solo opinioni personali dell'operatore"
+      ],
+      "a": 1,
+      "e": "La contestazione immediata è la regola quando possibile; il verbale deve documentare gli elementi essenziali della violazione."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Quando la contestazione immediata non è possibile, il verbale:",
+      "o": [
+        "Solo oralmente senza prova",
+        "Sulla classificazione dell'arma",
+        "Deve essere notificato nei termini previsti"
+      ],
+      "a": 2,
+      "e": "Se non vi è contestazione immediata, il verbale deve essere notificato nei termini e modi di legge."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Il pagamento in misura ridotta consente:",
+      "o": [
+        "Di definire la sanzione pagando l'importo previsto nei termini",
+        "Aumenta sempre la pena detentiva",
+        "Di annullare ogni reato grave"
+      ],
+      "a": 0,
+      "e": "Il pagamento in misura ridotta consente di definire la sanzione amministrativa pecuniaria entro termini e importi previsti."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Contro un verbale del Codice della Strada è possibile proporre ricorso:",
+      "o": [
+        "Arrestare l'agente accertatore",
+        "Al Prefetto nei termini previsti",
+        "Una misura cautelare"
+      ],
+      "a": 1,
+      "e": "Il ricorso al Prefetto è un rimedio amministrativo contro il verbale, nei termini e modi previsti."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "In alternativa al ricorso al Prefetto, si può ricorrere:",
+      "o": [
+        "Solo al Questore",
+        "Una sanzione accessoria",
+        "Al Giudice di Pace nei casi e termini previsti"
+      ],
+      "a": 2,
+      "e": "Il verbale può essere contestato con ricorso al Prefetto o, nei casi previsti, al Giudice di Pace."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Il trasporto di persone deve avvenire:",
+      "o": [
+        "Nel rispetto delle caratteristiche del veicolo e delle norme di sicurezza",
+        "È scelto liberamente dal conducente",
+        "Solo il patrimonio pubblico"
+      ],
+      "a": 0,
+      "e": "Il trasporto di persone è soggetto a limiti e regole legati a caratteristiche del veicolo e sicurezza."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Il carico dei veicoli deve essere sistemato in modo da:",
+      "o": [
+        "La corretta notizia di reato",
+        "Evitare caduta, dispersione, pericolo o intralcio",
+        "Solo la segretezza delle indagini"
+      ],
+      "a": 1,
+      "e": "Il carico deve essere stabile e sistemato per non creare pericolo, dispersione, intralcio o problemi di visibilità."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Il Codice della Strada promuove anche:",
+      "o": [
+        "Impedire ogni mobilità urbana",
+        "L'uso esclusivo dei veicoli militari",
+        "L'uso dei velocipedi"
+      ],
+      "a": 2,
+      "e": "L'art. 1 C.d.S. richiama anche la promozione dell'uso dei velocipedi tra gli obiettivi di mobilità sostenibile."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "I pedoni sono:",
+      "o": [
+        "Utenti della strada",
+        "Nella disciplina del peculato",
+        "Solo ai mezzi pesanti"
+      ],
+      "a": 0,
+      "e": "I pedoni sono utenti della strada particolarmente vulnerabili e il conducente deve adottare cautele adeguate."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Sono utenti deboli della strada:",
+      "o": [
+        "Solo conducenti di mezzi pesanti",
+        "Pedoni, ciclisti, minori, anziani e persone con disabilità nei casi considerati",
+        "Meno tutela"
+      ],
+      "a": 1,
+      "e": "Gli utenti deboli richiedono speciale prudenza perché più esposti alle conseguenze dei sinistri."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Il veicolo in circolazione deve essere:",
+      "o": [
+        "Non abbia documenti",
+        "Alla sentenza di condanna",
+        "In condizioni di efficienza e sicurezza"
+      ],
+      "a": 2,
+      "e": "Il veicolo deve circolare in condizioni efficienti e sicure, con dispositivi correttamente funzionanti."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Pneumatici inefficienti o non conformi possono:",
+      "o": [
+        "Compromettere la sicurezza della circolazione",
+        "La nomina del difensore",
+        "Solo il colore del cerchio"
+      ],
+      "a": 0,
+      "e": "Gli pneumatici sono essenziali per aderenza, frenata e stabilità; usura o non conformità creano pericolo."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "I dispositivi di illuminazione e segnalazione visiva servono a:",
+      "o": [
+        "La prova testimoniale",
+        "Vedere ed essere visti",
+        "Solo abbellire il veicolo"
+      ],
+      "a": 1,
+      "e": "I dispositivi luminosi sono essenziali per visibilità e segnalazione; devono essere usati e mantenuti efficienti."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Gli indicatori di direzione servono a:",
+      "o": [
+        "La segretezza investigativa",
+        "Sterzare senza controllare",
+        "Segnalare agli altri utenti le manovre"
+      ],
+      "a": 2,
+      "e": "Gli indicatori informano gli altri utenti, ma non autorizzano manovre pericolose o senza controllo."
+    }
+  ]
+}
