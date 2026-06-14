@@ -708,7 +708,7 @@
 
         <div id="result-screen">
             <h1 id="result-title">Simulazione conclusa!</h1>
-            <p id="result-subtitle">Hai completato la simulazione. Ecco il tuo risultato:</p>
+            <p id="result-subtitle">Ecco il tuo risultato:</p>
             <div class="score" id="final-score">0,00 / 0,00</div>
             <div class="result-details" id="result-details"></div>
             <div class="time-result" id="time-result"></div>
@@ -721,7 +721,7 @@
         </div>
 
         <div id="error-screen">
-            <h1>Quiz non disponibile</h1>
+            <h1>Simulazione non disponibile</h1>
             <div class="error-box" id="error-message"></div>
             <button class="action-btn secondary-btn home-btn" onclick="goHome()" title="Torna alla Home">Home</button>
         </div>
@@ -886,12 +886,12 @@
             const qData = quizData[currentQ];
             const selectedAnswer = answers[currentQ];
 
-            document.getElementById("topic-badge").innerText = qData.t || "Quiz";
+            document.getElementById("topic-badge").innerText = qData.t || "Topic";
             document.getElementById("question-text").innerText = `${currentQ + 1}. ${qData.q}`;
             document.getElementById("progress").innerText = `Domanda ${currentQ + 1} di ${quizData.length}`;
 
             document.getElementById("prev-btn").disabled = currentQ === 0;
-            document.getElementById("next-btn").innerHTML = currentQ === quizData.length - 1 ? "Termina Quiz &#10004;" : "Avanti &#10140;";
+            document.getElementById("next-btn").innerHTML = currentQ === quizData.length - 1 ? "Termina Simulazione &#10004;" : "Avanti &#10140;";
             updateLiveScore();
 
             qData.o.forEach((opt, index) => {
@@ -993,10 +993,10 @@
             const score = correctAnswers * POINTS_PER_CORRECT_ANSWER;
             const maxScore = quizData.length * POINTS_PER_CORRECT_ANSWER;
 
-            document.getElementById("result-title").innerText = timeExpired ? "Tempo scaduto!" : "Quiz concluso!";
+            document.getElementById("result-title").innerText = timeExpired ? "Tempo scaduto!" : "Simulazione conclusa!";
             document.getElementById("result-subtitle").innerText = timeExpired
                 ? "Il tempo è terminato. Ecco il tuo risultato:"
-                : "Hai completato il quiz. Ecco il tuo risultato:";
+                : "Ecco il tuo risultato:";
             document.getElementById("final-score").innerText = `${formatScore(score)} / ${formatScore(maxScore)}`;
             document.getElementById("result-details").innerHTML = `
                 Corrette: ${correctAnswers} · Errate: ${wrongAnswers} · Non date: ${unansweredQuestions}`;
