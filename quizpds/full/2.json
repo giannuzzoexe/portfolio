@@ -4,663 +4,663 @@
   "questions": [
     {
       "t": "Diritto Penale",
-      "q": "Nel programma d’esame, imputabilità va ricordato perché:",
+      "q": "Tizio accusa falsamente Caio di un reato, sapendolo innocente. Quale reato descrive il caso?",
       "o": [
-        "è la capacità di pagare la multa",
-        "è la capacità di intendere e di volere al momento del fatto",
-        "è la sola capacità di testimoniare"
+        "Simulazione di reato",
+        "Calunnia",
+        "Falsa testimonianza"
       ],
       "a": 1,
-      "e": "Senza imputabilità manca il presupposto della responsabilità penale personale."
+      "e": "La calunnia richiede l’incolpazione di una persona determinata che si sa innocente."
     },
     {
       "t": "Diritto Penale",
-      "q": "Durante lo studio di recidiva, quale opzione è corretta?",
+      "q": "Chi dichiara falsamente all’autorità che è avvenuto un furto mai commesso, senza accusare una persona precisa, commette:",
       "o": [
-        "riguarda solo la reiterazione di multe stradali",
-        "riguarda chi commette un nuovo reato dopo una precedente condanna",
-        "riguarda chi riceve una denuncia anonima"
+        "Simulazione di reato",
+        "Calunnia",
+        "Diffamazione"
       ],
-      "a": 1,
-      "e": "La recidiva valorizza la ricaduta nel reato dopo condanna."
+      "a": 0,
+      "e": "La simulazione consiste nel far credere falsamente che sia stato commesso un reato."
     },
     {
       "t": "Diritto Penale",
-      "q": "Se la domanda riguarda percosse, quale risposta sceglieresti?",
+      "q": "Una persona sottoposta agli arresti domiciliari si allontana senza autorizzazione. Quale reato può configurarsi?",
       "o": [
-        "richiedono sempre lesioni gravissime",
-        "puniscono il fatto di percuotere qualcuno se non deriva malattia",
-        "riguardano solo danni alle cose"
+        "Violazione di domicilio",
+        "Omissione di atti d’ufficio",
+        "Evasione"
       ],
-      "a": 1,
-      "e": "Le percosse si distinguono dalle lesioni perché manca una malattia."
+      "a": 2,
+      "e": "L’allontanamento dagli arresti domiciliari integra evasione perché il soggetto si sottrae alla misura restrittiva."
     },
     {
       "t": "Diritto Penale",
-      "q": "In relazione a sequestro di persona, quale indicazione è conforme al materiale?",
+      "q": "Nel furto, la condotta tipica consiste nel:",
       "o": [
-        "consiste nel privare taluno della libertà personale",
-        "richiede sempre finalità di profitto economico",
-        "consiste nel sottrarre un bene mobile"
+        "Costringere la vittima a pagare con minaccia",
+        "Sottrarre e impossessarsi di cosa mobile altrui",
+        "Ricevere beni di provenienza delittuosa"
       ],
-      "a": 0,
-      "e": "Il bene tutelato è la libertà personale."
+      "a": 1,
+      "e": "Il furto richiede sottrazione e impossessamento della cosa mobile altrui con fine di profitto."
     },
     {
       "t": "Diritto Penale",
-      "q": "Sul punto relativo a associazione per delinquere, qual è la formulazione corretta?",
+      "q": "Una persona strappa la borsa dalla mano della vittima e fugge. Quale figura viene in rilievo?",
       "o": [
-        "richiede due persone e un solo illecito amministrativo",
-        "si consuma solo dopo tutti i delitti-scopo",
-        "richiede almeno tre persone associate per commettere più delitti"
+        "Furto con strappo",
+        "Truffa",
+        "Riciclaggio"
       ],
-      "a": 2,
-      "e": "È reato di pericolo fondato sull’organizzazione stabile."
+      "a": 0,
+      "e": "Nel furto con strappo la violenza è diretta alla cosa, non alla persona come nella rapina."
     },
     {
       "t": "Diritto Penale",
-      "q": "Rispetto a usura, quale tra queste affermazioni è vera?",
+      "q": "Un soggetto, con minaccia, costringe la vittima a consegnargli denaro. Quale reato è più coerente?",
       "o": [
-        "consiste nel farsi dare o promettere interessi o vantaggi usurari",
-        "è la falsificazione di banconote",
-        "è il mancato pagamento di un debito civile"
+        "Furto semplice",
+        "Incauto acquisto",
+        "Estorsione"
       ],
-      "a": 0,
-      "e": "L’usura riguarda prestazioni di denaro o altra utilità con vantaggi usurari."
+      "a": 2,
+      "e": "Nell’estorsione la vittima compie un atto dispositivo perché costretta da violenza o minaccia."
     },
     {
       "t": "Diritto Penale",
-      "q": "Per evitare confusione su corruzione per l’esercizio della funzione, bisogna ricordare che:",
+      "q": "Una persona acquista un telefono sapendo che proviene da un furto. Quale reato può configurarsi?",
       "o": [
-        "riguarda l’accordo illecito per l’esercizio delle funzioni o dei poteri",
-        "è una violazione esclusivamente disciplinare",
-        "richiede sempre un sequestro di persona"
+        "Incauto acquisto",
+        "Ricettazione",
+        "Falso materiale"
       ],
-      "a": 0,
-      "e": "La corruzione presuppone un patto corruttivo tra privato e pubblico agente."
+      "a": 1,
+      "e": "La ricettazione richiede consapevolezza della provenienza delittuosa e fine di profitto."
     },
     {
       "t": "Diritto Penale",
-      "q": "Quale risposta descrive meglio omessa denuncia del pubblico ufficiale?",
+      "q": "Il reato di truffa si basa soprattutto su:",
       "o": [
-        "è un illecito stradale",
-        "punisce ogni privato che non denuncia un furto subito",
-        "punisce il P.U. che omette o ritarda la denuncia di un reato perseguibile d’ufficio conosciuto per ragione delle funzioni"
+        "Artifici o raggiri che inducono in errore",
+        "Violenza fisica sulla persona",
+        "Possesso d’ufficio di denaro pubblico"
       ],
-      "a": 2,
-      "e": "Il pubblico ufficiale ha obblighi qualificati di denuncia."
+      "a": 0,
+      "e": "La truffa richiede inganno, errore della vittima, profitto ingiusto e danno altrui."
     },
     {
       "t": "Diritto Penale",
-      "q": "Nella materia indicata, falsità ideologica in atto pubblico significa che:",
+      "q": "Nel reato di rissa, l’aggravante specifica ricorre quando:",
       "o": [
-        "si applica solo ai documenti privati senza valore",
-        "riguarda l’attestazione falsa del pubblico ufficiale su fatti che l’atto prova",
-        "richiede la contraffazione fisica della firma altrui"
+        "La lite avviene sempre di notte",
+        "I partecipanti litigano solo verbalmente",
+        "Qualcuno riporta lesioni o muore nella mischia"
       ],
-      "a": 1,
-      "e": "La falsità ideologica incide sulla verità del contenuto attestato."
+      "a": 2,
+      "e": "La morte o le lesioni personali aggravano la rissa."
     },
     {
       "t": "Diritto Penale",
-      "q": "Qual è il dato corretto riguardo a principio di tassatività?",
+      "q": "Lo stalking richiede, in termini generali:",
       "o": [
-        "la norma penale deve descrivere il fatto in modo preciso",
-        "la fattispecie può essere lasciata alla libera fantasia dell’interprete",
-        "la norma penale può essere volutamente indeterminata"
+        "Un singolo messaggio neutro e isolato",
+        "Condotte reiterate di minaccia o molestia con effetti tipici sulla vittima",
+        "Solo una lite occasionale tra sconosciuti"
       ],
-      "a": 0,
-      "e": "La tassatività garantisce certezza e limita interpretazioni arbitrarie."
+      "a": 1,
+      "e": "Gli atti persecutori richiedono reiterazione e un evento come ansia, paura o alterazione delle abitudini di vita."
     },
     {
       "t": "Diritto Penale",
-      "q": "Tra le seguenti opzioni su cause di giustificazione, quale è corretta?",
+      "q": "Durante un servizio, un pubblico ufficiale usa per sé denaro ricevuto per ragioni d’ufficio. Quale reato viene in rilievo?",
       "o": [
-        "eliminano l’antigiuridicità del fatto",
-        "aumentano automaticamente la pena",
-        "rendono sempre obbligatorio l’arresto"
+        "Peculato",
+        "Corruzione propria",
+        "Appropriazione indebita comune"
       ],
       "a": 0,
-      "e": "Se opera una scriminante, il fatto tipico non è illecito."
+      "e": "Nel peculato il pubblico ufficiale o l’incaricato di pubblico servizio si appropria di denaro o cosa mobile altrui posseduti per ragione dell’ufficio o servizio."
     },
     {
       "t": "Diritto Penale",
-      "q": "In sede di quiz, per minore di anni quattordici la risposta corretta è:",
+      "q": "Un pubblico ufficiale riceve denaro per compiere un atto contrario ai doveri d’ufficio. Quale figura è più corretta?",
       "o": [
-        "è sempre imputabile come un adulto",
-        "non è imputabile",
-        "risponde solo davanti al Prefetto"
+        "Peculato d’uso",
+        "Omissione di soccorso",
+        "Corruzione per atto contrario ai doveri"
       ],
-      "a": 1,
-      "e": "Il minore di 14 anni non è penalmente imputabile."
+      "a": 2,
+      "e": "La corruzione presuppone un accordo illecito; qui l’utilità è collegata a un atto contrario ai doveri d’ufficio."
     },
     {
       "t": "Diritto Penale",
-      "q": "La nozione di pena richiama soprattutto quale elemento?",
+      "q": "Un pubblico ufficiale, abusando dei poteri, costringe una persona a promettere denaro. Quale reato è più coerente?",
       "o": [
-        "è solo un rimprovero verbale",
-        "è la conseguenza giuridica penale prevista per il reato",
-        "è sempre decisa dalla persona offesa"
+        "Induzione indebita",
+        "Concussione",
+        "Truffa"
       ],
       "a": 1,
-      "e": "La pena è la sanzione penale stabilita dalla legge."
+      "e": "Nella concussione il privato subisce una costrizione abusiva da parte del pubblico agente."
     },
     {
       "t": "Procedura Penale",
-      "q": "Quale affermazione è corretta in tema di denuncia del privato?",
+      "q": "Il sequestro probatorio serve a:",
       "o": [
-        "di regola è facoltativa salvo specifici obblighi di legge",
-        "è sempre obbligatoria per qualunque fatto",
-        "è sempre vietata se non vi è difensore"
+        "Applicare una sanzione amministrativa",
+        "Sospendere la patente",
+        "Assicurare corpo del reato e cose pertinenti"
+      ],
+      "a": 2,
+      "e": "Il sequestro probatorio conserva beni o cose utili all’accertamento del fatto."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "Le intercettazioni, di regola, richiedono:",
+      "o": [
+        "Decisione autonoma della P.G. senza controllo",
+        "Autorizzazione del giudice su richiesta del P.M.",
+        "Consenso della persona intercettata"
+      ],
+      "a": 1,
+      "e": "Le intercettazioni sono mezzi di ricerca della prova particolarmente invasivi e richiedono presupposti e autorizzazione."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "L’arresto in flagranza presuppone che la persona sia:",
+      "o": [
+        "Colta nell’atto di commettere il reato o subito dopo nei casi previsti",
+        "Indicata da una voce anonima dopo mesi",
+        "Già condannata definitivamente"
       ],
       "a": 0,
-      "e": "Il privato ha obbligo solo nei casi previsti."
+      "e": "La flagranza richiede immediatezza tra fatto e intervento."
     },
     {
       "t": "Procedura Penale",
-      "q": "Con riferimento a nomina del difensore, individua la risposta esatta:",
+      "q": "L’arresto obbligatorio in flagranza si applica:",
       "o": [
-        "è sostituita sempre dalla persona offesa",
-        "è richiesta solo dopo la condanna definitiva",
-        "garantisce l’assistenza tecnica dell’indagato"
+        "A qualsiasi illecito amministrativo",
+        "Solo ai reati procedibili a querela",
+        "Ai delitti gravi indicati dalla legge"
       ],
       "a": 2,
-      "e": "Il diritto di difesa è garantito in ogni stato e grado."
+      "e": "L’art. 380 c.p.p. prevede casi tassativi nei quali la P.G. deve procedere all’arresto."
     },
     {
       "t": "Procedura Penale",
-      "q": "Nel programma d’esame, mezzi di prova va ricordato perché:",
+      "q": "Il fermo di indiziato di delitto non richiede flagranza, ma richiede:",
       "o": [
-        "sono solo strumenti di guida",
-        "servono alla formazione della prova nel processo",
-        "sono sanzioni amministrative"
+        "Solo una lite verbale",
+        "Gravi indizi e pericolo di fuga nei casi previsti",
+        "Una sanzione amministrativa pendente"
       ],
       "a": 1,
-      "e": "Testimonianza, esame, confronti e altri mezzi sono finalizzati all’accertamento."
+      "e": "Il fermo è misura precautelare fondata su gravi indizi per determinati delitti e pericolo di fuga."
     },
     {
       "t": "Procedura Penale",
-      "q": "Durante lo studio di intercettazioni, quale opzione è corretta?",
+      "q": "Dopo arresto o fermo, la convalida serve a:",
       "o": [
-        "sono utilizzabili senza limiti in ogni lite privata",
-        "sono sempre disposte liberamente dalla pattuglia",
-        "richiedono provvedimenti motivati e sono ammesse nei casi previsti dalla legge"
-      ],
-      "a": 2,
-      "e": "La segretezza delle comunicazioni richiede controllo dell’autorità giudiziaria."
-    },
-    {
-      "t": "Procedura Penale",
-      "q": "Se la domanda riguarda allontanamento d’urgenza dalla casa familiare, quale risposta sceglieresti?",
-      "o": [
-        "è misura per veicoli senza revisione",
-        "tutela vittime in contesti domestici nei casi e modi previsti",
-        "serve a sfrattare per morosità civile"
-      ],
-      "a": 1,
-      "e": "È misura precautelare collegata a reati in ambito familiare o domestico."
-    },
-    {
-      "t": "Procedura Penale",
-      "q": "In relazione a obbligo di presentazione alla P.G., quale indicazione è conforme al materiale?",
-      "o": [
-        "impone di pagare una tassa automobilistica",
-        "è una forma di testimonianza",
-        "impone di presentarsi periodicamente presso un ufficio di polizia"
-      ],
-      "a": 2,
-      "e": "È misura cautelare personale coercitiva non custodiale."
-    },
-    {
-      "t": "Procedura Penale",
-      "q": "Sul punto relativo a giurisdizione penale, qual è la formulazione corretta?",
-      "o": [
-        "è il rilascio del passaporto",
-        "è un servizio di viabilità",
-        "è la funzione di applicare la legge penale nel processo"
-      ],
-      "a": 2,
-      "e": "La giurisdizione penale accerta reati e responsabilità."
-    },
-    {
-      "t": "Procedura Penale",
-      "q": "Rispetto a processo penale, quale tra queste affermazioni è vera?",
-      "o": [
-        "inizia con l’esercizio dell’azione penale e termina con la decisione",
-        "è solo la raccolta informale di notizie",
-        "inizia con ogni controllo di polizia"
+        "Controllare la legittimità della privazione della libertà",
+        "Applicare automaticamente la pena",
+        "Sostituire l’interrogatorio"
       ],
       "a": 0,
-      "e": "Il processo è la porzione che segue l’azione penale."
+      "e": "La convalida è il controllo del giudice sui presupposti della misura precautelare."
     },
     {
       "t": "Procedura Penale",
-      "q": "Per evitare confusione su denuncia del pubblico ufficiale, bisogna ricordare che:",
+      "q": "L’allontanamento d’urgenza dalla casa familiare serve a:",
       "o": [
-        "è vietata senza autorizzazione del Questore",
-        "è obbligatoria per reati perseguibili d’ufficio conosciuti nell’esercizio o a causa delle funzioni",
-        "è sempre facoltativa come per il privato"
-      ],
-      "a": 1,
-      "e": "Il P.U. ha un dovere qualificato di riferire la notizia di reato."
-    },
-    {
-      "t": "Procedura Penale",
-      "q": "Quale risposta descrive meglio elezione di domicilio?",
-      "o": [
-        "serve a scegliere il luogo del reato",
-        "serve a individuare il luogo per le notificazioni all’indagato",
-        "è un atto del Codice della Strada"
-      ],
-      "a": 1,
-      "e": "È un adempimento difensivo e notificatorio rilevante."
-    },
-    {
-      "t": "Procedura Penale",
-      "q": "Nella materia indicata, verbale significa che:",
-      "o": [
-        "è un documento privo di valore",
-        "documenta atti compiuti e dichiarazioni ricevute con forme più rigorose",
-        "serve solo a prenotare servizi"
-      ],
-      "a": 1,
-      "e": "Il verbale garantisce tracciabilità e contenuto dell’atto."
-    },
-    {
-      "t": "Procedura Penale",
-      "q": "Qual è il dato corretto riguardo a sequestro di corrispondenza?",
-      "o": [
-        "è sempre vietato in Italia",
-        "se eseguito da ufficiale di P.G. la corrispondenza va consegnata all’autorità senza aprirla o conoscerne il contenuto",
-        "può essere letta liberamente dagli agenti"
-      ],
-      "a": 1,
-      "e": "La corrispondenza è assistita da garanzie rafforzate."
-    },
-    {
-      "t": "Procedura Penale",
-      "q": "Tra le seguenti opzioni su convalida di arresto e fermo, quale è corretta?",
-      "o": [
-        "è il controllo del giudice sulla legittimità della misura precautelare",
-        "è una licenza del Questore",
-        "è una multa stradale"
-      ],
-      "a": 0,
-      "e": "La convalida impedisce restrizioni arbitrarie della libertà."
-    },
-    {
-      "t": "Procedura Penale",
-      "q": "In sede di quiz, per divieto di avvicinamento la risposta corretta è:",
-      "o": [
-        "è una licenza di porto d’armi",
-        "è una confisca del veicolo",
-        "impedisce di avvicinarsi a luoghi frequentati dalla persona offesa o di comunicare nei modi stabiliti"
+        "Punire un mancato pagamento",
+        "Sequestrare un veicolo",
+        "Proteggere tempestivamente la vittima in situazioni di pericolo"
       ],
       "a": 2,
-      "e": "Serve a prevenire contatti pericolosi con la persona offesa."
+      "e": "L’art. 384-bis c.p.p. è pensato per interrompere situazioni di pericolo in ambito familiare."
     },
     {
       "t": "Procedura Penale",
-      "q": "La nozione di autonomia e indipendenza della magistratura richiama soprattutto quale elemento?",
+      "q": "Le misure cautelari personali richiedono, in generale:",
       "o": [
-        "impongono la scelta del giudice da parte del Questore",
-        "attribuiscono alla P.G. il potere di condannare",
-        "garantiscono che il giudice non dipenda da altri poteri nella decisione"
-      ],
-      "a": 2,
-      "e": "La magistratura deve essere indipendente per assicurare imparzialità."
-    },
-    {
-      "t": "Procedura Penale",
-      "q": "Quale affermazione è corretta in tema di procedimento penale in senso stretto?",
-      "o": [
-        "inizia dopo la sentenza",
-        "inizia con la notizia di reato e termina con l’esercizio dell’azione penale",
-        "coincide con l’esecuzione della pena"
+        "Solo una denuncia anonima",
+        "Gravi indizi ed esigenze cautelari",
+        "Sempre una condanna definitiva"
       ],
       "a": 1,
-      "e": "È la fase delle indagini preliminari."
+      "e": "Le misure cautelari personali incidono sulla libertà prima della sentenza definitiva e richiedono presupposti rigorosi."
     },
     {
       "t": "Procedura Penale",
-      "q": "Con riferimento a querela, individua la risposta esatta:",
+      "q": "Gli arresti domiciliari comportano:",
       "o": [
-        "è sempre una misura cautelare",
-        "è un mezzo di ricerca della prova",
-        "è manifestazione di volontà della persona offesa di procedere per reati non d’ufficio"
-      ],
-      "a": 2,
-      "e": "La querela è condizione di procedibilità per determinati reati."
-    },
-    {
-      "t": "Procedura Penale",
-      "q": "Nel programma d’esame, identificazione ex art. 349 c.p.p. va ricordato perché:",
-      "o": [
-        "è una misura di prevenzione patrimoniale",
-        "serve a identificare indagato, persona offesa, persone informate e altri soggetti utili",
-        "serve a irrogare la pena"
-      ],
-      "a": 1,
-      "e": "L’identificazione è un atto tipico di P.G."
-    },
-    {
-      "t": "Procedura Penale",
-      "q": "Durante lo studio di annotazione, quale opzione è corretta?",
-      "o": [
-        "è un atto del giudice civile",
-        "è sempre un provvedimento cautelare",
-        "documenta attività d’indagine quando non è richiesto il verbale"
-      ],
-      "a": 2,
-      "e": "L’annotazione è una forma sintetica di documentazione della P.G."
-    },
-    {
-      "t": "Procedura Penale",
-      "q": "Se la domanda riguarda sequestro probatorio d’urgenza, quale risposta sceglieresti?",
-      "o": [
-        "può essere eseguito dalla P.G. nei casi urgenti previsti",
-        "è sempre vietato alla P.G.",
-        "è deciso dalla persona offesa"
+        "Obbligo di rimanere nel luogo indicato dal giudice",
+        "Libertà di uscire senza limiti",
+        "Solo obbligo di pagare una somma"
       ],
       "a": 0,
-      "e": "Nei casi urgenti la P.G. agisce e trasmette per le valutazioni dell’autorità competente."
+      "e": "Gli arresti domiciliari sono una misura cautelare custodiale eseguita in un luogo determinato."
     },
     {
       "t": "Procedura Penale",
-      "q": "In relazione a messa a disposizione dell’arrestato o fermato, quale indicazione è conforme al materiale?",
+      "q": "Il divieto di avvicinamento ai luoghi frequentati dalla persona offesa serve a:",
       "o": [
-        "è decisa dalla vittima",
-        "deve avvenire nei termini previsti con trasmissione degli atti all’autorità",
-        "può essere rinviata senza limiti"
+        "Garantire il pagamento della sanzione",
+        "Autorizzare il sequestro del veicolo",
+        "Evitare nuovi contatti pericolosi"
       ],
-      "a": 1,
-      "e": "I termini garantiscono controllo rapido sulla privazione della libertà."
+      "a": 2,
+      "e": "È una misura cautelare personale finalizzata alla protezione della persona offesa."
     },
     {
       "t": "Procedura Penale",
-      "q": "Sul punto relativo a custodia cautelare in carcere, qual è la formulazione corretta?",
+      "q": "L’avviso di conclusione delle indagini preliminari consente all’indagato di:",
       "o": [
-        "è la misura cautelare personale più afflittiva",
-        "è una sanzione amministrativa accessoria",
-        "può essere decisa dalla persona offesa"
+        "Essere condannato automaticamente",
+        "Conoscere gli atti e svolgere difese",
+        "Evitare ogni controllo del P.M."
       ],
-      "a": 0,
-      "e": "Incide fortemente sulla libertà e richiede presupposti rigorosi."
+      "a": 1,
+      "e": "L’art. 415-bis c.p.p. apre una fase di garanzia prima dell’eventuale esercizio dell’azione penale."
     },
     {
       "t": "Procedura Penale",
-      "q": "Rispetto a diritto di difesa, quale tra queste affermazioni è vera?",
+      "q": "L’incidente probatorio serve a:",
       "o": [
-        "può essere escluso per comodità operativa",
-        "è inviolabile in ogni stato e grado del procedimento",
-        "esiste solo in appello"
+        "Assumere anticipatamente una prova nei casi previsti",
+        "Eseguire una sanzione amministrativa",
+        "Ritirare la patente"
       ],
-      "a": 1,
-      "e": "È un diritto costituzionale fondamentale."
+      "a": 0,
+      "e": "L’incidente probatorio consente di formare anticipatamente una prova con garanzie di contraddittorio."
     },
     {
       "t": "Procedura Penale",
-      "q": "Per evitare confusione su procedimento penale in senso ampio, bisogna ricordare che:",
+      "q": "L’udienza preliminare ha la funzione di:",
       "o": [
-        "è una serie ordinata di atti diretti alla decisione penale",
-        "coincide solo con il dibattimento",
-        "inizia sempre con la condanna"
+        "Eseguire la pena",
+        "Rilasciare documenti di guida",
+        "Verificare se l’accusa deve andare a giudizio"
       ],
-      "a": 0,
-      "e": "Il procedimento comprende il cammino dalla notizia di reato alla decisione finale."
+      "a": 2,
+      "e": "L’udienza preliminare è una fase filtro tra indagini e giudizio."
     },
     {
       "t": "Procedura Penale",
-      "q": "Quale risposta descrive meglio registro delle notizie di reato?",
+      "q": "Nel dibattimento, la prova si forma normalmente:",
       "o": [
-        "è gestito dal cittadino querelante",
-        "è curato dal Pubblico Ministero",
-        "è compilato dal Sindaco"
+        "Solo negli uffici di P.G.",
+        "Nel contraddittorio tra le parti",
+        "Senza presenza del giudice"
       ],
       "a": 1,
-      "e": "L’iscrizione ex art. 335 c.p.p. compete al P.M."
+      "e": "Il principio del contraddittorio è centrale nella formazione della prova dibattimentale."
     },
     {
-      "t": "Codice della Strada",
-      "q": "Nella materia indicata, patente ministeriale significa che:",
+      "t": "Procedura Penale",
+      "q": "Il giudizio direttissimo è un rito speciale collegato spesso:",
       "o": [
-        "abilita alla guida di veicoli dell’Amministrazione secondo categorie e certificati",
-        "è una misura cautelare personale",
-        "sostituisce ogni patente civile per uso privato"
+        "All’arresto in flagranza convalidato",
+        "Alla revisione scaduta",
+        "Alla remissione di querela sempre"
       ],
       "a": 0,
-      "e": "La patente di servizio riguarda veicoli dell’Amministrazione."
+      "e": "Il direttissimo accelera il giudizio quando vi sono presupposti di evidenza e immediatezza."
     },
     {
-      "t": "Codice della Strada",
-      "q": "Qual è il dato corretto riguardo a obbligo di custodia del veicolo?",
+      "t": "Procedura Penale",
+      "q": "Il patteggiamento consiste:",
       "o": [
-        "è una misura cautelare reale",
-        "vale solo per veicoli privati",
-        "rientra tra le prescrizioni nell’impiego dei veicoli di servizio"
+        "Nella denuncia del privato",
+        "Nella perquisizione personale",
+        "Nell’applicazione della pena su richiesta delle parti"
       ],
       "a": 2,
-      "e": "Il piano richiama l’obbligo di custodia del veicolo."
+      "e": "Il giudice controlla l’accordo tra imputato e P.M. nei limiti previsti."
     },
     {
-      "t": "Codice della Strada",
-      "q": "Tra le seguenti opzioni su blocco stradale, quale è corretta?",
+      "t": "Procedura Penale",
+      "q": "La persona offesa dal reato è:",
       "o": [
-        "è sempre lecito se fatto in gruppo",
-        "è argomento ricompreso nella tutela della circolazione e della sede stradale",
-        "riguarda solo la patente ministeriale"
+        "Sempre il P.M.",
+        "Il titolare del bene giuridico leso",
+        "Solo il difensore dell’imputato"
       ],
       "a": 1,
-      "e": "Il piano formativo richiama anche il blocco stradale."
+      "e": "La persona offesa è il soggetto titolare dell’interesse protetto dalla norma penale."
     },
     {
-      "t": "Codice della Strada",
-      "q": "In sede di quiz, per cintura di sicurezza la risposta corretta è:",
+      "t": "Procedura Penale",
+      "q": "Una pattuglia acquisisce la notizia di un possibile reato. A chi deve riferire senza ritardo?",
       "o": [
-        "è oggetto di regole e circolari anche per veicoli dell’Amministrazione",
-        "è una condizione di procedibilità",
-        "è sempre facoltativa per qualunque servizio"
+        "Al Pubblico Ministero",
+        "Al Prefetto",
+        "Al Giudice di Pace civile"
       ],
       "a": 0,
-      "e": "Il piano include l’uso della cintura anche nei veicoli dell’Amministrazione."
+      "e": "La polizia giudiziaria comunica la notizia di reato al Pubblico Ministero, che dirige le indagini."
     },
     {
-      "t": "Codice della Strada",
-      "q": "La nozione di Codice della Strada richiama soprattutto quale elemento?",
+      "t": "Procedura Penale",
+      "q": "Nel procedimento penale, il Pubblico Ministero ha il compito di:",
       "o": [
-        "è il D.Lgs. 30 aprile 1992, n. 285",
-        "è il codice di procedura penale",
-        "è il T.U.L.P.S."
+        "Decidere la sentenza definitiva",
+        "Rilasciare licenze di polizia",
+        "Dirigere le indagini ed esercitare l’azione penale"
+      ],
+      "a": 2,
+      "e": "Il P.M. dirige le indagini e decide se chiedere archiviazione o esercitare l’azione penale."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "Il G.I.P. interviene nelle indagini principalmente per:",
+      "o": [
+        "Dirigere operativamente le pattuglie",
+        "Controllare la legalità di atti che incidono sui diritti",
+        "Sostituire il difensore d’ufficio"
+      ],
+      "a": 1,
+      "e": "Il G.I.P. è giudice di garanzia: non dirige le indagini, ma controlla gli atti previsti dalla legge."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "La denuncia di un privato serve a:",
+      "o": [
+        "Portare all’autorità la conoscenza di un fatto di reato",
+        "Chiedere direttamente una condanna",
+        "Sostituire la querela in ogni caso"
       ],
       "a": 0,
-      "e": "Il materiale indica il Codice della Strada come D.Lgs. 285/1992."
+      "e": "La denuncia informa l’autorità di un fatto che può costituire reato; non coincide sempre con la querela."
     },
     {
-      "t": "Codice della Strada",
-      "q": "Quale affermazione è corretta in tema di Regolamento di esecuzione e attuazione?",
+      "t": "Procedura Penale",
+      "q": "La querela è necessaria quando:",
       "o": [
-        "riguarda solo armi da fuoco",
-        "integra il Codice della Strada",
-        "abroga la Costituzione"
-      ],
-      "a": 1,
-      "e": "Il C.d.S. è integrato dal D.P.R. 495/1992."
-    },
-    {
-      "t": "Codice della Strada",
-      "q": "Con riferimento a art. 1 C.d.S., individua la risposta esatta:",
-      "o": [
-        "regola l’interrogatorio dell’indagato",
-        "disciplina il furto in abitazione",
-        "pone la sicurezza delle persone tra le finalità primarie dello Stato"
+        "Il reato è sempre procedibile d’ufficio",
+        "La P.G. vuole evitare la notizia di reato",
+        "Il reato è procedibile a querela della persona offesa"
       ],
       "a": 2,
-      "e": "La sicurezza nella circolazione è finalità primaria di ordine sociale ed economico."
+      "e": "La querela è una condizione di procedibilità per determinati reati."
     },
     {
-      "t": "Codice della Strada",
-      "q": "Nel programma d’esame, mobilità sostenibile va ricordato perché:",
+      "t": "Procedura Penale",
+      "q": "Il termine ordinario per proporre querela è, salvo eccezioni:",
       "o": [
-        "è richiamata tra i principi cui si ispirano norme e provvedimenti attuativi",
-        "riguarda solo il porto d’armi",
-        "è vietata dal Codice della Strada"
+        "Ventiquattro ore dal controllo",
+        "Tre mesi dalla notizia del fatto",
+        "Cinque anni dalla sentenza"
+      ],
+      "a": 1,
+      "e": "Il termine ordinario è di tre mesi, salvo termini speciali previsti dalla legge."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "Il referto è un obbligo che riguarda principalmente:",
+      "o": [
+        "Gli esercenti una professione sanitaria nei casi previsti",
+        "Ogni passante che assiste a un litigio",
+        "Il conducente senza patente"
       ],
       "a": 0,
-      "e": "Il materiale collega sicurezza stradale e mobilità sostenibile."
+      "e": "Il referto è dovuto dai sanitari quando prestano assistenza in casi che possono presentare i caratteri di delitto perseguibile d’ufficio."
     },
     {
-      "t": "Codice della Strada",
-      "q": "Durante lo studio di Piano nazionale per la sicurezza stradale, quale opzione è corretta?",
+      "t": "Procedura Penale",
+      "q": "L’identificazione ex art. 349 c.p.p. può riguardare:",
       "o": [
-        "è deciso dal singolo conducente",
-        "è un atto del Pubblico Ministero",
-        "è definito dal Ministro delle infrastrutture e dei trasporti"
+        "Solo il giudice del dibattimento",
+        "Soltanto il proprietario del veicolo",
+        "Indagato e persone informate sui fatti"
       ],
       "a": 2,
-      "e": "L’art. 1 richiama il Piano nazionale per ridurre incidenti ed effetti."
-    },
-    {
-      "t": "Codice della Strada",
-      "q": "Se la domanda riguarda art. 140 C.d.S., quale risposta sceglieresti?",
-      "o": [
-        "disciplina il peculato",
-        "impone agli utenti di non costituire pericolo o intralcio e salvaguardare la sicurezza",
-        "riguarda la querela"
-      ],
-      "a": 1,
-      "e": "È il principio informatore della circolazione."
-    },
-    {
-      "t": "Armi e Tiro",
-      "q": "In relazione a rigature della canna, quale indicazione è conforme al materiale?",
-      "o": [
-        "servono a trattenere il caricatore",
-        "guidano e stabilizzano il proiettile imprimendo rotazione",
-        "sono righe della segnaletica orizzontale"
-      ],
-      "a": 1,
-      "e": "La rigatura è caratteristica tecnica delle armi a canna rigata."
-    },
-    {
-      "t": "Armi e Tiro",
-      "q": "Sul punto relativo a carrello-otturatore, qual è la formulazione corretta?",
-      "o": [
-        "è la fondina",
-        "è la sicura dell’impugnatura della PM12",
-        "è parte mobile collegata al ciclo di funzionamento della pistola"
-      ],
-      "a": 2,
-      "e": "Nella pistola semiautomatica partecipa ad alimentazione, estrazione ed espulsione."
-    },
-    {
-      "t": "Armi e Tiro",
-      "q": "Rispetto a PM 12/S ad otturatore aperto, quale tra queste affermazioni è vera?",
-      "o": [
-        "funziona con otturatore aperto a massa battente",
-        "funziona senza otturatore",
-        "è un revolver a tamburo"
-      ],
-      "a": 0,
-      "e": "La PM 12/S spara ad otturatore aperto."
-    },
-    {
-      "t": "Armi e Tiro",
-      "q": "Per evitare confusione su Beretta 92 FS, bisogna ricordare che:",
-      "o": [
-        "è un fucile a pompa",
-        "è un revolver ad avancarica",
-        "è pistola semiautomatica calibro 9 mm in dotazione individuale"
-      ],
-      "a": 2,
-      "e": "Il materiale descrive la Beretta 92 FS come pistola semiautomatica 9 mm."
-    },
-    {
-      "t": "Armi e Tiro",
-      "q": "Quale risposta descrive meglio smontaggio ordinario?",
-      "o": [
-        "riguarda solo atti amministrativi",
-        "è previsto a cura dell’operatore nei limiti indicati dalla dispensa",
-        "è sempre vietato anche in addestramento"
-      ],
-      "a": 1,
-      "e": "Lo smontaggio ordinario è parte della manutenzione di base."
+      "e": "L’art. 349 consente alla P.G. di identificare indagati e persone in grado di riferire circostanze utili."
     },
     {
       "t": "Legislazione P.S.",
-      "q": "Nella materia indicata, art. 15 T.U.L.P.S. significa che:",
+      "q": "Per una riunione in luogo pubblico, il preavviso all’autorità deve essere dato:",
       "o": [
-        "è la norma sulla patente ministeriale",
-        "consente l’invito a comparire davanti all’Autorità di P.S. nei casi previsti",
-        "disciplina la custodia in carcere"
-      ],
-      "a": 1,
-      "e": "L’invito a comparire può essere collegato alla bonaria composizione di dissidi."
-    },
-    {
-      "t": "Legislazione P.S.",
-      "q": "Qual è il dato corretto riguardo a ordine pubblico?",
-      "o": [
-        "è collegato ai beni fondamentali e all’ordinata e civile convivenza",
-        "è materia esclusiva dei privati",
-        "è solo il silenzio nei locali pubblici"
+        "Almeno tre giorni prima",
+        "Sempre dopo lo svolgimento",
+        "Solo se partecipano più di mille persone"
       ],
       "a": 0,
-      "e": "Il materiale richiama la definizione normativa di ordine pubblico."
+      "e": "Il preavviso consente all’autorità di valutare esigenze di ordine e sicurezza pubblica."
     },
     {
       "t": "Legislazione P.S.",
-      "q": "Tra le seguenti opzioni su art. 4 T.U.L.P.S., quale è corretta?",
+      "q": "Il D.A.SPO. è un provvedimento adottato:",
       "o": [
-        "regola la testimonianza",
-        "disciplina l’omicidio stradale",
-        "riguarda l’identificazione nei controlli di pubblica sicurezza"
+        "Dal difensore dell’indagato",
+        "Dalla persona offesa con querela",
+        "Dal Questore nei casi previsti"
       ],
       "a": 2,
-      "e": "È una norma di riferimento per identificazione in ambito P.S."
+      "e": "Il D.A.SPO. è una misura di prevenzione di competenza del Questore nei casi previsti."
     },
     {
       "t": "Legislazione P.S.",
-      "q": "In sede di quiz, per polizia amministrativa la risposta corretta è:",
+      "q": "L’invito a comparire ex art. 15 T.U.L.P.S. è collegato a:",
       "o": [
-        "coincide sempre con il processo penale",
-        "è una branca del diritto privato",
-        "cura il rispetto di limiti posti dalla legge alle attività dei privati per evitare danni sociali"
+        "Decisione sulla colpevolezza penale",
+        "Esigenze dell’autorità di pubblica sicurezza",
+        "Rilascio automatico di patente ministeriale"
+      ],
+      "a": 1,
+      "e": "L’art. 15 T.U.L.P.S. consente all’autorità di P.S. di invitare una persona a comparire nei casi previsti."
+    },
+    {
+      "t": "Legislazione P.S.",
+      "q": "Nel sistema di pubblica sicurezza, il Questore è considerato:",
+      "o": [
+        "Autorità provinciale tecnica di pubblica sicurezza",
+        "Organo giudicante del processo penale",
+        "Autorità sanitaria locale"
+      ],
+      "a": 0,
+      "e": "Il Questore è l’autorità tecnica provinciale di pubblica sicurezza."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "L’art. 177 C.d.S. consente deroghe ai veicoli in servizio urgente, ma:",
+      "o": [
+        "Autorizza qualunque manovra",
+        "Vale anche senza sirena e lampeggiante in ogni caso",
+        "Non elimina l’obbligo di prudenza"
       ],
       "a": 2,
-      "e": "La polizia di sicurezza è parte della polizia amministrativa."
+      "e": "La marcia in emergenza richiede urgenza, dispositivi previsti e prudenza costante."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "La revisione periodica del veicolo serve a verificare:",
+      "o": [
+        "La capacità penale del conducente",
+        "Sicurezza ed efficienza del mezzo",
+        "La validità della querela"
+      ],
+      "a": 1,
+      "e": "La revisione controlla che il veicolo sia idoneo alla circolazione in sicurezza."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "La guida senza patente, alla prima violazione, è di regola:",
+      "o": [
+        "Illecito amministrativo",
+        "Sempre delitto",
+        "Sempre contravvenzione penale"
+      ],
+      "a": 0,
+      "e": "La guida senza patente è depenalizzata alla prima violazione, ma la recidiva nel biennio assume rilievo penale."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "La patente a punti prevede:",
+      "o": [
+        "Solo premi senza sanzioni",
+        "Punti infiniti per chi guida spesso",
+        "Decurtazioni per specifiche violazioni"
+      ],
+      "a": 2,
+      "e": "Il sistema attribuisce un punteggio che viene decurtato in caso di violazioni previste."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "La distanza di sicurezza serve a:",
+      "o": [
+        "Permettere il sorpasso in curva",
+        "Evitare collisioni in caso di frenata o rallentamento",
+        "Occupare meno carreggiata"
+      ],
+      "a": 1,
+      "e": "La distanza deve consentire di arrestare il veicolo in sicurezza in base alle condizioni concrete."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Durante un controllo, la copertura assicurativa RCA serve a verificare:",
+      "o": [
+        "La tutela dei terzi danneggiati dalla circolazione",
+        "La validità del referto medico",
+        "La competenza del G.I.P."
+      ],
+      "a": 0,
+      "e": "L’assicurazione RCA è obbligatoria per la circolazione e tutela i terzi danneggiati."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "La guida in stato di ebbrezza diventa penalmente rilevante, per il conducente ordinario, quando il tasso è:",
+      "o": [
+        "Compreso tra 0,5 e 0,8 g/l",
+        "Sempre superiore a 0,2 g/l",
+        "Superiore a 0,8 g/l"
+      ],
+      "a": 2,
+      "e": "Da 0,5 a 0,8 g/l la violazione è amministrativa; oltre 0,8 g/l assume rilevanza penale."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Il rifiuto di sottoporsi all’accertamento alcolemico:",
+      "o": [
+        "Non produce conseguenze",
+        "È una violazione autonoma e severamente sanzionata",
+        "Vale come richiesta di revisione del veicolo"
+      ],
+      "a": 1,
+      "e": "Il rifiuto dell’accertamento è sanzionato per evitare che il controllo venga eluso."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "L’art. 187 C.d.S. riguarda:",
+      "o": [
+        "Guida in stato di alterazione da stupefacenti",
+        "Revisione periodica del veicolo",
+        "Sosta vietata in centro urbano"
+      ],
+      "a": 0,
+      "e": "L’art. 187 disciplina la guida in stato di alterazione psico-fisica dopo assunzione di sostanze stupefacenti o psicotrope."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Dopo un incidente con feriti, il conducente coinvolto deve:",
+      "o": [
+        "Allontanarsi se non si ritiene responsabile",
+        "Aspettare solo se il veicolo è danneggiato",
+        "Fermarsi e prestare assistenza"
+      ],
+      "a": 2,
+      "e": "L’art. 189 C.d.S. impone l’obbligo di fermarsi e soccorrere, specialmente in presenza di danni alle persone."
     },
     {
       "t": "Banche Dati SDI/MIPG",
-      "q": "La nozione di segnalazioni in SDI richiama soprattutto quale elemento?",
+      "q": "L’accesso alle banche dati di polizia deve avvenire:",
       "o": [
-        "sono sentenze definitive",
-        "sono documenti di assicurazione RCA",
-        "sono informazioni utili all’attività delle Forze di Polizia"
-      ],
-      "a": 2,
-      "e": "Le segnalazioni incrementano lo SDI con dati operativi."
-    },
-    {
-      "t": "Banche Dati SDI/MIPG",
-      "q": "Quale affermazione è corretta in tema di fonti normative SDI?",
-      "o": [
-        "comprendono L. 121/81, D.P.R. 378/82 e normativa privacy",
-        "sono esclusivamente ordini privati",
-        "comprendono solo il codice civile svizzero"
+        "Solo per finalità di servizio e nei limiti autorizzati",
+        "Per curiosità personale se l’operatore è in servizio",
+        "Liberamente per controllare conoscenti"
       ],
       "a": 0,
-      "e": "Le slide richiamano le fonti istitutive e privacy."
+      "e": "L’uso delle banche dati è vincolato a finalità istituzionali e tracciabilità."
     },
     {
       "t": "Banche Dati SDI/MIPG",
-      "q": "Con riferimento a area amministrazione MIPGWEB, individua la risposta esatta:",
+      "q": "Nel fatto S.D.I., il dato essenziale è:",
       "o": [
-        "è il registro delle sentenze",
-        "consente generazione/modifica utenti, diritti di riservatezza e spostamento modelli",
-        "serve a sparare col PM12"
+        "La sola opinione personale dell’operatore",
+        "Il pagamento di una sanzione stradale",
+        "La registrazione strutturata di un evento di interesse di polizia"
+      ],
+      "a": 2,
+      "e": "Il fatto S.D.I. rappresenta in modo strutturato un evento rilevante per le attività di polizia."
+    },
+    {
+      "t": "Banche Dati SDI/MIPG",
+      "q": "Lo S.D.I. è, in termini operativi:",
+      "o": [
+        "Un registro privato di autoscuola",
+        "Una banca dati interforze di polizia",
+        "Un tipo di misura cautelare"
       ],
       "a": 1,
-      "e": "Le slide distinguono area amministrazione e area tematica."
+      "e": "Lo S.D.I. è il sistema informativo che raccoglie dati utili alle Forze di polizia."
+    },
+    {
+      "t": "Armi e Tiro",
+      "q": "Il caricatore della Beretta 92 FS ha la funzione di:",
+      "o": [
+        "Contenere e alimentare le cartucce",
+        "Dirigere il proiettile",
+        "Espellere manualmente il bossolo"
+      ],
+      "a": 0,
+      "e": "Il caricatore contiene le cartucce e alimenta l’arma durante il funzionamento."
+    },
+    {
+      "t": "Armi e Tiro",
+      "q": "Il PM12/S viene trattato nel materiale come:",
+      "o": [
+        "Fucile da precisione",
+        "Pistola a tamburo",
+        "Pistola mitragliatrice"
+      ],
+      "a": 2,
+      "e": "Il PM12/S è una pistola mitragliatrice oggetto di studio per caratteristiche, funzionamento e sicurezze."
+    },
+    {
+      "t": "Armi e Tiro",
+      "q": "La sicura sull’impugnatura del PM12/S serve a:",
+      "o": [
+        "Aumentare il peso del caricatore",
+        "Consentire il funzionamento solo con presa corretta",
+        "Regolare la tacca di mira"
+      ],
+      "a": 1,
+      "e": "La sicura d’impugnatura è uno dei dispositivi di sicurezza caratteristici del PM12/S."
+    },
+    {
+      "t": "Armi e Tiro",
+      "q": "In caso di malfunzionamento di un’arma in servizio, l’operatore deve anzitutto:",
+      "o": [
+        "Seguire le procedure di sicurezza previste",
+        "Provare manovre improvvisate",
+        "Consegnarla a un passante esperto"
+      ],
+      "a": 0,
+      "e": "Il materiale richiama l’importanza di procedure codificate e sicurezza nei maneggi."
+    },
+    {
+      "t": "Armi e Tiro",
+      "q": "La Beretta 92 FS è, nel materiale didattico, una pistola:",
+      "o": [
+        "A tamburo",
+        "A colpo singolo manuale",
+        "Semiautomatica"
+      ],
+      "a": 2,
+      "e": "La Beretta 92 FS è una pistola semiautomatica in dotazione, studiata per caratteristiche e sicurezza d’impiego."
     }
   ]
 }
