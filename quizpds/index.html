@@ -108,6 +108,9 @@
 			padding: 18px;
 			background: #f8f9fa;
 			transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+
+			display: flex;
+			flex-direction: column;
 		}
 
 		.quiz-card:hover {
@@ -126,7 +129,6 @@
 			margin: 0 0 16px;
 			color: var(--muted);
 			line-height: 1.4;
-			min-height: 40px;
 		}
 
 		.quiz-card a {
@@ -139,27 +141,22 @@
 			padding: 11px 14px;
 			border-radius: 8px;
 			font-weight: 700;
+
+			margin-top: auto;
 		}
 
 		.quiz-card a:hover {
 			background: var(--primary-dark);
 		}
 
-		.edit-help {
-			margin-top: 26px;
+		.status-box {
 			padding: 16px;
 			border: 1px dashed #b7b7b7;
 			border-radius: 8px;
 			color: var(--muted);
 			background: #fafafa;
 			line-height: 1.5;
-			font-size: 0.95em;
-		}
-
-		code {
-			background: #eeeeee;
-			padding: 2px 5px;
-			border-radius: 4px;
+			text-align: center;
 		}
 
 		.site-footer {
@@ -176,8 +173,16 @@
 		}
 
 		.footer-small {
+			display: block;
 			font-size: 0.85em;
 			color: #999;
+			line-height: 1.5;
+		}
+
+		code {
+			background: #eeeeee;
+			padding: 2px 5px;
+			border-radius: 4px;
 		}
 	</style>
 </head>
@@ -187,7 +192,7 @@
 	<div id="app">
 		<h1>Simulazioni Esame</h1>
 		<p class="subtitle">
-			Seleziona una batteria di quiz da avviare. Ogni batteria si apre in una pagina separata.
+			Seleziona una batteria di quiz da avviare. L'elenco viene caricato automaticamente dai file disponibili.
 		</p>
 
 		<div class="notice" role="alert">
@@ -198,109 +203,161 @@
 
 		<div class="toolbar">
 			<input id="search" type="search" placeholder="Cerca una batteria..." oninput="renderQuizList()">
-			<span id="counter"></span>
+			<span id="counter">Caricamento...</span>
 		</div>
 
-		<div class="grid" id="quiz-list"></div>
+		<div class="grid" id="quiz-list">
+			<div class="status-box">Caricamento batterie in corso...</div>
+		</div>
 	</div>
 
 	<script>
-		const complete = [
-			{ title: "Simulazione 01", file: "batteria/1.html", description: "Batteria 60 Quiz, ripartiti in: Diritto Penale (13); Procedura Penale (25); legislazione di P.S. (4); Codice della Strada (10); SDI/MIPG (3); Armi e Tiro (5)." },
-			{ title: "Simulazione 02", file: "batteria/2.html", description: "Batteria 60 Quiz, ripartiti in: Diritto Penale (13); Procedura Penale (25); legislazione di P.S. (4); Codice della Strada (10); SDI/MIPG (3); Armi e Tiro (5)." },
-			{ title: "Simulazione 03", file: "batteria/3.html", description: "Batteria 60 Quiz, ripartiti in: Diritto Penale (13); Procedura Penale (25); legislazione di P.S. (4); Codice della Strada (10); SDI/MIPG (3); Armi e Tiro (5)." },
-			{ title: "Simulazione 04", file: "batteria/4.html", description: "Batteria 60 Quiz, ripartiti in: Diritto Penale (13); Procedura Penale (25); legislazione di P.S. (4); Codice della Strada (10); SDI/MIPG (3); Armi e Tiro (5)." },
-			{ title: "Simulazione 05", file: "batteria/5.html", description: "Batteria 60 Quiz, ripartiti in: Diritto Penale (13); Procedura Penale (25); legislazione di P.S. (4); Codice della Strada (10); SDI/MIPG (3); Armi e Tiro (5)." },
-			{ title: "Simulazione 06", file: "batteria/6.html", description: "Batteria 60 Quiz, ripartiti in: Diritto Penale (13); Procedura Penale (25); legislazione di P.S. (4); Codice della Strada (10); SDI/MIPG (3); Armi e Tiro (5)." },
-			{ title: "Simulazione 07", file: "batteria/7.html", description: "Batteria 60 Quiz, ripartiti in: Diritto Penale (13); Procedura Penale (25); legislazione di P.S. (4); Codice della Strada (10); SDI/MIPG (3); Armi e Tiro (5)." },
-			{ title: "Simulazione 08", file: "batteria/8.html", description: "Batteria 60 Quiz, ripartiti in: Diritto Penale (13); Procedura Penale (25); legislazione di P.S. (4); Codice della Strada (10); SDI/MIPG (3); Armi e Tiro (5)." },
-			{ title: "Simulazione 09", file: "batteria/9.html", description: "Batteria 60 Quiz, ripartiti in: Diritto Penale (13); Procedura Penale (25); legislazione di P.S. (4); Codice della Strada (10); SDI/MIPG (3); Armi e Tiro (5)." },
-			{ title: "Simulazione 10", file: "batteria/10.html", description: "Batteria 60 Quiz, ripartiti in: Diritto Penale (13); Procedura Penale (25); legislazione di P.S. (4); Codice della Strada (10); SDI/MIPG (3); Armi e Tiro (5)." },
-			{ title: "Simulazione 11", file: "batteria/11.html", description: "Batteria 60 Quiz, ripartiti in: Diritto Penale (13); Procedura Penale (25); legislazione di P.S. (4); Codice della Strada (10); SDI/MIPG (3); Armi e Tiro (5)." },
-			{ title: "Simulazione 12", file: "batteria/12.html", description: "Batteria 60 Quiz, ripartiti in: Diritto Penale (13); Procedura Penale (25); legislazione di P.S. (4); Codice della Strada (10); SDI/MIPG (3); Armi e Tiro (5)." },
-			{ title: "Simulazione 13", file: "batteria/13.html", description: "Batteria 60 Quiz, ripartiti in: Diritto Penale (13); Procedura Penale (25); legislazione di P.S. (4); Codice della Strada (10); SDI/MIPG (3); Armi e Tiro (5)." },
-			{ title: "Simulazione 14", file: "batteria/14.html", description: "Batteria 60 Quiz, ripartiti in: Diritto Penale (13); Procedura Penale (25); legislazione di P.S. (4); Codice della Strada (10); SDI/MIPG (3); Armi e Tiro (5)." },
-			{ title: "Simulazione 15", file: "batteria/15.html", description: "Batteria 60 Quiz, ripartiti in: Diritto Penale (13); Procedura Penale (25); legislazione di P.S. (4); Codice della Strada (10); SDI/MIPG (3); Armi e Tiro (5)." },
-			{ title: "Simulazione 16", file: "batteria/16.html", description: "Batteria 60 Quiz, ripartiti in: Diritto Penale (13); Procedura Penale (25); legislazione di P.S. (4); Codice della Strada (10); SDI/MIPG (3); Armi e Tiro (5)." }
+		const quizFolders = [
+			{
+				type: "full",
+				label: "Simulazione Completa",
+				fallbackDescription: "Batteria completa da 60 quiz."
+			},
+			{
+				type: "cp",
+				label: "Diritto Penale",
+				fallbackDescription: "Batteria da 60 quiz di Diritto Penale."
+			},
+			{
+				type: "cpp",
+				label: "Procedura Penale",
+				fallbackDescription: "Batteria da 60 quiz di Procedura Penale."
+			},
+			{
+				type: "cds",
+				label: "Codice della Strada",
+				fallbackDescription: "Batteria da 60 quiz di Codice della Strada."
+			}
 		];
 
-		const cp = [
-			{ title: "Diritto Penale 01", file: "cp/1.html", description: "Batteria 60 Quiz, Diritto Penale" },
-			{ title: "Diritto Penale 02", file: "cp/2.html", description: "Batteria 60 Quiz, Diritto Penale" },
-			{ title: "Diritto Penale 03", file: "cp/3.html", description: "Batteria 60 Quiz, Diritto Penale" },
-			{ title: "Diritto Penale 04", file: "cp/4.html", description: "Batteria 60 Quiz, Diritto Penale" },
-			{ title: "Diritto Penale 05", file: "cp/5.html", description: "Batteria 60 Quiz, Diritto Penale" },
-		];
+		const MAX_QUIZ_ID = 100;
+		const MAX_CONSECUTIVE_MISSES = 8;
 
-		const cpp = [
-			{ title: "Procedura Penale 01", file: "cpp/1.html", description: "Batteria 60 Quiz, Procedura Penale" },
-			{ title: "Procedura Penale 02", file: "cpp/2.html", description: "Batteria 60 Quiz, Procedura Penale" },
-			{ title: "Procedura Penale 03", file: "cpp/3.html", description: "Batteria 60 Quiz, Procedura Penale" },
-			{ title: "Procedura Penale 04", file: "cpp/4.html", description: "Batteria 60 Quiz, Procedura Penale" },
-			{ title: "Procedura Penale 05", file: "cpp/5.html", description: "Batteria 60 Quiz, Procedura Penale" },
-		];
+		let quizPages = [];
 
-		const cds = [
-			{ title: "Codice della Strada 01", file: "cds/1.html", description: "Batteria 60 Quiz, Codice della Strada" },
-			{ title: "Codice della Strada 02", file: "cds/2.html", description: "Batteria 60 Quiz, Codice della Strada" },
-			{ title: "Codice della Strada 03", file: "cds/3.html", description: "Batteria 60 Quiz, Codice della Strada" },
-			{ title: "Codice della Strada 04", file: "cds/4.html", description: "Batteria 60 Quiz, Codice della Strada" },
-			{ title: "Codice della Strada 05", file: "cds/5.html", description: "Batteria 60 Quiz, Codice della Strada" },
-		];
+		async function discoverQuizzes() {
+			const discoveredGroups = await Promise.all(quizFolders.map(discoverFolder));
+			quizPages = discoveredGroups.flat().sort((a, b) => {
+				if (a.folderOrder !== b.folderOrder) return a.folderOrder - b.folderOrder;
+				return a.id - b.id;
+			});
 
-		const quizPages = [
-			...complete,
-			...cp,
-			...cpp,
-			...cds,
-		];
+			renderQuizList();
+		}
+
+		async function discoverFolder(folder, folderOrder) {
+			const pages = [];
+			let consecutiveMisses = 0;
+
+			for (let id = 1; id <= MAX_QUIZ_ID; id++) {
+				const jsonPath = `${folder.type}/${id}.json`;
+
+				try {
+					const response = await fetch(jsonPath, { cache: "no-store" });
+
+					if (!response.ok) {
+						consecutiveMisses++;
+						if (consecutiveMisses >= MAX_CONSECUTIVE_MISSES) break;
+						continue;
+					}
+
+					const payload = await response.json();
+					const questions = Array.isArray(payload) ? payload : payload.questions;
+
+					if (!Array.isArray(questions) || questions.length === 0) {
+						consecutiveMisses++;
+						if (consecutiveMisses >= MAX_CONSECUTIVE_MISSES) break;
+						continue;
+					}
+
+					consecutiveMisses = 0;
+
+					pages.push({
+						id,
+						type: folder.type,
+						folderOrder,
+						title: payload.title || `${folder.label} ${String(id).padStart(2, "0")}`,
+						description: payload.description || `${folder.fallbackDescription} ${questions.length} domande caricate.`,
+						questionsCount: questions.length,
+						file: `simulator.html?type=${encodeURIComponent(folder.type)}&id=${encodeURIComponent(id)}`
+					});
+				} catch {
+					consecutiveMisses++;
+					if (consecutiveMisses >= MAX_CONSECUTIVE_MISSES) break;
+				}
+			}
+
+			return pages;
+		}
 
 		function renderQuizList() {
 			const list = document.getElementById("quiz-list");
+			const counter = document.getElementById("counter");
 			const search = document.getElementById("search").value.trim().toLowerCase();
+
+			if (quizPages.length === 0) {
+				counter.innerText = "0 batterie";
+				list.innerHTML = `
+                    <div class="status-box">
+                        Nessuna batteria trovata.
+                    </div>
+                `;
+				return;
+			}
 
 			const filteredPages = quizPages.filter(page => {
 				return page.title.toLowerCase().includes(search) ||
-					page.file.toLowerCase().includes(search);
+					page.description.toLowerCase().includes(search) ||
+					page.type.toLowerCase().includes(search) ||
+					String(page.id).includes(search);
 			});
 
-			document.getElementById("counter").innerText = filteredPages.length + " / " + quizPages.length + " batterie";
+			counter.innerText = `${filteredPages.length} / ${quizPages.length} batterie`;
 
 			if (filteredPages.length === 0) {
-				list.innerHTML = "<p>Nessuna batteria trovata.</p>";
+				list.innerHTML = `<div class="status-box">Nessuna batteria trovata.</div>`;
 				return;
 			}
 
 			list.innerHTML = filteredPages.map(page => `
-        <div class="quiz-card">
-            <h2>${page.title}</h2>
-            <p>${page.description}</p>
-            <a href="${page.file}">Avvia simulazione</a>
-        </div>
-    `).join("");
+                <div class="quiz-card">
+                    <h2>${escapeHtml(page.title)}</h2>
+                    <p>${escapeHtml(page.description)}</p>
+                    <a href="${page.file}">Avvia simulazione</a>
+                </div>
+            `).join("");
 		}
 
-		window.onload = renderQuizList;
+		function escapeHtml(value) {
+			return String(value)
+				.replaceAll("&", "&amp;")
+				.replaceAll("<", "&lt;")
+				.replaceAll(">", "&gt;")
+				.replaceAll('"', "&quot;")
+				.replaceAll("'", "&#039;");
+		}
+
+		window.onload = discoverQuizzes;
 	</script>
 
 	<footer class="site-footer">
-		<p class="footer">
+		<p>
 			<code>Made with ❤️ dal vostro amichevole Giannuzzo di corrioio :P</code>
 		</p>
-		<code class="footer-small">
-				Il presente simulatore è stato realizzato esclusivamente a fini personali, didattici ed esercitativi.
-
-				Le batterie di quiz non sono in alcun modo ufficiali, né affiliate, approvate, validate o riconducibili
-				alla Polizia di Stato, al Ministero dell’Interno, alla Scuola Allievi Agenti di Alessandria o ad altri
-				enti istituzionali.
-
-				Le domande, le risposte e le spiegazioni hanno esclusivamente finalità di ripasso e autovalutazione. Non
-				sostituiscono fonti normative, manuali ufficiali, circolari, dispense istituzionali o indicazioni
-				fornite dagli enti competenti.
-
-				L’utente è invitato a verificare sempre le informazioni attraverso fonti ufficiali e aggiornate.
-
-			</code>
+		<span class="footer-small">
+			Il presente simulatore è stato realizzato esclusivamente a fini personali, didattici ed esercitativi.
+			Le batterie di quiz non sono in alcun modo ufficiali, né affiliate, approvate, validate o riconducibili
+			alla Polizia di Stato, al Ministero dell’Interno, alla Scuola Allievi Agenti di Alessandria o ad altri
+			enti istituzionali. Le domande, le risposte e le spiegazioni hanno esclusivamente finalità di ripasso e
+			autovalutazione. Non sostituiscono fonti normative, manuali ufficiali, circolari, dispense istituzionali
+			o indicazioni fornite dagli enti competenti. L’utente è invitato a verificare sempre le informazioni
+			attraverso fonti ufficiali e aggiornate.
+		</span>
 	</footer>
 </body>
 

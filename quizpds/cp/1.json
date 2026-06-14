@@ -1,0 +1,666 @@
+{
+  "title": "Diritto Penale 01",
+  "description": "Batteria da 60 quiz di Diritto Penale.",
+  "questions": [
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su principio di legalità?",
+      "o": [
+        "reato e pena devono essere previsti dalla legge prima del fatto",
+        "il giudice può punire fatti non previsti come reato",
+        "la Polizia Giudiziaria può stabilire nuove pene"
+      ],
+      "a": 0,
+      "e": "Il principio di legalità garantisce che nessuno sia punito senza una previa legge che preveda fatto e pena."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su riserva di legge?",
+      "o": [
+        "un regolamento interno può creare autonomamente delitti",
+        "solo la legge può stabilire quali fatti costituiscono reato e quali pene si applicano",
+        "la consuetudine può introdurre pene detentive"
+      ],
+      "a": 1,
+      "e": "La riserva di legge affida alla fonte legislativa la previsione di reati e pene."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su irretroattività penale?",
+      "o": [
+        "ogni legge penale più severa retroagisce sempre",
+        "la pena può essere aggravata dopo il fatto senza limiti",
+        "la legge penale sfavorevole non si applica ai fatti commessi prima della sua entrata in vigore"
+      ],
+      "a": 2,
+      "e": "L’irretroattività sfavorevole tutela il cittadino da incriminazioni o pene successive al fatto."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su tassatività della norma penale?",
+      "o": [
+        "il fatto punibile deve essere descritto in modo chiaro e determinato",
+        "la norma penale deve restare volutamente generica",
+        "il giudice può completare liberamente una fattispecie vaga"
+      ],
+      "a": 0,
+      "e": "La tassatività richiede precisione della fattispecie e limita interpretazioni arbitrarie."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su materialità e offensività?",
+      "o": [
+        "è punibile il mero pensiero non manifestato",
+        "il diritto penale punisce fatti esteriori offensivi di beni giuridici",
+        "basta un’intenzione interiore priva di condotta"
+      ],
+      "a": 1,
+      "e": "Materialità e offensività escludono la punizione del solo pensiero e richiedono offesa o pericolo."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su delitti e contravvenzioni?",
+      "o": [
+        "la distinzione dipende dal luogo del fatto",
+        "la distinzione dipende dal numero di testimoni",
+        "la distinzione dipende dalla specie della pena prevista"
+      ],
+      "a": 2,
+      "e": "Delitti e contravvenzioni si distinguono formalmente in base alle pene stabilite dalla legge."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su struttura del reato?",
+      "o": [
+        "il reato richiede fatto tipico, antigiuridicità e colpevolezza",
+        "basta una denuncia per avere automaticamente un reato",
+        "è sufficiente la sola pericolosità morale dell’autore"
+      ],
+      "a": 0,
+      "e": "La struttura del reato comprende fatto tipico, antigiuridicità e colpevolezza."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su condotta penalmente rilevante?",
+      "o": [
+        "la condotta è sempre e solo un’azione violenta",
+        "la condotta può essere attiva oppure omissiva",
+        "l’omissione non ha mai rilievo penale"
+      ],
+      "a": 1,
+      "e": "La condotta può consistere in azione o omissione quando esiste un obbligo giuridico di agire."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su rapporto di causalità?",
+      "o": [
+        "collega la persona offesa al luogo di residenza",
+        "serve solo a scegliere il giudice competente",
+        "collega la condotta all’evento previsto dalla norma"
+      ],
+      "a": 2,
+      "e": "Il nesso causale consente di attribuire l’evento alla condotta dell’agente."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su dolo?",
+      "o": [
+        "consiste nella coscienza e volontà del fatto costituente reato",
+        "coincide con la mera distrazione involontaria",
+        "esclude sempre la responsabilità penale"
+      ],
+      "a": 0,
+      "e": "Il dolo richiede rappresentazione e volontà degli elementi essenziali del fatto tipico."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su colpa?",
+      "o": [
+        "richiede sempre la volontà diretta dell’evento",
+        "ricorre quando l’evento non voluto deriva da negligenza, imprudenza, imperizia o violazione di regole",
+        "coincide con l’accordo tra più concorrenti"
+      ],
+      "a": 1,
+      "e": "La colpa riguarda eventi non voluti causati dalla violazione di regole cautelari."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su preterintenzione?",
+      "o": [
+        "si verifica solo quando l’evento è pienamente voluto",
+        "esclude sempre qualsiasi nesso causale",
+        "si verifica quando dall’azione deriva un evento più grave di quello voluto"
+      ],
+      "a": 2,
+      "e": "La preterintenzione indica un evento più grave rispetto a quello voluto dall’agente."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su imputabilità?",
+      "o": [
+        "è la capacità di intendere e di volere al momento del fatto",
+        "è la capacità di pagare una sanzione pecuniaria",
+        "dipende solo dalla professione della persona offesa"
+      ],
+      "a": 0,
+      "e": "L’imputabilità è presupposto della responsabilità penale e si valuta al momento del fatto."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su cause di giustificazione?",
+      "o": [
+        "aumentano sempre la pena prevista",
+        "escludono l’antigiuridicità del fatto tipico",
+        "trasformano ogni delitto in illecito amministrativo"
+      ],
+      "a": 1,
+      "e": "Le scriminanti rendono lecito un fatto che altrimenti sarebbe penalmente rilevante."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su legittima difesa?",
+      "o": [
+        "consente sempre una vendetta successiva",
+        "opera anche quando il pericolo è passato da tempo",
+        "richiede pericolo attuale di offesa ingiusta, necessità e proporzione della difesa"
+      ],
+      "a": 2,
+      "e": "La legittima difesa scrimina la reazione necessaria e proporzionata contro un’offesa ingiusta attuale."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su stato di necessità?",
+      "o": [
+        "richiede il pericolo attuale di un danno grave alla persona non altrimenti evitabile",
+        "riguarda solo un lieve fastidio patrimoniale",
+        "opera per punire chi ha causato il pericolo"
+      ],
+      "a": 0,
+      "e": "Lo stato di necessità riguarda il fatto commesso per salvare sé o altri da un danno grave alla persona."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su uso legittimo delle armi?",
+      "o": [
+        "autorizza l’uso arbitrario della forza in ogni circostanza",
+        "è una scriminante riferita al pubblico ufficiale nei casi e limiti previsti dalla legge",
+        "vale per qualunque privato per tutelare beni economici"
+      ],
+      "a": 1,
+      "e": "L’uso legittimo delle armi è ammesso solo nei limiti di necessità, proporzione e previsione legale."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su eccesso colposo?",
+      "o": [
+        "esclude sempre ogni responsabilità",
+        "richiede necessariamente dolo di profitto",
+        "si ha quando si superano per colpa i limiti di una causa di giustificazione"
+      ],
+      "a": 2,
+      "e": "L’eccesso colposo riguarda il superamento non voluto e colposo dei limiti della scriminante."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su tentativo?",
+      "o": [
+        "richiede atti idonei e diretti in modo non equivoco a commettere un delitto",
+        "punisce il solo pensiero criminoso",
+        "richiede sempre la consumazione completa"
+      ],
+      "a": 0,
+      "e": "Il tentativo punibile presuppone atti esterni idonei e inequivocabilmente diretti al delitto."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su circostanze del reato?",
+      "o": [
+        "sono sempre elementi essenziali del fatto base",
+        "sono elementi accidentali che incidono sulla pena aggravandola o attenuandola",
+        "eliminano automaticamente il reato"
+      ],
+      "a": 1,
+      "e": "Le circostanze modificano il trattamento sanzionatorio senza costituire necessariamente il nucleo del reato."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su concorso di persone?",
+      "o": [
+        "risponde solo chi esegue materialmente l’ultimo atto",
+        "la presenza casuale sul luogo basta sempre",
+        "più soggetti contribuiscono materialmente o moralmente alla commissione dello stesso reato"
+      ],
+      "a": 2,
+      "e": "Nel concorso rileva un contributo causale, materiale o morale, alla realizzazione del reato."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su reato continuato?",
+      "o": [
+        "richiede più violazioni commesse in esecuzione di un medesimo disegno criminoso",
+        "richiede un unico fatto privo di offesa",
+        "si ha solo nei reati colposi stradali"
+      ],
+      "a": 0,
+      "e": "La continuazione unifica più violazioni sotto un medesimo programma criminoso ai fini sanzionatori."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su omicidio doloso?",
+      "o": [
+        "consiste nel procurare solo un danno patrimoniale",
+        "consiste nel cagionare volontariamente la morte di una persona",
+        "è sempre una contravvenzione"
+      ],
+      "a": 1,
+      "e": "L’omicidio doloso tutela la vita e richiede volontà dell’evento morte."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su omicidio colposo?",
+      "o": [
+        "richiede sempre volontà diretta di uccidere",
+        "riguarda solo la sottrazione di cosa mobile",
+        "si ha quando la morte non voluta deriva da colpa"
+      ],
+      "a": 2,
+      "e": "L’omicidio colposo punisce la causazione non voluta della morte per violazione di regole cautelari."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su omicidio stradale?",
+      "o": [
+        "riguarda la morte cagionata violando norme sulla circolazione stradale",
+        "riguarda il danneggiamento di un veicolo senza feriti",
+        "coincide con il furto d’auto"
+      ],
+      "a": 0,
+      "e": "L’omicidio stradale è una figura legata alla morte causata nell’ambito della circolazione stradale."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su percosse?",
+      "o": [
+        "richiedono sempre una malattia grave",
+        "si configurano quando si percuote taluno senza cagionare malattia nel corpo o nella mente",
+        "riguardano solo l’offesa al patrimonio"
+      ],
+      "a": 1,
+      "e": "Le percosse si distinguono dalle lesioni perché non producono malattia."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su lesioni personali?",
+      "o": [
+        "consistono sempre in una mera minaccia verbale",
+        "sono reati esclusivamente contro il patrimonio",
+        "richiedono una malattia nel corpo o nella mente"
+      ],
+      "a": 2,
+      "e": "Le lesioni personali tutelano l’integrità fisica e psichica e richiedono una malattia."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su rissa?",
+      "o": [
+        "presuppone una contesa violenta tra più persone",
+        "si realizza con un semplice litigio verbale isolato",
+        "richiede necessariamente un pubblico ufficiale"
+      ],
+      "a": 0,
+      "e": "La rissa è una mischia violenta tra più persone ed è aggravata da morte o lesioni."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su omissione di soccorso?",
+      "o": [
+        "punisce chi denuncia un reato perseguibile d’ufficio",
+        "punisce chi non presta assistenza o non avvisa l’autorità nei casi previsti",
+        "riguarda la falsificazione di atti pubblici"
+      ],
+      "a": 1,
+      "e": "L’omissione di soccorso tutela vita e incolumità di persone in pericolo."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su violenza privata?",
+      "o": [
+        "consiste nella sottrazione nascosta di una cosa mobile",
+        "richiede sempre la qualifica di pubblico ufficiale",
+        "consiste nel costringere altri con violenza o minaccia a fare, tollerare od omettere qualcosa"
+      ],
+      "a": 2,
+      "e": "La violenza privata tutela la libertà morale di autodeterminazione."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su atti persecutori?",
+      "o": [
+        "richiedono condotte reiterate di minaccia o molestia idonee a provocare ansia, paura o alterazione delle abitudini",
+        "richiedono un solo atto neutro privo di molestia",
+        "riguardano soltanto la falsificazione di documenti"
+      ],
+      "a": 0,
+      "e": "Gli atti persecutori tutelano la tranquillità e libertà morale della persona offesa."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su tortura?",
+      "o": [
+        "è un semplice illecito amministrativo stradale",
+        "riguarda condotte gravi idonee a causare acute sofferenze fisiche o trauma psichico verificabile",
+        "richiede sempre un profitto patrimoniale"
+      ],
+      "a": 1,
+      "e": "La tortura è un grave delitto contro la persona, collegato a sofferenze fisiche o psichiche."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su violazione di domicilio?",
+      "o": [
+        "tutela solo la circolazione stradale",
+        "richiede sempre il consenso del titolare",
+        "tutela l’inviolabilità dei luoghi di privata dimora contro introduzione o permanenza abusiva"
+      ],
+      "a": 2,
+      "e": "La violazione di domicilio protegge la libertà domestica e la riservatezza dei luoghi privati."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su sequestro di persona?",
+      "o": [
+        "consiste nel privare taluno della libertà personale",
+        "consiste nel ricevere cose di provenienza delittuosa",
+        "riguarda solo la falsificazione materiale"
+      ],
+      "a": 0,
+      "e": "Il sequestro di persona tutela la libertà personale contro privazioni illegittime."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su arresto illegale?",
+      "o": [
+        "riguarda un privato che non paga una multa",
+        "può configurarsi quando il pubblico ufficiale procede ad arresto fuori dai casi consentiti",
+        "coincide con il furto in abitazione"
+      ],
+      "a": 1,
+      "e": "L’arresto illegale tutela la libertà personale contro abusi del pubblico ufficiale."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su violenza sessuale?",
+      "o": [
+        "tutela solo il patrimonio pubblico",
+        "consiste nella guida senza patente",
+        "tutela la libertà di autodeterminazione sessuale"
+      ],
+      "a": 2,
+      "e": "La violenza sessuale è delitto contro la persona e protegge la libertà sessuale."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su maltrattamenti familiari?",
+      "o": [
+        "richiedono condotte abituali vessatorie in ambito familiare o parafamiliare",
+        "si realizzano con un singolo episodio neutro e isolato",
+        "riguardano solo falsi documentali"
+      ],
+      "a": 0,
+      "e": "I maltrattamenti presuppongono abitualità e un regime di vita offensivo per la vittima."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su abuso dei mezzi di correzione?",
+      "o": [
+        "punisce l’appropriazione di denaro pubblico",
+        "punisce l’uso abusivo di mezzi correttivi o disciplinari leciti in origine",
+        "coincide sempre con la rapina"
+      ],
+      "a": 1,
+      "e": "Il reato riguarda l’abuso di strumenti educativi o disciplinari, quando pericoloso o lesivo."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su furto?",
+      "o": [
+        "richiede sempre un accordo corruttivo",
+        "riguarda solo beni immobili",
+        "consiste nella sottrazione e impossessamento di cosa mobile altrui con fine di profitto"
+      ],
+      "a": 2,
+      "e": "Il furto richiede sottrazione, impossessamento, cosa mobile altrui e fine di profitto."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su furto in abitazione?",
+      "o": [
+        "è commesso introducendosi in un edificio o luogo destinato a privata dimora",
+        "si realizza solo falsificando un atto pubblico",
+        "richiede sempre violenza alla persona"
+      ],
+      "a": 0,
+      "e": "Il furto in abitazione valorizza il luogo di privata dimora come elemento qualificante."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su furto con strappo?",
+      "o": [
+        "si ha quando la vittima consegna denaro sotto minaccia",
+        "si ha quando la cosa viene strappata di dosso o di mano alla persona",
+        "richiede sempre un atto pubblico falso"
+      ],
+      "a": 1,
+      "e": "Nel furto con strappo la violenza è rivolta alla cosa; se diretta alla persona può configurarsi rapina."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su appropriazione indebita?",
+      "o": [
+        "presuppone sempre la sottrazione clandestina iniziale",
+        "riguarda solo atti giudiziari falsi",
+        "presuppone il possesso già legittimo della cosa altrui e la successiva appropriazione"
+      ],
+      "a": 2,
+      "e": "Nell’appropriazione indebita l’agente possiede già la cosa e poi si comporta da proprietario."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su rapina?",
+      "o": [
+        "unisce sottrazione della cosa mobile a violenza o minaccia alla persona",
+        "si realizza solo con artifici e raggiri",
+        "riguarda esclusivamente un atto d’ufficio omesso"
+      ],
+      "a": 0,
+      "e": "La rapina offende patrimonio e persona perché alla sottrazione si aggiunge violenza o minaccia."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su estorsione?",
+      "o": [
+        "si realizza solo con sottrazione clandestina senza cooperazione della vittima",
+        "costringe la vittima con violenza o minaccia a fare od omettere qualcosa con profitto ingiusto e danno",
+        "non richiede mai minaccia o violenza"
+      ],
+      "a": 1,
+      "e": "Nell’estorsione la vittima coopera in modo coartato all’atto dispositivo."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su truffa?",
+      "o": [
+        "richiede sempre violenza fisica sulla persona",
+        "coincide con la resistenza a pubblico ufficiale",
+        "richiede artifici o raggiri, errore della vittima, profitto ingiusto e danno"
+      ],
+      "a": 2,
+      "e": "La truffa si fonda sull’inganno che induce la vittima a compiere un atto pregiudizievole."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su usura?",
+      "o": [
+        "consiste nel farsi dare o promettere interessi o vantaggi usurari",
+        "consiste nella falsificazione di banconote",
+        "riguarda solo l’omessa denuncia del P.U."
+      ],
+      "a": 0,
+      "e": "L’usura punisce la pretesa o promessa di interessi o vantaggi usurari."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su ricettazione?",
+      "o": [
+        "punisce chi commette il delitto presupposto come autore principale",
+        "punisce chi acquista, riceve od occulta cose provenienti da delitto per profitto, fuori dal concorso nel reato presupposto",
+        "riguarda solo l’abuso di un potere disciplinare"
+      ],
+      "a": 1,
+      "e": "La ricettazione richiede consapevolezza della provenienza delittuosa e fine di profitto."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su incauto acquisto?",
+      "o": [
+        "richiede sempre la certezza dolosa della provenienza illecita",
+        "è un delitto contro la vita",
+        "si distingue dalla ricettazione perché manca la piena consapevolezza dolosa della provenienza delittuosa"
+      ],
+      "a": 2,
+      "e": "L’incauto acquisto punisce l’acquisto colposo in presenza di motivi di sospetto."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su riciclaggio?",
+      "o": [
+        "consiste in operazioni su denaro, beni o utilità provenienti da delitto non colposo per ostacolarne l’identificazione",
+        "coincide con la mera percussione senza malattia",
+        "riguarda solo la guida di veicoli di servizio"
+      ],
+      "a": 0,
+      "e": "Il riciclaggio mira a colpire la ripulitura di proventi illeciti."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su associazione per delinquere?",
+      "o": [
+        "richiede un solo fatto isolato senza accordo stabile",
+        "richiede un vincolo stabile tra più persone finalizzato a commettere più delitti",
+        "si realizza con la sola presenza casuale in strada"
+      ],
+      "a": 1,
+      "e": "L’associazione per delinquere si fonda sulla stabilità del vincolo e sul programma criminoso."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su associazione mafiosa?",
+      "o": [
+        "si caratterizza solo per un contratto commerciale illecito",
+        "non richiede alcun metodo intimidatorio",
+        "si caratterizza per forza di intimidazione, assoggettamento e omertà"
+      ],
+      "a": 2,
+      "e": "L’associazione mafiosa è connotata dal metodo mafioso e dai suoi effetti di assoggettamento e omertà."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su pubblico ufficiale?",
+      "o": [
+        "esercita una pubblica funzione legislativa, giudiziaria o amministrativa con poteri tipici",
+        "svolge soltanto mansioni materiali private",
+        "è sempre un soggetto privo di poteri pubblici"
+      ],
+      "a": 0,
+      "e": "La qualifica di pubblico ufficiale rileva per numerosi reati propri contro la P.A."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su incaricato di pubblico servizio?",
+      "o": [
+        "è sempre titolare di poteri certificativi pieni",
+        "presta un pubblico servizio senza i poteri tipici del pubblico ufficiale e senza mere mansioni materiali",
+        "è necessariamente estraneo a ogni attività pubblica"
+      ],
+      "a": 1,
+      "e": "L’incaricato di pubblico servizio svolge attività pubblicistica priva dei poteri tipici della pubblica funzione."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su peculato?",
+      "o": [
+        "si ha quando un privato sottrae una borsa per strada",
+        "coincide con l’accusa falsa contro un innocente",
+        "si ha quando pubblico ufficiale o incaricato si appropria di denaro o cosa mobile altrui posseduti per ragione dell’ufficio o servizio"
+      ],
+      "a": 2,
+      "e": "Il peculato è appropriazione indebita qualificata dalla funzione pubblica e dal possesso per ragioni d’ufficio."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su concussione?",
+      "o": [
+        "punisce il pubblico ufficiale che, abusando della qualità o dei poteri, costringe taluno a dare o promettere utilità indebita",
+        "riguarda un accordo paritario tra privato e pubblico agente",
+        "consiste nella sottrazione clandestina di cosa mobile"
+      ],
+      "a": 0,
+      "e": "La concussione si fonda sull’abuso costrittivo del pubblico funzionario nei confronti del privato."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su corruzione?",
+      "o": [
+        "richiede sempre che il privato sia costretto senza margine decisionale",
+        "presuppone un accordo illecito tra pubblico agente e privato avente a oggetto denaro o altra utilità",
+        "coincide con il furto in abitazione"
+      ],
+      "a": 1,
+      "e": "La corruzione si basa sul pactum sceleris tra pubblico agente e privato."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su induzione indebita?",
+      "o": [
+        "richiede sempre violenza fisica irresistibile sul privato",
+        "non prevede mai la punibilità del privato",
+        "si ha quando il pubblico agente abusa della qualità o dei poteri inducendo il privato a dare o promettere utilità"
+      ],
+      "a": 2,
+      "e": "L’induzione indebita si distingue dalla concussione perché il privato è indotto, non costretto."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su omissione o rifiuto di atti d’ufficio?",
+      "o": [
+        "punisce il rifiuto o l’omissione indebita di atti dovuti nei casi previsti dalla legge",
+        "riguarda solo la sottrazione di cose private",
+        "è sempre un mero illecito disciplinare privo di rilievo penale"
+      ],
+      "a": 0,
+      "e": "L’art. 328 c.p. tutela il buon andamento della P.A. rispetto ad atti dovuti e urgenti."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su resistenza a pubblico ufficiale?",
+      "o": [
+        "si realizza con la mera resistenza passiva priva di violenza o minaccia",
+        "si configura quando si usa violenza o minaccia per opporsi al pubblico ufficiale mentre compie un atto d’ufficio",
+        "coincide con la calunnia"
+      ],
+      "a": 1,
+      "e": "La resistenza richiede violenza o minaccia diretta a ostacolare un atto d’ufficio in corso."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "In diritto penale, quale affermazione è corretta su calunnia?",
+      "o": [
+        "consiste nel simulare un reato senza indicare alcuna persona",
+        "richiede solo colpa nella ricostruzione dei fatti",
+        "consiste nell’incolpare di un reato una persona che si sa innocente"
+      ],
+      "a": 2,
+      "e": "La calunnia richiede la falsa accusa contro un soggetto determinato saputo innocente."
+    }
+  ]
+}

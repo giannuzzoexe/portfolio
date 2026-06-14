@@ -1,0 +1,666 @@
+{
+  "title": "Procedura Penale 05",
+  "description": "Batteria da 60 quiz di Procedura Penale.",
+  "questions": [
+    {
+      "t": "Procedura Penale",
+      "q": "La finalità essenziale del processo penale è: (scopo processo)",
+      "o": [
+        "Gestire solo controversie civili tra privati",
+        "Giungere a una decisione sul fatto di reato e sulla responsabilità",
+        "Rilasciare licenze di pubblica sicurezza"
+      ],
+      "a": 1,
+      "e": "Il processo penale è lo strumento con cui si accertano fatto, autore e sanzione applicabile."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "Nel lessico del codice, il processo è: (procedimento processo)",
+      "o": [
+        "Un atto amministrativo del Prefetto",
+        "Solo la fase dell'esecuzione della pena",
+        "La fase che segue l'esercizio dell'azione penale e conduce alla decisione"
+      ],
+      "a": 2,
+      "e": "Il procedimento comprende il percorso dalla notizia di reato; il processo inizia con l'esercizio dell'azione penale."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "La decisione finale appartiene alla fase: (fasi procedimento)",
+      "o": [
+        "Del giudizio",
+        "Revisione del veicolo, collaudo e confisca",
+        "Il rilascio della patente ministeriale"
+      ],
+      "a": 0,
+      "e": "Il procedimento si sviluppa, in via generale, attraverso indagini preliminari, udienza preliminare e giudizio."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "Il segmento che va dalla notizia di reato all'esercizio dell'azione penale è: (procedimento stretto)",
+      "o": [
+        "Con la revoca della patente",
+        "Il procedimento penale in senso stretto",
+        "È la fase di esecuzione civile"
+      ],
+      "a": 1,
+      "e": "Il procedimento in senso stretto coincide con la fase delle indagini preliminari."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "Se gli elementi raccolti consentono di sostenere l'accusa, il P.M.: (azione penale)",
+      "o": [
+        "La revisione del veicolo",
+        "Dispone direttamente la pena definitiva",
+        "Esercita l'azione penale"
+      ],
+      "a": 2,
+      "e": "L'azione penale avvia il processo e si concreta nella formulazione dell'imputazione."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "L'archiviazione riguarda l'ipotesi in cui: (archiviazione)",
+      "o": [
+        "Non vi siano elementi sufficienti per proseguire verso il giudizio",
+        "Rilasciare passaporti e licenze",
+        "La Polizia vuole applicare una pena"
+      ],
+      "a": 0,
+      "e": "Il P.M. chiede l'archiviazione quando gli elementi non giustificano l'azione penale; il controllo spetta al G.I.P."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "La funzione del Pubblico Ministero nelle indagini è: (pm)",
+      "o": [
+        "Emanare sanzioni disciplinari interne",
+        "Raccogliere elementi per decidere sull'azione penale",
+        "Decide sempre la condanna definitiva"
+      ],
+      "a": 1,
+      "e": "Il P.M. dirige le indagini preliminari ed è titolare dell'azione penale."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "Autorizzare intercettazioni o convalidare arresti rientra tra le funzioni: (gip)",
+      "o": [
+        "Direzione operativa delle pattuglie",
+        "Sostituisce la P.G. nei servizi ordinari",
+        "Del G.I.P."
+      ],
+      "a": 2,
+      "e": "Il G.I.P. non dirige le indagini: controlla la legalità e tutela i diritti nei casi previsti."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "Il giusto processo garantisce: (giusto processo)",
+      "o": [
+        "Regole eque per accusa e difesa davanti a un giudice imparziale",
+        "Alla circolazione dei veicoli",
+        "La prova è decisa segretamente da una sola parte"
+      ],
+      "a": 0,
+      "e": "Il giusto processo valorizza contraddittorio, parità delle parti e terzietà del giudice."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "Scegliere il giudice caso per caso dopo il fatto sarebbe contrario: (giudice naturale)",
+      "o": [
+        "Dalla Questura dopo la denuncia",
+        "Al principio del giudice naturale precostituito per legge",
+        "Al rilascio della patente di servizio"
+      ],
+      "a": 1,
+      "e": "Il giudice naturale deve essere predeterminato dalla legge, non scelto dopo il fatto."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "La presenza del difensore è necessaria: (diritto difesa)",
+      "o": [
+        "Il Codice della Strada",
+        "Solo dopo la condanna definitiva",
+        "Negli atti per cui la legge la richiede"
+      ],
+      "a": 2,
+      "e": "Il diritto di difesa è una garanzia costituzionale operante in ogni stato e grado."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "La decisione finale sulla responsabilità penale compete: (giurisdizione)",
+      "o": [
+        "Al giudice",
+        "Al solo testimone",
+        "Rilasciare licenze commerciali"
+      ],
+      "a": 0,
+      "e": "La giurisdizione penale è esercitata dal giudice, autonomo e indipendente."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "La P.G. deve assicurare: (pg funzioni)",
+      "o": [
+        "Decidere la condanna definitiva",
+        "Le fonti di prova utili al procedimento",
+        "Rilasciare passaporti diplomatici"
+      ],
+      "a": 1,
+      "e": "La P.G. svolge attività investigativa e di assicurazione delle fonti di prova sotto la direzione dell'A.G."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "Ufficiali e agenti di P.G. si distinguono: (organizzazione pg)",
+      "o": [
+        "Organismi privati senza poteri pubblici",
+        "Le società assicurative",
+        "Per attribuzioni e poteri previsti dalla legge"
+      ],
+      "a": 2,
+      "e": "La P.G. è organizzata in sezioni, servizi e ufficiali/agenti con attribuzioni previste dalla legge."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "Le attività delegate di P.G. sono svolte: (rapporti pm pg)",
+      "o": [
+        "Secondo le direttive dell'Autorità Giudiziaria",
+        "Al Sindaco come regola generale",
+        "Senza documentazione"
+      ],
+      "a": 0,
+      "e": "La P.G. opera sotto la direzione del P.M., anche mediante attività delegate."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "Acquisita la notizia di reato, il P.M.: (notizia reato)",
+      "o": [
+        "La conclusione automatica del giudizio",
+        "Valuta le determinazioni inerenti all'esercizio dell'azione penale",
+        "La sentenza definitiva"
+      ],
+      "a": 1,
+      "e": "La notizia di reato è l'informazione iniziale che attiva la fase delle indagini preliminari."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "L'iscrizione nel registro ex art. 335 c.p.p. serve a: (iscrizione 335)",
+      "o": [
+        "Emanare una licenza di P.S.",
+        "Presso la motorizzazione",
+        "Formalizzare l'avvio del procedimento e l'eventuale nominativo dell'indagato"
+      ],
+      "a": 2,
+      "e": "L'iscrizione della notizia di reato è adempimento del P.M. nel registro previsto dall'art. 335 c.p.p."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "La tempestività della comunicazione al P.M. è importante perché: (comunicazione 347)",
+      "o": [
+        "Permette il controllo e la direzione dell'attività investigativa",
+        "Solo dopo la sentenza definitiva",
+        "Attribuire la competenza al Prefetto"
+      ],
+      "a": 0,
+      "e": "La P.G. deve comunicare la notizia di reato al P.M. senza ritardo, con gli elementi utili."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "La denuncia si distingue dalla querela perché: (denuncia)",
+      "o": [
+        "Sempre vietata",
+        "Non contiene necessariamente la volontà punitiva della persona offesa",
+        "Solo al Sindaco per reati penali"
+      ],
+      "a": 1,
+      "e": "La denuncia comunica un fatto di reato; per il P.U. è obbligatoria nei casi di reati d'ufficio conosciuti per funzione."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "La remissione di querela consiste: (querela)",
+      "o": [
+        "Si procede sempre d'ufficio",
+        "Nell'arresto obbligatorio",
+        "Nella rinuncia successiva alla querela nei casi consentiti"
+      ],
+      "a": 2,
+      "e": "La querela è la manifestazione di volontà della persona offesa necessaria per procedere in alcuni reati."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "Il medico che assiste una persona con lesioni potenzialmente da delitto procedibile d'ufficio deve: (referto)",
+      "o": [
+        "Presentare referto secondo legge",
+        "Alla patente ministeriale",
+        "Chiunque transiti casualmente"
+      ],
+      "a": 0,
+      "e": "Il referto è l'obbligo degli esercenti professione sanitaria di segnalare casi che possono integrare delitti d'ufficio."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "Querela, istanza e richiesta sono collegate: (condizioni procedibilita)",
+      "o": [
+        "Alle pene accessorie stradali",
+        "Alle condizioni di procedibilità",
+        "Revisione, collaudo e assicurazione"
+      ],
+      "a": 1,
+      "e": "Le condizioni di procedibilità sono presupposti necessari per procedere penalmente in determinati casi."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "La distinzione tra attività d'iniziativa e delegata riguarda: (attivita iniziativa delegata)",
+      "o": [
+        "Solo amministrativa e mai penale",
+        "Su ordine del privato denunciante",
+        "L'origine dell'impulso investigativo"
+      ],
+      "a": 2,
+      "e": "La P.G. compie attività d'iniziativa nei casi consentiti e attività delegata su impulso del P.M."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "La P.G. può svolgere atti atipici quando: (atti tipici atipici)",
+      "o": [
+        "Sono utili alle indagini e rispettano legge e diritti fondamentali",
+        "Sono sempre illeciti",
+        "Licenze di pubblica sicurezza"
+      ],
+      "a": 0,
+      "e": "Gli atti tipici sono regolati dal codice; quelli atipici sono ammessi se leciti e utili alle indagini."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "L'accompagnamento per identificazione è: (identificazione 349)",
+      "o": [
+        "La persona può essere trattenuta senza limiti",
+        "Una limitazione temporanea finalizzata all'identificazione nei casi previsti",
+        "Una pena definitiva"
+      ],
+      "a": 1,
+      "e": "L'art. 349 c.p.p. disciplina l'identificazione e consente rilievi e accompagnamento nei limiti previsti."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "L'assistenza difensiva è particolarmente rilevante: (nomina difensore)",
+      "o": [
+        "Permettere alla P.G. di omettere i verbali",
+        "A scegliere il giudice",
+        "Negli atti garantiti"
+      ],
+      "a": 2,
+      "e": "L'indagato può nominare un difensore; in mancanza opera la difesa d'ufficio nei casi previsti."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "Le garanzie difensive nelle dichiarazioni dell'indagato servono a: (dichiarazioni indagato)",
+      "o": [
+        "Evitare compressioni illegittime del diritto di difesa",
+        "Eliminare il contraddittorio",
+        "Il Codice della Strada soltanto"
+      ],
+      "a": 0,
+      "e": "Le dichiarazioni dell'indagato sono atti delicati e richiedono il rispetto delle garanzie difensive."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "Le sommarie informazioni appartengono alla fase: (sommarie informazioni)",
+      "o": [
+        "Solo dal giudice di pace in materia civile",
+        "Delle indagini preliminari",
+        "Applicare direttamente la pena"
+      ],
+      "a": 1,
+      "e": "Le sommarie informazioni sono dichiarazioni assunte da persone informate sui fatti nella fase delle indagini."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "Nella fase delle indagini si acquisiscono soprattutto: (fonti mezzi prova)",
+      "o": [
+        "La pena applicata dal giudice",
+        "Una licenza di P.S.",
+        "Elementi e fonti di prova"
+      ],
+      "a": 2,
+      "e": "Fonti di prova sono persone, cose o documenti; i mezzi di prova sono gli strumenti processuali che producono prova."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "Il confronto e la ricognizione sono esempi: (mezzi prova)",
+      "o": [
+        "Di mezzi di prova",
+        "Rilasciare autorizzazioni amministrative",
+        "Di sanzioni disciplinari"
+      ],
+      "a": 0,
+      "e": "I mezzi di prova sono strumenti processuali, come testimonianza, perizia e documenti, destinati alla formazione della prova."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "Una perquisizione è: (mezzi ricerca prova)",
+      "o": [
+        "Sono identici senza differenze",
+        "Un mezzo di ricerca della prova",
+        "Pene principali"
+      ],
+      "a": 1,
+      "e": "I mezzi di ricerca della prova servono ad acquisire fonti di prova: ispezioni, perquisizioni, sequestri, intercettazioni."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "La funzione dell'ispezione è: (ispezione)",
+      "o": [
+        "Rilasciare patente ministeriale",
+        "Solo la proprietà del veicolo",
+        "Verificare direttamente lo stato di persone, luoghi o cose"
+      ],
+      "a": 2,
+      "e": "L'ispezione serve ad accertare tracce, effetti materiali e stato di persone, luoghi o cose."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "La perquisizione di iniziativa della P.G. richiede: (perquisizione)",
+      "o": [
+        "Presupposti di legge, urgenza e successiva convalida quando prevista",
+        "Applicare una pena detentiva",
+        "Il consenso del Sindaco come regola unica"
+      ],
+      "a": 0,
+      "e": "La perquisizione mira alla ricerca del corpo del reato o di cose pertinenti al reato, nei casi e modi previsti."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "Se il giudice accerta che la perquisizione è fuori legge: (perquisizioni illegittime)",
+      "o": [
+        "Non esiste alcun rimedio",
+        "Accoglie l'opposizione nei casi previsti",
+        "Sostituire il processo con una multa"
+      ],
+      "a": 1,
+      "e": "Le perquisizioni illegittime sono quelle fuori dai presupposti di legge e possono essere sottoposte a controllo."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "La finalità del sequestro probatorio è: (sequestro probatorio)",
+      "o": [
+        "Non necessita mai di controllo",
+        "Rilasciare la persona arrestata",
+        "Conservare elementi utili all'accertamento del fatto"
+      ],
+      "a": 2,
+      "e": "Il sequestro probatorio conserva corpo del reato e cose pertinenti per l'accertamento."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "Le intercettazioni rientrano: (intercettazioni)",
+      "o": [
+        "Tra i mezzi di ricerca della prova",
+        "A durata illimitata senza decreto",
+        "Sempre dalla P.G. senza controllo"
+      ],
+      "a": 0,
+      "e": "Le intercettazioni sono mezzi invasivi di ricerca della prova e richiedono autorizzazione e presupposti stringenti."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "Il consenso di uno dei partecipanti alla conversazione: (registrazioni interlocutore)",
+      "o": [
+        "Equivale a sentenza di condanna",
+        "Riduce l'intrusione ma non elimina sempre ogni garanzia",
+        "Maggiore in ogni caso"
+      ],
+      "a": 1,
+      "e": "Le registrazioni da parte di un interlocutore comportano minore intrusione, ma restano soggette alle regole previste."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "La flagranza è collegata: (arresto flagranza)",
+      "o": [
+        "Una condanna irrevocabile",
+        "È identificato mesi dopo senza altri elementi",
+        "Alla immediatezza tra fatto e intervento"
+      ],
+      "a": 2,
+      "e": "L'arresto in flagranza è misura precautelare fondata su flagranza o quasi flagranza nei casi di legge."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "La differenza tra arresto obbligatorio e facoltativo riguarda: (arresto obbligatorio)",
+      "o": [
+        "La presenza o meno di discrezionalità della P.G.",
+        "Può ignorare sempre l'obbligo",
+        "Alla validità della patente ministeriale"
+      ],
+      "a": 0,
+      "e": "L'arresto obbligatorio opera nei casi tassativi e gravi previsti dall'art. 380 c.p.p."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "La facoltatività dell'arresto significa che: (arresto facoltativo)",
+      "o": [
+        "La competenza civile del giudice",
+        "La P.G. deve compiere una valutazione, non agire automaticamente",
+        "È sempre vietato"
+      ],
+      "a": 1,
+      "e": "L'arresto facoltativo richiede flagranza e valutazione concreta di gravità del fatto e pericolosità."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "L'arresto differito deve avvenire: (arresto differito)",
+      "o": [
+        "Per sostituire la querela",
+        "Di arrestare senza alcun termine",
+        "Entro i limiti temporali stabiliti dalla normativa speciale"
+      ],
+      "a": 2,
+      "e": "L'arresto differito è eccezionale e opera solo nei casi tassativi e nei termini previsti."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "La finalità del fermo è: (fermo)",
+      "o": [
+        "Evitare che l'indiziato si sottragga alle indagini o alla giustizia",
+        "Applicare direttamente la pena",
+        "Richiede sempre flagranza nel momento esatto"
+      ],
+      "a": 0,
+      "e": "Il fermo è misura precautelare fondata su gravi indizi e pericolo di fuga, senza necessità di flagranza."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "La mancata convalida comporta: (convalida arresto fermo)",
+      "o": [
+        "Applicare sempre la pena definitiva",
+        "La cessazione degli effetti della misura precautelare, salvo altri titoli",
+        "Al Sindaco"
+      ],
+      "a": 1,
+      "e": "La convalida è il controllo del giudice sulla legittimità di arresto o fermo."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "La P.G., dopo l'arresto, deve rispettare: (messa disposizione pm)",
+      "o": [
+        "Al Comune per la tassa rifiuti",
+        "Solo la proprietà privata del veicolo",
+        "Termini e garanzie previsti dalla legge"
+      ],
+      "a": 2,
+      "e": "Dopo arresto o fermo, la P.G. deve compiere gli adempimenti nei termini previsti per il controllo dell'A.G."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "Nei casi di violenza domestica, l'allontanamento d'urgenza serve a: (allontanamento urgenza)",
+      "o": [
+        "Separare tempestivamente l'autore dalla persona offesa",
+        "Una multa non pagata",
+        "Sostituire sempre il processo"
+      ],
+      "a": 0,
+      "e": "L'allontanamento d'urgenza è misura precautelare prevista per tutelare vittime di violenza familiare nei casi urgenti."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "La custodia cautelare è: (misure cautelari)",
+      "o": [
+        "Dopo l'espiazione completa della pena",
+        "Una misura cautelare personale custodiale",
+        "Sempre dalla P.G. in autonomia definitiva"
+      ],
+      "a": 1,
+      "e": "Le misure cautelari sono provvedimenti del giudice, richiesti dal P.M., fondati su gravi indizi ed esigenze cautelari."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "Gli arresti domiciliari sono esempio di: (misure personali reali)",
+      "o": [
+        "Sanzione amministrativa stradale",
+        "Solo sul patrimonio",
+        "Misura cautelare personale"
+      ],
+      "a": 2,
+      "e": "Le misure personali incidono sulla libertà; quelle reali incidono sui beni."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "L'allontanamento non autorizzato dagli arresti domiciliari può integrare: (arresti domiciliari)",
+      "o": [
+        "Evasione",
+        "La revoca automatica della cittadinanza",
+        "Una misura reale su beni"
+      ],
+      "a": 0,
+      "e": "Gli arresti domiciliari sono misura custodiale da eseguire nel luogo stabilito; l'allontanamento può integrare evasione."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "La custodia cautelare in carcere incide: (custodia carcere)",
+      "o": [
+        "Da qualsiasi privato",
+        "In modo intenso sulla libertà personale",
+        "Un verbale di divieto di sosta"
+      ],
+      "a": 1,
+      "e": "La custodia cautelare in carcere è misura eccezionale e molto afflittiva, disposta dal giudice nei casi di legge."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "La finalità del divieto di avvicinamento è: (divieto avvicinamento)",
+      "o": [
+        "Furto di energia elettrica soltanto",
+        "Applicare una pena pecuniaria automatica",
+        "Proteggere la persona offesa da ulteriori condotte"
+      ],
+      "a": 2,
+      "e": "Il divieto di avvicinamento è misura cautelare personale a tutela della persona offesa."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "Questa misura cautelare impone: (obbligo presentazione)",
+      "o": [
+        "Una presenza controllata presso la P.G.",
+        "Solo sulla proprietà di immobili",
+        "Nel consegnare sempre il veicolo allo Stato"
+      ],
+      "a": 0,
+      "e": "L'obbligo di presentazione alla P.G. è misura cautelare personale non custodiale."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "Un divieto temporaneo di esercitare determinate attività può essere: (misure interdittive)",
+      "o": [
+        "Un mezzo di prova",
+        "Una misura interdittiva",
+        "Una pena sempre definitiva"
+      ],
+      "a": 1,
+      "e": "Le misure interdittive limitano temporaneamente funzioni o attività, senza custodire fisicamente la persona."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "Bloccare un bene per evitare che aggravi le conseguenze del reato è funzione: (misure reali)",
+      "o": [
+        "Arresto e fermo",
+        "Punire con reclusione",
+        "Del sequestro preventivo"
+      ],
+      "a": 2,
+      "e": "Le misure reali sono sequestri che incidono sui beni, con finalità preventiva o conservativa."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "Il 415-bis si colloca: (avviso 415bis)",
+      "o": [
+        "Al termine delle indagini preliminari",
+        "Ottenere automaticamente l'assoluzione",
+        "Impugnare una multa stradale"
+      ],
+      "a": 0,
+      "e": "L'avviso di conclusione indagini apre una fase di garanzia difensiva prima dell'eventuale esercizio dell'azione penale."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "L'incidente probatorio garantisce: (incidente probatorio)",
+      "o": [
+        "Una licenza amministrativa",
+        "Contraddittorio e utilizzabilità della prova anticipata",
+        "L'assenza del giudice"
+      ],
+      "a": 1,
+      "e": "L'incidente probatorio permette l'assunzione anticipata di prove non rinviabili o delicate, con garanzie."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "La tutela della persona offesa comprende: (persona offesa)",
+      "o": [
+        "Della revisione dell'auto",
+        "Sempre il Pubblico Ministero",
+        "Informazioni, partecipazione e protezione nei casi previsti"
+      ],
+      "a": 2,
+      "e": "La persona offesa è titolare del bene giuridico leso e ha facoltà procedimentali previste dalla legge."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "Nell'assunzione di dichiarazioni da vittime vulnerabili occorre: (vulnerabilita)",
+      "o": [
+        "Rispettare cautele, modalità e garanzie previste",
+        "Usare solo procedure amministrative",
+        "Solo imputati condannati"
+      ],
+      "a": 0,
+      "e": "Le vittime vulnerabili, specie minori, richiedono modalità protette e cautele nell'assunzione delle dichiarazioni."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "La persona informata sui fatti può diventare: (testimonianza)",
+      "o": [
+        "Una misura cautelare reale",
+        "Testimone nel dibattimento",
+        "Sempre in segreto senza parti"
+      ],
+      "a": 1,
+      "e": "La testimonianza è mezzo di prova dichiarativo che si forma normalmente in dibattimento."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "Un atto di P.G. deve essere documentato: (documentazione atti)",
+      "o": [
+        "Solo il colore dell'uniforme",
+        "La condanna automatica",
+        "Secondo le forme previste dalla legge"
+      ],
+      "a": 2,
+      "e": "La documentazione degli atti assicura tracciabilità, controllo e rispetto delle garanzie."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "La mancata o scorretta verbalizzazione può incidere: (verbale)",
+      "o": [
+        "Sulla regolarità e utilizzabilità dell'atto",
+        "Evitare la presenza del difensore quando dovuta",
+        "Solo sul bollo auto"
+      ],
+      "a": 0,
+      "e": "Il verbale è lo strumento formale di documentazione degli atti processuali o investigativi."
+    }
+  ]
+}
