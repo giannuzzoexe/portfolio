@@ -240,10 +240,19 @@
 			{ title: "Procedura Penale 05", file: "cpp/5.html", description: "Batteria 60 Quiz, Procedura Penale" },
 		];
 
+		const cds = [
+			{ title: "Codice della Strada 01", file: "cds/1.html", description: "Batteria 60 Quiz, Codice della Strada" },
+			{ title: "Codice della Strada 02", file: "cds/2.html", description: "Batteria 60 Quiz, Codice della Strada" },
+			{ title: "Codice della Strada 03", file: "cds/3.html", description: "Batteria 60 Quiz, Codice della Strada" },
+			{ title: "Codice della Strada 04", file: "cds/4.html", description: "Batteria 60 Quiz, Codice della Strada" },
+			{ title: "Codice della Strada 05", file: "cds/5.html", description: "Batteria 60 Quiz, Codice della Strada" },
+		];
+
 		const quizPages = [
 			...complete,
 			...cp,
 			...cpp,
+			...cds,
 		];
 
 		function renderQuizList() {
@@ -252,8 +261,7 @@
 
 			const filteredPages = quizPages.filter(page => {
 				return page.title.toLowerCase().includes(search) ||
-					page.file.toLowerCase().includes(search) ||
-					page.description.toLowerCase().includes(search);
+					page.file.toLowerCase().includes(search);
 			});
 
 			document.getElementById("counter").innerText = filteredPages.length + " / " + quizPages.length + " batterie";

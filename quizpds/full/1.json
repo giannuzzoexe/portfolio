@@ -1,0 +1,28 @@
+{
+  "title": "Simulazione Esame - Batteria 1",
+  "description": "Quiz completo da 60 domande",
+  "questions": [
+    {
+      "t": "Diritto Penale",
+      "q": "Il reato di peculato si configura quando:",
+      "o": [
+        "Un privato ruba in un ente pubblico",
+        "Il Pubblico Ufficiale si appropria di denaro o cosa mobile altrui di cui ha il possesso per ragione del suo ufficio",
+        "Il Pubblico Ufficiale accetta denaro per compiere un atto contrario ai doveri d'ufficio"
+      ],
+      "a": 1,
+      "e": "L'appropriazione da parte del Pubblico Ufficiale è peculato."
+    },
+    {
+      "t": "Diritto Penale",
+      "q": "Il reato di peculato si configura quando 2:",
+      "o": [
+        "Un privato ruba in un ente pubblico",
+        "Il Pubblico Ufficiale si appropria di denaro o cosa mobile altrui di cui ha il possesso per ragione del suo ufficio",
+        "Il Pubblico Ufficiale accetta denaro per compiere un atto contrario ai doveri d'ufficio"
+      ],
+      "a": 1,
+      "e": "L'appropriazione da parte del Pubblico Ufficiale è peculato."
+    }
+  ]
+}
