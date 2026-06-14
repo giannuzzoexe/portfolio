@@ -1,804 +1,2129 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="keywords"
-		content="Game Developer, Back-End Developer, Mobile Developer, PigParty, Cyber Angels, ZeroRobotics, AtlasoftGames, N.A.O., Google Dev Fest, IDEA Virtual Verona Trento, Augmented Visual Art, JumpIt">
-	<title>Portfolio | Giovanni D'Amore</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="theme-color" content="#080b12" />
+	<meta name="description"
+		content="Giovanni D'Amore — percorso personale tra sviluppo software, volontariato, servizio operativo e progetti creativi." />
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
-	<link id="u-theme-google-font" rel="stylesheet"
-		href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
-	<link id="u-page-google-font" rel="stylesheet"
-		href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i">
-	<link rel="stylesheet" href="/css/Home.css" media="screen">
-	<link rel="stylesheet" href="/css/gdss.css" media="screen">
+	<link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+	<link rel="manifest" href="images/favicon/site.webmanifest">
 
-	<meta property="og:title" content="Home">
-	<meta property="og:type" content="website">
-	<meta name="theme-color" content="#478ac9">
-	<link rel="canonical" href="index.html">
-	<meta property="og:url" content="index.html">
-	<meta name="twitter:site" content="@">
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:title" content="Home">
-	<meta name="twitter:description" content="">
+	<title>Giovanni D'Amore — Percorso</title>
+
+	<style>
+		:root {
+			--bg: #070a11;
+			--bg-soft: #0d1220;
+			--card: rgba(255, 255, 255, .055);
+			--card-strong: rgba(255, 255, 255, .085);
+			--line: rgba(255, 255, 255, .12);
+			--text: #f4f7fb;
+			--muted: #aab4c5;
+			--muted-2: #788397;
+			--blue: #69c8ff;
+			--violet: #a987ff;
+			--rose: #ff6d9d;
+			--gold: #ffd276;
+			--radius: 26px;
+			--max: 1120px;
+			--shadow: 0 24px 80px rgba(0, 0, 0, .35);
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		html {
+			scroll-behavior: smooth;
+		}
+
+		body {
+			margin: 0;
+			min-height: 100vh;
+			color: var(--text);
+			background:
+				radial-gradient(circle at 15% 10%, rgba(105, 200, 255, .20), transparent 32rem),
+				radial-gradient(circle at 86% 22%, rgba(169, 135, 255, .18), transparent 34rem),
+				radial-gradient(circle at 45% 90%, rgba(255, 109, 157, .10), transparent 36rem),
+				var(--bg);
+			font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+			line-height: 1.65;
+			overflow-x: hidden;
+		}
+
+		body::before {
+			content: "";
+			position: fixed;
+			inset: 0;
+			pointer-events: none;
+			background-image:
+				linear-gradient(rgba(255, 255, 255, .035) 1px, transparent 1px),
+				linear-gradient(90deg, rgba(255, 255, 255, .035) 1px, transparent 1px);
+			background-size: 72px 72px;
+			mask-image: linear-gradient(to bottom, rgba(0, 0, 0, .65), transparent 72%);
+			z-index: -2;
+		}
+
+		body::after {
+			content: "";
+			position: fixed;
+			inset: 0;
+			pointer-events: none;
+			background: linear-gradient(to bottom, transparent, rgba(7, 10, 17, .9));
+			z-index: -1;
+		}
+
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
+
+		img {
+			max-width: 100%;
+			display: block;
+		}
+
+		.container {
+			width: min(calc(100% - 40px), var(--max));
+			margin: 0 auto;
+		}
+
+		.site-header {
+			position: sticky;
+			top: 0;
+			z-index: 20;
+			backdrop-filter: blur(18px);
+			background: rgba(7, 10, 17, .68);
+			border-bottom: 1px solid rgba(255, 255, 255, .08);
+		}
+
+		.nav {
+			min-height: 74px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 18px;
+		}
+
+		.brand {
+			display: inline-flex;
+			align-items: center;
+			gap: 12px;
+			font-weight: 800;
+			letter-spacing: -.03em;
+		}
+
+		.brand-mark {
+			width: 38px;
+			height: 38px;
+			border-radius: 14px;
+			display: grid;
+			place-items: center;
+			background: linear-gradient(135deg, rgba(105, 200, 255, .22), rgba(255, 109, 157, .18));
+			border: 1px solid rgba(255, 255, 255, .13);
+			box-shadow: 0 14px 50px rgba(105, 200, 255, .08);
+		}
+
+		.brand-mark img {
+			width: 24px;
+			height: 24px;
+			object-fit: contain;
+		}
+
+		.nav-links {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			font-size: .92rem;
+			color: var(--muted);
+		}
+
+		.nav-links a {
+			padding: 9px 12px;
+			border-radius: 999px;
+			transition: .2s ease;
+		}
+
+		.nav-links a:hover {
+			color: var(--text);
+			background: rgba(255, 255, 255, .07);
+		}
+
+		.hero {
+			padding: 86px 0 64px;
+		}
+
+		.hero-grid {
+			display: grid;
+			grid-template-columns: minmax(0, 1.18fr) minmax(290px, .82fr);
+			gap: 42px;
+			align-items: center;
+		}
+
+		.eyebrow {
+			display: inline-flex;
+			align-items: center;
+			gap: 10px;
+			margin-bottom: 22px;
+			padding: 9px 13px;
+			border: 1px solid rgba(255, 255, 255, .12);
+			border-radius: 999px;
+			color: var(--muted);
+			background: rgba(255, 255, 255, .045);
+			font-size: .88rem;
+		}
+
+		.dot {
+			width: 8px;
+			height: 8px;
+			border-radius: 999px;
+			background: var(--blue);
+			box-shadow: 0 0 0 6px rgba(105, 200, 255, .12);
+		}
+
+		h1 {
+			margin: 0;
+			max-width: 850px;
+			font-size: clamp(3rem, 8vw, 6.8rem);
+			line-height: .93;
+			letter-spacing: -.085em;
+		}
+
+		.gradient-text {
+			background: linear-gradient(120deg, #fff 12%, #a9dcff 45%, #d2b7ff 70%, #ffb3cc);
+			-webkit-background-clip: text;
+			background-clip: text;
+			color: transparent;
+		}
+
+		.lead {
+			margin: 28px 0 0;
+			max-width: 710px;
+			color: #cad3e2;
+			font-size: clamp(1.08rem, 2vw, 1.32rem);
+		}
+
+		.hero-actions {
+			margin-top: 34px;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 12px;
+		}
+
+		.button {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+			min-height: 48px;
+			padding: 0 18px;
+			border-radius: 999px;
+			border: 1px solid rgba(255, 255, 255, .14);
+			color: var(--text);
+			background: rgba(255, 255, 255, .07);
+			transition: transform .2s ease, background .2s ease, border-color .2s ease;
+		}
+
+		.button.primary {
+			background: linear-gradient(135deg, rgba(105, 200, 255, .28), rgba(169, 135, 255, .24));
+			border-color: rgba(255, 255, 255, .20);
+		}
+
+		.button:hover {
+			transform: translateY(-2px);
+			background: rgba(255, 255, 255, .11);
+			border-color: rgba(255, 255, 255, .26);
+		}
+
+		.portrait-card {
+			position: relative;
+			border-radius: 36px;
+			padding: 14px;
+			background: linear-gradient(135deg, rgba(255, 255, 255, .16), rgba(255, 255, 255, .045));
+			border: 1px solid rgba(255, 255, 255, .14);
+			box-shadow: var(--shadow);
+			overflow: hidden;
+		}
+
+		.portrait-card::before {
+			content: "";
+			position: absolute;
+			inset: -35%;
+			background: conic-gradient(from 210deg, transparent, rgba(105, 200, 255, .20), transparent, rgba(255, 109, 157, .16), transparent);
+			animation: spin 18s linear infinite;
+			opacity: .8;
+		}
+
+		@keyframes spin {
+			to {
+				transform: rotate(360deg);
+			}
+		}
+
+		.portrait-inner {
+			position: relative;
+			overflow: hidden;
+			border-radius: 26px;
+			background: #0a0e18;
+			border: 1px solid rgba(255, 255, 255, .12);
+		}
+
+		.portrait-inner img {
+			width: 100%;
+			aspect-ratio: 1 / 1.05;
+			object-fit: cover;
+			filter: grayscale(1) contrast(1.04);
+			opacity: .92;
+		}
+
+		.portrait-caption {
+			position: absolute;
+			left: 16px;
+			right: 16px;
+			bottom: 16px;
+			padding: 16px;
+			border-radius: 20px;
+			background: rgba(7, 10, 17, .70);
+			border: 1px solid rgba(255, 255, 255, .12);
+			backdrop-filter: blur(16px);
+		}
+
+		.portrait-caption strong {
+			display: block;
+			line-height: 1.25;
+		}
+
+		.portrait-caption span {
+			display: block;
+			margin-top: 4px;
+			color: var(--muted);
+			font-size: .92rem;
+		}
+
+		section {
+			padding: 74px 0;
+		}
+
+		.section-head {
+			display: grid;
+			grid-template-columns: minmax(0, .75fr) minmax(280px, 1fr);
+			gap: 32px;
+			align-items: end;
+			margin-bottom: 34px;
+		}
+
+		.section-kicker {
+			margin: 0 0 10px;
+			color: var(--blue);
+			text-transform: uppercase;
+			letter-spacing: .18em;
+			font-weight: 800;
+			font-size: .75rem;
+		}
+
+		h2 {
+			margin: 0;
+			font-size: clamp(2rem, 4vw, 3.6rem);
+			line-height: 1;
+			letter-spacing: -.06em;
+		}
+
+		.section-head p {
+			margin: 0;
+			color: var(--muted);
+			font-size: 1.04rem;
+		}
+
+		.panel {
+			padding: clamp(24px, 4vw, 44px);
+			border-radius: var(--radius);
+			border: 1px solid var(--line);
+			background: linear-gradient(180deg, rgba(255, 255, 255, .075), rgba(255, 255, 255, .035));
+			box-shadow: var(--shadow);
+		}
+
+		.about-grid {
+			display: grid;
+			grid-template-columns: minmax(0, 1.25fr) minmax(260px, .75fr);
+			gap: 24px;
+			align-items: stretch;
+		}
+
+		.about-text p {
+			margin: 0;
+			color: #d5dceb;
+			font-size: 1.08rem;
+		}
+
+		.about-text p+p {
+			margin-top: 18px;
+		}
+
+		.identity-list {
+			display: grid;
+			gap: 12px;
+		}
+
+		.identity-item {
+			padding: 16px;
+			border-radius: 20px;
+			background: rgba(255, 255, 255, .055);
+			border: 1px solid rgba(255, 255, 255, .09);
+		}
+
+		.identity-item strong {
+			display: block;
+			letter-spacing: -.02em;
+		}
+
+		.identity-item span {
+			display: block;
+			margin-top: 4px;
+			color: var(--muted);
+			font-size: .94rem;
+		}
+
+		.timeline {
+			position: relative;
+			display: grid;
+			gap: 16px;
+		}
+
+		.timeline::before {
+			content: "";
+			position: absolute;
+			left: 17px;
+			top: 12px;
+			bottom: 12px;
+			width: 1px;
+			background: linear-gradient(to bottom, rgba(105, 200, 255, .65), rgba(255, 255, 255, .08));
+		}
+
+		.timeline-item {
+			position: relative;
+			display: grid;
+			grid-template-columns: 36px 1fr;
+			gap: 18px;
+		}
+
+		.timeline-pin {
+			width: 36px;
+			height: 36px;
+			border-radius: 999px;
+			background: rgba(7, 10, 17, .95);
+			border: 1px solid rgba(105, 200, 255, .45);
+			display: grid;
+			place-items: center;
+			z-index: 1;
+			box-shadow: 0 0 0 8px rgba(105, 200, 255, .06);
+		}
+
+		.timeline-pin::after {
+			content: "";
+			width: 8px;
+			height: 8px;
+			border-radius: 999px;
+			background: var(--blue);
+		}
+
+		.timeline-card {
+			padding: 20px;
+			border-radius: 22px;
+			background: rgba(255, 255, 255, .055);
+			border: 1px solid rgba(255, 255, 255, .10);
+		}
+
+		.timeline-card small {
+			display: inline-block;
+			margin-bottom: 6px;
+			color: var(--gold);
+			font-weight: 800;
+			letter-spacing: .08em;
+			text-transform: uppercase;
+			font-size: .72rem;
+		}
+
+		.timeline-card h3,
+		.project-card h3,
+		.value-card h3 {
+			margin: 0;
+			font-size: 1.22rem;
+			letter-spacing: -.03em;
+		}
+
+		.timeline-card p,
+		.project-card p,
+		.value-card p {
+			margin: 10px 0 0;
+			color: var(--muted);
+		}
+
+		.project-grid {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: 18px;
+		}
+
+		.project-card {
+			position: relative;
+			min-height: 280px;
+			padding: 22px;
+			border-radius: var(--radius);
+			background: rgba(255, 255, 255, .055);
+			border: 1px solid rgba(255, 255, 255, .10);
+			overflow: hidden;
+			transition: transform .22s ease, background .22s ease, border-color .22s ease;
+		}
+
+		.project-card:hover {
+			transform: translateY(-4px);
+			background: rgba(255, 255, 255, .075);
+			border-color: rgba(255, 255, 255, .18);
+		}
+
+		.project-card.featured {
+			grid-column: span 2;
+			min-height: 340px;
+			display: grid;
+			grid-template-columns: minmax(0, 1fr) 240px;
+			gap: 28px;
+			align-items: center;
+		}
+
+		.project-icon {
+			width: 62px;
+			height: 62px;
+			margin-bottom: 18px;
+			border-radius: 20px;
+			display: grid;
+			place-items: center;
+			background: rgba(255, 255, 255, .08);
+			border: 1px solid rgba(255, 255, 255, .10);
+		}
+
+		.project-icon img {
+			width: 42px;
+			height: 42px;
+			object-fit: contain;
+		}
+
+		.project-visual {
+			justify-self: end;
+			width: min(100%, 230px);
+			aspect-ratio: 1;
+			border-radius: 34px;
+			display: grid;
+			place-items: center;
+			background: radial-gradient(circle, rgba(105, 200, 255, .16), rgba(255, 255, 255, .04));
+			border: 1px solid rgba(255, 255, 255, .10);
+		}
+
+		.project-visual img {
+			width: 72%;
+			height: 72%;
+			object-fit: contain;
+			filter: drop-shadow(0 24px 40px rgba(0, 0, 0, .35));
+		}
+
+		.tags {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+			margin-top: 18px;
+		}
+
+		.tag {
+			padding: 7px 10px;
+			border-radius: 999px;
+			background: rgba(255, 255, 255, .065);
+			border: 1px solid rgba(255, 255, 255, .08);
+			color: #cbd5e5;
+			font-size: .82rem;
+		}
+
+		.values-grid {
+			display: grid;
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+			gap: 16px;
+		}
+
+		.value-card {
+			min-height: 210px;
+			padding: 22px;
+			border-radius: var(--radius);
+			background: rgba(255, 255, 255, .055);
+			border: 1px solid rgba(255, 255, 255, .10);
+		}
+
+		.value-number {
+			width: 42px;
+			height: 42px;
+			display: grid;
+			place-items: center;
+			margin-bottom: 18px;
+			border-radius: 16px;
+			color: #07101d;
+			font-weight: 900;
+			background: linear-gradient(135deg, var(--blue), var(--violet));
+		}
+
+		.story-flow {
+			display: grid;
+			gap: 18px;
+		}
+
+		.story-block {
+			position: relative;
+			display: grid;
+			grid-template-columns: minmax(160px, .36fr) minmax(0, 1fr);
+			gap: 26px;
+			padding: clamp(22px, 4vw, 38px);
+			border-radius: var(--radius);
+			background: rgba(255, 255, 255, .055);
+			border: 1px solid rgba(255, 255, 255, .10);
+			overflow: hidden;
+		}
+
+		.story-block::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background: radial-gradient(circle at 18% 20%, rgba(105, 200, 255, .12), transparent 24rem);
+			pointer-events: none;
+		}
+
+		.story-year {
+			position: relative;
+			color: var(--gold);
+			font-weight: 900;
+			letter-spacing: .16em;
+			text-transform: uppercase;
+			font-size: .78rem;
+		}
+
+		.story-content {
+			position: relative;
+		}
+
+		.story-content h3 {
+			margin: 0;
+			font-size: clamp(1.35rem, 3vw, 2.2rem);
+			line-height: 1.05;
+			letter-spacing: -.05em;
+		}
+
+		.story-content p {
+			margin: 14px 0 0;
+			color: #cfd8e8;
+			font-size: 1.05rem;
+		}
+
+		.red-cross-section {
+			position: relative;
+			padding: 92px 0 96px;
+			background:
+				radial-gradient(circle at 16% 20%, rgba(255, 255, 255, .20), transparent 26rem),
+				radial-gradient(circle at 88% 24%, rgba(224, 30, 46, .22), transparent 30rem),
+				radial-gradient(circle at 44% 78%, rgba(255, 226, 168, .22), transparent 34rem),
+				radial-gradient(circle at 74% 92%, rgba(105, 83, 52, .24), transparent 30rem),
+				linear-gradient(180deg, rgba(62, 8, 14, .48), rgba(112, 16, 24, .34) 38%, rgba(91, 50, 30, .50) 64%, rgba(66, 55, 38, .42));
+			border-top: 1px solid rgba(255, 255, 255, .14);
+			border-bottom: 0;
+			overflow: hidden;
+		}
+
+		.red-cross-section::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background-image:
+				linear-gradient(90deg, rgba(255, 255, 255, .035) 1px, transparent 1px),
+				linear-gradient(rgba(255, 255, 255, .03) 1px, transparent 1px),
+				url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,3 61,38 98,38 68,59 79,94 50,73 21,94 32,59 2,38 39,38' fill='%23ffffff' opacity='0.055'/%3E%3C/svg%3E");
+			background-size: 68px 68px, 68px 68px, clamp(130px, 18vw, 240px) auto;
+			background-position: 0 0, 0 0, calc(100% - 44px) calc(100% - 2700px);
+			background-repeat: repeat, repeat, no-repeat;
+			mask-image: linear-gradient(to bottom, rgba(0, 0, 0, .85), rgba(0, 0, 0, .35));
+			pointer-events: none;
+		}
+
+		.red-cross-section::after {
+			content: "+";
+			position: absolute;
+			right: clamp(18px, 8vw, 110px);
+			top: 52px;
+			font-size: clamp(7rem, 16vw, 16rem);
+			line-height: 1;
+			font-weight: 900;
+			color: rgba(255, 255, 255, .045);
+			pointer-events: none;
+		}
+
+		.red-cross-section .container {
+			position: relative;
+			z-index: 1;
+		}
+
+		.red-cross-section .section-kicker {
+			color: #ffb7bf;
+		}
+
+		.red-cross-section .section-head p {
+			color: #f0cbd0;
+		}
+
+		.service-grid {
+			display: grid;
+			grid-template-columns: minmax(0, 1fr) minmax(280px, .82fr);
+			gap: 20px;
+			align-items: stretch;
+		}
+
+		.red-cross-logo-card {
+			position: relative;
+			min-height: 270px;
+			display: grid;
+			place-items: center;
+			padding: 28px 34px;
+			border-radius: var(--radius);
+			background:
+				radial-gradient(circle at 50% 36%, rgba(224, 30, 46, .10), transparent 11rem),
+				linear-gradient(180deg, #ffffff, #f4f7fb);
+			border: 1px solid rgba(255, 255, 255, .72);
+			box-shadow: 0 24px 70px rgba(0, 0, 0, .28), inset 0 0 0 1px rgba(224, 30, 46, .08);
+			overflow: hidden;
+		}
+
+		.red-cross-logo-card::before {
+			content: "";
+			position: absolute;
+			inset: 18px;
+			border: 1px dashed rgba(224, 30, 46, .22);
+			border-radius: 22px;
+			pointer-events: none;
+		}
+
+		.red-cross-logo-card::after {
+			position: absolute;
+			left: 24px;
+			right: 24px;
+			bottom: 20px;
+			color: rgba(40, 48, 62, .62);
+			font-size: .72rem;
+			font-weight: 800;
+			letter-spacing: .18em;
+			text-transform: uppercase;
+			text-align: center;
+		}
+
+		.red-cross-logo-card img {
+			position: relative;
+			z-index: 1;
+			width: min(285px, 86%);
+			max-height: 180px;
+			object-fit: contain;
+			filter: drop-shadow(0 16px 32px rgba(0, 0, 0, .18));
+		}
+
+		.logo-fallback {
+			display: none;
+			position: absolute;
+			left: 22px;
+			right: 22px;
+			top: 50%;
+			transform: translateY(-50%);
+			z-index: 1;
+			color: rgba(40, 48, 62, .74);
+			font-size: .9rem;
+			font-weight: 750;
+			text-align: center;
+		}
+
+		.service-card {
+			padding: clamp(24px, 4vw, 42px);
+			border-radius: var(--radius);
+			background:
+				linear-gradient(180deg, rgba(255, 255, 255, .12), rgba(255, 255, 255, .055)),
+				rgba(80, 10, 18, .34);
+			border: 1px solid rgba(255, 255, 255, .16);
+			box-shadow: var(--shadow);
+		}
+
+		.service-card p {
+			margin: 0;
+			color: #f7dde1;
+			font-size: 1.07rem;
+		}
+
+		.service-card p+p {
+			margin-top: 18px;
+		}
+
+		.service-points {
+			display: grid;
+			gap: 12px;
+		}
+
+		.service-point {
+			padding: 18px;
+			border-radius: 22px;
+			background: rgba(255, 255, 255, .085);
+			border: 1px solid rgba(255, 255, 255, .14);
+		}
+
+		.service-point strong {
+			display: block;
+			letter-spacing: -.02em;
+		}
+
+		.service-point span {
+			display: block;
+			margin-top: 5px;
+			color: #f0cbd0;
+			font-size: .94rem;
+		}
+
+		.service-value {
+			position: relative;
+			margin-top: 22px;
+			padding: clamp(28px, 5vw, 54px);
+			border-radius: 36px;
+			background:
+				linear-gradient(135deg, rgba(255, 255, 255, .16), rgba(224, 30, 46, .12) 48%, rgba(20, 8, 11, .30)),
+				rgba(78, 10, 18, .48);
+			border: 1px solid rgba(255, 255, 255, .18);
+			box-shadow: var(--shadow);
+			overflow: hidden;
+		}
+
+		.service-value::before {
+			content: "";
+			position: absolute;
+			right: -80px;
+			top: -80px;
+			width: 240px;
+			height: 240px;
+			border-radius: 999px;
+			background: rgba(255, 255, 255, .08);
+			pointer-events: none;
+		}
+
+		.service-value h3 {
+			position: relative;
+			margin: 0;
+			max-width: 840px;
+			font-size: clamp(1.6rem, 3.8vw, 3rem);
+			line-height: 1.03;
+			letter-spacing: -.055em;
+		}
+
+		.service-value p {
+			position: relative;
+			max-width: 900px;
+			margin: 18px 0 0;
+			color: #f7dde1;
+			font-size: clamp(1.05rem, 2vw, 1.22rem);
+		}
+
+		.service-value-grid {
+			position: relative;
+			display: grid;
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+			gap: 12px;
+			margin-top: 30px;
+		}
+
+		.service-value-item {
+			padding: 18px;
+			border-radius: 22px;
+			background: rgba(255, 255, 255, .09);
+			border: 1px solid rgba(255, 255, 255, .15);
+		}
+
+		.service-value-item strong {
+			display: block;
+			color: #fff;
+			letter-spacing: -.02em;
+		}
+
+		.service-value-item span {
+			display: block;
+			margin-top: 6px;
+			color: #f0cbd0;
+			font-size: .94rem;
+		}
+
+
+		.service-bridge {
+			position: relative;
+			margin-top: 26px;
+			margin-bottom: clamp(34px, 5vw, 62px);
+			padding: clamp(26px, 5vw, 48px);
+			border-radius: 34px;
+			background:
+				linear-gradient(135deg, rgba(255, 244, 215, .13), rgba(142, 94, 54, .12) 46%, rgba(36, 42, 31, .16)),
+				rgba(20, 13, 11, .30);
+			border: 1px solid rgba(255, 229, 177, .12);
+			box-shadow: 0 24px 80px rgba(0, 0, 0, .24);
+			overflow: hidden;
+		}
+
+		.service-bridge::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background:
+				radial-gradient(circle at 86% 18%, rgba(255, 226, 168, .10), transparent 18rem),
+				linear-gradient(to bottom, rgba(255, 255, 255, .035), rgba(66, 55, 38, .20));
+			pointer-events: none;
+		}
+
+		.service-bridge small {
+			position: relative;
+			display: inline-block;
+			margin-bottom: 10px;
+			color: #ffe2a8;
+			font-weight: 900;
+			letter-spacing: .16em;
+			text-transform: uppercase;
+			font-size: .72rem;
+		}
+
+		.service-bridge h3 {
+			position: relative;
+			margin: 0;
+			max-width: 860px;
+			font-size: clamp(1.45rem, 3.4vw, 2.6rem);
+			line-height: 1.05;
+			letter-spacing: -.055em;
+		}
+
+		.service-bridge p {
+			position: relative;
+			max-width: 900px;
+			margin: 16px 0 0;
+			color: #ead7c7;
+			font-size: clamp(1.03rem, 2vw, 1.18rem);
+		}
+
+
+		.turning-point {
+			position: relative;
+			padding: clamp(30px, 6vw, 64px);
+			border-radius: 40px;
+			background:
+				linear-gradient(135deg, rgba(244, 215, 159, .22), rgba(106, 91, 61, .20) 45%, rgba(36, 42, 31, .20)),
+				rgba(15, 17, 13, .50);
+			border: 1px solid rgba(255, 229, 177, .18);
+			box-shadow: 0 32px 90px rgba(0, 0, 0, .40);
+			overflow: hidden;
+		}
+
+		.turning-point::after {
+			content: none;
+		}
+
+		.turning-point .section-kicker {
+			color: var(--gold);
+		}
+
+		.turning-point h2 {
+			max-width: 850px;
+		}
+
+		.turning-point p {
+			position: relative;
+			max-width: 880px;
+			margin: 22px 0 0;
+			color: #e0e6f2;
+			font-size: clamp(1.08rem, 2vw, 1.24rem);
+		}
+
+		.army-lessons {
+			position: relative;
+			display: grid;
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+			gap: 12px;
+			margin-top: 30px;
+		}
+
+		.army-lesson {
+			padding: 18px;
+			border-radius: 22px;
+			background: rgba(255, 244, 215, .07);
+			border: 1px solid rgba(255, 229, 177, .13);
+		}
+
+		.army-lesson strong {
+			display: block;
+			color: #fff2cf;
+			letter-spacing: -.02em;
+		}
+
+		.army-lesson span {
+			display: block;
+			margin-top: 6px;
+			color: #d8cfbd;
+			font-size: .94rem;
+		}
+
+		.secret-section {
+			position: relative;
+			padding: 96px 0 88px;
+			background:
+				radial-gradient(circle at 18% 22%, rgba(105, 200, 255, .13), transparent 28rem),
+				radial-gradient(circle at 78% 80%, rgba(169, 135, 255, .12), transparent 30rem),
+				linear-gradient(180deg, rgba(7, 10, 17, .92), rgba(11, 14, 24, .98));
+			overflow: hidden;
+		}
+
+		.secret-section::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .05), transparent);
+			transform: translateX(-100%);
+			animation: sweep 8s ease-in-out infinite;
+			opacity: .55;
+			pointer-events: none;
+		}
+
+		@keyframes sweep {
+
+			0%,
+			42% {
+				transform: translateX(-100%);
+			}
+
+			70%,
+			100% {
+				transform: translateX(100%);
+			}
+		}
+
+		.secret-card {
+			position: relative;
+			padding: clamp(30px, 6vw, 58px);
+			border-radius: 38px;
+			background: rgba(255, 255, 255, .05);
+			border: 1px solid rgba(255, 255, 255, .13);
+			box-shadow: var(--shadow);
+		}
+
+		.secret-card::after {
+			content: "riservato";
+			position: absolute;
+			right: clamp(18px, 4vw, 42px);
+			top: clamp(18px, 4vw, 34px);
+			padding: 8px 12px;
+			border-radius: 999px;
+			border: 1px solid rgba(255, 255, 255, .13);
+			color: var(--muted);
+			font-size: .72rem;
+			font-weight: 800;
+			letter-spacing: .14em;
+			text-transform: uppercase;
+			background: rgba(7, 10, 17, .62);
+		}
+
+		.secret-card h2 {
+			max-width: 850px;
+		}
+
+		.secret-card p {
+			max-width: 870px;
+			margin: 22px 0 0;
+			color: #cbd5e5;
+			font-size: clamp(1.08rem, 2vw, 1.22rem);
+		}
+
+		.secret-line {
+			position: relative;
+			display: grid;
+			grid-template-columns: 42px 1fr;
+			gap: 18px;
+			align-items: start;
+			margin-top: 34px;
+			padding-top: 2px;
+		}
+
+		.secret-marker {
+			width: 42px;
+			height: 42px;
+			border-radius: 999px;
+			display: grid;
+			place-items: center;
+			background: rgba(255, 255, 255, .06);
+			border: 1px solid rgba(105, 200, 255, .28);
+			box-shadow: 0 0 0 10px rgba(105, 200, 255, .055);
+		}
+
+		.secret-marker::before {
+			content: "";
+			width: 10px;
+			height: 10px;
+			border-radius: 999px;
+			background: var(--blue);
+		}
+
+		.secret-note {
+			padding: 18px 20px;
+			border-radius: 22px;
+			background: rgba(255, 255, 255, .045);
+			border: 1px solid rgba(255, 255, 255, .10);
+			color: var(--muted);
+		}
+
+		.quote {
+			position: relative;
+			padding: clamp(26px, 5vw, 54px);
+			border-radius: 36px;
+			overflow: hidden;
+			background:
+				linear-gradient(135deg, rgba(105, 200, 255, .18), rgba(169, 135, 255, .10) 46%, rgba(255, 109, 157, .12)),
+				rgba(255, 255, 255, .045);
+			border: 1px solid rgba(255, 255, 255, .14);
+			box-shadow: var(--shadow);
+		}
+
+		.quote p {
+			margin: 0;
+			max-width: 900px;
+			font-size: clamp(1.35rem, 3vw, 2.35rem);
+			line-height: 1.22;
+			letter-spacing: -.045em;
+		}
+
+		.quote span {
+			display: block;
+			margin-top: 22px;
+			color: var(--muted);
+		}
+
+		.contact-card {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 24px;
+			padding: clamp(24px, 4vw, 42px);
+			border-radius: 34px;
+			background: rgba(255, 255, 255, .055);
+			border: 1px solid rgba(255, 255, 255, .10);
+		}
+
+		.contact-card h2 {
+			font-size: clamp(2rem, 4vw, 3rem);
+		}
+
+		.contact-card p {
+			max-width: 650px;
+			color: var(--muted);
+			margin: 14px 0 0;
+		}
+
+		.socials {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 10px;
+			justify-content: flex-end;
+		}
+
+		.socials a {
+			padding: 10px 14px;
+			border-radius: 999px;
+			color: var(--muted);
+			border: 1px solid rgba(255, 255, 255, .12);
+			background: rgba(255, 255, 255, .045);
+			transition: .2s ease;
+		}
+
+		.socials a:hover {
+			color: var(--text);
+			transform: translateY(-2px);
+			background: rgba(255, 255, 255, .085);
+		}
+
+		footer {
+			padding: 34px 0 44px;
+			color: var(--muted-2);
+			font-size: .92rem;
+		}
+
+		.footer-row {
+			display: flex;
+			justify-content: space-between;
+			gap: 16px;
+			border-top: 1px solid rgba(255, 255, 255, .08);
+			padding-top: 24px;
+		}
+
+		.reveal {
+			opacity: 0;
+			transform: translateY(18px);
+			transition: opacity .65s ease, transform .65s ease;
+		}
+
+		.reveal.visible {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+
+		.project-link {
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			margin-top: 18px;
+			color: var(--text);
+			font-weight: 750;
+			font-size: .92rem;
+			opacity: .9;
+			transition: opacity .2s ease, transform .2s ease;
+		}
+
+		.project-link::after {
+			content: "↗";
+			font-size: .9rem;
+			color: var(--blue);
+		}
+
+		.project-link:hover {
+			opacity: 1;
+			transform: translateX(2px);
+		}
+
+		@media (max-width: 900px) {
+			.nav-links {
+				display: none;
+			}
+
+			.hero {
+				padding-top: 58px;
+			}
+
+			.hero-grid,
+			.section-head,
+			.about-grid {
+				grid-template-columns: 1fr;
+			}
+
+			.portrait-card {
+				max-width: 460px;
+				margin: 0 auto;
+			}
+
+			.project-grid {
+				grid-template-columns: 1fr;
+			}
+
+			.project-card.featured {
+				grid-column: auto;
+				grid-template-columns: 1fr;
+			}
+
+			.project-visual {
+				justify-self: start;
+				width: 180px;
+			}
+
+			.values-grid,
+			.service-grid,
+			.service-value-grid,
+			.army-lessons {
+				grid-template-columns: 1fr;
+			}
+
+			.story-block {
+				grid-template-columns: 1fr;
+				gap: 12px;
+			}
+
+
+			.red-cross-logo-card {
+				min-height: 230px;
+			}
+
+			.red-cross-logo-card img {
+				max-height: 150px;
+			}
+
+			.secret-card::after {
+				position: static;
+				display: inline-flex;
+				margin-bottom: 18px;
+			}
+
+			.secret-line {
+				grid-template-columns: 1fr;
+			}
+
+			.contact-card {
+				align-items: flex-start;
+				flex-direction: column;
+			}
+
+			.socials {
+				justify-content: flex-start;
+			}
+		}
+
+		@media (max-width: 560px) {
+			.container {
+				width: min(calc(100% - 28px), var(--max));
+			}
+
+			section {
+				padding: 54px 0;
+			}
+
+			.hero {
+				padding: 40px 0 34px;
+			}
+
+			.hero-grid {
+				gap: 24px;
+			}
+
+			.eyebrow {
+				margin-bottom: 16px;
+				padding: 8px 12px;
+				font-size: .8rem;
+				line-height: 1.35;
+			}
+
+			h1 {
+				font-size: clamp(2.7rem, 17vw, 4.5rem);
+				line-height: .97;
+			}
+
+			.lead {
+				margin-top: 18px;
+				font-size: 1rem;
+			}
+
+			.hero-actions {
+				margin-top: 22px;
+			}
+
+			.hero-actions .button {
+				width: 100%;
+			}
+
+			.section-head {
+				gap: 16px;
+				margin-bottom: 24px;
+			}
+
+			.section-head p {
+				font-size: .98rem;
+			}
+
+			.about-text p,
+			.story-content p,
+			.service-card p,
+			.service-value p,
+			.service-bridge p,
+			.turning-point p,
+			.secret-card p,
+			.contact-card p {
+				font-size: .98rem;
+			}
+
+			.portrait-card {
+				padding: 10px;
+				border-radius: 28px;
+			}
+
+			.portrait-inner {
+				border-radius: 22px;
+			}
+
+			.portrait-inner img {
+				aspect-ratio: 1 / 1;
+			}
+
+			.portrait-caption {
+				left: 10px;
+				right: 10px;
+				bottom: 10px;
+				padding: 12px 14px;
+				border-radius: 16px;
+			}
+
+			.project-card,
+			.value-card,
+			.story-block,
+			.service-card,
+			.service-value,
+			.service-bridge,
+			.turning-point,
+			.secret-card,
+			.contact-card {
+				padding: 20px 18px;
+				border-radius: 24px;
+			}
+
+			.project-card {
+				min-height: auto;
+			}
+
+			.project-icon {
+				width: 54px;
+				height: 54px;
+				margin-bottom: 14px;
+			}
+
+			.project-icon img {
+				width: 34px;
+				height: 34px;
+			}
+
+			.quote {
+				padding: 22px 18px;
+				border-radius: 26px;
+			}
+
+			.quote p {
+				font-size: clamp(1.2rem, 6vw, 1.7rem);
+			}
+
+			.red-cross-section {
+				padding: 64px 0 72px;
+			}
+
+			.red-cross-section::after {
+				top: 28px;
+				right: 14px;
+				font-size: clamp(4.8rem, 22vw, 7.4rem);
+			}
+
+			.red-cross-section::before {
+				background-size: 52px 52px, 52px 52px, 118px auto;
+				background-position: 0 0, 0 0, calc(100% - 14px) calc(100% - 170px);
+			}
+
+			.red-cross-logo-card {
+				min-height: 200px;
+				padding: 20px;
+			}
+
+			.red-cross-logo-card::before {
+				inset: 12px;
+				border-radius: 16px;
+			}
+
+			.red-cross-logo-card img {
+				width: min(220px, 84%);
+				max-height: 120px;
+			}
+
+			.service-point,
+			.service-value-item,
+			.army-lesson,
+			.secret-note,
+			.identity-item {
+				padding: 15px;
+				border-radius: 18px;
+			}
+
+			.service-bridge {
+				margin-top: 20px;
+				margin-bottom: 28px;
+			}
+
+			.turning-point {
+				padding-top: 22px;
+			}
+
+			.turning-point::after {
+				content: none;
+			}
+
+			.footer-row {
+				flex-direction: column;
+			}
+
+			.timeline-item {
+				gap: 12px;
+			}
+
+			.socials a {
+				width: 100%;
+				justify-content: center;
+			}
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			html {
+				scroll-behavior: auto;
+			}
+
+			*,
+			*::before,
+			*::after {
+				animation-duration: .001ms !important;
+				animation-iteration-count: 1 !important;
+				transition-duration: .001ms !important;
+			}
+
+			.reveal {
+				opacity: 1;
+				transform: none;
+			}
+		}
+	</style>
 </head>
 
-<body class="u-body">
-	<header
-		class="u-clearfix u-header u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-valign-middle-xs u-header"
-		id="sec-2fd7">
-		<div class="u-container-style u-expanded-width u-grey-90 u-group u-shape-rectangle u-group-1">
-			<div class="u-container-layout u-valign-bottom-xl u-container-layout-1">
-				<div class="u-container-style u-expanded-width u-grey-90 u-group u-shape-rectangle u-group-2">
-					<div
-						class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-container-layout-2">
-						<div class="u-social-icons u-spacing-18 u-social-icons-1">
-							<a class="u-social-url" title="twitter" target="_blank"
-								href="https://www.twitter.com/giannuzzoexe">
-								<span class="u-icon u-icon-circle u-social-icon u-social-twitter u-text-white u-icon-1">
-									<svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512">
-										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-bf45"></use>
-									</svg>
-									<svg class="u-svg-content" viewBox="0 0 512 512" id="svg-bf45">
-										<path
-											d="m256 0c-141.363281 0-256 114.636719-256 256s114.636719 256 256 256 256-114.636719 256-256-114.636719-256-256-256zm116.886719 199.601562c.113281 2.519532.167969 5.050782.167969 7.59375 0 77.644532-59.101563 167.179688-167.183594 167.183594h.003906-.003906c-33.183594 0-64.0625-9.726562-90.066406-26.394531 4.597656.542969 9.277343.8125 14.015624.8125 27.53125 0 52.867188-9.390625 72.980469-25.152344-25.722656-.476562-47.410156-17.464843-54.894531-40.8125 3.582031.6875 7.265625 1.0625 11.042969 1.0625 5.363281 0 10.558593-.722656 15.496093-2.070312-26.886718-5.382813-47.140624-29.144531-47.140624-57.597657 0-.265624 0-.503906.007812-.75 7.917969 4.402344 16.972656 7.050782 26.613281 7.347657-15.777343-10.527344-26.148437-28.523438-26.148437-48.910157 0-10.765624 2.910156-20.851562 7.957031-29.535156 28.976563 35.554688 72.28125 58.9375 121.117187 61.394532-1.007812-4.304688-1.527343-8.789063-1.527343-13.398438 0-32.4375 26.316406-58.753906 58.765625-58.753906 16.902344 0 32.167968 7.144531 42.890625 18.566406 13.386719-2.640625 25.957031-7.53125 37.3125-14.261719-4.394531 13.714844-13.707031 25.222657-25.839844 32.5 11.886719-1.421875 23.214844-4.574219 33.742187-9.253906-7.863281 11.785156-17.835937 22.136719-29.308593 30.429687zm0 0">
-										</path>
-									</svg>
-								</span>
-							</a>
-							<a class="u-social-url" title="instagram" target="_blank"
-								href="https://www.instagram.com/giannuzzo.exe">
-								<span
-									class="u-icon u-icon-circle u-social-icon u-social-instagram u-text-white u-icon-2">
-									<svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512">
-										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-18a4"></use>
-									</svg>
-									<svg class="u-svg-content" viewBox="0 0 512 512" id="svg-18a4">
-										<path
-											d="m305 256c0 27.0625-21.9375 49-49 49s-49-21.9375-49-49 21.9375-49 49-49 49 21.9375 49 49zm0 0">
-										</path>
-										<path
-											d="m370.59375 169.304688c-2.355469-6.382813-6.113281-12.160157-10.996094-16.902344-4.742187-4.882813-10.515625-8.640625-16.902344-10.996094-5.179687-2.011719-12.960937-4.40625-27.292968-5.058594-15.503906-.707031-20.152344-.859375-59.402344-.859375-39.253906 0-43.902344.148438-59.402344.855469-14.332031.65625-22.117187 3.050781-27.292968 5.0625-6.386719 2.355469-12.164063 6.113281-16.902344 10.996094-4.882813 4.742187-8.640625 10.515625-11 16.902344-2.011719 5.179687-4.40625 12.964843-5.058594 27.296874-.707031 15.5-.859375 20.148438-.859375 59.402344 0 39.25.152344 43.898438.859375 59.402344.652344 14.332031 3.046875 22.113281 5.058594 27.292969 2.359375 6.386719 6.113281 12.160156 10.996094 16.902343 4.742187 4.882813 10.515624 8.640626 16.902343 10.996094 5.179688 2.015625 12.964844 4.410156 27.296875 5.0625 15.5.707032 20.144532.855469 59.398438.855469 39.257812 0 43.90625-.148437 59.402344-.855469 14.332031-.652344 22.117187-3.046875 27.296874-5.0625 12.820313-4.945312 22.953126-15.078125 27.898438-27.898437 2.011719-5.179688 4.40625-12.960938 5.0625-27.292969.707031-15.503906.855469-20.152344.855469-59.402344 0-39.253906-.148438-43.902344-.855469-59.402344-.652344-14.332031-3.046875-22.117187-5.0625-27.296874zm-114.59375 162.179687c-41.691406 0-75.488281-33.792969-75.488281-75.484375s33.796875-75.484375 75.488281-75.484375c41.6875 0 75.484375 33.792969 75.484375 75.484375s-33.796875 75.484375-75.484375 75.484375zm78.46875-136.3125c-9.742188 0-17.640625-7.898437-17.640625-17.640625s7.898437-17.640625 17.640625-17.640625 17.640625 7.898437 17.640625 17.640625c-.003906 9.742188-7.898437 17.640625-17.640625 17.640625zm0 0">
-										</path>
-										<path
-											d="m256 0c-141.363281 0-256 114.636719-256 256s114.636719 256 256 256 256-114.636719 256-256-114.636719-256-256-256zm146.113281 316.605469c-.710937 15.648437-3.199219 26.332031-6.832031 35.683593-7.636719 19.746094-23.246094 35.355469-42.992188 42.992188-9.347656 3.632812-20.035156 6.117188-35.679687 6.832031-15.675781.714844-20.683594.886719-60.605469.886719-39.925781 0-44.929687-.171875-60.609375-.886719-15.644531-.714843-26.332031-3.199219-35.679687-6.832031-9.8125-3.691406-18.695313-9.476562-26.039063-16.957031-7.476562-7.339844-13.261719-16.226563-16.953125-26.035157-3.632812-9.347656-6.121094-20.035156-6.832031-35.679687-.722656-15.679687-.890625-20.6875-.890625-60.609375s.167969-44.929688.886719-60.605469c.710937-15.648437 3.195312-26.332031 6.828125-35.683593 3.691406-9.808594 9.480468-18.695313 16.960937-26.035157 7.339844-7.480469 16.226563-13.265625 26.035157-16.957031 9.351562-3.632812 20.035156-6.117188 35.683593-6.832031 15.675781-.714844 20.683594-.886719 60.605469-.886719s44.929688.171875 60.605469.890625c15.648437.710937 26.332031 3.195313 35.683593 6.824219 9.808594 3.691406 18.695313 9.480468 26.039063 16.960937 7.476563 7.34375 13.265625 16.226563 16.953125 26.035157 3.636719 9.351562 6.121094 20.035156 6.835938 35.683593.714843 15.675781.882812 20.683594.882812 60.605469s-.167969 44.929688-.886719 60.605469zm0 0">
-										</path>
-									</svg>
-								</span>
-							</a>
-							<a class="u-social-url" title="github" target="_blank"
-								href="https://github.com/giannuzzoexe">
-								<span
-									class="u-icon u-icon-circle u-social-facebook u-social-icon u-text-white u-icon-3">
-									<svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512">
-										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-c6da"></use>
-									</svg>
-									<svg class="u-svg-content" viewBox="0 0 512 512" id="svg-c6da">
-										<path
-											d="m256 0c-140.609375 0-256 115.390625-256 256 0 119.988281 84.195312 228.984375 196 256v-84.695312c-11.078125 2.425781-21.273438 2.496093-32.550781-.828126-15.128907-4.464843-27.421875-14.542968-36.546875-29.910156-5.816406-9.8125-16.125-20.453125-26.878906-19.671875l-2.636719-29.882812c23.253906-1.992188 43.371093 14.167969 55.3125 34.230469 5.304687 8.921874 11.410156 14.152343 19.246093 16.464843 7.574219 2.230469 15.707032 1.160157 25.183594-2.1875 2.378906-18.972656 11.070313-26.074219 17.636719-36.074219v-.015624c-66.679687-9.945313-93.253906-45.320313-103.800781-73.242188-13.976563-37.074219-6.476563-83.390625 18.238281-112.660156.480469-.570313 1.347656-2.0625 1.011719-3.105469-11.332032-34.230469 2.476562-62.546875 2.984375-65.550781 13.078125 3.867187 15.203125-3.890625 56.808593 21.386718l7.191407 4.320313c3.007812 1.792969 2.0625.769531 5.070312.542969 17.371094-4.71875 35.683594-7.324219 53.726563-7.558594 18.179687.234375 36.375 2.839844 54.464844 7.75l2.328124.234375c-.203124-.03125.632813-.148437 2.035157-.984375 51.972656-31.480469 50.105469-21.191406 64.042969-25.722656.503906 3.007812 14.128906 31.785156 2.917968 65.582031-1.511718 4.65625 45.058594 47.300781 19.246094 115.753906-10.546875 27.933594-37.117188 63.308594-103.796875 73.253907v.015624c8.546875 13.027344 18.816406 19.957032 18.761719 46.832032v105.722656c111.808594-27.015625 196-136.011719 196-256 .003906-140.609375-115.386719-256-255.996094-256zm0 0">
-										</path>
-									</svg>
-								</span>
-							</a>
-							<a class="u-social-url" target="_blank" title="LinkedIn"
-								href="https://www.linkedin.com/in/giovanni-d-amore-892b95203/">
-								<span
-									class="u-icon u-icon-circle u-social-icon u-social-linkedin u-text-white u-icon-4">
-									<svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512">
-										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-0ced"></use>
-									</svg><svg class="u-svg-content" viewBox="0 0 512 512" id="svg-0ced">
-										<path
-											d="m256 0c-141.363281 0-256 114.636719-256 256s114.636719 256 256 256 256-114.636719 256-256-114.636719-256-256-256zm-74.390625 387h-62.347656v-187.574219h62.347656zm-31.171875-213.1875h-.40625c-20.921875 0-34.453125-14.402344-34.453125-32.402344 0-18.40625 13.945313-32.410156 35.273437-32.410156 21.328126 0 34.453126 14.003906 34.859376 32.410156 0 18-13.53125 32.402344-35.273438 32.402344zm255.984375 213.1875h-62.339844v-100.347656c0-25.21875-9.027343-42.417969-31.585937-42.417969-17.222656 0-27.480469 11.601563-31.988282 22.800781-1.648437 4.007813-2.050781 9.609375-2.050781 15.214844v104.75h-62.34375s.816407-169.976562 0-187.574219h62.34375v26.558594c8.285157-12.78125 23.109375-30.960937 56.1875-30.960937 41.019531 0 71.777344 26.808593 71.777344 84.421874zm0 0">
-										</path>
-									</svg>
-								</span>
-							</a>
-							<a class="u-social-url" target="_blank" title="Email"
-								href="mailto:giovanni.damore85@gmail.com">
-								<span class="u-icon u-icon-circle u-social-email u-social-icon u-icon-5">
-									<svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512">
-										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-ab30"></use>
-									</svg><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-ab30"
-										style="enable-background:new 0 0 512 512;">
-										<g>
-											<g>
-												<path
-													d="M257,210c-24.814,0-45,20.186-45,45c0,24.814,20.186,45,45,45c24.814,0,45-20.186,45-45C302,230.186,281.814,210,257,210z">
-												</path>
-											</g>
-										</g>
-										<g>
-											<g>
-												<path
-													d="M255,0C114.39,0,0,114.39,0,255s114.39,257,255,257s257-116.39,257-257S395.61,0,255,0z M362,330    c-20.273,0-38.152-10.161-49.017-25.596C299.23,319.971,279.354,330,257,330c-41.353,0-75-33.647-75-75c0-41.353,33.647-75,75-75    c16.948,0,32.426,5.865,45,15.383V195c0-8.291,6.709-15,15-15c8.291,0,15,6.709,15,15c0,33.36,0,41.625,0,75    c0,16.538,13.462,30,30,30c16.538,0,30-13.462,30-30c0-100.391-66.432-150-135-150c-74.443,0-135,60.557-135,135    s60.557,135,135,135c30,0,58.374-9.609,82.061-27.803c15.822-12.078,33.94,11.765,18.281,23.789    C328.353,408.237,293.665,420,257,420c-90.981,0-165-74.019-165-165S166.019,90,257,90c82.897,0,165,61.135,165,180    C422,303.091,395.091,330,362,330z">
-												</path>
-											</g>
-										</g>
-									</svg></span>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div alt="" class="u-image u-image-circle u-image-1" data-image-width="477" data-image-height="553">
-					<img class="u-image u-image-circle u-image-1" src="/images/pic.PNG" data-image-width="900"
-						data-image-height="900" style="margin-top: 10px;">
-				</div>
-				<div class="u-align-center u-black u-container-style u-group u-opacity u-opacity-0 u-group-3">
-					<div class="u-container-layout u-container-layout-3"><span
-							class="u-icon u-icon-circle u-text-white u-icon-6"><svg class="u-svg-link"
-								preserveAspectRatio="xMidYMin slice" viewBox="0 0 95.333 95.332">
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-ca2d"></use>
-							</svg><svg class="u-svg-content" viewBox="0 0 95.333 95.332" x="0px" y="0px" id="svg-ca2d"
-								style="enable-background:new 0 0 95.333 95.332;">
-								<g>
-									<g>
-										<path
-											d="M30.512,43.939c-2.348-0.676-4.696-1.019-6.98-1.019c-3.527,0-6.47,0.806-8.752,1.793    c2.2-8.054,7.485-21.951,18.013-23.516c0.975-0.145,1.774-0.85,2.04-1.799l2.301-8.23c0.194-0.696,0.079-1.441-0.318-2.045    s-1.035-1.007-1.75-1.105c-0.777-0.106-1.569-0.16-2.354-0.16c-12.637,0-25.152,13.19-30.433,32.076    c-3.1,11.08-4.009,27.738,3.627,38.223c4.273,5.867,10.507,9,18.529,9.313c0.033,0.001,0.065,0.002,0.098,0.002    c9.898,0,18.675-6.666,21.345-16.209c1.595-5.705,0.874-11.688-2.032-16.851C40.971,49.307,36.236,45.586,30.512,43.939z">
-										</path>
-										<path
-											d="M92.471,54.413c-2.875-5.106-7.61-8.827-13.334-10.474c-2.348-0.676-4.696-1.019-6.979-1.019    c-3.527,0-6.471,0.806-8.753,1.793c2.2-8.054,7.485-21.951,18.014-23.516c0.975-0.145,1.773-0.85,2.04-1.799l2.301-8.23    c0.194-0.696,0.079-1.441-0.318-2.045c-0.396-0.604-1.034-1.007-1.75-1.105c-0.776-0.106-1.568-0.16-2.354-0.16    c-12.637,0-25.152,13.19-30.434,32.076c-3.099,11.08-4.008,27.738,3.629,38.225c4.272,5.866,10.507,9,18.528,9.312    c0.033,0.001,0.065,0.002,0.099,0.002c9.897,0,18.675-6.666,21.345-16.209C96.098,65.559,95.376,59.575,92.471,54.413z">
-										</path>
-									</g>
-								</g>
-							</svg></span>
-						<p class="u-text u-text-1">Mi chiamo Giovanni ho <span id="my_years">--</span> anni e sono uno
-							Sviluppatore di videogiochi, applicazioni per dispositivi (mobili, desktop e web) e
-							back-end. Nel corso della
-							mia carriera formativa ho lavorato a diversi progetti nazionali, internazionali e
-							personali.&nbsp;</p><span class="u-icon u-icon-circle u-text-white u-icon-7"><svg
-								class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 98.829 98.829">
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1569"></use>
-							</svg><svg class="u-svg-content" viewBox="0 0 98.829 98.829" x="0px" y="0px" id="svg-1569"
-								style="enable-background:new 0 0 98.829 98.829;">
-								<g>
-									<g>
-										<path
-											d="M96.76,41.603C91.511,22.831,78.562,9.204,65.975,9.204c-1.011,0-2.021,0.088-3.005,0.262    c-0.558,0.098-1.046,0.426-1.348,0.902c-0.301,0.479-0.386,1.061-0.233,1.605l2.591,9.268c0.25,0.895,1.113,1.5,2.01,1.459    l0.206-0.004c4.668,0,13.199,6.996,17.548,22.545c0.172,0.617,0.335,1.248,0.492,1.906c-4.882-2.416-10.706-2.975-15.98-1.506    C56.358,48.97,49.388,61.356,52.714,73.252c2.696,9.639,11.563,16.373,21.563,16.373c2.037,0,4.071-0.281,6.046-0.834    c7.846-2.193,13.745-8.707,16.611-18.338C99.521,61.764,99.456,51.249,96.76,41.603z">
-										</path>
-										<path
-											d="M14.088,9.206c-1.009,0-2.02,0.086-3.003,0.26c-0.557,0.096-1.046,0.426-1.347,0.902    c-0.301,0.479-0.386,1.061-0.234,1.605l2.592,9.268c0.25,0.895,1.097,1.5,2.01,1.459l0.204-0.004    c4.668,0,13.2,6.996,17.549,22.545c0.173,0.621,0.336,1.252,0.492,1.906c-4.884-2.416-10.706-2.975-15.98-1.506    C4.475,48.97-2.497,61.356,0.831,73.252c2.696,9.639,11.563,16.373,21.563,16.373c2.037,0,4.071-0.281,6.047-0.834    c7.845-2.193,13.744-8.707,16.611-18.338c2.586-8.689,2.522-19.205-0.175-28.852C39.625,22.831,26.678,9.206,14.088,9.206z">
-										</path>
-									</g>
-								</g>
-							</svg></span>
-					</div>
-				</div>
-				<img src="/images/White.png" alt=""
-					class="u-hidden-sm u-hidden-xs u-image u-image-default u-preserve-proportions u-image-2"
-					data-image-width="1000" data-image-height="1000">
-			</div>
-		</div>
-		<div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
-			<div class="u-layout">
-				<div class="u-layout-row">
-					<div class="u-align-center u-container-style u-layout-cell u-size-20 u-layout-cell-1">
-						<div class="u-container-layout u-valign-top-xs u-container-layout-4"><span
-								class="u-icon u-icon-circle u-icon-8"><svg class="u-svg-link"
-									preserveAspectRatio="xMidYMin slice" viewBox="0 0 510 510">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-c248"></use>
-								</svg><svg class="u-svg-content" viewBox="0 0 510 510" id="svg-c248">
-									<g id="XMLID_1325_">
-										<path id="XMLID_1328_"
-											d="m255 110.972c-18.389-30.517-51.849-50.972-90-50.972-33.084 0-60-26.916-60-60h-30c0 49.626 40.374 90 90 90 41.355 0 75 33.645 75 75l8.5 10 6.5-10 4-17.5z"
-											fill="#e7f2ff"></path>
-										<path id="XMLID_1331_" d="m255 165h-15-30l-4.89 60 29.945 10 19.945-10 10-30z"
-											fill="#3d4566"></path>
-										<path id="XMLID_1334_"
-											d="m270 165c0-19.746-5.482-38.234-15-54.028v54.028l9.374 10z"
-											fill="#d0e8ff"></path>
-										<path id="XMLID_1337_" d="m255 225 30 10 30-10-15-60h-30-15z" fill="#2e2e4d">
-										</path>
-										<path id="XMLID_1340_"
-											d="m187.281 289.897-64.286-64.897h-2.995c-68.471 0-120 100.095-120 165 0 66.168 53.832 120 120 120 43.424 0 82.733-23.302 103.939-60h31.061l10-59.999-10-75.001z"
-											fill="#4d5e80"></path>
-										<path id="XMLID_1343_"
-											d="m390 225-67.5 71.397-67.5 18.603v135h31.06c21.151 36.603 60.405 60 103.94 60 66.168 0 120-53.832 120-120 0-64.905-51.529-165-120-165z"
-											fill="#3d4566"></path>
-										<path id="XMLID_1346_" d="m150 360h-30v-30h-30v30h-30v30h30v30h30v-30h30z"
-											fill="#2de6a8"></path>
-										<path id="XMLID_1347_" d="m375 405h30v30h-30z" fill="#f33c54"></path>
-										<path id="XMLID_1348_" d="m375 315h30v30h-30z" fill="#f33c54"></path>
-										<path id="XMLID_1351_" d="m330 360h30v30h-30z" fill="#ffbe40"></path>
-										<path id="XMLID_1354_" d="m420 360h30v30h-30z" fill="#00bf9f"></path>
-										<path id="XMLID_1357_"
-											d="m255 315 10-45-10-45c-15.616 0-116.537 0-132.005 0l64.286 90z"
-											fill="#8adefd"></path>
-										<path id="XMLID_1360_" d="m322.5 315 67.5-90c-15.867 0-120.627 0-135 0v90z"
-											fill="#50c5ff"></path>
-									</g>
-								</svg></span>
-							<h2 class="u-custom-font u-font-ubuntu u-subtitle u-text u-text-2">Game Developer</h2>
-						</div>
-					</div>
-					<div class="u-align-center u-container-style u-layout-cell u-size-20 u-layout-cell-2">
-						<div class="u-container-layout u-valign-top-sm u-valign-top-xs u-container-layout-5"><span
-								class="u-icon u-icon-circle u-icon-9"><svg class="u-svg-link"
-									preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-88bc"></use>
-								</svg><svg class="u-svg-content" viewBox="0 0 512 512" id="svg-88bc">
-									<g>
-										<g>
-											<g>
-												<path d="m31 137h450v60h-450z" fill="#384949"></path>
-											</g>
-										</g>
-										<path d="m256 137h225v60h-225z" fill="#293939"></path>
-										<g>
-											<g>
-												<path d="m31 317h450v60h-450z" fill="#384949"></path>
-											</g>
-										</g>
-										<path d="m256 317h225v60h-225z" fill="#293939"></path>
-										<g>
-											<path d="m0 0v152h512v-152z" fill="#4a696f"></path>
-										</g>
-										<path d="m256 0h256v152h-256z" fill="#384949"></path>
-										<g>
-											<g>
-												<g>
-													<path d="m61 62h30v30h-30z" fill="#9bfcff"></path>
-												</g>
-											</g>
-										</g>
-										<g>
-											<g>
-												<path d="m121 62h30v30h-30z" fill="#9bfcff"></path>
-											</g>
-										</g>
-										<g>
-											<g>
-												<g>
-													<path d="m181 62h30v30h-30z" fill="#9bfcff"></path>
-												</g>
-											</g>
-										</g>
-										<g>
-											<g>
-												<path d="m301 62h150v30h-150z" fill="#293939"></path>
-											</g>
-										</g>
-										<g>
-											<path d="m0 182v150h512v-150z" fill="#4a696f"></path>
-										</g>
-										<path d="m256 182h256v150h-256z" fill="#384949"></path>
-										<g>
-											<g>
-												<g>
-													<path d="m61 242h30v30h-30z" fill="#9bfcff"></path>
-												</g>
-											</g>
-										</g>
-										<g>
-											<g>
-												<path d="m121 242h30v30h-30z" fill="#9bfcff"></path>
-											</g>
-										</g>
-										<g>
-											<g>
-												<g>
-													<path d="m181 242h30v30h-30z" fill="#9bfcff"></path>
-												</g>
-											</g>
-										</g>
-										<g>
-											<g>
-												<path d="m301 242h150v30h-150z" fill="#293939"></path>
-											</g>
-										</g>
-										<g>
-											<path d="m0 362v150h512v-150z" fill="#4a696f"></path>
-										</g>
-										<path d="m256 362h256v150h-256z" fill="#384949"></path>
-										<g>
-											<g>
-												<g>
-													<path d="m61 422h30v30h-30z" fill="#9bfcff"></path>
-												</g>
-											</g>
-										</g>
-										<g>
-											<g>
-												<g>
-													<path d="m121 422h30v30h-30z" fill="#9bfcff"></path>
-												</g>
-											</g>
-										</g>
-										<g>
-											<g>
-												<g>
-													<path d="m181 422h30v30h-30z" fill="#9bfcff"></path>
-												</g>
-											</g>
-										</g>
-										<g>
-											<path d="m301 422h150v30h-150z" fill="#293939"></path>
-										</g>
-									</g>
-								</svg></span>
-							<h2 class="u-custom-font u-font-ubuntu u-subtitle u-text u-text-3">Back-End Developer</h2>
-						</div>
-					</div>
-					<div class="u-align-center u-container-style u-layout-cell u-size-20 u-layout-cell-3">
-						<div class="u-container-layout u-valign-top u-container-layout-6"><span
-								class="u-icon u-icon-circle u-icon-10"><svg class="u-svg-link"
-									preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-7e57"></use>
-								</svg><svg class="u-svg-content" viewBox="0 0 512 512" id="svg-7e57">
-									<g>
-										<path
-											d="m460.8 256v-68.267c0-28.277-22.923-51.2-51.2-51.2h-124.932c-6.43 0-11.609 5.262-11.601 11.692.01 7.825 1.256 15.362 3.534 22.442h-241.792c-19.126 0-35.156 15.652-34.803 34.775.342 18.546 15.5 33.492 34.127 33.492h34.134v204.8h307.2 34.133c28.28 0 51.2-22.921 51.2-51.2h36.2c8.284 0 15-6.716 15-15v-106.534c0-8.284-6.716-15-15-15z"
-											fill="#ffdcc8"></path>
-										<path
-											d="m330.105 0h-216.476c-25.013 0-45.362 20.349-45.362 45.361v421.277c0 25.012 20.35 45.361 45.362 45.361h216.476c25.012 0 45.362-20.349 45.362-45.361v-421.277c0-25.012-20.35-45.361-45.362-45.361z"
-											fill="#00366d"></path>
-										<path
-											d="m375.467 466.639v-421.278c0-25.012-20.35-45.361-45.362-45.361h-108.238v512h108.238c25.012 0 45.362-20.349 45.362-45.361z"
-											fill="#01223c"></path>
-										<path
-											d="m328.333 30h-17.133v17.133c0 26.031-21.102 47.133-47.133 47.133h-84.4c-26.031 0-47.133-21.102-47.133-47.133v-17.133h-17.133c-9.447 0-17.134 7.686-17.134 17.133v417.733c0 9.447 7.687 17.133 17.134 17.133h212.932c9.447 0 17.134-7.686 17.134-17.133v-417.733c0-9.447-7.687-17.133-17.134-17.133z"
-											fill="#5ff9fe"></path>
-										<path
-											d="m345.467 464.867v-417.734c0-9.447-7.687-17.133-17.134-17.133h-17.133v17.133c0 26.031-21.102 47.133-47.133 47.133h-42.2v387.734h106.466c9.447 0 17.134-7.686 17.134-17.133z"
-											fill="#00dde7"></path>
-										<circle cx="68.267" cy="409.6" fill="#ffc5bb" r="34.133"></circle>
-										<path
-											d="m110.933 307.2c18.842 0 34.134-15.292 34.134-34.133s-15.292-34.133-34.134-34.133h-68.266c-18.842 0-34.133 15.292-34.133 34.133s15.291 34.133 34.133 34.133h17.067c-18.842 0-34.133 15.292-34.133 34.133s15.292 34.133 34.133 34.133h51.2c18.842 0 34.134-15.292 34.134-34.133s-15.293-34.133-34.135-34.133z"
-											fill="#ffc5bb"></path>
-										<path
-											d="m254 447.733h-64.267c-8.284 0-15-6.716-15-15s6.716-15 15-15h64.267c8.284 0 15 6.716 15 15s-6.716 15-15 15z"
-											fill="#00dde7"></path>
-										<path
-											d="m269 432.733c0-8.284-6.716-15-15-15h-32.133v30h32.133c8.284 0 15-6.715 15-15z"
-											fill="#00bdcd"></path>
-										<path
-											d="m460.8 234v-46.267c0-28.277-22.923-51.2-51.2-51.2h-124.932c-6.405 0-11.601 5.196-11.601 11.602 0 40.656 33.076 73.732 73.732 73.732h28.667v221.867h34.134c28.28 0 51.2-22.921 51.2-51.2h36.2c8.284 0 15-6.716 15-15v-128.534c0-8.284-6.716-15-15-15z"
-											fill="#ffc5bb"></path>
-										<g fill="#ffadad">
-											<path
-												d="m110.933 307.2h-51.2c-18.842 0-34.133 15.292-34.133 34.133s15.292 34.133 34.133 34.133h51.2c18.842 0 34.134-15.292 34.134-34.133s-15.292-34.133-34.134-34.133z">
-											</path>
-											<path
-												d="m375.467 307.2v136.533h34.133c28.28 0 51.2-22.921 51.2-51.2h36.2c8.284 0 15-6.716 15-15v-70.333z">
-											</path>
-										</g>
-									</g>
-								</svg></span>
-							<h2 class="u-custom-font u-font-ubuntu u-subtitle u-text u-text-4">Mobile Developer</h2>
-						</div>
-					</div>
-				</div>
-			</div>
+<body>
+	<header class="site-header">
+		<div class="container nav">
+			<a class="brand" href="#top" aria-label="Torna all'inizio">
+				<span>Giannuzzo</span>
+			</a>
+
+			<nav class="nav-links" aria-label="Navigazione principale">
+				<a href="#background">Background</a>
+				<a href="#origini">Origini</a>
+				<a href="#progetti">Progetti</a>
+				<a href="#croce-rossa">Croce Rossa</a>
+				<a href="#svolta">La svolta</a>
+				<a href="#prossimo-capitolo">Prossimo capitolo</a>
+				<a href="#contatti">Contatti</a>
+			</nav>
 		</div>
 	</header>
-	<section class="u-align-center u-clearfix u-grey-90 u-section-1" id="carousel_3ead">
-		<div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-sheet-1">
-			<div
-				class="u-absolute-hcenter-sm u-absolute-hcenter-xs u-expanded-height u-shape u-shape-rectangle u-white u-shape-1">
-			</div>
-			<div class="u-clearfix u-expanded-width u-gutter-40 u-layout-wrap u-layout-wrap-1">
-				<div class="u-gutter-0 u-layout">
-					<div class="u-layout-row">
-						<div
-							class="u-container-style u-layout-cell u-size-30-lg u-size-30-xl u-size-32-md u-size-32-sm u-size-32-xs u-layout-cell-1">
-							<div class="u-container-layout u-container-layout-1">
-								<img class="u-expanded-width u-image u-image-contain u-image-round u-image-1"
-									src="/images/pig.png" data-image-width="900" data-image-height="900">
-							</div>
+
+	<main id="top">
+		<section class="hero">
+			<div class="container hero-grid">
+				<div>
+					<div class="eyebrow reveal"><span class="dot"></span> Non un curriculum, bensì un percorso</div>
+					<h1 class="reveal"><span class="gradient-text">Tecnologia, servizio e identità.</span></h1>
+					<p class="lead reveal">
+						Sono Giovanni D'Amore (Giannuzzo). Ho iniziato a programmare da giovanissimo e, nel tempo, ho
+						portato il mio
+						modo di costruire dentro esperienze diverse: software, volontariato, contesti operativi,
+						disciplina e progetti personali.
+					</p>
+					<div class="hero-actions reveal">
+						<a class="button primary" href="#background">Leggi il background</a>
+						<a class="button" href="#progetti">Vedi i progetti</a>
+					</div>
+				</div>
+
+				<aside class="portrait-card reveal" aria-label="Ritratto Giovanni D'Amore">
+					<div class="portrait-inner">
+						<img src="/images/logo.png" alt="Giovanni D'Amore" />
+						<div class="portrait-caption">
+							<strong>Giovanni D'Amore</strong>
+							<span>Messina · Software · Servizio · Progetti personali</span>
 						</div>
-						<div
-							class="u-container-style u-layout-cell u-shape-rectangle u-size-28-md u-size-28-sm u-size-28-xs u-size-30-lg u-size-30-xl u-layout-cell-2">
-							<div class="u-container-layout u-valign-middle-lg u-container-layout-2">
-								<div class="u-shape u-shape-circle u-white u-shape-2"></div>
-								<div
-									class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-container-style u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-grey-80 u-group u-group-1">
-									<div class="u-container-layout u-container-layout-3">
-										<h2 class="u-text u-text-1">PigParty</h2>
-										<p class="u-text u-text-font u-text-2">Ho lavorato alla progettazione e alla
-											realizzazione di alcuni Plugin per questo progetto.</p>
-										<p class="u-text u-text-3">
-											<span style="font-weight: 700;">Tipologia di Progetto:</span> Server
-											Minecraft
-										</p>
-										<p class="u-text u-text-4">
-											<span style="font-weight: 700;">Linguaggi e Strumenti:</span> Java, SQL,
-											MySQL
-										</p>
-									</div>
-								</div>
-							</div>
+					</div>
+				</aside>
+			</div>
+		</section>
+
+		<section id="background">
+			<div class="container">
+				<div class="section-head reveal">
+					<div>
+						<p class="section-kicker">Background</p>
+						<h2>Da ciò che so costruire a ciò che scelgo di essere.</h2>
+					</div>
+					<p>
+						Questa pagina non nasce per vendere competenze, ma per raccogliere un percorso: le cose
+						imparate, i contesti vissuti e i progetti che hanno lasciato un segno.
+					</p>
+				</div>
+
+				<div class="about-grid">
+					<div class="panel about-text reveal">
+						<p>
+							La tecnologia è stata una delle prime forme con cui ho imparato a dare ordine alle idee.
+							Scrivere codice, per me, non è mai stato solo mettere insieme funzioni: è stato un modo per
+							capire problemi, costruire strumenti e trasformare intuizioni in qualcosa che funziona
+							davvero.
+						</p>
+						<p>
+							Accanto allo sviluppo software, il volontariato e l'esperienza operativa hanno dato una
+							forma più concreta al mio modo di ragionare. Servizio, emergenza, responsabilità e
+							disciplina mi hanno insegnato che ogni scelta progettuale ha un peso, soprattutto quando
+							nasce da bisogni reali.
+						</p>
+						<p>
+							Oggi il mio percorso tiene insieme questi mondi: creatività e metodo, codice e persone,
+							progettazione e azione. Non come etichette separate, ma come parti della stessa storia.
+						</p>
+					</div>
+
+					<div class="identity-list reveal">
+						<div class="identity-item">
+							<strong>Sviluppo software</strong>
+							<span>Web, mobile, back-end, Unity e strumenti nati per risolvere problemi concreti.</span>
+						</div>
+						<div class="identity-item">
+							<strong>Servizio e responsabilità</strong>
+							<span>Esperienze in contesti dove organizzazione, lucidità e presenza contano
+								davvero.</span>
+						</div>
+						<div class="identity-item">
+							<strong>Progetti personali</strong>
+							<span>Giochi, applicazioni, sistemi gestionali e idee nate dalla voglia di costruire.</span>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-	<section class="u-align-center u-clearfix u-grey-90 u-section-2" id="carousel_7583">
-		<div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-sheet-1">
-			<div
-				class="u-absolute-hcenter-sm u-absolute-hcenter-xs u-expanded-height u-shape u-shape-rectangle u-white u-shape-1">
-			</div>
-			<div class="u-clearfix u-expanded-width u-gutter-40 u-layout-wrap u-layout-wrap-1">
-				<div class="u-gutter-0 u-layout">
-					<div class="u-layout-row">
-						<div
-							class="u-container-style u-layout-cell u-size-30-lg u-size-30-xl u-size-32-md u-size-32-sm u-size-32-xs u-layout-cell-1">
-							<div
-								class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-container-layout-1">
-								<img class="u-image u-image-contain u-image-1" src="/images/a.png"
-									data-image-width="512" data-image-height="512">
-							</div>
+		</section>
+
+		<section id="origini">
+			<div class="container">
+				<div class="section-head reveal">
+					<div>
+						<p class="section-kicker">Origini</p>
+						<h2>Prima il codice. Poi tutto il resto.</h2>
+					</div>
+					<p>
+						Scendendo nella pagina, il racconto va avanti: dalle prime righe scritte per curiosità, ai
+						progetti, al servizio, fino alla svolta che ha cambiato direzione alla mia vita.
+					</p>
+				</div>
+
+				<div class="story-flow">
+					<article class="story-block reveal">
+						<div class="story-year">Primo tratto</div>
+						<div class="story-content">
+							<h3>Ho iniziato costruendo cose mie.</h3>
+							<p>
+								La programmazione è arrivata presto, prima come gioco e poi come linguaggio personale.
+								Mi piaceva capire cosa c'era dietro una schermata, una meccanica, un'applicazione, e
+								provare a rifarla da zero con le mie mani.
+							</p>
 						</div>
-						<div
-							class="u-container-style u-layout-cell u-shape-rectangle u-size-28-md u-size-28-sm u-size-28-xs u-size-30-lg u-size-30-xl u-layout-cell-2">
-							<div class="u-container-layout u-valign-middle-lg u-container-layout-2">
-								<div class="u-shape u-shape-circle u-white u-shape-2"></div>
-								<div
-									class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-container-style u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-grey-80 u-group u-group-1">
-									<div class="u-container-layout u-container-layout-3">
-										<h2 class="u-text u-text-1">Cyber Angels</h2>
-										<p class="u-text u-text-font u-text-2">Ho lavorato alla progettazione e alla
-											realizzazione di un applicazione. Progetto in collaborazione con il <span
-												style="font-weight: 700;">M.I.U.R.</span>
-										</p>
-										<p class="u-text u-text-3">
-											<span style="font-weight: 700;">Tipologia di Progetto:</span> Competizione
-											Scolastica
-										</p>
-										<p class="u-text u-text-4">
-											<span style="font-weight: 700;">Linguaggi e Strumenti:</span> Java with
-											AppInventor
-										</p>
-									</div>
-								</div>
-							</div>
+					</article>
+
+					<article class="story-block reveal">
+						<div class="story-year">Crescita</div>
+						<div class="story-content">
+							<h3>Dai prototipi ai sistemi veri.</h3>
+							<p>
+								Con il tempo il codice ha smesso di essere soltanto sperimentazione. È diventato un modo
+								per ordinare processi, creare strumenti utili, progettare interfacce e trasformare
+								problemi concreti in soluzioni utilizzabili.
+							</p>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section id="progetti">
+			<div class="container">
+				<div class="section-head reveal">
+					<div>
+						<p class="section-kicker">Progetti</p>
+						<h2>Cose costruite, non solo elencate.</h2>
+					</div>
+					<p>
+						Qui i progetti non sono messi come una vetrina tecnica, ma come frammenti del percorso: alcuni
+						creativi, altri pratici, altri nati da esigenze molto reali.
+					</p>
+				</div>
+
+				<div class="project-grid" id="projectsGrid" aria-live="polite">
+					<article class="project-card reveal">
+						<h3>Caricamento progetti...</h3>
+						<p>Se stai aprendo il file in locale, avvia un piccolo server per permettere il caricamento di
+							data.json.</p>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section id="metodo">
+			<div class="container">
+				<div class="section-head reveal">
+					<div>
+						<p class="section-kicker">Metodo</p>
+						<h2>Il modo in cui costruisco.</h2>
+					</div>
+					<p>
+						Non mi interessa soltanto fare qualcosa che “funziona”. Mi interessa che abbia senso, che sia
+						leggibile, che tenga insieme utilità e identità.
+					</p>
+				</div>
+
+				<div class="values-grid">
+					<article class="value-card reveal">
+						<div class="value-number">01</div>
+						<h3>Concretezza</h3>
+						<p>Partire dal problema reale, non dalla soluzione più appariscente. Prima capire cosa serve,
+							poi costruire.</p>
+					</article>
+
+					<article class="value-card reveal">
+						<div class="value-number">02</div>
+						<h3>Chiarezza</h3>
+						<p>Un sistema buono deve essere comprensibile: da chi lo sviluppa, da chi lo usa e da chi dovrà
+							mantenerlo dopo.</p>
+					</article>
+
+					<article class="value-card reveal">
+						<div class="value-number">03</div>
+						<h3>Carattere</h3>
+						<p>Anche una cosa semplice può avere identità. Il dettaglio giusto fa percepire cura, presenza e
+							intenzione.</p>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="container">
+				<div class="quote reveal">
+					<p>
+						Costruire, per me, significa dare una forma concreta a qualcosa che prima era solo un'esigenza,
+						un'intuizione o un'urgenza.
+					</p>
+					<span>— Giovanni D'Amore</span>
+				</div>
+			</div>
+		</section>
+
+		<section id="croce-rossa" class="red-cross-section">
+			<div class="container">
+				<div class="section-head reveal">
+					<div>
+						<p class="section-kicker">Croce Rossa</p>
+						<h2>Il punto in cui la tecnologia ha incontrato il servizio.</h2>
+					</div>
+					<p>
+						A un certo punto, costruire strumenti non è bastato più: serviva capire dove quegli strumenti
+						potevano avere un impatto reale, vicino alle persone.
+					</p>
+				</div>
+
+				<div class="service-grid">
+					<div class="service-card reveal">
+						<p>
+							La Croce Rossa è stata uno dei primi luoghi in cui il mio modo di essere è uscito
+							dallo schermo. Non c'era più soltanto un progetto da sistemare, una schermata da
+							rendere pulita o una funzione da far girare: c'erano persone, turni, necessità reali,
+							strade, fragilità e situazioni in cui bisognava esserci davvero.
+						</p>
+						<p>
+							Nell'Unità di Strada ho imparato il valore della presenza: arrivare, osservare,
+							ascoltare, non dare nulla per scontato. È un tipo di servizio che ti obbliga a vedere
+							le persone prima dei problemi, e a capire che anche un gesto semplice può avere peso
+							se fatto con rispetto, continuità e attenzione.
+						</p>
+						<p>
+							Quell'esperienza ha cambiato anche il mio rapporto con la tecnologia. Ho iniziato a
+							vederla meno come dimostrazione di capacità e più come strumento di servizio: qualcosa
+							che deve semplificare, ordinare, ridurre gli errori e aiutare chi opera sul campo.
+							Da qui nasce anche il bisogno di costruire strumenti pratici, chiari, pensati per
+							persone che non hanno tempo da perdere davanti a un'interfaccia confusa.
+						</p>
+						<p>
+							La Croce Rossa mi ha lasciato un bagaglio preciso: umanità senza scena, organizzazione
+							senza rigidità inutile, responsabilità concreta e la consapevolezza che servire non
+							significa apparire, ma reggere una parte del peso quando serve.
+						</p>
+					</div>
+
+					<div class="service-points reveal">
+						<div class="red-cross-logo-card" aria-label="Spazio logo Croce Rossa">
+							<img src="images/logo-croce-rossa.png" alt="Logo Croce Rossa"
+								onerror="this.style.opacity='0'; this.nextElementSibling.style.display='block';" />
+						</div>
+
+						<div class="service-point">
+							<strong>Unità di Strada</strong>
+							<span>Servizio, ascolto, presenza sul territorio e attenzione a chi spesso resta ai margini,
+								senza ridurre mai una persona alla sua difficoltà.</span>
+						</div>
+						<div class="service-point">
+							<strong>Organizzazione</strong>
+							<span>Turni, ruoli, report, strumenti e processi: il bisogno di rendere il servizio più
+								ordinato, più leggibile e più affidabile.</span>
+						</div>
+						<div class="service-point">
+							<strong>Umanità operativa</strong>
+							<span>Stare nelle cose con sensibilità, ma anche con metodo: cuore, lucidità e capacità di
+								muoversi dentro contesti reali.</span>
+						</div>
+						<div class="service-point">
+							<strong>Tecnologia come servizio</strong>
+							<span>Costruire non per mostrare competenze, ma per alleggerire il lavoro, evitare
+								confusione e lasciare strumenti utili a chi opera.</span>
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-	</section>
-	<section class="u-align-center u-clearfix u-grey-90 u-section-3" id="carousel_4d58">
-		<div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-sheet-1">
-			<div
-				class="u-absolute-hcenter-sm u-absolute-hcenter-xs u-expanded-height u-shape u-shape-rectangle u-white u-shape-1">
-			</div>
-			<div class="u-clearfix u-expanded-width u-gutter-40 u-layout-wrap u-layout-wrap-1">
-				<div class="u-gutter-0 u-layout">
-					<div class="u-layout-row">
-						<div
-							class="u-container-style u-layout-cell u-size-30-lg u-size-30-xl u-size-32-md u-size-32-sm u-size-32-xs u-layout-cell-1">
-							<div class="u-container-layout u-valign-middle u-container-layout-1">
-								<img class="u-image u-image-contain u-image-1" src="/images/b.png"
-									data-image-width="1000" data-image-height="1000">
-							</div>
+
+				<div class="service-value reveal">
+					<h3>Il valore del servizio non sta nell'apparire, ma nel restare.</h3>
+					<p>
+						Stare sul campo significa scoprire che il servizio vero non è fatto solo di sirene, luci blu o
+						momenti che sembrano importanti da fuori. È fatto soprattutto di persone che hanno realmente
+						bisogno: qualcuno che aspetta un pasto, qualcuno che ha freddo, qualcuno che non cerca una
+						soluzione perfetta ma una presenza sincera.
+					</p>
+					<p>
+						Ci sono lacrime che ti restano addosso, parole dette a bassa voce, silenzi che devi imparare a
+						non riempire per forza. C'è l'ascolto vero: quello in cui non ti metti al centro, non giudichi,
+						non corri a dare risposte facili. Resti lì, con rispetto, e fai capire all'altra persona che in
+						quel momento non è invisibile.
+					</p>
+					<p>
+						E poi ci sono abbracci che valgono più di mille frasi: quelli che ti ricordano che, prima di un
+						ruolo, di una divisa o di un compito, sei umano anche tu. La Croce Rossa mi ha insegnato questo:
+						che servire significa avvicinarsi senza invadere, aiutare senza sentirsi superiori, esserci
+						quando qualcuno ha bisogno di una mano, ma anche di uno sguardo che non lo attraversi come se
+						fosse trasparente.
+					</p>
+
+					<div class="service-value-grid">
+						<div class="service-value-item">
+							<strong>Presenza</strong>
+							<span>Stare davvero nel momento, senza trattare il bisogno degli altri come una pratica da
+								chiudere.</span>
 						</div>
-						<div
-							class="u-container-style u-layout-cell u-shape-rectangle u-size-28-md u-size-28-sm u-size-28-xs u-size-30-lg u-size-30-xl u-layout-cell-2">
-							<div class="u-container-layout u-valign-middle-lg u-container-layout-2">
-								<div class="u-shape u-shape-circle u-white u-shape-2"></div>
-								<div
-									class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-container-style u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-grey-80 u-group u-group-1">
-									<div class="u-container-layout u-container-layout-3">
-										<h2 class="u-text u-text-1">ZeroRobotics</h2>
-										<p class="u-text u-text-font u-text-2">Ho lavorato alla progettazione e alla
-											realizzazione di alcuni codici per completare degli obiettivi posti dal
-											<span style="font-weight: 700;">M.I.T.</span> in collaborazione con la <span
-												style="font-weight: 700;">N.A.S.A.</span> e L'<span
-												style="font-weight: 700;">E.S.A.</span>
-										</p>
-										<p class="u-text u-text-3">
-											<span style="font-weight: 700;">Tipologia di
-												Progetto:</span>&nbsp;Competizione Scolastica
-										</p>
-										<p class="u-text u-text-4">
-											<span style="font-weight: 700;">Linguaggi e Strumenti:</span> C
-										</p>
-									</div>
-								</div>
-							</div>
+						<div class="service-value-item">
+							<strong>Ascolto</strong>
+							<span>Capire che a volte la cosa più utile non è parlare, ma lasciare spazio a chi non viene
+								ascoltato mai.</span>
+						</div>
+						<div class="service-value-item">
+							<strong>Umanità</strong>
+							<span>Ricordarsi che dietro ogni fragilità c'è una persona, non una scena, non un numero,
+								non un caso.</span>
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-	</section>
-	<section class="u-align-center u-clearfix u-grey-90 u-section-4" id="carousel_80d1">
-		<div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-sheet-1">
-			<div
-				class="u-absolute-hcenter-sm u-absolute-hcenter-xs u-expanded-height u-shape u-shape-rectangle u-white u-shape-1">
-			</div>
-			<div class="u-clearfix u-expanded-width u-gutter-40 u-layout-wrap u-layout-wrap-1">
-				<div class="u-gutter-0 u-layout">
-					<div class="u-layout-row">
-						<div
-							class="u-container-style u-layout-cell u-size-30-lg u-size-30-xl u-size-32-md u-size-32-sm u-size-32-xs u-layout-cell-1">
-							<div
-								class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-container-layout-1">
-								<img class="u-image u-image-contain u-image-1" src="/images/OnlyLogoColor.png"
-									data-image-width="1064" data-image-height="1064">
-							</div>
-						</div>
-						<div
-							class="u-container-style u-layout-cell u-shape-rectangle u-size-28-md u-size-28-sm u-size-28-xs u-size-30-lg u-size-30-xl u-layout-cell-2">
-							<div class="u-container-layout u-valign-middle-lg u-container-layout-2">
-								<div class="u-shape u-shape-circle u-white u-shape-2"></div>
-								<div
-									class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-container-style u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-grey-80 u-group u-group-1">
-									<div class="u-container-layout u-container-layout-3">
-										<h2 class="u-text u-text-1">AtlasoftGames</h2>
-										<p class="u-text u-text-font u-text-2">Ho fondato la start-up e lavorato alla
-											realizzazione dei videogiochi e dei sistemi annessi insieme al team.</p>
-										<p class="u-text u-text-3">
-											<span style="font-weight: 700;">Tipologia di Progetto:</span> Start-Up,
-											Gruppo di Lavoro
-										</p>
-										<p class="u-text u-text-4">
-											<span style="font-weight: 700;">Linguaggi e Strumenti: <span
-													style="font-weight: 400;">C#, Unity, Java, PHP, Node.js, Python,
-													SQL, MySQL, MariaDB</span>
-											</span>
-										</p>
-										<a href="https://atlasoftgames.itch.io/"
-											class="u-active-white u-border-2 u-border-white u-btn u-btn-round u-button-style u-hover-white u-none u-radius-50 u-text-active-grey-90 u-text-body-alt-color u-text-hover-grey-90 u-btn-1">SCOPRI</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+
+				<div class="service-bridge reveal">
+					<small>Dallo stesso filo</small>
+					<h3>Il servizio mi ha preparato al cambiamento prima ancora che arrivasse.</h3>
+					<p>
+						Quello che ho imparato nella Croce Rossa non è rimasto lì. La capacità di stare sul campo,
+						di ascoltare senza perdere lucidità, di reggere la fatica emotiva e di muovermi dentro un
+						gruppo mi ha accompagnato anche dopo. Quando il percorso ha cambiato colore, passando dal
+						rosso del servizio al sabbia della vita militare, non è stato uno strappo: è stata una
+						trasformazione della stessa direzione.
+					</p>
 				</div>
 			</div>
-		</div>
-	</section>
-	<section class="u-align-center u-clearfix u-grey-90 u-section-5" id="carousel_6374">
-		<div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-sheet-1">
-			<div
-				class="u-absolute-hcenter-sm u-absolute-hcenter-xs u-expanded-height u-shape u-shape-rectangle u-white u-shape-1">
-			</div>
-			<div class="u-clearfix u-expanded-width u-gutter-40 u-layout-wrap u-layout-wrap-1">
-				<div class="u-gutter-0 u-layout">
-					<div class="u-layout-row">
-						<div
-							class="u-container-style u-layout-cell u-size-30-lg u-size-30-xl u-size-32-md u-size-32-sm u-size-32-xs u-layout-cell-1">
-							<div
-								class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-container-layout-1">
-								<img class="u-image u-image-contain u-image-1" src="/images/aaaa.png"
-									data-image-width="1000" data-image-height="1000">
-							</div>
+
+			<div id="svolta" class="container">
+				<div class="turning-point reveal">
+					<p class="section-kicker">La svolta</p>
+					<h2>Poi, a un tratto, tutto è cambiato.</h2>
+					<p>
+						A un certo punto la mia vita ha cambiato terreno. Dopo anni passati davanti a codice, progetti,
+						interfacce e strumenti digitali, ho deciso di arruolarmi nell'Esercito Italiano, un ambiente
+						dove non bastava più saper costruire: bisognava reggere il ritmo, rispettare una struttura,
+						adattarsi in fretta e restare presenti anche quando la giornata non lasciava spazio alle scuse.
+					</p>
+					<p>
+						Sono stato un Artigliere Alpino. E in quella parola ho trovato qualcosa di molto diverso da una
+						semplice mansione: precisione, coordinamento, attesa, forza controllata, fiducia nel gruppo. Lì
+						ho imparato che certe responsabilità non si dichiarano, si dimostrano; che ogni ruolo ha un
+						peso; che la disciplina non serve a spegnere una persona, ma a renderla affidabile quando
+						intorno cambia tutto.
+					</p>
+					<p>
+						Essere Alpino, però, non è qualcosa che si capisce soltanto leggendo un nome su una qualifica.
+						Ci sono simboli che, da fuori, sembrano semplici dettagli; poi li vivi, li indossi, li rispetti,
+						e capisci che portano un peso diverso. Il cappello alpino non è un accessorio: è appartenenza,
+						memoria, sacrificio, responsabilità. È il segno di una storia che non inizia con te e non
+						finisce con te, ma che per un tratto ti viene affidata.
+					</p>
+
+					<p>
+						Quel cappello racconta un modo di stare al mondo: con sobrietà, con fatica, con rispetto. Ti
+						ricorda che non tutto ha bisogno di essere spiegato a voce, perché certe cose si dimostrano nel
+						modo in cui resisti, nel modo in cui ti presenti, nel modo in cui porti avanti il tuo compito
+						anche
+						quando sei stanco, lontano, fuori posto o semplicemente diverso da come eri prima.
+					</p>
+
+					<p>
+						Anche l'alzabandiera, col tempo, ha smesso di sembrarmi una semplice formalità. Da fuori può
+						sembrare un gesto ripetuto, quasi automatico: una bandiera che sale, qualcuno che resta fermo,
+						un momento scandito sempre allo stesso modo. Ma quando lo vivi davvero, capisci che dentro
+						quella
+						cerimonia c'è molto di più. C'è il senso di appartenere a qualcosa che viene prima di te, che ti
+						supera e che ti chiede rispetto.
+					</p>
+
+					<p>
+						Per me l'alzabandiera è diventato un momento di silenzio e consapevolezza. È uno di quei pochi
+						istanti in cui tutto si ferma: la stanchezza, i pensieri, la distanza da casa, le preoccupazioni
+						personali. Resti lì, presente, e ti ricordi perché stai indossando quella divisa. Non per scena,
+						non per abitudine, ma perché hai scelto di stare dentro un servizio, dentro una responsabilità,
+						dentro un'idea più grande del singolo giorno.
+					</p>
+
+					<p>
+						Ogni volta che quella bandiera sale, mi ricorda che il dovere non è fatto solo di ordini, orari
+						e
+						disciplina. È fatto anche di rispetto, memoria, identità e gratitudine. È un gesto semplice, ma
+						per me ha il peso delle cose serie: ti rimette al tuo posto, abbassa il rumore dentro e ti fa
+						sentire, anche solo per pochi secondi, parte di qualcosa che merita presenza.
+					</p>
+
+					<p>
+						La vita militare mi ha portato lontano dalla comfort zone in modo concreto. Non era più soltanto
+						cambiare abitudini: era viaggiare per ore e ore tra casa e il luogo in cui lavoravo, imparare a
+						stare distante dalla famiglia, dagli amici, dai punti fermi, dalle cose che ti fanno sentire al
+						sicuro. Era partire, tornare, ripartire ancora. Era accettare che crescere, a volte, significa
+						sentire la mancanza di tutto quello che ami e continuare comunque a fare il tuo dovere.
+					</p>
+
+					<p>
+						In quella distanza ho imparato a portarmi dietro l'essenziale. Quando sei lontano, capisci cosa
+						ti manca davvero e cosa invece era solo abitudine. Capisci il valore di una chiamata, di un
+						messaggio, di una presenza che resta anche a chilometri di distanza. Capisci anche che casa non
+						è
+						soltanto un posto: è ciò che riesci a custodire dentro mentre attraversi luoghi nuovi, ritmi
+						nuovi
+						e persone che, piano piano, diventano parte della tua strada.
+					</p>
+
+					<p>
+						È stato un periodo fatto di adattamento, fatica e silenzi, ma anche di incontri che mi hanno
+						lasciato qualcosa. Ho conosciuto persone speciali, compagni di strada capaci di rendere più
+						umano
+						anche un contesto duro. Alcuni legami nascono proprio così: non perché tutto è semplice, ma
+						perché
+						si attraversano insieme giornate lunghe, attese, viaggi, stanchezza, momenti seri e momenti
+						leggeri.
+						E alla fine ti accorgi che certe persone non sono state solo presenze di passaggio, ma parte del
+						bagaglio che ti porti dietro.
+					</p>
+
+					<p>
+						Il passaggio all'Esercito non ha cancellato quello che c'era prima. Lo ha messo alla prova. La
+						mentalità da sviluppatore mi ha seguito anche lì: osservare, capire il sistema, trovare ordine
+						nel caos, ragionare con metodo, cercare il dettaglio che fa funzionare meglio l'insieme. Allo
+						stesso tempo, il servizio e la vita militare mi hanno consegnato un bagaglio che il codice da
+						solo non poteva darmi: resistenza, presenza, rispetto dei tempi, lucidità sotto pressione e
+						senso concreto del gruppo.
+					</p>
+					<p>
+						Mi sono portato dietro curiosità, precisione, capacità di organizzare e voglia di costruire. In
+						cambio ho incontrato persone speciali, compagni di strada capaci di lasciare un segno anche
+						dentro giornate dure, ripetitive o stanche. Alcuni legami nascono proprio così: non perché tutto
+						è facile, ma perché si attraversa qualcosa insieme.
+					</p>
+
+					<div class="army-lessons">
+						<div class="army-lesson">
+							<strong>Artiglieria</strong>
+							<span>Precisione, coordinamento e consapevolezza che ogni azione ha un tempo, un ruolo e una
+								responsabilità.</span>
 						</div>
-						<div
-							class="u-container-style u-layout-cell u-shape-rectangle u-size-28-md u-size-28-sm u-size-28-xs u-size-30-lg u-size-30-xl u-layout-cell-2">
-							<div class="u-container-layout u-valign-middle-lg u-container-layout-2">
-								<div class="u-shape u-shape-circle u-white u-shape-2"></div>
-								<div
-									class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-container-style u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-grey-80 u-group u-group-1">
-									<div class="u-container-layout u-container-layout-3">
-										<h2 class="u-text u-text-1">N.A.O.</h2>
-										<p class="u-text u-text-font u-text-2">Ho lavorato alla progettazione e alla
-											realizzazione delle task poste dall'università <span
-												style="font-weight: 700;">Scuola di Robotica</span> per la <span
-												style="font-weight: 700;">NAO C:HALLENGE</span>
-										</p>
-										<p class="u-text u-text-3">
-											<span style="font-weight: 700;">Tipologia di Progetto:&nbsp;<span
-													style="font-weight: 400;"> Competizione Scolastica</span>
-											</span>
-										</p>
-										<p class="u-text u-text-4">
-											<span style="font-weight: 700;">Linguaggi e Strumenti:</span> Python,
-											Choregraphe
-										</p>
-										<a href="https://www.facebook.com/letteraemme/videos/538552993341329/"
-											class="u-active-white u-border-2 u-border-white u-btn u-btn-round u-button-style u-hover-white u-none u-radius-50 u-text-active-grey-90 u-text-body-alt-color u-text-hover-grey-90 u-btn-1">SCOPRI</a>
-									</div>
-								</div>
-							</div>
+						<div class="army-lesson">
+							<strong>Disciplina</strong>
+							<span>Non come rigidità vuota, ma come capacità di dare continuità alle cose anche quando la
+								motivazione non basta.</span>
 						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="u-align-center u-clearfix u-grey-90 u-section-6" id="carousel_247c">
-		<div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-sheet-1">
-			<div
-				class="u-absolute-hcenter-sm u-absolute-hcenter-xs u-expanded-height u-shape u-shape-rectangle u-white u-shape-1">
-			</div>
-			<div class="u-clearfix u-expanded-width u-gutter-40 u-layout-wrap u-layout-wrap-1">
-				<div class="u-gutter-0 u-layout">
-					<div class="u-layout-row">
-						<div
-							class="u-container-style u-layout-cell u-size-30-lg u-size-30-xl u-size-32-md u-size-32-sm u-size-32-xs u-layout-cell-1">
-							<div
-								class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-container-layout-1">
-								<img class="u-image u-image-contain u-image-1"
-									src="/images/10efdb01-7089-7bcc-ada0-14a0502fb15f.png" data-image-width="4096"
-									data-image-height="4096">
-							</div>
-						</div>
-						<div
-							class="u-container-style u-layout-cell u-shape-rectangle u-size-28-md u-size-28-sm u-size-28-xs u-size-30-lg u-size-30-xl u-layout-cell-2">
-							<div class="u-container-layout u-valign-middle-lg u-container-layout-2">
-								<div class="u-shape u-shape-circle u-white u-shape-2"></div>
-								<div
-									class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-container-style u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-grey-80 u-group u-group-1">
-									<div class="u-container-layout u-container-layout-3">
-										<h2 class="u-text u-text-1">Google Dev Fest</h2>
-										<p class="u-text u-text-font u-text-2">Ho lavorato alla progettazione della ECHO
-											Marine Station presentando prototipi in 3D, Animazioni e documentazioni (2°
-											Posto)</p>
-										<p class="u-text u-text-3">
-											<span style="font-weight: 700;">Tipologia di Progetto:&nbsp;<span
-													style="font-weight: 400;"> Competizione Scolastica</span>
-											</span>
-										</p>
-										<p class="u-text u-text-4">
-											<span style="font-weight: 700;">Linguaggi e Strumenti:</span> Cinema4D,
-											Python
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="u-align-center u-clearfix u-grey-90 u-section-7" id="carousel_19e5">
-		<div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-sheet-1">
-			<div
-				class="u-absolute-hcenter-sm u-absolute-hcenter-xs u-expanded-height u-shape u-shape-rectangle u-white u-shape-1">
-			</div>
-			<div class="u-clearfix u-expanded-width u-gutter-40 u-layout-wrap u-layout-wrap-1">
-				<div class="u-gutter-0 u-layout">
-					<div class="u-layout-row">
-						<div
-							class="u-container-style u-layout-cell u-size-30-lg u-size-30-xl u-size-32-md u-size-32-sm u-size-32-xs u-layout-cell-1">
-							<div
-								class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-container-layout-1">
-								<img class="u-image u-image-contain u-image-1"
-									src="/images/6d26f301-5105-e4c2-3502-92eb125fbacf.png" data-image-width="476"
-									data-image-height="476">
-							</div>
-						</div>
-						<div
-							class="u-container-style u-layout-cell u-shape-rectangle u-size-28-md u-size-28-sm u-size-28-xs u-size-30-lg u-size-30-xl u-layout-cell-2">
-							<div class="u-container-layout u-valign-middle-lg u-container-layout-2">
-								<div class="u-shape u-shape-circle u-white u-shape-2"></div>
-								<div
-									class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-container-style u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-grey-80 u-group u-group-1">
-									<div class="u-container-layout u-container-layout-3">
-										<h2 class="u-text u-text-1">IDEA Virtual Verona Trento</h2>
-										<p class="u-text u-text-font u-text-2">Ho Co-Fondato questo corso interno alla
-											scuola per istruire gli studenti all'utilizzo della Tecnologia Unity.</p>
-										<p class="u-text u-text-3">
-											<span style="font-weight: 700;">Tipologia di Progetto:</span> Corso
-										</p>
-										<p class="u-text u-text-4">
-											<span style="font-weight: 700;">Linguaggi e Strumenti:</span> C#, Unity, AI
-										</p>
-									</div>
-								</div>
-							</div>
+						<div class="army-lesson">
+							<strong>Persone</strong>
+							<span>Incontrare presenze speciali, capaci di trasformare un periodo duro in un pezzo
+								importante del percorso.</span>
 						</div>
 					</div>
+
+					<p>
+						Questa parte del percorso è una svolta perché tiene insieme tutto: la tecnologia, la Croce
+						Rossa, il bisogno di servire, la ricerca di identità e la scelta di entrare in un contesto più
+						duro, più essenziale, più reale. Da qui non riparte un'altra persona: riparte la stessa, ma con
+						un passo diverso e con un bagaglio molto più pesante, nel senso migliore del termine.
+					</p>
 				</div>
 			</div>
-		</div>
-	</section>
-	<section class="u-align-center u-clearfix u-grey-90 u-section-8" id="carousel_9c4e">
-		<div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-sheet-1">
-			<div
-				class="u-absolute-hcenter-sm u-absolute-hcenter-xs u-expanded-height u-shape u-shape-rectangle u-white u-shape-1">
-			</div>
-			<div class="u-clearfix u-expanded-width u-gutter-40 u-layout-wrap u-layout-wrap-1">
-				<div class="u-gutter-0 u-layout">
-					<div class="u-layout-row">
-						<div
-							class="u-container-style u-layout-cell u-size-30-lg u-size-30-xl u-size-32-md u-size-32-sm u-size-32-xs u-layout-cell-1">
-							<div class="u-container-layout u-container-layout-1">
-								<img class="u-expanded-width u-image u-image-contain u-image-1"
-									src="/images/ms-icon-310x310.png" data-image-width="310" data-image-height="310">
-							</div>
-						</div>
-						<div
-							class="u-container-style u-layout-cell u-shape-rectangle u-size-28-md u-size-28-sm u-size-28-xs u-size-30-lg u-size-30-xl u-layout-cell-2">
-							<div class="u-container-layout u-valign-middle-lg u-container-layout-2">
-								<div class="u-shape u-shape-circle u-white u-shape-2"></div>
-								<div
-									class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-container-style u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-grey-80 u-group u-group-1">
-									<div class="u-container-layout u-container-layout-3">
-										<h2 class="u-text u-text-1">Augmented Visual Art</h2>
-										<p class="u-text u-text-font u-text-2">Ho realizzato il Back-End del sito web e
-											il motore grafico AVAEngine</p>
-										<p class="u-text u-text-3">
-											<span style="font-weight: 700;">Tipologia di Progetto:</span> Lavoro
-											Freelance
-										</p>
-										<p class="u-text u-text-4">
-											<span style="font-weight: 700;">Linguaggi e Strumenti:</span> Node.js,
-											JavaScript, JQuery, Express, EJS, SQL, MySQL, Three.js
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="u-align-center u-clearfix u-grey-90 u-section-9" id="carousel_2888">
-		<div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-sheet-1">
-			<div
-				class="u-absolute-hcenter-sm u-absolute-hcenter-xs u-expanded-height u-shape u-shape-rectangle u-white u-shape-1">
-			</div>
-			<div class="u-clearfix u-expanded-width u-gutter-40 u-layout-wrap u-layout-wrap-1">
-				<div class="u-gutter-0 u-layout">
-					<div class="u-layout-row">
-						<div
-							class="u-container-style u-layout-cell u-size-30-lg u-size-30-xl u-size-32-md u-size-32-sm u-size-32-xs u-layout-cell-1">
-							<div class="u-container-layout u-valign-middle u-container-layout-1">
-								<img class="u-image u-image-contain u-image-1" src="/images/Kady.png"
-									data-image-width="150" data-image-height="150">
-							</div>
-						</div>
-						<div
-							class="u-container-style u-layout-cell u-shape-rectangle u-size-28-md u-size-28-sm u-size-28-xs u-size-30-lg u-size-30-xl u-layout-cell-2">
-							<div class="u-container-layout u-valign-middle-lg u-container-layout-2">
-								<div class="u-shape u-shape-circle u-white u-shape-2"></div>
-								<div
-									class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-container-style u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-grey-80 u-group u-group-1">
-									<div class="u-container-layout u-container-layout-3">
-										<h2 class="u-text u-text-1">JumpIt</h2>
-										<p class="u-text u-text-font u-text-2">Ho realizzato il videogioco per la
-											start-up AtlasoftGames</p>
-										<p class="u-text u-text-3">
-											<span style="font-weight: 700;">Tipologia di Progetto:&nbsp;<span
-													style="font-weight: 400;">Sviluppo Videogiochi</span>
-											</span>
-										</p>
-										<p class="u-text u-text-4">
-											<span style="font-weight: 700;">Linguaggi e Strumenti:</span> C#, MySQL,
-											Unity, Unity Ads
-										</p>
-										<a href="https://atlasoftgames.itch.io/jumpit"
-											class="u-active-white u-border-2 u-border-white u-btn u-btn-round u-button-style u-hover-white u-none u-radius-50 u-text-active-grey-90 u-text-body-alt-color u-text-hover-grey-90 u-btn-1">SCOPRI</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+		</section>
 
 
-	<footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-a1c1">
-		<div class="u-clearfix u-sheet u-sheet-1">
-			<p class="u-small-text u-text u-text-variant u-text-1">Copyright &copy; Giovanni D'Amore <span
-					id="current_copy_year"></span></p>
+		<section id="prossimo-capitolo" class="secret-section">
+			<div class="container">
+				<div class="secret-card reveal">
+					<p class="section-kicker">Prossimo capitolo</p>
+					<h2>Il percorso ha preso ancora un'altra svolta.</h2>
+					<p>
+						Dopo la tecnologia, il volontariato e l'Esercito, qualcosa si è rimesso in movimento. Un'altra
+						direzione, un altro passaggio, un altro pezzo di strada che per il momento resta volutamente
+						fuori scena.
+					</p>
+					<p>
+						Non tutto va raccontato subito. Alcune svolte hanno bisogno di tempo prima di diventare parole,
+						perché prima devono diventare esperienza, scelta, identità.
+					</p>
+
+					<div class="secret-line">
+						<div class="secret-marker"></div>
+						<div class="secret-note">
+							Il capitolo è iniziato, ma non è ancora il momento di aprirlo. Per ora resta una promessa
+							silenziosa: qualcosa è cambiato di nuovo.
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="contatti">
+			<div class="container">
+				<div class="contact-card reveal">
+					<div>
+						<p class="section-kicker">Contatti</p>
+						<h2>Un punto di partenza.</h2>
+						<p>
+							Questa pagina è pensata come una traccia personale: un percorso che parte dalla tecnologia,
+							attraversa il servizio, passa dall'Esercito e si ferma davanti a un nuovo capitolo ancora da
+							raccontare.
+						</p>
+					</div>
+					<div class="socials" id="socialLinks" aria-label="Link social">
+						<a href="mailto:giovanni.damore85@gmail.com">Email</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<div class="container footer-row">
+			<span>© <span id="year"></span> Giovanni D'Amore</span>
+			<span>giodam.com</span>
 		</div>
 	</footer>
+
+	<script>
+		document.getElementById('year').textContent = new Date().getFullYear();
+
+		const revealObserver = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('visible');
+					revealObserver.unobserve(entry.target);
+				}
+			});
+		}, { threshold: 0.12 });
+
+		function observeRevealElements(root = document) {
+			root.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+		}
+
+		function escapeHtml(value) {
+			return String(value ?? '')
+				.replaceAll('&', '&amp;')
+				.replaceAll('<', '&lt;')
+				.replaceAll('>', '&gt;')
+				.replaceAll('"', '&quot;')
+				.replaceAll("'", '&#039;');
+		}
+
+		function normalizeUrl(url) {
+			const safeUrl = String(url ?? '').trim();
+			if (!safeUrl) return '#';
+			if (safeUrl.startsWith('mailto:')) return safeUrl;
+			if (safeUrl.startsWith('tel:')) return safeUrl;
+			if (safeUrl.startsWith('#')) return safeUrl;
+			if (safeUrl.startsWith('/')) return safeUrl;
+			if (/^https?:\/\//i.test(safeUrl)) return safeUrl;
+			return `https://${safeUrl}`;
+		}
+
+		function renderTags(tags = []) {
+			return tags
+				.filter(Boolean)
+				.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`)
+				.join('');
+		}
+
+		function renderProject(project, index) {
+			const title = escapeHtml(project.title);
+			const description = escapeHtml(project.description);
+			const image = escapeHtml(project.image);
+			const imageAlt = escapeHtml(project.imageAlt || project.title || 'Immagine progetto');
+			const ic = escapeHtml(project.icon);
+			const icAlt = escapeHtml(project.iconAlt || project.title || 'Immagine progetto');
+			const tags = renderTags(project.tags);
+			const featuredClass = project.featured ? ' featured' : '';
+			const link = project.url ? normalizeUrl(project.url) : '';
+			const linkLabel = escapeHtml(project.linkLabel || 'Apri progetto');
+			const icon = ic
+				? `<div class="project-icon"><img src="${ic}" alt="${icAlt}" loading="lazy" /></div>`
+				: '';
+			const visual = project.featured && image
+				? `<div class="project-visual"><img src="${image}" alt="${imageAlt}" loading="lazy" /></div>`
+				: '';
+			const action = link
+				? `<a class="project-link" href="${escapeHtml(link)}" target="_blank" rel="noreferrer">${linkLabel}</a>`
+				: '';
+
+			return `
+        <article class="project-card${featuredClass} reveal" style="transition-delay: ${Math.min(index * 70, 280)}ms">
+          <div>
+            ${icon}
+            <h3>${title}</h3>
+            <p>${description}</p>
+            ${tags ? `<div class="tags">${tags}</div>` : ''}
+            ${action}
+          </div>
+          ${visual}
+        </article>
+      `;
+		}
+
+		function renderSocial(social) {
+			const label = escapeHtml(social.label);
+			const url = normalizeUrl(social.url);
+			const isExternal = !url.startsWith('mailto:') && !url.startsWith('tel:') && !url.startsWith('#') && !url.startsWith('/');
+			const target = isExternal ? ' target="_blank" rel="noreferrer"' : '';
+			return `<a href="${escapeHtml(url)}"${target}>${label}</a>`;
+		}
+
+		async function loadSiteData() {
+			const projectsGrid = document.getElementById('projectsGrid');
+			const socialLinks = document.getElementById('socialLinks');
+
+			try {
+				const response = await fetch('data.json', { cache: 'no-store' });
+				if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+				const data = await response.json();
+
+				if (Array.isArray(data.projects) && data.projects.length > 0) {
+					projectsGrid.innerHTML = data.projects.map(renderProject).join('');
+				}
+
+				if (Array.isArray(data.socials) && data.socials.length > 0) {
+					socialLinks.innerHTML = data.socials.map(renderSocial).join('');
+				}
+
+				observeRevealElements();
+			} catch (error) {
+				console.warn('Impossibile caricare data.json:', error);
+				projectsGrid.innerHTML = `
+          <article class="project-card reveal visible">
+            <h3>data.json non caricato</h3>
+            <p>La struttura è corretta, ma il browser non riesce a leggere il file JSON. Carica index.html e data.json sul server, oppure apri la cartella con un server locale.</p>
+          </article>
+        `;
+				observeRevealElements();
+			}
+		}
+
+		observeRevealElements();
+		loadSiteData();
+	</script>
 </body>
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"
-	integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
-<script type="text/javascript" src="/js/gdjs.js"></script>
-<script type="text/javascript" src="/js/age.js"></script>
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-	integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-</script>
-<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-</script>
 
 </html>

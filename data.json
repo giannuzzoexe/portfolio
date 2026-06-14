@@ -1,0 +1,110 @@
+{
+  "projects": [
+    {
+      "title": "Strumenti al servizio del prossimo",
+      "description": "Strumenti digitali nati da esigenze operative concrete: gestione dei servizi, ruoli, turni, report e flussi di lavoro. Applicativi pensati per semplificare l’organizzazione, rendere le informazioni più chiare e supportare chi opera sul campo.",
+      "image": "/images/uds-report.png",
+      "imageAlt": "",
+      "icon": "",
+      "iconAlt": "",
+      "tags": ["Flutter", "Laravel", "Vue", "PDF", "Workflow"],
+      "featured": true,
+      "url": "",
+      "linkLabel": "Apri progetto"
+    },
+    {
+      "title": "Strumenti operativi e gestionali",
+      "description": "Applicazioni, backoffice e flussi digitali pensati per mettere ordine nei processi: quando la tecnologia diventa un supporto concreto, non un esercizio estetico.",
+      "image": "/images/ava.png",
+      "imageAlt": "",
+      "icon": "/images/ava.png",
+      "iconAlt": "",
+      "tags": ["Flutter", "Laravel", "Vue", "PDF", "Workflow"],
+      "featured": false,
+      "url": "",
+      "linkLabel": "Apri progetto"
+    },
+    {
+      "title": "Videogiochi e sperimentazione",
+      "description": "Dallo sviluppo in Unity ai prototipi personali, il gioco è sempre stato uno spazio dove unire tecnica, ritmo, interfaccia, feedback e sensazione.",
+      "image": "/images/unity.png",
+      "imageAlt": "",
+      "icon": "/images/unity.png",
+      "iconAlt": "",
+      "tags": ["Unity", "C#", "Game Feel", "UI"],
+      "featured": false,
+      "url": "",
+      "linkLabel": "Apri progetto"
+    },
+    {
+      "title": "Robotica e competizioni",
+      "description": "Esperienze formative che mi hanno abituato a lavorare su obiettivi, vincoli, prove, errori e soluzioni costruite con quello che avevo davanti.",
+      "image": "/images/nao.png",
+      "imageAlt": "",
+      "icon": "/images/nao.png",
+      "iconAlt": "",
+      "tags": ["Python", "C", "Prototipi", "Team"],
+      "featured": false,
+      "url": "",
+      "linkLabel": "Apri progetto"
+    },
+    {
+      "title": "Competizioni spaziali (NASA & ESA)",
+      "description": "Esperienze progettuali che mi hanno avvicinato a tecnologia, ricerca e collaborazione internazionale, insegnandomi a lavorare per obiettivi, dentro vincoli reali, trasformando idee e competenze tecniche in soluzioni concrete.",
+      "image": "/images/sphere.png",
+      "imageAlt": "",
+      "icon": "/images/sphere.png",
+      "iconAlt": "",
+      "tags": ["C", "C++", "Mathlab"],
+      "featured": false,
+      "url": "",
+      "linkLabel": "Apri progetto"
+    },
+    {
+      "title": "Community e server",
+      "description": "Plugin, sistemi e piccole infrastrutture nate per ambienti condivisi: luoghi in cui il codice deve sostenere esperienze, regole e interazioni.",
+      "image": "/images/pig.png",
+      "imageAlt": "",
+      "icon": "/images/pig.png",
+      "iconAlt": "",
+      "tags": ["Java", "SQL", "Server", "Community"],
+      "featured": false,
+      "url": "",
+      "linkLabel": "Apri progetto"
+    },
+    {
+      "title": "Visualizzazione e creatività",
+      "description": "Esperimenti tra 3D, visual, interfacce e motori grafici: la parte più creativa del percorso, dove forma e funzione iniziano a contaminarsi.",
+      "image": "/images/atlas.png",
+      "imageAlt": "",
+      "icon": "/images/atlas.png",
+      "iconAlt": "",
+      "tags": ["3D", "Three.js", "Cinema 4D", "Design"],
+      "featured": false,
+      "url": "",
+      "linkLabel": "Apri progetto"
+    }
+  ],
+  "socials": [
+    {
+      "label": "Email",
+      "url": "mailto:giovanni.damore85@gmail.com"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/giannuzzoexe"
+    },
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/astrogiannuzzo"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/giovanni-d-amore-892b95203/"
+    },
+    {
+      "label": "X",
+      "url": "https://twitter.com/giannuzzoexe"
+    }
+  ]
+}
