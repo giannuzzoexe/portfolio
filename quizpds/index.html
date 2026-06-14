@@ -311,10 +311,7 @@
 			}
 
 			const filteredPages = quizPages.filter(page => {
-				return page.title.toLowerCase().includes(search) ||
-					page.description.toLowerCase().includes(search) ||
-					page.type.toLowerCase().includes(search) ||
-					String(page.id).includes(search);
+				return page.title.toLowerCase().includes(search);
 			});
 
 			counter.innerText = `${filteredPages.length} / ${quizPages.length} batterie`;
