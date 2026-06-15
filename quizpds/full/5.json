@@ -4,663 +4,648 @@
   "questions": [
     {
       "t": "Diritto Penale",
-      "q": "In sede di qualificazione giuridica, due condotte moleste ripetute nel tempo possono rilevare come atti persecutori quando: nel caso descritto quale risposta è corretta?",
+      "q": "Cosa disciplina l'istituto del 'reato continuato' (art. 81 cpv. c.p.)?",
       "o": [
-        "Sono sempre prive di rilievo",
-        "Producono uno degli eventi previsti sulla persona offesa",
-        "Riguardano solo un bene mobile"
+        "Il compimento di reati della stessa indole da parte di soggetti minorenni",
+        "La commissione di più violazioni della legge penale, anche in tempi diversi, in esecuzione di un medesimo disegno criminoso",
+        "La continuazione di un'attività illecita da parte di un'associazione mafiosa"
       ],
       "a": 1,
-      "e": "Lo stalking non si fonda sul fastidio generico, ma su condotte reiterate con effetti tipici."
+      "e": "Il reato continuato prevede un regime sanzionatorio più mite (cumulo giuridico) per chi agisce spinto da un unico e predeterminato piano illecito."
     },
     {
       "t": "Diritto Penale",
-      "q": "Un operatore ha la disponibilità di un bene dell’ufficio e lo fa proprio. La qualificazione corretta è: nel caso descritto?",
+      "q": "La prescrizione del reato (art. 157 c.p.) è:",
       "o": [
-        "Peculato",
-        "Furto aggravato",
-        "Ricettazione"
+        "Una causa di estinzione del reato dovuta al decorso del tempo",
+        "Un provvedimento di grazia concesso dal Presidente della Repubblica",
+        "L'atto con cui la Polizia ordina di non commettere più illeciti"
       ],
       "a": 0,
-      "e": "Il punto decisivo è il possesso qualificato per ragioni d’ufficio: per questo si parla di peculato."
+      "e": "Il tempo cancella l'interesse dello Stato a punire il colpevole, estinguendo il reato (salvo i reati puniti con l'ergastolo, che sono imprescrittibili)."
     },
     {
       "t": "Diritto Penale",
-      "q": "Quando il privato e il pubblico agente si accordano su un’utilità indebita per un atto dell’ufficio, il tema è: nel caso descritto?",
+      "q": "Nel delitto di percosse (art. 581 c.p.), se dalla condotta deriva una malattia nel corpo o nella mente:",
       "o": [
-        "Calunnia",
-        "Fuga dopo incidente",
-        "Corruzione"
+        "La pena raddoppia in automatico",
+        "Si applica una sanzione esclusivamente civile per il risarcimento del danno",
+        "Il reato muta e si configura il più grave delitto di lesioni personali"
       ],
       "a": 2,
-      "e": "La corruzione si fonda sul patto tra privato e pubblico agente, diversamente dalla concussione, dove prevale la costrizione."
+      "e": "La linea di confine tra percosse e lesioni è proprio l'insorgenza della malattia; se c'è malattia, non c'è più percossa ma lesione."
     },
     {
       "t": "Diritto Penale",
-      "q": "La differenza decisiva tra concussione e corruzione è che nella concussione: nel caso descritto?",
+      "q": "L'abbandono di persone minori o incapaci (art. 591 c.p.) è un reato che richiede una specifica condizione. Quale?",
       "o": [
-        "Il privato partecipa a un accordo paritario",
-        "Il privato è costretto dall’abuso del pubblico agente",
-        "Manca sempre la qualifica pubblica"
+        "L'abbandono deve avvenire di notte",
+        "L'autore deve avere per legge o per patto un obbligo di cura o di custodia verso il soggetto abbandonato",
+        "Il minore deve avere meno di tre anni"
       ],
       "a": 1,
-      "e": "La concussione si basa sulla pressione costrittiva esercitata dal soggetto pubblico."
+      "e": "Non chiunque può commettere questo reato, ma solo chi ricopre una 'posizione di garanzia' verso l'incapace (genitori, insegnanti, infermieri)."
     },
     {
       "t": "Diritto Penale",
-      "q": "Nel caso pratico proposto, nel rifiuto di atti d’ufficio, l’urgenza dell’atto rileva perché: nel caso descritto qual è il dato da ricordare?",
+      "q": "La contravvenzione di 'Rifiuto d'indicazioni sulla propria identità personale' (art. 651 c.p.) si consuma quando:",
       "o": [
-        "Il rifiuto ingiustificato può consumare subito il reato",
-        "Serve sempre una querela della persona offesa",
-        "La condotta diventa solo disciplinare"
+        "Il cittadino si rifiuta di fornire le proprie generalità a un qualsiasi passante che gliele chiede",
+        "Il soggetto dichiara un nome palesemente falso per nascondere i propri precedenti",
+        "Il cittadino rifiuta di dare indicazioni sulla propria identità a un Pubblico Ufficiale nell'esercizio delle sue funzioni"
       ],
-      "a": 0,
-      "e": "Per gli atti urgenti, il rifiuto indebito è immediatamente rilevante penalmente."
+      "a": 2,
+      "e": "L'obbligo di declinare le vere generalità sussiste unicamente di fronte alla richiesta di un Pubblico Ufficiale in servizio."
     },
     {
       "t": "Diritto Penale",
-      "q": "Ragionando sulla fattispecie, perché l’offesa al pubblico ufficiale non è sempre oltraggio nel caso descritto quale soluzione è conforme alla disciplina studiata?",
+      "q": "Il delitto di procurato allarme (art. 658 c.p.) punisce:",
       "o": [
-        "Perché l’oltraggio richiede sempre una lesione fisica",
-        "Perché vale solo se l’offesa è scritta",
-        "Perché servono condizioni specifiche, come luogo e presenza di più persone"
+        "Chi aziona accidentalmente l'antifurto della propria abitazione per più di 15 minuti",
+        "Chi, annunciando disastri o pericoli inesistenti, suscita allarme presso l'Autorità o enti di pubblico soccorso",
+        "La stampa che pubblica notizie di cronaca non verificate"
       ],
-      "a": 2,
-      "e": "L’art. 341-bis richiede precisi presupposti: non ogni insulto integra automaticamente oltraggio."
+      "a": 1,
+      "e": "Si tratta di una contravvenzione a tutela dell'ordine pubblico, per evitare lo spreco di risorse delle forze di pronto intervento."
     },
     {
       "t": "Diritto Penale",
-      "q": "Nel quadro del reato indicato, se la minaccia è usata per costringere il pubblico ufficiale a omettere un atto, il riferimento è: nel caso descritto quale risposta evita la confusione con le ipotesi vicine?",
-      "o": [
-        "Ricettazione",
-        "Violenza o minaccia a pubblico ufficiale",
-        "Omissione di soccorso"
-      ],
+      "q": "Quale tra queste figure rientra tra le 'Cause di estinzione della pena' (e non del reato)?",
+      "o": ["La legittima difesa", "L'indulto", "L'amnistia"],
       "a": 1,
-      "e": "La violenza o minaccia a P.U. mira a condizionare l’attività del pubblico agente."
+      "e": "Mentre l'amnistia estingue il reato alla radice, l'indulto condona in tutto o in parte la pena inflitta con una sentenza definitiva, ma la condanna resta."
     },
     {
       "t": "Diritto Penale",
-      "q": "La differenza tra calunnia e simulazione di reato è che nella calunnia: nel caso descritto?",
+      "q": "Il peculato d'uso (art. 314 cpv. c.p.) ricorre quando il Pubblico Ufficiale:",
       "o": [
-        "Si accusa una persona determinata sapendola innocente",
-        "Si denuncia solo un reato inesistente senza indicare nessuno",
-        "Si mente sempre davanti al giudice come testimone"
+        "Dimentica di utilizzare i fondi pubblici entro l'anno finanziario",
+        "Si appropria della cosa al solo scopo di farne un uso momentaneo e poi la restituisce immediatamente",
+        "Usa l'auto di servizio per inseguire un latitante fuori dalla sua giurisdizione"
       ],
-      "a": 0,
-      "e": "Nella simulazione si fa credere all’autorità che sia avvenuto un reato; nella calunnia si indica un innocente."
+      "a": 1,
+      "e": "La natura 'momentanea' dell'utilizzo e la successiva restituzione rendono la fattispecie molto meno grave del peculato ordinario."
     },
     {
       "t": "Diritto Penale",
-      "q": "La simulazione di reato si distingue dalla calunnia perché: nel caso descritto?",
+      "q": "Il delitto di frode informatica (art. 640-ter c.p.) si distingue dalla truffa classica perché:",
       "o": [
-        "Presuppone sempre violenza alla persona",
-        "Riguarda solo reati fiscali",
-        "Non richiede necessariamente l’accusa contro uno specifico innocente"
+        "Viene commesso solo da hacker professionisti operanti dall'estero",
+        "Il profitto ingiusto è conseguito ingannando non una persona fisica, ma alterando il funzionamento di un sistema informatico",
+        "Il danno economico deve essere superiore a un milione di euro"
       ],
-      "a": 2,
-      "e": "Nella simulazione il falso riguarda l’esistenza del reato, non necessariamente l’attribuzione a una persona."
+      "a": 1,
+      "e": "La macchina non può essere 'indotta in errore' psicologicamente, pertanto la norma punisce l'intervento abusivo sui dati o sul sistema."
     },
     {
       "t": "Diritto Penale",
-      "q": "L’evasione non riguarda solo la fuga dal carcere, ma anche: nel caso descritto?",
+      "q": "Secondo l'art. 92 c.p., l'ubriachezza volontaria o colposa:",
       "o": [
-        "Il mancato pagamento di una sanzione stradale",
-        "L’allontanamento non autorizzato dagli arresti domiciliari",
-        "Il rifiuto di esibire un documento"
+        "Non esclude né diminuisce l'imputabilità del soggetto",
+        "Esonera sempre il colpevole da responsabilità penale, trasformandola in civile",
+        "Costituisce una causa di giustificazione assoluta se si era bevuto in un locale pubblico"
       ],
-      "a": 1,
-      "e": "La legge equipara agli effetti dell’evasione anche l’allontanamento dagli arresti domiciliari."
+      "a": 0,
+      "e": "Se ci si ubriaca per propria scelta o negligenza e si commette un reato, si risponde pienamente delle proprie azioni (non si ha lo 'sconto' del vizio di mente)."
     },
     {
       "t": "Diritto Penale",
-      "q": "In sede di qualificazione giuridica, una borsa viene sottratta senza violenza sulla persona, approfittando della distrazione della vittima. Il tema principale è: nel caso descritto quale affermazione è più precisa?",
+      "q": "La riforma sulla 'Legittima Difesa Domiciliare' (art. 52 c.p.) ha introdotto una presunzione riguardante:",
       "o": [
-        "Furto",
-        "Rapina",
-        "Estorsione"
+        "L'obbligo dell'aggressore di risarcire immediatamente il danno",
+        "La proporzione tra l'offesa e la difesa, se si usa un'arma legittimamente detenuta contro chi si è introdotto in casa con violenza o minaccia",
+        "La possibilità di sparare a vista in giardino a chiunque si avvicini al cancello"
       ],
-      "a": 0,
-      "e": "Se manca violenza o minaccia alla persona, si ragiona sul furto e non sulla rapina."
+      "a": 1,
+      "e": "Per tutelare chi viene aggredito in casa propria, la legge presume che la reazione armata sia proporzionata se c'è pericolo per l'incolumità propria o altrui."
     },
     {
       "t": "Diritto Penale",
-      "q": "Se devi scegliere la risposta più corretta, la differenza pratica tra furto con strappo e rapina è che nel furto con strappo: nel caso descritto qual è l’inquadramento corretto?",
+      "q": "In ambito di furto (art. 624 c.p.), l'energia elettrica è considerata:",
       "o": [
-        "La vittima consegna denaro sotto minaccia",
-        "Si usa inganno contrattuale",
-        "La violenza è rivolta alla cosa"
+        "Una risorsa immateriale non suscettibile di sottrazione penale",
+        "Una cosa mobile, in quanto possiede un valore economico e può essere sottratta allacciandosi abusivamente",
+        "Un bene immobile"
       ],
-      "a": 2,
-      "e": "Nel furto con strappo la forza serve a togliere la cosa; nella rapina la violenza o minaccia incide sulla persona."
+      "a": 1,
+      "e": "Il codice penale equipara esplicitamente l'energia elettrica alle cose mobili, rendendo penalmente rilevante l'allaccio abusivo ai contatori."
     },
     {
       "t": "Diritto Penale",
-      "q": "Nel confronto tra fattispecie simili, nell’estorsione la vittima: nel caso descritto qual è il dato da ricordare?",
+      "q": "Il reato di rissa aggravata si configura se:",
       "o": [
-        "Subisce soltanto una sottrazione clandestina",
-        "È costretta a fare o omettere qualcosa con danno e profitto ingiusto",
-        "Viene sempre ingannata con artifici informatici"
+        "Partecipano più di venti persone",
+        "Qualcuno resta ucciso o riporta lesioni personali nella colluttazione",
+        "I partecipanti sono tutti minorenni"
       ],
       "a": 1,
-      "e": "La coartazione della volontà della vittima è l’elemento centrale dell’estorsione."
+      "e": "La rissa semplice è un delitto di pericolo, ma se sfocia in lesioni o omicidio scatta un'aggravante specifica per tutti i partecipanti."
     },
     {
       "t": "Procedura Penale",
-      "q": "Nel controllo dell’atto, il decreto penale di condanna può essere opposto: nel caso descritto quale soluzione è conforme alla disciplina studiata?",
+      "q": "L'istituto della 'Rinuncia alla querela' (art. 124 c.p.p.):",
       "o": [
-        "Solo dal testimone",
-        "Dalla polizia giudiziaria come regola",
-        "Dall’imputato nei termini previsti"
+        "Si esercita durante il processo davanti al Giudice",
+        "È l'atto preventivo con cui la persona offesa, prima di averla proposta, rinuncia definitivamente al diritto di presentare querela",
+        "Si applica solo per i delitti contro il patrimonio"
+      ],
+      "a": 1,
+      "e": "La rinuncia avviene 'prima' dell'esercizio del diritto; la remissione interviene 'dopo' che la querela è già stata sporta."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "In quale caso il Giudice ha l'obbligo di 'Astensione' dal processo?",
+      "o": [
+        "Quando ritiene che il Pubblico Ministero non stia svolgendo bene il suo lavoro",
+        "Quando ha un interesse personale nel procedimento o legami di parentela con una delle parti",
+        "Quando non è esperto nella specifica materia tecnica trattata"
+      ],
+      "a": 1,
+      "e": "L'astensione è un dovere del magistrato per preservare la totale terzietà e imparzialità dell'organo giudicante."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "L'avocazione delle indagini preliminari avviene quando:",
+      "o": [
+        "La Polizia Giudiziaria decide di proseguire da sola esautorando il magistrato",
+        "Il Procuratore Generale presso la Corte d'Appello subentra al PM locale in caso di inerzia o mancato rispetto dei termini",
+        "Il Sindaco richiede l'archiviazione diretta per motivi di ordine pubblico"
+      ],
+      "a": 1,
+      "e": "L'avocazione è un potere di controllo dei vertici giudiziari distrettuali per evitare che un'indagine rimanga paralizzata negli uffici della Procura."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "La competenza in primo grado della Corte d'Assise riguarda:",
+      "o": [
+        "Contravvenzioni stradali di particolare gravità",
+        "Reati di spaccio di stupefacenti di lieve entità",
+        "I reati di sangue più efferati e i delitti puniti con la pena dell'ergastolo (o reclusione > 24 anni)"
       ],
       "a": 2,
-      "e": "Il decreto penale è un rito speciale semplificato, ma l’imputato può proporre opposizione."
+      "e": "La Corte d'Assise (composta anche da giudici popolari) è riservata ai crimini di massimo allarme sociale, come l'omicidio volontario e le stragi."
     },
     {
       "t": "Procedura Penale",
-      "q": "Nel corso delle indagini, la vittima vulnerabile richiede particolari cautele soprattutto quando: nel caso descritto quale risposta evita la confusione con le ipotesi vicine?",
+      "q": "Si ha 'conflitto di competenza' quando:",
       "o": [
-        "Si calcola il bollo auto",
-        "Vengono assunte dichiarazioni o informazioni",
-        "Si classifica un veicolo"
+        "L'imputato e la parte civile non trovano un accordo sul risarcimento",
+        "Due o più giudici si ritengono contemporaneamente competenti (o incompetenti) a giudicare un medesimo fatto",
+        "Polizia e Carabinieri intervengono sullo stesso incidente stradale"
       ],
       "a": 1,
-      "e": "Le cautele servono a proteggere la persona offesa e a ridurre la vittimizzazione secondaria."
+      "e": "È una situazione di stallo processuale che deve essere risolta dalla Corte di Cassazione indicando quale sia il giudice corretto."
     },
     {
       "t": "Procedura Penale",
-      "q": "Sul piano procedurale, la comunicazione della notizia di reato serve soprattutto a: nel caso descritto quale alternativa è corretta nel caso concreto?",
+      "q": "La perquisizione di un sistema informatico (es. hard disk o smartphone) da parte della PG:",
       "o": [
-        "Consentire al P.M. di dirigere le indagini",
-        "Applicare subito la pena",
-        "Trasferire il procedimento al Comune"
+        "È equiparata alla perquisizione domiciliare, richiedendo l'adozione di misure tecniche per assicurare la conservazione dei dati originali inalterati",
+        "Si può svolgere solo con il consenso del proprietario della password",
+        "È vietata in Italia per la legge sulla privacy"
       ],
       "a": 0,
-      "e": "La comunicazione permette al P.M. di assumere la direzione investigativa."
+      "e": "Le garanzie di copia forense e inalterabilità del dato sono requisiti fondamentali stabiliti dalla giurisprudenza e dalla convenzione di Budapest."
     },
     {
       "t": "Procedura Penale",
-      "q": "Nel procedimento descritto, durante le indagini preliminari, la polizia giudiziaria opera: nel caso descritto quale risposta è corretta?",
+      "q": "Il Sequestro Conservativo (art. 316 c.p.p.) può essere richiesto:",
       "o": [
-        "In sostituzione del giudice del dibattimento",
-        "Solo su richiesta della persona offesa",
-        "Sotto la direzione del Pubblico Ministero"
-      ],
-      "a": 2,
-      "e": "La P.G. svolge attività d’iniziativa e delegata sotto la direzione del P.M."
-    },
-    {
-      "t": "Procedura Penale",
-      "q": "Durante l’attività di P.G., la convalida dell’arresto viene decisa: nel caso descritto quale opzione sceglieresti?",
-      "o": [
-        "Dalla persona offesa",
-        "Dal giudice competente",
-        "Dal responsabile del turno"
+        "Solo dalla Polizia per sequestrare droga o armi",
+        "Dal Pubblico Ministero o dalla Parte Civile se vi è fondata ragione che manchino le garanzie per il pagamento della pena pecuniaria o delle spese",
+        "Dal Questore per bloccare lo stadio"
       ],
       "a": 1,
-      "e": "La convalida è il controllo giurisdizionale sulla legittimità dell’arresto o del fermo."
+      "e": "Ha una funzione tipicamente patrimoniale e civilistica: bloccare beni o conti correnti per garantire che a fine processo ci siano fondi per pagare danni e spese."
     },
     {
       "t": "Procedura Penale",
-      "q": "Per il pubblico ufficiale, la denuncia di un reato perseguibile d’ufficio conosciuto per ragioni di funzione è: nel caso descritto?",
-      "o": [
-        "Obbligatoria",
-        "Sempre facoltativa",
-        "Possibile solo dopo autorizzazione del privato"
-      ],
+      "q": "L'udienza di convalida del fermo o dell'arresto in flagranza deve avvenire entro quale termine temporale dalla richiesta del PM al GIP?",
+      "o": ["Massimo 48 ore", "Una settimana lavorativa", "Dieci giorni"],
       "a": 0,
-      "e": "Il pubblico ufficiale ha un obbligo qualificato di denuncia nei casi previsti."
+      "e": "L'arrestato deve essere condotto davanti al Giudice terzo nelle 48 ore successive alla ricezione degli atti da parte del GIP (che si sommano alle prime 48 ore a disposizione del PM)."
     },
     {
       "t": "Procedura Penale",
-      "q": "La querela si distingue dalla denuncia perché contiene: nel caso descritto?",
+      "q": "La misura cautelare dell''Obbligo di presentazione alla Polizia Giudiziaria' (firma) impone all'indagato di:",
       "o": [
-        "La decisione del giudice sulla pena",
-        "La convalida dell’arresto",
-        "La volontà della persona offesa che si proceda"
+        "Indossare costantemente il braccialetto elettronico",
+        "Non uscire di casa nelle ore serali",
+        "Presentarsi presso un ufficio di PG in giorni e orari prestabiliti"
       ],
       "a": 2,
-      "e": "La querela non si limita a informare: manifesta la volontà punitiva della persona offesa."
+      "e": "Garantisce il controllo periodico dell'autorità sui movimenti dell'imputato senza privarlo totalmente della libertà personale."
     },
     {
       "t": "Procedura Penale",
-      "q": "Nella fase indicata dal quesito, la remissione di querela consiste: nel caso descritto qual è il dato da ricordare?",
+      "q": "In caso di irreperibilità dell'indagato, come si procede alle notificazioni?",
       "o": [
-        "Nell’arresto della persona querelata",
-        "Nella rinuncia successiva alla querela nei casi consentiti",
-        "Nella trasmissione del verbale al Prefetto"
+        "Si interrompe il processo per dieci anni",
+        "Mediante decreto di irreperibilità, con consegna dell'atto al difensore, che rappresenta l'irreperibile",
+        "Inviando un'email al datore di lavoro"
       ],
       "a": 1,
-      "e": "La remissione fa venir meno la querela quando la legge lo consente e ricorrono i presupposti."
+      "e": "Se le ricerche danno esito negativo, la legge crea la finzione giuridica della notifica al difensore per non paralizzare il processo."
     },
     {
       "t": "Procedura Penale",
-      "q": "Ai fini delle garanzie procedurali, il medico che assiste una persona con lesioni potenzialmente da delitto d’ufficio deve valutare: nel caso descritto quale soluzione è conforme alla disciplina studiata?",
+      "q": "Il difensore di fiducia nominato dall'indagato può rinunciare al mandato?",
       "o": [
-        "La presentazione del referto",
-        "La revoca della patente",
-        "La richiesta di patteggiamento"
+        "Sì, ma la rinuncia non ha effetto finché la parte non è assistita da un nuovo difensore (di fiducia o d'ufficio)",
+        "No, deve obbligatoriamente seguire il cliente fino in Cassazione",
+        "Sì, ed ha effetto immediato abbandonando la causa all'istante"
       ],
       "a": 0,
-      "e": "Il referto collega l’attività sanitaria all’obbligo informativo verso l’autorità."
+      "e": "Per il principio di continuità della difesa tecnica, l'avvocato uscente resta obbligato fino all'effettivo subentro del sostituto."
     },
     {
       "t": "Procedura Penale",
-      "q": "Quando si applicano le regole del codice, se una persona rifiuta di farsi identificare o vi sono dubbi sull’identità, la P.G. può: nel caso descritto quale risposta evita la confusione con le ipotesi vicine?",
+      "q": "L'interrogatorio di garanzia si svolge:",
       "o": [
-        "Trattenerla senza limiti di tempo",
-        "Applicare direttamente una pena",
-        "Procedere secondo i poteri e i limiti dell’art. 349 c.p.p."
-      ],
-      "a": 2,
-      "e": "L’accompagnamento per identificazione è possibile nei casi e nei limiti temporali stabiliti."
-    },
-    {
-      "t": "Procedura Penale",
-      "q": "Nel controllo dell’atto, la persona informata sui fatti è utile perché: nel caso descritto quale alternativa è corretta nel caso concreto?",
-      "o": [
-        "Decide la misura cautelare",
-        "Può fornire elementi per ricostruire l’accaduto",
-        "Sostituisce il P.M."
+        "In Questura subito dopo l'arresto",
+        "Davanti al GIP, entro cinque giorni dall'esecuzione dell'ordinanza di custodia cautelare in carcere",
+        "Alla fine del processo prima della sentenza"
       ],
       "a": 1,
-      "e": "Le informazioni rese possono orientare le indagini e individuare fonti di prova."
+      "e": "È il meccanismo che assicura all'arrestato su ordinanza cautelare di essere sentito prontamente dal giudice per fornire le proprie discolpe."
     },
     {
       "t": "Procedura Penale",
-      "q": "Nel corso delle indagini, una perquisizione di iniziativa della P.G. richiede: nel caso descritto quale risposta è corretta?",
+      "q": "Una persona imputata in un procedimento connesso (es. un coimputato o un complice) esaminata dal Giudice:",
       "o": [
-        "Presupposti di legge e successiva convalida quando prevista",
-        "Libera scelta senza motivazione",
-        "Sempre autorizzazione del privato controllato"
-      ],
-      "a": 0,
-      "e": "Gli atti invasivi sono ammessi nei casi previsti e sono soggetti a controlli."
-    },
-    {
-      "t": "Procedura Penale",
-      "q": "Sul piano procedurale, quando la P.G. esegue un sequestro probatorio di iniziativa, deve: nel caso descritto quale opzione sceglieresti?",
-      "o": [
-        "Decidere la confisca definitiva",
-        "Chiedere il consenso dell’indagato",
-        "Trasmettere gli atti per la convalida del P.M. nei casi previsti"
-      ],
-      "a": 2,
-      "e": "Il controllo del P.M. garantisce la legalità dell’atto eseguito d’urgenza."
-    },
-    {
-      "t": "Procedura Penale",
-      "q": "Nel procedimento descritto, per disporre intercettazioni sono normalmente necessari: nel caso descritto quale affermazione è più precisa?",
-      "o": [
-        "Un generico sospetto privo di riscontri",
-        "Gravi indizi e indispensabilità per le indagini",
-        "La sola richiesta della persona offesa"
+        "Ha sempre l'obbligo di dire la verità sotto giuramento come un normale testimone",
+        "Gode delle stesse garanzie dell'imputato, ivi compresa l'assistenza di un difensore e la facoltà di non rispondere",
+        "Viene ascoltata solo a porte chiuse"
       ],
       "a": 1,
-      "e": "La disciplina richiede requisiti stringenti per bilanciare indagini e segretezza delle comunicazioni."
+      "e": "Data la comunanza di interessi illeciti, il complice mantiene prerogative difensive e non può essere costretto ad autoincriminarsi giurando come un teste neutro."
     },
     {
       "t": "Procedura Penale",
-      "q": "Durante l’attività di P.G., la quasi flagranza riguarda, tra l’altro, chi: nel caso descritto qual è l’inquadramento corretto?",
+      "q": "Quale rito speciale è caratterizzato dalla totale soppressione dell'udienza preliminare, quando vi è l'evidenza della prova (es. confessione o flagranza)?",
       "o": [
-        "È inseguito subito dopo il reato o trovato con tracce significative",
-        "Riceve una multa stradale",
-        "Rifiuta una notifica civile"
+        "Giudizio Direttissimo o Giudizio Immediato",
+        "Sospensione del procedimento con messa alla prova",
+        "Patteggiamento in Appello"
       ],
       "a": 0,
-      "e": "La quasi flagranza estende la flagranza a situazioni immediatamente collegate al fatto."
+      "e": "Sono riti acceleratori che consentono al PM di portare l'imputato direttamente in dibattimento quando le prove sono granitiche."
     },
     {
       "t": "Procedura Penale",
-      "q": "L’arresto facoltativo si distingue da quello obbligatorio perché la P.G.: nel caso descritto?",
+      "q": "Con la Sospensione del procedimento con Messa alla Prova per adulti, l'imputato viene affidato a:",
       "o": [
-        "Non deve considerare alcun presupposto",
-        "Lo applica sempre per ogni reato",
-        "Valuta gravità del fatto e pericolosità del soggetto"
-      ],
-      "a": 2,
-      "e": "Nell’arresto facoltativo la legge lascia uno spazio valutativo alla P.G."
-    },
-    {
-      "t": "Procedura Penale",
-      "q": "La differenza principale tra arresto in flagranza e fermo è che il fermo: nel caso descritto?",
-      "o": [
-        "Richiede sempre il reato in atto",
-        "Può prescindere dalla flagranza",
-        "È deciso dalla persona offesa"
+        "Alla Polizia Penitenziaria in un braccio speciale del carcere",
+        "All'Ufficio di Esecuzione Penale Esterna (UEPE) per svolgere un programma di trattamento e lavoro di pubblica utilità",
+        "A una clinica psichiatrica"
       ],
       "a": 1,
-      "e": "Il fermo guarda soprattutto a gravi indizi e pericolo di fuga."
+      "e": "È un percorso alternativo al carcere basato su condotte riparatorie e volontariato sociale."
     },
     {
       "t": "Procedura Penale",
-      "q": "Nella fase indicata dal quesito, se il giudice non convalida arresto o fermo, la misura: nel caso descritto quale risposta evita la confusione con le ipotesi vicine?",
+      "q": "Entro quanti giorni il condannato può proporre 'Opposizione' contro un Decreto Penale di Condanna?",
       "o": [
-        "Perde efficacia, salvo altri titoli",
-        "Diventa automaticamente condanna",
-        "Si trasforma in sequestro probatorio"
+        "Entro 15 giorni dalla notificazione del decreto",
+        "Entro 3 mesi",
+        "Non è possibile opporsi, il decreto è inappellabile"
       ],
       "a": 0,
-      "e": "La mancata convalida fa cessare gli effetti della misura precautelare, se non vi sono altri provvedimenti."
+      "e": "L'opposizione tempestiva (15 giorni) invalida il decreto e restituisce all'imputato il diritto al processo ordinario o ai riti alternativi."
     },
     {
       "t": "Procedura Penale",
-      "q": "Ai fini delle garanzie procedurali, nei casi di violenza domestica, una misura precautelare possibile è: nel caso descritto quale alternativa è corretta nel caso concreto?",
+      "q": "La Revisione del processo penale (art. 630 c.p.p.) è un'impugnazione straordinaria che si richiede quando:",
       "o": [
-        "Revisione della patente",
-        "Ricorso al Prefetto",
-        "Allontanamento d’urgenza dalla casa familiare"
-      ],
-      "a": 2,
-      "e": "La misura mira a separare con urgenza l’autore dalla persona offesa quando ricorrono i presupposti."
-    },
-    {
-      "t": "Procedura Penale",
-      "q": "Quando si applicano le regole del codice, le esigenze cautelari possono riguardare: nel caso descritto quale risposta è corretta?",
-      "o": [
-        "Solo pagamento della multa",
-        "Pericolo di fuga, inquinamento probatorio o reiterazione",
-        "Scelta del foro civile"
+        "L'imputato in Appello non è soddisfatto della pena ricevuta",
+        "Emergono nuove prove che dimostrano che il condannato (con sentenza irrevocabile) debba essere prosciolto",
+        "Si vuole semplicemente ritardare l'esecuzione della pena"
       ],
       "a": 1,
-      "e": "Le esigenze cautelari giustificano la misura solo nei casi previsti dalla legge."
+      "e": "Riguarda solo gli 'errori giudiziari' accertati dopo la chiusura definitiva del processo."
     },
     {
       "t": "Procedura Penale",
-      "q": "Nel controllo dell’atto, l’allontanamento non autorizzato dagli arresti domiciliari può integrare: nel caso descritto quale opzione sceglieresti?",
+      "q": "Le intercettazioni 'tra presenti' (ambientali) mediante l'inserimento di un captatore informatico (Trojan) in uno smartphone:",
       "o": [
-        "Evasione",
-        "Ricettazione",
-        "Falso ideologico"
+        "Sono sempre ammesse senza restrizioni",
+        "Sono vietate in assoluto dalla Corte Costituzionale",
+        "Sono ammesse, ma nei luoghi di privata dimora solo per reati di grave allarme sociale (mafia, terrorismo) o se l'attività criminosa è in atto",
+        "Sono disciplinate con particolari limitazioni per tutelare l'inviolabilità del domicilio"
       ],
-      "a": 0,
-      "e": "Chi si allontana si sottrae alla misura restrittiva imposta."
+      "a": 3,
+      "e": "Il Trojan trasforma il telefono in una microspia itinerante, quindi per i reati comuni il suo uso in casa subisce forti paletti giurisprudenziali."
     },
     {
       "t": "Procedura Penale",
-      "q": "Nel corso delle indagini, in procedimenti per stalking o maltrattamenti, una misura cautelare frequente è: nel caso descritto quale affermazione è più precisa?",
+      "q": "In caso di assoluta urgenza investigativa, il Pubblico Ministero può disporre un sequestro preventivo d'urgenza?",
       "o": [
-        "Decreto penale per revisione",
-        "Fermo amministrativo",
-        "Divieto di avvicinamento"
+        "Sì, ma solo con il permesso del Sindaco",
+        "No, il sequestro preventivo spetta esclusivamente e sempre al Giudice",
+        "Sì, con decreto motivato, ma il GIP deve convalidarlo entro i successivi giorni per non farne decadere gli effetti"
       ],
       "a": 2,
-      "e": "Il divieto limita i contatti con la persona offesa per prevenire ulteriori condotte."
+      "e": "Se non si può attendere il GIP (es. sequestro di una pagina web pericolosa), PM e PG agiscono d'urgenza soggiacendo a stretta convalida giudiziale."
     },
     {
       "t": "Procedura Penale",
-      "q": "Sul piano procedurale, dopo l’avviso ex art. 415-bis c.p.p., la difesa può: nel caso descritto qual è l’inquadramento corretto?",
+      "q": "Se il giudice rileva la propria 'incompetenza per materia' durante il dibattimento di primo grado, cosa deve fare?",
       "o": [
-        "Decidere la sentenza",
-        "Presentare memorie o chiedere interrogatorio nei termini",
-        "Disporre il sequestro probatorio"
+        "Giudicare lo stesso se l'imputato è d'accordo",
+        "Dichiararla con sentenza e ordinare la trasmissione degli atti al PM presso il giudice competente",
+        "Assolvere l'imputato"
       ],
       "a": 1,
-      "e": "L’avviso permette all’indagato di partecipare alla fase conclusiva delle indagini."
+      "e": "L'incompetenza per materia in difetto (giudica un giudice inferiore su un reato grave) rende invalidi gli atti e sposta la competenza."
     },
     {
       "t": "Procedura Penale",
-      "q": "Nel procedimento descritto, si ricorre all’incidente probatorio quando: nel caso descritto qual è il dato da ricordare?",
+      "q": "A livello organizzativo, le 'Sezioni' di Polizia Giudiziaria differiscono dai 'Servizi' di P.G. perché:",
       "o": [
-        "La prova non può attendere il dibattimento o richiede tutela",
-        "La prova è sicuramente inutile",
-        "Il P.M. vuole evitare il giudice"
+        "Le Sezioni sono uffici distaccati situati fisicamente all'interno della Procura e alle dirette dipendenze del PM, i Servizi restano nelle Questure/Caserne",
+        "I Servizi sono riservati all'Esercito",
+        "Le Sezioni si occupano solo di indagini amministrative"
       ],
       "a": 0,
-      "e": "La funzione è cristallizzare prove delicate o non rinviabili."
+      "e": "Le Sezioni sono il 'braccio destro' diretto del PM ubicato in Tribunale, i Servizi sono le Squadre Mobili, i Nuclei Investigativi, ecc."
     },
     {
       "t": "Procedura Penale",
-      "q": "Durante l’attività di P.G., all’esito dell’udienza preliminare il giudice può: nel caso descritto quale soluzione è conforme alla disciplina studiata?",
+      "q": "Cosa accade se un cittadino extracomunitario viene interrogato ma non comprende la lingua italiana?",
       "o": [
-        "Applicare sempre l’arresto obbligatorio",
-        "Convalidare una multa stradale",
-        "Disporre rinvio a giudizio o non luogo a procedere"
+        "L'interrogatorio si svolge a gesti",
+        "Il processo è nullo e viene rimpatriato",
+        "L'Autorità Giudiziaria ha l'obbligo di nominare un interprete o un traduttore affinché comprenda l'accusa e possa difendersi"
       ],
       "a": 2,
-      "e": "Il G.U.P. valuta la sostenibilità dell’accusa nel giudizio."
+      "e": "La nomina dell'interprete è prescritta a pena di nullità dell'atto, per garantire il fondamentale diritto all'autodifesa."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "Nel corso della Ricognizione di persona (art. 213 c.p.p.), il giudice cosa richiede al testimone prima di mostrargli l'imputato?",
+      "o": [
+        "Di prestare giuramento di segretezza",
+        "Di descrivere la persona e indicare se l'abbia già riconosciuta in precedenza (es. in foto)",
+        "Di chiudere gli occhi per concentrarsi"
+      ],
+      "a": 1,
+      "e": "Prima del riconoscimento 'all'americana', la legge impone di descrivere a verbale l'aspetto del sospetto per saggiare l'attendibilità del ricordo."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "In fase dibattimentale, l'esame incrociato (cross-examination) dei testimoni viene condotto da:",
+      "o": [
+        "Dal solo Giudice con un formulario standard",
+        "Dai periti del Tribunale",
+        "Direttamente dal Pubblico Ministero e dai difensori, mentre il giudice interviene per dirigere o porre domande integrative"
+      ],
+      "a": 2,
+      "e": "È il cuore del sistema accusatorio: le parti formano la prova facendo domande dirette al testimone, garantendo la dialettica."
+    },
+    {
+      "t": "Procedura Penale",
+      "q": "Il Giudice può porre domande 'suggestive' (che suggeriscono la risposta) al testimone durante il dibattimento?",
+      "o": [
+        "Sì, sempre e senza limitazioni",
+        "No, sono vietate a chiunque",
+        "Sono ammesse solo nel controesame svolto dalla parte avversa, per minare l'attendibilità del teste"
+      ],
+      "a": 2,
+      "e": "Nell'esame diretto (fatto da chi ha citato il teste) non si può suggerire, nel controesame invece si usa la suggestione per far cadere il teste in contraddizione."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "La prima revisione periodica per un'autovettura nuova (acquistata dal concessionario) deve essere effettuata dopo:",
+      "o": [
+        "Un anno dall'immatricolazione",
+        "Quattro anni dalla data di prima immatricolazione",
+        "Dieci anni"
+      ],
+      "a": 1,
+      "e": "La regola generale è: prima revisione dopo 4 anni nel mese di immatricolazione, le successive ogni 2 anni."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Un neopatentato (nei primi 3 anni di patente) sorpreso alla guida con un tasso alcolemico di 0,3 g/l incorre in:",
+      "o": [
+        "Nessuna sanzione, perché è sotto la soglia di 0.5 g/l",
+        "Una specifica sanzione amministrativa pecuniaria e decurtazione di 5 punti dalla patente, per violazione dell'obbligo del tasso zero",
+        "Arresto immediato"
+      ],
+      "a": 1,
+      "e": "L'art. 186-bis fissa a 0,0 g/l il limite per i neopatentati. Bere anche pochissimo fa scattare la multa, anche se non la denuncia penale (che parte da 0,81 per i neopatentati in alcuni casi o resta amministrativa aggravata)."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "In caso di infrazione che comporta il decurtamento dei punti patente, l'utilizzo dello smartphone alla guida (senza auricolare) quanti punti erode dal saldo base?",
+      "o": ["Nessun punto, solo sanzione in denaro", "5 punti", "10 punti"],
+      "a": 1,
+      "e": "La distrazione da dispositivi radiomobili comporta un taglio secco di 5 punti, oltre alla possibilità di sospensione alla seconda violazione in un biennio."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Su una strada extraurbana a doppio senso di circolazione, in prossimità di un dosso, il sorpasso è:",
+      "o": [
+        "Sempre vietato, a meno che non ci sia una linea continua",
+        "Vietato nel tratto in salita e sulla cima, a meno che la carreggiata non sia a senso unico o con almeno due corsie per senso di marcia",
+        "Sempre consentito suonando il clacson"
+      ],
+      "a": 1,
+      "e": "Il dosso nasconde chi proviene in senso inverso; il sorpasso è vietato in salita a meno che l'infrastruttura (più corsie o senso unico) escluda scontri frontali."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Circolare alla guida di un veicolo quando la propria patente è stata materialmente ritirata dall'organo di polizia comporta:",
+      "o": [
+        "Il fermo amministrativo del veicolo per 3 mesi e una pesante sanzione pecuniaria",
+        "Una sanzione accessoria di 30 euro",
+        "L'ergastolo"
+      ],
+      "a": 0,
+      "e": "L'art. 216 CdS stabilisce misure rigorosissime contro chi vanifica l'atto restrittivo della Polizia riprendendo a guidare."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "L'autorizzazione per esercitarsi alla guida (il cosiddetto 'foglio rosa') rilasciata dalla Motorizzazione ha una validità attuale di:",
+      "o": ["Tre mesi", "Sei mesi", "Dodici mesi"],
+      "a": 2,
+      "e": "Le recenti modifiche normative al Codice della Strada hanno esteso la validità del foglio rosa a 12 mesi per agevolare la preparazione."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "Un cartello circolare blu con all'interno il numero '30' in bianco indica:",
+      "o": [
+        "Limite di velocità massimo consentito",
+        "Velocità consigliata",
+        "Limite minimo di velocità (non si può marciare a meno di 30 km/h se non in caso di ingorghi o cause di forza maggiore)"
+      ],
+      "a": 2,
+      "e": "I segnali circolari blu sono di obbligo. Il numero stabilisce una soglia sotto la quale il veicolo crea intralcio al traffico su quella corsia."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "La Targa Prova può essere utilizzata:",
+      "o": [
+        "Da chiunque per evitare di pagare l'assicurazione annuale",
+        "Da chi ha l'auto sequestrata per spostarsi liberamente",
+        "Esclusivamente per scopi limitati come collaudi, prove tecniche o trasferimenti da parte di soggetti autorizzati (officine, concessionarie)"
+      ],
+      "a": 2,
+      "e": "Il D.P.R. 474/2001 (e recenti decreti) disciplina l'uso della targa di prova, limitato strettamente a fini professionali dell'automotive."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "I giubbotti ad alta visibilità da tenere in auto devono rispettare standard specifici. Quale di questi colori NON è previsto dalla norma tecnica UNI EN 471?",
+      "o": [
+        "Giallo fluorescente",
+        "Rosso fluorescente o Arancione",
+        "Bianco ghiaccio"
+      ],
+      "a": 2,
+      "e": "I dispositivi retroriflettenti approvati per la sicurezza stradale devono essere gialli, arancioni o rossi fluorescenti."
+    },
+    {
+      "t": "Codice della Strada",
+      "q": "L'uso dei fari fendinebbia anteriori, in condizioni di visibilità ottimale diurna e notturna:",
+      "o": [
+        "È consentito per dare un look sportivo all'auto",
+        "È vietato e comporta una sanzione",
+        "È obbligatorio in autostrada"
+      ],
+      "a": 1,
+      "e": "Il CdS vieta l'uso dei proiettori fendinebbia e di profondità quando non vi è reale necessità meteorologica, in quanto abbagliano e confondono gli altri utenti."
+    },
+    {
+      "t": "Armi e Tiro",
+      "q": "Cosa studia la 'balistica terminale'?",
+      "o": [
+        "La traiettoria dell'arma dopo essere stata lanciata",
+        "Gli effetti provocati dal proiettile nel momento in cui colpisce e penetra il bersaglio",
+        "Il suono dello sparo nel poligono chiuso"
+      ],
+      "a": 1,
+      "e": "Analizza il trasferimento di energia cinetica e la deformazione sul target bersaglio, fondamentale nella scienza forense e operativa."
+    },
+    {
+      "t": "Armi e Tiro",
+      "q": "La Beretta 92 FS è dotata di un 'dente di mezza monta' sul cane. A cosa serve?",
+      "o": [
+        "Ad abbassare il volume del colpo",
+        "A evitare che l'arma spari accidentalmente se il cane dovesse sfuggire al tiratore mentre lo sta armando col pollice prima di arrivare a fondo corsa",
+        "A inserire la raffica controllata"
+      ],
+      "a": 1,
+      "e": "È una sicurezza passiva: intercetta la caduta del cane prima che percuota l'innesco se scivola la presa durante l'armamento manuale."
+    },
+    {
+      "t": "Armi e Tiro",
+      "q": "Nel ciclo di sparo di un'arma semiautomatica, la fase di 'estrazione' avviene:",
+      "o": [
+        "Prima della percussione",
+        "Immediatamente dopo l'esplosione, quando l'otturatore arretrando sfila il bossolo spento dalla camera di scoppio",
+        "Quando il caricatore si svuota"
+      ],
+      "a": 1,
+      "e": "L'estrattore fa presa sul fondello e tira indietro il bossolo, permettendogli poi di essere 'espulso' dalla finestra dell'otturatore."
+    },
+    {
+      "t": "Armi e Tiro",
+      "q": "Le munizioni 'traccianti' o perforanti:",
+      "o": [
+        "Sono vietate in ambito civile e destinate unicamente all'uso militare o da parte delle forze armate",
+        "Sono di libera vendita in armeria mostrando il porto d'armi",
+        "Vengono fornite di serie per il tiro a segno"
+      ],
+      "a": 0,
+      "e": "La Legge 110/75 vieta severamente l'impiego civile di queste particolari e distruttive tipologie di proiettili (munizionamento da guerra)."
+    },
+    {
+      "t": "Armi e Tiro",
+      "q": "Il selettore di tiro della PM 12/S ha una leva di commutazione. Quale di queste posizioni NON esiste sull'arma?",
+      "o": [
+        "Sicura (S)",
+        "Tiro singolo (1)",
+        "Raffica controllata a 3 colpi limitata elettronicamente (3)"
+      ],
+      "a": 2,
+      "e": "La PM 12/S è meccanica e puramente analogica: il selettore prevede solo Sicura, Colpo Singolo e Raffica libera."
     },
     {
       "t": "Legislazione P.S.",
-      "q": "A livello provinciale, il riferimento tecnico per molte funzioni di P.S. è: nel caso descritto?",
+      "q": "Il cosiddetto 'DASPO Willy' (introd. L. 130/2020) conferisce al Questore il potere di vietare l'accesso:",
       "o": [
-        "Il Questore",
-        "Il giudice civile",
-        "Il sindaco come giudice penale"
+        "A tutti i supermercati a chi ruba alimentari",
+        "A locali di intrattenimento pubblico e pubblici esercizi a soggetti resisi protagonisti di gravi disordini, risse o spaccio all'interno o nelle vicinanze degli stessi",
+        "Alle partite di calcio per i minorenni"
       ],
-      "a": 0,
-      "e": "La legislazione di P.S. attribuisce al Questore un ruolo tecnico provinciale."
+      "a": 1,
+      "e": "Norma nata dopo i tragici fatti di cronaca di Colleferro, mira a tutelare la 'movida' isolando i soggetti violenti da bar, discoteche e piazze."
     },
     {
       "t": "Legislazione P.S.",
-      "q": "In materia di pubblica sicurezza, la sospensione ex art. 100 T.U.L.P.S. ha una funzione: nel caso descritto quale alternativa è corretta nel caso concreto?",
+      "q": "In base al Testo Unico sugli Stupefacenti (DPR 309/90), l'uso strettamente personale di droghe leggere (es. hashish):",
       "o": [
-        "Premiale per l’esercente",
-        "Processuale per assumere prove",
-        "Preventiva a tutela di ordine e sicurezza pubblica"
+        "Non è sanzionato in alcun modo",
+        "Costituisce un reato punibile con il carcere fino a tre anni",
+        "È un illecito amministrativo sanzionato, ad esempio, con la sospensione della patente di guida, del passaporto o del porto d'armi"
       ],
       "a": 2,
-      "e": "È un provvedimento amministrativo di prevenzione, non una pena penale."
+      "e": "Il possesso per solo uso personale non è reato penale (spaccio), ma l'art. 75 prevede pesanti conseguenze amministrative disposte dal Prefetto."
     },
     {
       "t": "Legislazione P.S.",
-      "q": "Il preavviso per le riunioni in luogo pubblico serve a: nel caso descritto?",
+      "q": "A differenza della licenza di porto d'armi per 'uso personale' (difesa), la licenza per 'uso sportivo' (Tiro a Volo):",
       "o": [
-        "Chiedere autorizzazione al giudice penale",
-        "Consentire valutazioni di sicurezza e ordine pubblico",
-        "Pagare una tassa di circolazione"
+        "Viene rilasciata dal Questore anziché dal Prefetto e ha procedure di rinnovo differenti",
+        "Permette di portare l'arma carica addosso al supermercato",
+        "Viene rilasciata direttamente dall'armiere"
       ],
-      "a": 1,
-      "e": "Il preavviso non è una richiesta di permesso, ma permette i necessari controlli di P.S."
+      "a": 0,
+      "e": "L'uso sportivo o di caccia è un'autorizzazione amministrativa di Polizia in capo al Questore, non implicando la valutazione del 'pericolo di vita' che compete al Prefetto per la difesa personale."
     },
     {
       "t": "Legislazione P.S.",
-      "q": "Rispetto ai poteri di pubblica sicurezza, la logica del D.A.SPO. è principalmente: nel caso descritto quale opzione sceglieresti?",
+      "q": "A chi compete, secondo la legge sull'ordinamento degli Enti Locali, emanare Ordinanze Contingibili e Urgenti in caso di gravi pericoli che minacciano l'incolumità pubblica a livello strettamente comunale?",
       "o": [
-        "Prevenire condotte pericolose in contesti sportivi",
-        "Accertare la responsabilità penale definitiva",
-        "Sostituire la revisione del veicolo"
+        "Al Sindaco, nella sua veste di Ufficiale di Governo per la sicurezza urbana",
+        "Al Comandante dei Vigili Urbani",
+        "Al Presidente della Regione"
       ],
       "a": 0,
-      "e": "Il D.A.SPO. ha natura preventiva e mira a evitare condotte pericolose collegate agli eventi sportivi."
+      "e": "L'art. 54 del TUEL attribuisce al primo cittadino poteri eccezionali d'urgenza per tamponare minacce gravi e immediate alla sicurezza locale (es. crolli o emergenze sanitarie urbane)."
     },
     {
-      "t": "Codice della Strada",
-      "q": "Durante un controllo su strada, un tasso alcolemico di 1,00 g/l rientra: nel caso descritto quale affermazione è più precisa?",
+      "t": "Banca dati SDI",
+      "q": "Nelle indagini di Polizia l'inserimento di un 'Alias' nello SDI serve a:",
       "o": [
-        "Nel solo illecito amministrativo 0,5-0,8",
-        "In una condotta non sanzionata",
-        "Nella fascia penalmente rilevante"
+        "Segnalare al sistema che il server è in manutenzione",
+        "Creare falsi profili per gli agenti infiltrati sui social",
+        "Ricondurre alla medesima identità anagrafica corretta (C.U.I.) un nominativo falso o storpiato fornito dal soggetto durante precedenti controlli"
       ],
       "a": 2,
-      "e": "Oltre 0,8 g/l la guida in stato di ebbrezza è penalmente rilevante."
+      "e": "Il sistema Alias è fondamentale per impedire ai criminali di 'pulirsi' la fedina penale semplicemente cambiando l'ordine del nome o fornendo date di nascita false."
     },
     {
-      "t": "Codice della Strada",
-      "q": "Nella circolazione stradale, un conducente che rifiuta l’alcoltest non evita il problema perché: nel caso descritto qual è l’inquadramento corretto?",
+      "t": "Banca dati SDI",
+      "q": "Le credenziali di accesso al portale SDI e al MIPGWEB:",
       "o": [
-        "La prova diventa automaticamente negativa",
-        "Il rifiuto è previsto e sanzionato dalla legge",
-        "Il verbale non può essere redatto"
+        "Possono essere prestate a un collega che ha smarrito la propria password per motivi di urgenza operativa",
+        "Sono strettamente personali, incedibili e la loro condivisione costituisce una grave violazione della sicurezza informatica e delle direttive ministeriali",
+        "Sono uguali per tutti gli appartenenti alla stessa caserma"
       ],
       "a": 1,
-      "e": "Il rifiuto integra una condotta autonoma con conseguenze proprie."
+      "e": "Qualsiasi query o atto generato lascia una traccia (log) indissolubile in capo all'operatore; prestarle significa assumersi la responsabilità penale delle azioni altrui."
     },
     {
-      "t": "Codice della Strada",
-      "q": "Nel caso di un conducente controllato, per la guida sotto stupefacenti, il punto centrale è: nel caso descritto qual è il dato da ricordare?",
+      "t": "Banca dati SDI",
+      "q": "Il controllo via radio o tramite dispositivo mobile di una targa veicolare alla Banca Dati SDI permette di scoprire istantaneamente:",
       "o": [
-        "Lo stato di alterazione collegato all’assunzione",
-        "La sola presenza di passeggeri",
-        "La cilindrata del veicolo"
-      ],
-      "a": 0,
-      "e": "La norma mira a reprimere la guida alterata da sostanze."
-    },
-    {
-      "t": "Codice della Strada",
-      "q": "Rispetto alla sicurezza della circolazione, la fuga dopo un sinistro con danni alle persone: nel caso descritto quale soluzione è conforme alla disciplina studiata?",
-      "o": [
-        "È solo una irregolarità formale",
-        "È sempre assorbita dall’assicurazione",
-        "Può avere rilevanza penale"
-      ],
-      "a": 2,
-      "e": "La fuga e l’omissione di assistenza sono condotte gravi previste dall’art. 189 C.d.S."
-    },
-    {
-      "t": "Codice della Strada",
-      "q": "In un intervento di polizia stradale, durante un servizio urgente, sirena e lampeggiante: nel caso descritto quale risposta evita la confusione con le ipotesi vicine?",
-      "o": [
-        "Rendono sempre non responsabile il conducente",
-        "Segnalano l’urgenza agli altri utenti",
-        "Sostituiscono la patente ministeriale"
+        "I gusti musicali e gli acquisti su internet del proprietario",
+        "Lo stato del veicolo (se rubato o smarrito), l'intestatario e la regolarità della copertura assicurativa e della revisione ministeriale",
+        "Le tratte GPS percorse dal mezzo nell'ultimo mese senza bisogno di intercettazioni o indagini"
       ],
       "a": 1,
-      "e": "I dispositivi servono a rendere percepibile il servizio urgente, ma non autorizzano condotte imprudenti."
-    },
-    {
-      "t": "Codice della Strada",
-      "q": "Nel contesto di un sinistro, circolare con revisione scaduta comporta: nel caso descritto quale alternativa è corretta nel caso concreto?",
-      "o": [
-        "Sanzione e sospensione dalla circolazione nei casi previsti",
-        "Sempre solo un richiamo verbale",
-        "La revoca automatica della patente"
-      ],
-      "a": 0,
-      "e": "La revisione scaduta incide sulla regolarità e sicurezza del veicolo."
-    },
-    {
-      "t": "Codice della Strada",
-      "q": "Quando si applica il Codice della Strada, la guida senza patente diventa penalmente rilevante: nel caso descritto quale risposta è corretta?",
-      "o": [
-        "Solo se il veicolo è assicurato",
-        "Ogni volta senza eccezioni",
-        "In caso di recidiva nel biennio nei casi previsti"
-      ],
-      "a": 2,
-      "e": "La recidiva nel biennio è il dato che può far scattare la rilevanza penale."
-    },
-    {
-      "t": "Codice della Strada",
-      "q": "Nel comportamento di guida descritto, la perdita totale dei punti può comportare: nel caso descritto quale opzione sceglieresti?",
-      "o": [
-        "Confisca del veicolo sempre",
-        "Revisione della patente",
-        "Arresto obbligatorio"
-      ],
-      "a": 1,
-      "e": "La perdita dei punti incide sull’idoneità alla guida e può portare alla revisione."
-    },
-    {
-      "t": "Codice della Strada",
-      "q": "Durante un controllo su strada, la velocità deve essere regolata: nel caso descritto quale affermazione è più precisa?",
-      "o": [
-        "In base a strada, traffico, visibilità e condizioni del veicolo",
-        "Sempre sul limite massimo",
-        "Solo sulla fretta del conducente"
-      ],
-      "a": 0,
-      "e": "Non basta rispettare il limite: la velocità deve essere adeguata alle condizioni reali."
-    },
-    {
-      "t": "Codice della Strada",
-      "q": "Nella circolazione stradale, un veicolo senza assicurazione può essere sottoposto: nel caso descritto qual è l’inquadramento corretto?",
-      "o": [
-        "A incidente probatorio",
-        "A remissione di querela",
-        "A sanzione e sequestro nei casi previsti"
-      ],
-      "a": 2,
-      "e": "La mancanza di copertura comporta conseguenze amministrative e misure sul veicolo."
-    },
-    {
-      "t": "Banche Dati SDI/MIPG",
-      "q": "Rispetto ai sistemi informativi di polizia, un vantaggio di MIPGWEB è: nel caso descritto qual è il dato da ricordare?",
-      "o": [
-        "Uniformare e velocizzare la redazione degli atti",
-        "Eliminare la comunicazione al P.M.",
-        "Trasformare ogni notizia in condanna"
-      ],
-      "a": 0,
-      "e": "Il sistema aiuta la standardizzazione documentale e l’efficienza operativa."
-    },
-    {
-      "t": "Banche Dati SDI/MIPG",
-      "q": "Consultare S.D.I. senza ragioni di servizio è: nel caso descritto?",
-      "o": [
-        "Una normale attività privata",
-        "Sempre consentito se non si stampa nulla",
-        "Un uso abusivo del sistema"
-      ],
-      "a": 2,
-      "e": "La consultazione deve essere giustificata da esigenze di servizio."
-    },
-    {
-      "t": "Banche Dati SDI/MIPG",
-      "q": "Nell’uso delle banche dati, l’informativa di polizia è importante perché: nel caso descritto quale risposta evita la confusione con le ipotesi vicine?",
-      "o": [
-        "Sostituisce sempre il processo",
-        "Trasmette all’autorità elementi utili sull’attività svolta",
-        "È un documento privato senza valore"
-      ],
-      "a": 1,
-      "e": "L’informativa documenta e comunica gli elementi acquisiti nell’attività di polizia."
-    },
-    {
-      "t": "Armi e Tiro",
-      "q": "Durante lo studio dell’arma, smontaggio e manutenzione delle armi devono avvenire: nel caso descritto quale alternativa è corretta nel caso concreto?",
-      "o": [
-        "Secondo procedure previste e in sicurezza",
-        "Sempre in modo improvvisato",
-        "Solo durante un servizio urgente"
-      ],
-      "a": 0,
-      "e": "La manutenzione corretta serve a efficienza e sicurezza dell’arma."
-    },
-    {
-      "t": "Armi e Tiro",
-      "q": "La pistola Beretta 92 FS funziona: nel caso descritto?",
-      "o": [
-        "Solo ad avancarica",
-        "Solo a raffica",
-        "In singola e doppia azione"
-      ],
-      "a": 2,
-      "e": "Il materiale richiama il funzionamento in singola e doppia azione."
-    },
-    {
-      "t": "Armi e Tiro",
-      "q": "Nella manutenzione e nei controlli, quando si studia la Beretta 92 FS, la sicura va ricordata perché: nel caso descritto quale opzione sceglieresti?",
-      "o": [
-        "Elimina ogni necessità di maneggio corretto",
-        "Contribuisce alla gestione sicura dell’arma",
-        "Serve a modificare il calibro"
-      ],
-      "a": 1,
-      "e": "Le sicure riducono il rischio solo se unite a procedure corrette e consapevoli."
-    },
-    {
-      "t": "Armi e Tiro",
-      "q": "La canna della pistola serve principalmente a: nel caso descritto?",
-      "o": [
-        "Guidare il proiettile durante lo sparo",
-        "Conservare le cartucce di riserva",
-        "Bloccare il grilletto"
-      ],
-      "a": 0,
-      "e": "La canna è l’elemento attraverso cui passa e viene guidato il proiettile."
-    },
-    {
-      "t": "Armi e Tiro",
-      "q": "Nel maneggio in sicurezza, il PM12/S è ricordato soprattutto per: nel caso descritto qual è l’inquadramento corretto?",
-      "o": [
-        "Uso esclusivo come arma sportiva privata",
-        "Assenza totale di dispositivi di sicurezza",
-        "Funzionamento e sicurezze specifiche dell’arma"
-      ],
-      "a": 2,
-      "e": "Il materiale dedica attenzione a funzionamento, sicure, smontaggio e maneggi del PM12/S."
+      "e": "Il controllo incrociato unisce gli alert investigativi (es. da ricercare) con i dati della Motorizzazione civile per le infrazioni al CdS."
     }
   ]
 }
