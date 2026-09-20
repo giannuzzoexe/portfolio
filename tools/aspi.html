@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Chiusure Autostradali</title>
+
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			padding: 30px;
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+			background: #f5f5f5;
+			color: #111;
+		}
+
+		.container {
+			width: 100%;
+			max-width: 1100px;
+			margin: 0 auto;
+		}
+
+		h1 {
+			margin-top: 0;
+		}
+
+		.toolbar {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 10px;
+			margin-bottom: 15px;
+		}
+
+		button {
+			border: 0;
+			border-radius: 8px;
+			padding: 10px 18px;
+			font-size: 15px;
+			cursor: pointer;
+		}
+
+		button:disabled {
+			opacity: 0.6;
+			cursor: wait;
+		}
+
+		#refreshButton {
+			background: #1d4ed8;
+			color: white;
+		}
+
+		#copyButton {
+			background: #111827;
+			color: white;
+		}
+
+		#inclusionsButton {
+			background: #059669;
+			color: white;
+		}
+
+		#inclusionsButton.disabled {
+			background: #d97706;
+		}
+
+		textarea {
+			width: 100%;
+			min-height: 650px;
+			resize: vertical;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 10px;
+			background: white;
+			color: #111;
+			font-family: Menlo, Monaco, Consolas, monospace;
+			font-size: 14px;
+			line-height: 1.6;
+		}
+
+		#status {
+			margin-bottom: 12px;
+			font-size: 14px;
+			color: #555;
+		}
+
+		.error {
+			color: #b91c1c !important;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="container">
+
+		<h1>Chiusure autostradali</h1>
+
+		<div class="toolbar">
+
+			<button id="refreshButton">
+				Aggiorna
+			</button>
+
+			<button id="copyButton">
+				Copia testo
+			</button>
+
+			<button id="inclusionsButton">
+				Inclusioni: ON
+			</button>
+
+		</div>
+
+		<div id="status">
+			Caricamento...
+		</div>
+
+		<textarea id="output" readonly placeholder="Le chiusure compariranno qui..."></textarea>
+
+	</div>
+
+	<script>
+
+		const REGION_CODES = new Set([
+			"6",
+			"8"
+		]);
+
+		const INCLUSIONS = [
+			"Bologna Borgo Panigale",
+			"Bologna Interporto",
+			"Altedo"
+		];
+
+		const API_URL =
+			"https://viabilita.autostrade.it/json/eventi.json";
+
+		let ignoreInclusions = false;
+
+		let loadedEvents = [];
+
+		let lastUpdate = null;
+
+
+		function normalize(text) {
+
+			return String(text ?? "")
+				.normalize("NFD")
+				.replace(/[\u0300-\u036f]/g, "")
+				.replace(/[’']/g, "'")
+				.replace(/\s+/g, " ")
+				.trim()
+				.toLowerCase();
+
+		}
+
+
+		function cleanDescription(description) {
+
+			if (!description) {
+				return "";
+			}
+
+			let text = String(description)
+				.split(/\r?\n/)[0]
+				.trim();
+
+			text = text.replace(
+				/\s*(?:Entrata|Uscita)\s+consigliata\b.*$/i,
+				""
+			);
+
+			return text
+				.replace(/\s+/g, " ")
+				.trim();
+
+		}
+
+
+		function getToday() {
+
+			return new Intl.DateTimeFormat(
+				"it-IT",
+				{
+					timeZone: "Europe/Rome",
+					day: "2-digit",
+					month: "2-digit",
+					year: "numeric"
+				}
+			).format(new Date());
+
+		}
+
+
+		function getTodayNumeric() {
+
+			const parts = new Intl.DateTimeFormat(
+				"it-IT",
+				{
+					timeZone: "Europe/Rome",
+					day: "2-digit",
+					month: "2-digit",
+					year: "numeric"
+				}
+			).formatToParts(new Date());
+
+			const day =
+				parts.find(
+					part => part.type === "day"
+				).value;
+
+			const month =
+				parts.find(
+					part => part.type === "month"
+				).value;
+
+			const year =
+				parts.find(
+					part => part.type === "year"
+				).value;
+
+			return Number(
+				`${year}${month}${day}`
+			);
+
+		}
+
+
+		function parseItalianDate(dateString) {
+
+			const match =
+				dateString.match(
+					/^(\d{2})\/(\d{2})\/(\d{4})$/
+				);
+
+			if (!match) {
+				return null;
+			}
+
+			const [, day, month, year] =
+				match;
+
+			return Number(
+				`${year}${month}${day}`
+			);
+
+		}
+
+
+		function isClosureToday(event) {
+
+			const description =
+				String(
+					event.t_des_it ?? ""
+				);
+
+			const matches =
+				description.match(
+					/\b\d{2}\/\d{2}\/\d{4}\b/g
+				);
+
+			if (
+				!matches ||
+				matches.length === 0
+			) {
+				return false;
+			}
+
+			const dates =
+				matches
+					.map(parseItalianDate)
+					.filter(
+						date => date !== null
+					)
+					.sort(
+						(a, b) => a - b
+					);
+
+			if (dates.length === 0) {
+				return false;
+			}
+
+			const today =
+				getTodayNumeric();
+
+			if (dates.length === 1) {
+				return dates[0] === today;
+			}
+
+			const startDate =
+				dates[0];
+
+			const endDate =
+				dates[
+				dates.length - 1
+				];
+
+			return (
+				today >= startDate &&
+				today <= endDate
+			);
+
+		}
+
+
+		function isWantedRegion(event) {
+
+			const reg1 =
+				String(
+					event.c_reg ?? ""
+				);
+
+			const reg2 =
+				String(
+					event.c_reg2 ?? ""
+				);
+
+			return (
+				REGION_CODES.has(reg1) ||
+				REGION_CODES.has(reg2)
+			);
+
+		}
+
+
+		function isClosure(event) {
+
+			if (
+				String(
+					event.c_grp_tip ?? ""
+				).toUpperCase() !== "C"
+			) {
+				return false;
+			}
+
+			const type =
+				normalize(
+					event.t_des_fra_it
+				);
+
+			return (
+				type.includes("chiuso") ||
+				type.includes("chiusa") ||
+				type.includes("chiusura")
+			);
+
+		}
+
+
+		function isServiceAreaEvent(event) {
+
+			const text =
+				normalize([
+					event.t_des_fra_it,
+					event.t_des_it,
+					event.locpri,
+					event.locsec
+				].join(" "));
+
+			return (
+				text.includes(
+					"area di servizio"
+				) ||
+				text.includes(
+					"area servizio"
+				)
+			);
+
+		}
+
+
+		function matchesInclusion(event) {
+
+			if (INCLUSIONS.length === 0) {
+				return false;
+			}
+
+			const description =
+				cleanDescription(
+					event.t_des_it
+				);
+
+			const eventText =
+				normalize([
+					event.locpri,
+					event.locsec,
+					description
+				].join(" "));
+
+			return INCLUSIONS.some(
+				inclusion => {
+
+					const needle =
+						normalize(inclusion);
+
+					return (
+						needle !== "" &&
+						eventText.includes(
+							needle
+						)
+					);
+
+				}
+			);
+
+		}
+
+
+		function getDuplicateKey(event) {
+
+			return normalize([
+				event.c_str,
+				event.t_des_fra_it,
+				event.t_des_dir_it,
+				event.locpri,
+				event.locsec,
+				event.n_km_ini,
+				event.n_km_fin,
+				cleanDescription(
+					event.t_des_it
+				)
+			].join("|"));
+
+		}
+
+
+		function removeDuplicates(events) {
+
+			const seen =
+				new Set();
+
+			return events.filter(
+				event => {
+
+					const key =
+						getDuplicateKey(
+							event
+						);
+
+					if (seen.has(key)) {
+						return false;
+					}
+
+					seen.add(key);
+
+					return true;
+
+				}
+			);
+
+		}
+
+
+		function formatKm(value) {
+
+			if (
+				value === null ||
+				value === undefined ||
+				value === ""
+			) {
+				return "?";
+			}
+
+			const number =
+				Number(value);
+
+			if (Number.isNaN(number)) {
+				return String(value);
+			}
+
+			return number.toString();
+
+		}
+
+
+		function buildEventTitle(event) {
+
+			const type =
+				String(
+					event.t_des_fra_it ?? ""
+				).trim();
+
+			const direction =
+				String(
+					event.t_des_dir_it ?? ""
+				).trim();
+
+			const locPrimary =
+				String(
+					event.locpri ?? ""
+				).trim();
+
+			const locSecondary =
+				String(
+					event.locsec ?? ""
+				).trim();
+
+			const normalizedType =
+				normalize(type);
+
+			if (
+				normalizedType.includes(
+					"tratto chiuso"
+				) &&
+				locSecondary
+			) {
+
+				const locations =
+					`${locSecondary} - ${locPrimary}`
+						.toLocaleUpperCase(
+							"it-IT"
+						);
+
+				const km =
+					formatKm(
+						event.n_km_fin
+					);
+
+				return (
+					`${locations} - ${type} ` +
+					`(dal km ${km} - Direzione: ${direction})`
+				);
+
+			}
+
+			const location =
+				(
+					locPrimary ||
+					locSecondary
+				)
+					.toLocaleUpperCase(
+						"it-IT"
+					);
+
+			const km =
+				formatKm(
+					event.n_km_ini
+				);
+
+			return (
+				`${location} - ${type} ` +
+				`(al km ${km} - Direzione: ${direction})`
+			);
+
+		}
+
+
+		function sortEvents(events) {
+
+			return [...events].sort(
+				(a, b) => {
+
+					const roadA =
+						String(
+							a.c_str ??
+							a.t_des_str ??
+							""
+						);
+
+					const roadB =
+						String(
+							b.c_str ??
+							b.t_des_str ??
+							""
+						);
+
+					const roadComparison =
+						roadA.localeCompare(
+							roadB,
+							"it",
+							{
+								numeric: true,
+								sensitivity: "base"
+							}
+						);
+
+					if (
+						roadComparison !== 0
+					) {
+						return roadComparison;
+					}
+
+					return (
+						Number(
+							a.n_km_ini ?? 0
+						) -
+						Number(
+							b.n_km_ini ?? 0
+						)
+					);
+
+				}
+			);
+
+		}
+
+
+		function generateText(events) {
+
+			const grouped =
+				new Map();
+
+			for (
+				const event
+				of events
+			) {
+
+				const road =
+					String(
+						event.t_des_str ??
+						event.t_des_ram ??
+						event.c_str ??
+						"AUTOSTRADA"
+					)
+						.trim()
+						.toLocaleUpperCase(
+							"it-IT"
+						);
+
+				if (
+					!grouped.has(road)
+				) {
+					grouped.set(
+						road,
+						[]
+					);
+				}
+
+				grouped
+					.get(road)
+					.push(event);
+
+			}
+
+			const blocks = [];
+
+			for (
+				const [
+					road,
+					roadEvents
+				]
+				of grouped
+			) {
+
+				const lines = [
+					road,
+					""
+				];
+
+				roadEvents.forEach(
+					(event, index) => {
+
+						lines.push(
+							buildEventTitle(
+								event
+							)
+						);
+
+						lines.push("");
+
+						lines.push(
+							cleanDescription(
+								event.t_des_it
+							)
+						);
+
+						if (
+							index <
+							roadEvents.length - 1
+						) {
+							lines.push("");
+						}
+
+					}
+				);
+
+				blocks.push(
+					lines.join("\n")
+				);
+
+			}
+
+			return blocks.join(
+				"\n\n"
+			);
+
+		}
+
+
+		async function downloadEvents() {
+
+			const url =
+				`${API_URL}?index=${Math.random()}`;
+
+			try {
+
+				const response =
+					await fetch(
+						url,
+						{
+							cache: "no-store"
+						}
+					);
+
+				if (!response.ok) {
+					throw new Error(
+						`HTTP ${response.status}`
+					);
+				}
+
+				return await response.json();
+
+			} catch (directError) {
+
+				console.warn(
+					"Richiesta diretta fallita. Provo il fallback CORS.",
+					directError
+				);
+
+				const proxyUrl =
+					"https://api.allorigins.win/raw?url=" +
+					encodeURIComponent(url);
+
+				const response =
+					await fetch(
+						proxyUrl,
+						{
+							cache: "no-store"
+						}
+					);
+
+				if (!response.ok) {
+					throw new Error(
+						`Errore API: HTTP ${response.status}`
+					);
+				}
+
+				return await response.json();
+
+			}
+
+		}
+
+
+		function renderEvents() {
+
+			const output =
+				document.getElementById(
+					"output"
+				);
+
+			const status =
+				document.getElementById(
+					"status"
+				);
+
+			let events =
+				[...loadedEvents];
+
+			if (!ignoreInclusions) {
+
+				events =
+					events.filter(
+						event =>
+							matchesInclusion(
+								event
+							)
+					);
+
+			}
+
+			const text =
+				generateText(
+					events
+				);
+
+			output.value =
+				text ||
+				"Nessuna chiusura corrispondente ai filtri.";
+
+			const mode =
+				ignoreInclusions
+					? "inclusioni disattivate"
+					: "inclusioni attive";
+
+			const updateTime =
+				lastUpdate
+					? lastUpdate.toLocaleTimeString(
+						"it-IT",
+						{
+							timeZone: "Europe/Rome",
+							hour: "2-digit",
+							minute: "2-digit"
+						}
+					)
+					: "--:--";
+
+			status.textContent =
+				`${events.length} chiusure visualizzate su ${loadedEvents.length} totali ` +
+				`attive il ${getToday()} — ` +
+				`${mode} — ` +
+				`dati aggiornati alle ${updateTime}`;
+
+		}
+
+
+		async function load() {
+
+			const status =
+				document.getElementById(
+					"status"
+				);
+
+			const output =
+				document.getElementById(
+					"output"
+				);
+
+			const refreshButton =
+				document.getElementById(
+					"refreshButton"
+				);
+
+			status.classList.remove(
+				"error"
+			);
+
+			status.textContent =
+				"Caricamento chiusure...";
+
+			refreshButton.disabled =
+				true;
+
+			try {
+
+				const data =
+					await downloadEvents();
+
+				if (
+					!data ||
+					!Array.isArray(
+						data.events
+					)
+				) {
+
+					throw new Error(
+						"Formato JSON non riconosciuto."
+					);
+
+				}
+
+				let events =
+					data.events.filter(
+						event => {
+
+							if (
+								!isWantedRegion(
+									event
+								)
+							) {
+								return false;
+							}
+
+							if (
+								!isClosure(
+									event
+								)
+							) {
+								return false;
+							}
+
+							if (
+								!isClosureToday(
+									event
+								)
+							) {
+								return false;
+							}
+
+							if (
+								isServiceAreaEvent(
+									event
+								)
+							) {
+								return false;
+							}
+
+							return true;
+
+						}
+					);
+
+				events =
+					removeDuplicates(
+						events
+					);
+
+				events =
+					sortEvents(
+						events
+					);
+
+				loadedEvents =
+					events;
+
+				lastUpdate =
+					new Date();
+
+				renderEvents();
+
+			} catch (error) {
+
+				console.error(
+					error
+				);
+
+				status.classList.add(
+					"error"
+				);
+
+				status.textContent =
+					"Errore durante il caricamento dei dati.";
+
+				output.value =
+					"Errore:\n" +
+					error.message;
+
+			} finally {
+
+				refreshButton.disabled =
+					false;
+
+			}
+
+		}
+
+
+		function toggleInclusions() {
+
+			ignoreInclusions =
+				!ignoreInclusions;
+
+			const button =
+				document.getElementById(
+					"inclusionsButton"
+				);
+
+			if (ignoreInclusions) {
+
+				button.textContent =
+					"Inclusioni: OFF";
+
+				button.classList.add(
+					"disabled"
+				);
+
+			} else {
+
+				button.textContent =
+					"Inclusioni: ON";
+
+				button.classList.remove(
+					"disabled"
+				);
+
+			}
+
+			renderEvents();
+
+		}
+
+
+		async function copyOutput() {
+
+			const output =
+				document.getElementById(
+					"output"
+				);
+
+			const button =
+				document.getElementById(
+					"copyButton"
+				);
+
+			try {
+
+				await navigator.clipboard.writeText(
+					output.value
+				);
+
+				const oldText =
+					button.textContent;
+
+				button.textContent =
+					"Copiato ✓";
+
+				setTimeout(
+					() => {
+						button.textContent =
+							oldText;
+					},
+					1500
+				);
+
+			} catch {
+
+				output.select();
+
+				document.execCommand(
+					"copy"
+				);
+
+			}
+
+		}
+
+
+		document
+			.getElementById(
+				"refreshButton"
+			)
+			.addEventListener(
+				"click",
+				load
+			);
+
+
+		document
+			.getElementById(
+				"copyButton"
+			)
+			.addEventListener(
+				"click",
+				copyOutput
+			);
+
+
+		document
+			.getElementById(
+				"inclusionsButton"
+			)
+			.addEventListener(
+				"click",
+				toggleInclusions
+			);
+
+
+		load();
+
+	</script>
+
+</body>
+
+</html>
