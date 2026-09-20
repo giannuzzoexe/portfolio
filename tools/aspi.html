@@ -133,9 +133,7 @@
 		]);
 
 		const INCLUSIONS = [
-			"Bologna Borgo Panigale",
-			"Bologna Interporto",
-			"Altedo"
+			"*"
 		];
 
 		const API_URL =
@@ -376,6 +374,10 @@
 
 
 		function matchesInclusion(event) {
+
+			if (INCLUSIONS.includes("*")) {
+				return true;
+			}
 
 			if (INCLUSIONS.length === 0) {
 				return false;
