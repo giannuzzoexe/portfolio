@@ -198,29 +198,33 @@
 
 		function getTodayNumeric() {
 
-			const parts = new Intl.DateTimeFormat(
-				"it-IT",
-				{
-					timeZone: "Europe/Rome",
-					day: "2-digit",
-					month: "2-digit",
-					year: "numeric"
-				}
-			).formatToParts(new Date());
+			const parts =
+				new Intl.DateTimeFormat(
+					"it-IT",
+					{
+						timeZone: "Europe/Rome",
+						day: "2-digit",
+						month: "2-digit",
+						year: "numeric"
+					}
+				).formatToParts(new Date());
 
 			const day =
 				parts.find(
-					part => part.type === "day"
+					part =>
+						part.type === "day"
 				).value;
 
 			const month =
 				parts.find(
-					part => part.type === "month"
+					part =>
+						part.type === "month"
 				).value;
 
 			const year =
 				parts.find(
-					part => part.type === "year"
+					part =>
+						part.type === "year"
 				).value;
 
 			return Number(
@@ -241,8 +245,12 @@
 				return null;
 			}
 
-			const [, day, month, year] =
-				match;
+			const [
+				,
+				day,
+				month,
+				year
+			] = match;
 
 			return Number(
 				`${year}${month}${day}`
@@ -258,51 +266,121 @@
 					event.t_des_it ?? ""
 				);
 
-			const matches =
-				description.match(
-					/\b\d{2}\/\d{2}\/\d{4}\b/g
-				);
+			const matches = [
+				...description.matchAll(
+					/\b(\d{2}\/\d{2}\/\d{4})\b/g
+				)
+			];
 
-			if (
-				!matches ||
-				matches.length === 0
-			) {
-				return false;
-			}
-
-			const dates =
-				matches
-					.map(parseItalianDate)
-					.filter(
-						date => date !== null
-					)
-					.sort(
-						(a, b) => a - b
-					);
-
-			if (dates.length === 0) {
+			if (matches.length === 0) {
 				return false;
 			}
 
 			const today =
 				getTodayNumeric();
 
-			if (dates.length === 1) {
-				return dates[0] === today;
+			const dates =
+				matches
+					.map(
+						match => ({
+							value:
+								parseItalianDate(
+									match[1]
+								),
+							index:
+								match.index
+						})
+					)
+					.filter(
+						item =>
+							item.value !== null
+					);
+
+			if (dates.length === 0) {
+				return false;
 			}
 
-			const startDate =
-				dates[0];
 
-			const endDate =
-				dates[
-				dates.length - 1
-				];
+			if (dates.length >= 2) {
 
-			return (
-				today >= startDate &&
-				today <= endDate
-			);
+				const values =
+					dates
+						.map(
+							item =>
+								item.value
+						)
+						.sort(
+							(a, b) =>
+								a - b
+						);
+
+				const startDate =
+					values[0];
+
+				const endDate =
+					values[
+					values.length - 1
+					];
+
+				return (
+					today >= startDate &&
+					today <= endDate
+				);
+
+			}
+
+
+			const date =
+				dates[0].value;
+
+			const dateIndex =
+				dates[0].index;
+
+
+			if (date === today) {
+				return true;
+			}
+
+
+			const beforeDate =
+				normalize(
+					description.slice(
+						Math.max(
+							0,
+							dateIndex - 180
+						),
+						dateIndex
+					)
+				);
+
+
+			if (
+				date > today &&
+				(
+					beforeDate.includes("fino") ||
+					beforeDate.includes("sino")
+				)
+			) {
+				return true;
+			}
+
+
+			if (
+				date < today &&
+				(
+					/\bdal\b/.test(beforeDate) ||
+					/\bdalla\b/.test(beforeDate) ||
+					/\bdalle\b/.test(beforeDate) ||
+					beforeDate.includes(
+						"a partire"
+					)
+				)
+			) {
+				return true;
+			}
+
+
+			return false;
 
 		}
 
@@ -375,11 +453,15 @@
 
 		function matchesInclusion(event) {
 
-			if (INCLUSIONS.includes("*")) {
+			if (
+				INCLUSIONS.includes("*")
+			) {
 				return true;
 			}
 
-			if (INCLUSIONS.length === 0) {
+			if (
+				INCLUSIONS.length === 0
+			) {
 				return false;
 			}
 
@@ -399,7 +481,9 @@
 				inclusion => {
 
 					const needle =
-						normalize(inclusion);
+						normalize(
+							inclusion
+						);
 
 					return (
 						needle !== "" &&
@@ -445,7 +529,9 @@
 							event
 						);
 
-					if (seen.has(key)) {
+					if (
+						seen.has(key)
+					) {
 						return false;
 					}
 
@@ -472,7 +558,9 @@
 			const number =
 				Number(value);
 
-			if (Number.isNaN(number)) {
+			if (
+				Number.isNaN(number)
+			) {
 				return String(value);
 			}
 
@@ -506,6 +594,7 @@
 			const normalizedType =
 				normalize(type);
 
+
 			if (
 				normalizedType.includes(
 					"tratto chiuso"
@@ -530,6 +619,7 @@
 				);
 
 			}
+
 
 			const location =
 				(
@@ -640,7 +730,9 @@
 
 			}
 
+
 			const blocks = [];
+
 
 			for (
 				const [
@@ -682,11 +774,13 @@
 					}
 				);
 
+
 				blocks.push(
 					lines.join("\n")
 				);
 
 			}
+
 
 			return blocks.join(
 				"\n\n"
@@ -710,7 +804,9 @@
 						}
 					);
 
-				if (!response.ok) {
+				if (
+					!response.ok
+				) {
 					throw new Error(
 						`HTTP ${response.status}`
 					);
@@ -737,7 +833,9 @@
 						}
 					);
 
-				if (!response.ok) {
+				if (
+					!response.ok
+				) {
 					throw new Error(
 						`Errore API: HTTP ${response.status}`
 					);
@@ -765,7 +863,10 @@
 			let events =
 				[...loadedEvents];
 
-			if (!ignoreInclusions) {
+
+			if (
+				!ignoreInclusions
+			) {
 
 				events =
 					events.filter(
@@ -777,19 +878,23 @@
 
 			}
 
+
 			const text =
 				generateText(
 					events
 				);
 
+
 			output.value =
 				text ||
 				"Nessuna chiusura corrispondente ai filtri.";
+
 
 			const mode =
 				ignoreInclusions
 					? "inclusioni disattivate"
 					: "inclusioni attive";
+
 
 			const updateTime =
 				lastUpdate
@@ -802,6 +907,7 @@
 						}
 					)
 					: "--:--";
+
 
 			status.textContent =
 				`${events.length} chiusure visualizzate su ${loadedEvents.length} totali ` +
@@ -829,6 +935,7 @@
 					"refreshButton"
 				);
 
+
 			status.classList.remove(
 				"error"
 			);
@@ -839,10 +946,12 @@
 			refreshButton.disabled =
 				true;
 
+
 			try {
 
 				const data =
 					await downloadEvents();
+
 
 				if (
 					!data ||
@@ -850,12 +959,11 @@
 						data.events
 					)
 				) {
-
 					throw new Error(
 						"Formato JSON non riconosciuto."
 					);
-
 				}
+
 
 				let events =
 					data.events.filter(
@@ -898,21 +1006,26 @@
 						}
 					);
 
+
 				events =
 					removeDuplicates(
 						events
 					);
+
 
 				events =
 					sortEvents(
 						events
 					);
 
+
 				loadedEvents =
 					events;
 
+
 				lastUpdate =
 					new Date();
+
 
 				renderEvents();
 
@@ -922,12 +1035,15 @@
 					error
 				);
 
+
 				status.classList.add(
 					"error"
 				);
 
+
 				status.textContent =
 					"Errore durante il caricamento dei dati.";
+
 
 				output.value =
 					"Errore:\n" +
@@ -948,12 +1064,16 @@
 			ignoreInclusions =
 				!ignoreInclusions;
 
+
 			const button =
 				document.getElementById(
 					"inclusionsButton"
 				);
 
-			if (ignoreInclusions) {
+
+			if (
+				ignoreInclusions
+			) {
 
 				button.textContent =
 					"Inclusioni: OFF";
@@ -973,6 +1093,7 @@
 
 			}
 
+
 			renderEvents();
 
 		}
@@ -990,22 +1111,28 @@
 					"copyButton"
 				);
 
+
 			try {
 
 				await navigator.clipboard.writeText(
 					output.value
 				);
 
+
 				const oldText =
 					button.textContent;
+
 
 				button.textContent =
 					"Copiato ✓";
 
+
 				setTimeout(
 					() => {
+
 						button.textContent =
 							oldText;
+
 					},
 					1500
 				);
