@@ -128,9 +128,16 @@
 	<script>
 
 		const REGION_CODES = new Set([
-			"6",
+			"5",
 			"8"
 		]);
+
+		const REGION_BORDER_LOCATIONS = [
+			"Pian del Voglio",
+			"Roncobilaccio",
+			"Rioveggio",
+			"Cattolica"
+		];
 
 		const INCLUSIONS = [
 			"*"
@@ -144,6 +151,15 @@
 		let loadedEvents = [];
 
 		let lastUpdate = null;
+
+		let apiStats = {
+			total: 0,
+			region: 0,
+			closures: 0,
+			today: 0,
+			serviceArea: 0,
+			final: 0
+		};
 
 
 		function normalize(text) {
@@ -165,9 +181,10 @@
 				return "";
 			}
 
-			let text = String(description)
-				.split(/\r?\n/)[0]
-				.trim();
+			let text =
+				String(description)
+					.replace(/\r?\n/g, " ")
+					.trim();
 
 			text = text.replace(
 				/\s*(?:Entrata|Uscita)\s+consigliata\b.*$/i,
@@ -245,12 +262,8 @@
 				return null;
 			}
 
-			const [
-				,
-				day,
-				month,
-				year
-			] = match;
+			const [, day, month, year] =
+				match;
 
 			return Number(
 				`${year}${month}${day}`
@@ -300,7 +313,6 @@
 				return false;
 			}
 
-
 			if (dates.length >= 2) {
 
 				const values =
@@ -347,7 +359,7 @@
 					description.slice(
 						Math.max(
 							0,
-							dateIndex - 180
+							dateIndex - 200
 						),
 						dateIndex
 					)
@@ -397,9 +409,28 @@
 					event.c_reg2 ?? ""
 				);
 
-			return (
+
+			if (
 				REGION_CODES.has(reg1) ||
 				REGION_CODES.has(reg2)
+			) {
+				return true;
+			}
+
+
+			const locations =
+				normalize([
+					event.locpri,
+					event.locsec,
+					event.t_des_it
+				].join(" "));
+
+
+			return REGION_BORDER_LOCATIONS.some(
+				location =>
+					locations.includes(
+						normalize(location)
+					)
 			);
 
 		}
@@ -698,6 +729,7 @@
 			const grouped =
 				new Map();
 
+
 			for (
 				const event
 				of events
@@ -747,6 +779,7 @@
 					""
 				];
 
+
 				roadEvents.forEach(
 					(event, index) => {
 
@@ -793,6 +826,7 @@
 
 			const url =
 				`${API_URL}?index=${Math.random()}`;
+
 
 			try {
 
@@ -910,10 +944,9 @@
 
 
 			status.textContent =
-				`${events.length} chiusure visualizzate su ${loadedEvents.length} totali ` +
-				`attive il ${getToday()} — ` +
+				`${events.length} chiusure visualizzate su ${loadedEvents.length} — ` +
 				`${mode} — ` +
-				`dati aggiornati alle ${updateTime}`;
+				`aggiornato alle ${updateTime}`;
 
 		}
 
@@ -965,46 +998,56 @@
 				}
 
 
+				apiStats.total =
+					data.events.length;
+
+
 				let events =
 					data.events.filter(
-						event => {
-
-							if (
-								!isWantedRegion(
-									event
-								)
-							) {
-								return false;
-							}
-
-							if (
-								!isClosure(
-									event
-								)
-							) {
-								return false;
-							}
-
-							if (
-								!isClosureToday(
-									event
-								)
-							) {
-								return false;
-							}
-
-							if (
-								isServiceAreaEvent(
-									event
-								)
-							) {
-								return false;
-							}
-
-							return true;
-
-						}
+						event =>
+							isWantedRegion(
+								event
+							)
 					);
+
+				apiStats.region =
+					events.length;
+
+
+				events =
+					events.filter(
+						event =>
+							isClosure(
+								event
+							)
+					);
+
+				apiStats.closures =
+					events.length;
+
+
+				events =
+					events.filter(
+						event =>
+							isClosureToday(
+								event
+							)
+					);
+
+				apiStats.today =
+					events.length;
+
+
+				events =
+					events.filter(
+						event =>
+							!isServiceAreaEvent(
+								event
+							)
+					);
+
+				apiStats.serviceArea =
+					events.length;
 
 
 				events =
@@ -1019,12 +1062,26 @@
 					);
 
 
+				apiStats.final =
+					events.length;
+
+
 				loadedEvents =
 					events;
 
 
 				lastUpdate =
 					new Date();
+
+
+				console.table({
+					"Eventi API": apiStats.total,
+					"Regione": apiStats.region,
+					"Chiusure": apiStats.closures,
+					"Attive oggi": apiStats.today,
+					"No aree servizio": apiStats.serviceArea,
+					"Finali": apiStats.final
+				});
 
 
 				renderEvents();
